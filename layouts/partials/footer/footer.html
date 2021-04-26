@@ -34,10 +34,9 @@
           Copyright &copy; LocalStack
         </div>
         <div class="col text-end">
-          <!--
-          Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://getdoks.org">Doks</a>
-          -->
           <ul class="list-inline">
+            <li class="list-inline-item"><i>Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://getdoks.org">Doks</a></i></li>
+            <li class="list-inline-item">|</li>
             {{ range .Site.Menus.footerend -}}
             <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
             {{ end -}}

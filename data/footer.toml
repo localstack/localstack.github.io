@@ -4,8 +4,8 @@
 name = "LocalStack"
 
   [[categories.entries]]
-  name = "About"
-  url = "/"
+  name = "Contact"
+  url = "/contact"
 
   [[categories.entries]]
   name = "Pricing"
