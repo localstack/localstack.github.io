@@ -1,9 +1,9 @@
 ---
 title: "Help"
-description: "Help Doks."
+description: "Get help with LocalStack."
 lead: ""
-date: 2020-10-06T08:49:15+00:00
-lastmod: 2020-10-06T08:49:15+00:00
+date: 2021-04-26T18:56:25+02:00
+lastmod: 2021-04-26T18:56:25+02:00
 draft: false
 images: []
 ---
