@@ -4,18 +4,38 @@
     <article>
       <h1 class="text-center">{{ .Title }}</h1>
       <div class="text-center">{{ .Content }}</div>
-			<div class="card-list">
-				{{ range .Data.Pages -}}
-					<div class="card">
-						<div class="card-body">
-							<h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-							<p>{{ .Params.lead | safeHTML }}</p>
-							{{ partial "main/blog-meta.html" . -}}
-						</div>
-					</div>
-				{{ end -}}
-			</div>
+      <div class="card-list">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h3"><a class="stretched-link text-body" href="#">Coming Soon</a></h2>
+              <p>
+                Stay tuned for the LocalStack blog, launching soon&trade; in 2021!
+              </p>
+            </div>
+          </div>
+      </div>
     </article>
   </div>
 </div>
+<!--
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-8">
+    <article>
+      <h1 class="text-center">{{ .Title }}</h1>
+      <div class="text-center">{{ .Content }}</div>
+      <div class="card-list">
+        {{ range .Data.Pages -}}
+          <div class="card">
+            <div class="card-body">
+              <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+              <p>{{ .Params.lead | safeHTML }}</p>
+              {{ partial "main/blog-meta.html" . -}}
+            </div>
+          </div>
+        {{ end -}}
+      </div>
+    </article>
+  </div>
+</div>
+-->
 {{ end }}

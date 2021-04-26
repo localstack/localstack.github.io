@@ -1,25 +1,26 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "LocalStack"
+logo = "/images/localstack.png"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "A fully functional local cloud stack"
+description = "Develop and test your cloud apps offline"
 
 ## Open Graph + Twitter Cards
-images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
+images = ["/images/localstack.png"]
+twitterSite = "_localstack"
+twitterCreator = "_localstack"
+#facebookAuthor = "localstack"
+#facebookPublisher = "localstack"
 ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+schemaLogo = "/images/localstack.png"
+schemaTwitter = "https://twitter.com/_localstack"
+schemaLinkedIn = "https://www.linkedin.com/"
+schemaGitHub = "https://github.com/localstack"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -43,7 +44,7 @@ alert = false
 alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/localstack/localstack.github.io"
 editPage = false
 
 [options]
@@ -51,8 +52,8 @@ editPage = false
   clipBoard = true
   instantPage = true
   flexSearch = true
-  darkMode = true
-  bootStrapJs = false
+  darkMode = false
+  bootStrapJs = true
   breadCrumb = false
   highLight = true
   kaTex = false

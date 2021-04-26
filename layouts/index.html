@@ -2,12 +2,21 @@
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
+      <img src="{{ .Site.Params.Logo }}" alt="LocalStack Logo" style="max-width: 150px" class="mb-4">
       <h1 class="mt-0">{{ .Title }}</h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "docs/prologue/introduction/" | relURL }}" role="button">Get started</a>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ .Site.Data.doks.version }}</a></p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col text-center">
+      <div class="mb-4">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localstack.github.io" data-text="LocalStack - Develop and test your cloud apps offline.">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <iframe src="https://ghbtns.com/github-btn.html?user=localstack&amp;repo=localstack&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20" style="margin-left: 10px"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=localstack&amp;repo=localstack&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -17,35 +26,221 @@
 <section class="section section-sm">
   <div class="container">
     <div class="row justify-content-center text-center">
-      <div class="col-lg-5">
-        <h2 class="h4">Security aware</h2>
-        <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
+      <div class="col-lg-4">
+        <img src="/images/icons/flash.png" style="max-width: 50px" class="mb-3">
+        <p>Enables a highly efficient dev&test loop. Deploy your application locally in Docker, within seconds.</p>
       </div>
-      <div class="col-lg-5">
-        <h2 class="h4">Fast by default ⚡️</h2>
-        <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=7731347bb8ce999eff7428a8e763b637">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
+      <div class="col-lg-4">
+        <img src="/images/icons/money.png" style="max-width: 50px" class="mb-3">
+        <p>Huge cost savings for development teams of all sizes. No cloud infrastructure needed.</p>
       </div>
-      <div class="col-lg-5">
-        <h2 class="h4">SEO-ready</h2>
-        <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
-      </div>
-    </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-5">
-        <h2 class="h4">Full text search</h2>
-        <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">Page layouts</h2>
-        <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
-      </div>
-      <div class="col-lg-5">
-        <h2 class="h4">Dark mode</h2>
-        <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+      <div class="col-lg-4">
+        <img src="/images/icons/ci.png" style="max-width: 50px" class="mb-3">
+        <p>Improve software quality through continuous integration. Stop rolling out untested changes.</p>
       </div>
     </div>
   </div>
 </section>
+
+<div style="background: #E9EFF5" class="mt-4 p-4">
+<section class="section section-sm container">
+  <div class="row justify-content-center text-center">
+    <div class="col col-md-4 col-lg-3">
+      <span style="font-size: 2.2rem">330+</span><br>
+      Contributors
+    </div>
+    <div class="col col-md-4 col-lg-3">
+      <span style="font-size: 2.2rem">4,700+</span><br>
+      Slack members
+    </div>
+    <div class="col col-md-4 col-lg-3">
+      <span style="font-size: 2.2rem">29,000+</span><br>
+      GitHub stars
+    </div>
+    <div class="col col-md-4 col-lg-3">
+      <span style="font-size: 2.2rem">100,000+</span><br>
+      Pulls per day
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="section section-sm container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h2 class="h2 text-center">What is LocalStack?</h2>
+      <p>LocalStack provides an easy-to-use test/mocking framework for developing Cloud
+        applications. It spins up a testing environment on your local machine that provides
+        the same functionality and APIs as the real AWS cloud environment.
+      </p>
+      <p>Yes, that's true -
+        you can run your Lambda functions, store data to DynamoDB tables, feed events through
+        Kinesis streams, put your application behind an API Gateway, and much more. And
+        all this happens on your local machine, without ever talking to the cloud.
+      </p>
+      <p style="margin-bottom: 10px">
+        The diagram below illustrates the <b>efficient dev/test and deployment pipeline</b>
+        enabled by LocalStack.
+      </p>
+        <ol>
+          <li>Your application is developed entirely on the local developer
+            machines. LocalStack provisions all required "cloud" resources in a local
+            container.</li>
+          <li>Changes are frequently pushed to a continuous integration server that
+            runs the automated tests. LocalStack provisions all required "cloud"
+            resources in the continuous integration server environment.</li>
+          <li>Once all tests are green, you flip the switch and the application can
+            be seamlessly deployed to the real AWS cloud environment.</li>
+        </ol>
+      <p>
+        <img style="width: 100%" src="/images/diagram.png">
+      </p>
+      <p>Needless to say, this enables an extremely efficient development loop and
+        team collaboration. No more tedious uploading of application code to
+        run a quick test. No more dollars spent on expensive test resources on AWS!
+      </p>
+      <p>
+        <b>Our users love it</b>. Check out the
+        <a href="https://github.com/localstack/localstack">Github repository</a>, or search on
+        <a href="https://twitter.com/search?q=localstack">Twitter</a>/<a
+          href="https://www.google.com/search?q=LocalStack+AWS">Google</a>
+          to find out what people have to say about LocalStack. It's the modern
+          way of developing cloud applications - we hope you're part of it!
+      </p>
+
+      <h2 class="h2 text-center">Features</h2>
+      <p class="text-center">
+        Interact with LocalStack via the CLI or our hosted web application:
+      </p>
+      <!-- feature carousel -->
+      <div id="featureCarousel" class="featureCarousel carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        </div>
+        <div class="carousel-inner">
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "active" "active"
+            "image" "/images/features/dynamodb.png"
+            "label" "DynamoDB Tables"
+            "descr" "Querying DynamoDB items becomes a breeze")
+          }}
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "image" "/images/features/lambda.png"
+            "label" "Lambda"
+            "descr" "Interactively search and debug Lambda logs")
+          }}
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "image" "/images/features/cognito.png"
+            "label" "Cognito"
+            "descr" "Manage your Cognito user pools and user attributes")
+          }}
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "image" "/images/features/apigateway.png"
+            "label" "API Gateway"
+            "descr" "Navigate API Gateways and directly run test invocations from the browser")
+          }}
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "image" "/images/features/cloudformation.png"
+            "label" "Cloud Formation"
+            "descr" "Edit CloudFormation templates and trigger stack creation")
+          }}
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "image" "/images/features/stepfunctions.png"
+            "label" "StepFunctions"
+            "descr" "Visually inspect and debug your StepFunctions state machines")
+          }}
+          {{ partial "misc/feature-carousel-item.html" (dict
+            "image" "/images/features/ssm.png"
+            "label" "System Parameters"
+            "descr" "Easily set SSM parameters to configure your system")
+          }}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- /feature carousel -->
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm container">
+  <h2 class="h2 text-center">LocalStack is trusted by 10,000s of developers worldwide</h2>
+  <div class="row justify-content-center text-center mt-5">
+    <div class="col-lg-10">
+      <div class="row">
+        <div class="col">
+          <a href="https://www.cambiahealth.com/">
+            <img src="/images/customers/cambia.png" style="max-height: 80px">
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://getcommandeer.com/">
+            <img src="/images/customers/commandeer.png" style="max-height: 80px">
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://www.kurusugawa.jp/" target="_blank">
+            <img src="/images/customers/kci.png" style="max-height: 80px">
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://www.gov.uk/government/organisations/uk-hydrographic-office">
+            <img src="/images/customers/ukho.jpg" style="max-height: 80px">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background: #E9EFF5" class="mt-4 pb-5">
+<section class="section section-sm container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h2 class="h2 text-center">Stay in the loop</h2>
+      <p>If you have any questions or feedback, please shoot us a message at
+        <a href="mailto:info@localstack.cloud">info@localstack.cloud</a>
+      </p>
+
+      <p>
+        We'd love to get in touch with you.
+        Please subscribe with your email to stay tuned for release notes and product updates.
+        We promise never to send an excessive amount of emails (we hate spam, too).
+      </p>
+
+      <div class="center text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <form class="center text-center validate" action="https://github.us16.list-manage.com/subscribe/post?u=988d9bf9ad8ad389bde9e2c6d&amp;id=7daf893897" method="post" target="_blank" novalidate>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control email" name="EMAIL" id="mce-EMAIL" placeholder="email address" aria-label="email address" aria-describedby="basic-addon2">
+                <input type="hidden" name="b_988d9bf9ad8ad389bde9e2c6d_7daf893897" tabindex="-1" value=""/>
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit" name="subscribe">Subscribe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
 {{ end }}
 
 {{ define "sidebar-footer" }}
