@@ -5,6 +5,8 @@ The website uses [Hugo](https://github.com/gohugoio/hugo) and the [doks theme](h
 
 ## Build and run locally
 
+Make sure you have `npm` and `hugo` (extended - for sass compilation) installed.
+
 ### Install dependencies
 
 npm is used to manage the frontend dependencies.
