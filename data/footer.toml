@@ -1,7 +1,7 @@
 # couldn't get the nested menus to work ...
 
 [[categories]]
-name = "LocalStack"
+name = "LocalStack <i class=\"bi bi-stack\"></i>"
 
   [[categories.entries]]
   name = "Contact"
@@ -12,12 +12,12 @@ name = "LocalStack"
   url = "/pricing"
 
   [[categories.entries]]
-  name = "App"
-  url = "/app"
-
-  [[categories.entries]]
   name = "Blog"
   url = "/blog"
+
+  [[categories.entries]]
+  name = "App"
+  url = "/app"
 
 [[categories]]
 name = "Resources"
@@ -27,9 +27,9 @@ name = "Resources"
   url = "https://github.com/localstack"
 
   [[categories.entries]]
-  name = "Docs"
-  url = "/docs"
+  name = "DockerHub"
+  url = "https://hub.docker.com/u/localstack"
 
   [[categories.entries]]
-  name = "API Docs (coming soon)"
-  url = "#"
+  name = "Docs"
+  url = "/docs"

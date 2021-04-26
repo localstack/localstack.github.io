@@ -12,10 +12,10 @@
           <div class="row">
             {{ range .Site.Data.footer.categories -}}
             <div class="col">
-              <h5 class="mt-0 h6">{{ .name }}</h5>
+              <h5 class="mt-0 h6">{{ .name | safeHTML }}</h5>
               <ul class="list-unstyled">
               {{ range .entries -}}
-                <li class=""><a href="{{ .url | relURL }}">{{ .name }}</a></li>
+                <li class=""><a href="{{ .url | relURL }}">{{ .name | safeHTML }}</a></li>
                 {{ end -}}
               </ul>
             </div>

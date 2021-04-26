@@ -16,11 +16,6 @@
   weight = 5
 
 [[main]]
-  name = "App"
-  url = "https://app.localstack.cloud"
-  weight = 7
-
-[[main]]
   name = "Docs"
   url = "/docs/prologue/introduction/"
   #url = "https://app.localstack.cloud/docs"
@@ -30,6 +25,11 @@
   name = "Blog"
   url = "/blog/"
   weight = 20
+
+[[main]]
+  name = "<i class=\"bi bi-laptop\"></i> App"
+  url = "https://app.localstack.cloud"
+  weight = 30
 
 
 [[social]]
