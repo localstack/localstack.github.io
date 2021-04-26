@@ -1,6 +1,19 @@
 #featureCarousel .carousel-caption {
   font-size: $font-size-md;
-  background-color: rgba(255,255,255,0.7);
-  left: 0%;
-  right: 0%;
+  background-color: rgba(23,50,220,0.65);
+  left: 10%;
+  right: 10%;
+  bottom: 12%;
+  color: $white;
+  @include border-radius(1.5rem);
+ }
+
+.section-alt {
+  color: $white;
+  //@include gradient-x-three-colors($indigo, $purple, 50%, $orange);
+  @include gradient-x($blue-dark, $blue-mid);
+}
+
+.section-alt a {
+  color: $gray-300;
 }

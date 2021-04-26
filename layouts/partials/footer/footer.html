@@ -1,17 +1,48 @@
 <footer class="footer text-muted">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 order-last order-lg-first">
-        <ul class="list-inline">
-          <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
-        </ul>
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+          <div>
+            <img class="footer-logo" src="/images/localstack.png" />
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-9 mt-4 mt-md-0">
+
+          <div class="row">
+            {{ range .Site.Data.footer.categories -}}
+            <div class="col">
+              <h5 class="mt-0 h6">{{ .name }}</h5>
+              <ul class="list-unstyled">
+              {{ range .entries -}}
+                <li class=""><a href="{{ .url | relURL }}">{{ .name }}</a></li>
+                {{ end -}}
+              </ul>
+            </div>
+            {{ end -}}
+          </div>
+        </div>
       </div>
-      <div class="col-lg-8 order-first order-lg-last text-lg-end">
-        <ul class="list-inline">
-          {{ range .Site.Menus.footer -}}
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col">
+          Copyright &copy; LocalStack
+        </div>
+        <div class="col text-end">
+          <!--
+          Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://getdoks.org">Doks</a>
+          -->
+          <ul class="list-inline">
+            {{ range .Site.Menus.footerend -}}
             <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-          {{ end -}}
-        </ul>
+            {{ end -}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

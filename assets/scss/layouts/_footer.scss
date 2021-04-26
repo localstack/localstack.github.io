@@ -1,7 +1,9 @@
 .footer {
-  border-top: 1px solid $gray-200;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
+  border-top: 1px solid $gray-400;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: $gray-700;
+  background-color: $gray-100;
 }
 
 .footer ul {
@@ -17,4 +19,30 @@
   .footer li {
     font-size: $font-size-base;
   }
+}
+
+.footer .footer-main {
+  padding-top: 2rem;
+}
+
+.footer .footer-logo {
+  opacity: 0.4;
+  max-height: 70px;
+}
+
+.footer .footer-bottom {
+  font-size: $font-size-sm;
+  padding: 0.5rem 0;
+}
+
+.footer .footer-bottom > .container {
+  padding-bottom: 1rem;
+}
+
+.footer .footer-bottom hr {
+  margin-bottom: 1rem;
+}
+
+.footer .footer-bottom .list-inline-item {
+  font-size: $font-size-sm;
 }

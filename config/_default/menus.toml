@@ -22,8 +22,8 @@
 
 [[main]]
   name = "Docs"
-  #url = "/docs/prologue/introduction/"
-  url = "https://app.localstack.cloud/docs"
+  url = "/docs/prologue/introduction/"
+  #url = "https://app.localstack.cloud/docs"
   weight = 10
 
 [[main]]
@@ -45,7 +45,13 @@
   post = "v0.1.0"
   weight = 20
 
-# [[footer]]
-#   name = "Privacy"
-#   url = "/privacy-policy/"
-#   weight = 10
+
+[[footerend]]
+  name = "Privacy policy"
+  url = "/privacy-policy/"
+  weight = 20
+
+[[footerend]]
+  name = "Imprint"
+  url = "#"
+  weight = 30

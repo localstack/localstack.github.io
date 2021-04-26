@@ -42,28 +42,28 @@
   </div>
 </section>
 
-<div style="background: #E9EFF5" class="mt-4 p-4">
-<section class="section section-sm container">
-  <div class="row justify-content-center text-center">
-    <div class="col col-md-4 col-lg-3">
-      <span style="font-size: 2.2rem">330+</span><br>
-      Contributors
-    </div>
-    <div class="col col-md-4 col-lg-3">
-      <span style="font-size: 2.2rem">4,700+</span><br>
-      Slack members
-    </div>
-    <div class="col col-md-4 col-lg-3">
-      <span style="font-size: 2.2rem">29,000+</span><br>
-      GitHub stars
-    </div>
-    <div class="col col-md-4 col-lg-3">
-      <span style="font-size: 2.2rem">100,000+</span><br>
-      Pulls per day
+<section class="section section-md section-alt">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.2rem">330+</span><br>
+        Contributors
+      </div>
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.2rem">4,700+</span><br>
+        Slack members
+      </div>
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.2rem">29,000+</span><br>
+        GitHub stars
+      </div>
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.2rem">100,000+</span><br>
+        Pulls per day
+      </div>
     </div>
   </div>
 </section>
-</div>
 
 <section class="section section-sm container">
   <div class="row justify-content-center">
@@ -176,7 +176,7 @@
   </div>
 </section>
 
-<section class="section section-sm container">
+<section class="section section-md container">
   <h2 class="h2 text-center">LocalStack is trusted by 10,000s of developers worldwide</h2>
   <div class="row justify-content-center text-center mt-5">
     <div class="col-lg-10">
@@ -206,49 +206,42 @@
   </div>
 </section>
 
-<div style="background: #E9EFF5" class="mt-4 pb-5">
-<section class="section section-sm container">
-  <div class="row justify-content-center">
-    <div class="col-lg-10">
-      <h2 class="h2 text-center">Stay in the loop</h2>
-      <p>If you have any questions or feedback, please shoot us a message at
-        <a href="mailto:info@localstack.cloud">info@localstack.cloud</a>
-      </p>
+<section class="section section-md section-alt">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="h2 text-center">Stay in the loop</h2>
+        <p>If you have any questions or feedback, please shoot us a message at
+          <a href="mailto:info@localstack.cloud">info@localstack.cloud</a>
+        </p>
 
-      <p>
-        We'd love to get in touch with you.
-        Please subscribe with your email to stay tuned for release notes and product updates.
-        We promise never to send an excessive amount of emails (we hate spam, too).
-      </p>
+        <p>
+          We'd love to get in touch with you.
+          Please subscribe with your email to stay tuned for release notes and product updates.
+          We promise never to send an excessive amount of emails (we hate spam, too).
+        </p>
 
-      <div class="center text-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <form class="center text-center validate" action="https://github.us16.list-manage.com/subscribe/post?u=988d9bf9ad8ad389bde9e2c6d&amp;id=7daf893897" method="post" target="_blank" novalidate>
-              <div class="input-group mb-3">
-                <input type="email" class="form-control email" name="EMAIL" id="mce-EMAIL" placeholder="email address" aria-label="email address" aria-describedby="basic-addon2">
-                <input type="hidden" name="b_988d9bf9ad8ad389bde9e2c6d_7daf893897" tabindex="-1" value=""/>
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit" name="subscribe">Subscribe</button>
+        <div class="center text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <form class="center text-center validate" action="https://github.us16.list-manage.com/subscribe/post?u=988d9bf9ad8ad389bde9e2c6d&amp;id=7daf893897" method="post" target="_blank" novalidate>
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control email" name="EMAIL" id="mce-EMAIL" placeholder="email address" aria-label="email address" aria-describedby="basic-addon2">
+                  <input type="hidden" name="b_988d9bf9ad8ad389bde9e2c6d_7daf893897" tabindex="-1" value=""/>
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit" name="subscribe">Subscribe</button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-</div>
-
 {{ end }}
 
 {{ define "sidebar-footer" }}
-<section class="section section-sm container-fluid">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-9">
-      {{- .Content -}}
-    </div>
-  </div>
-</section>
+{{- .Content -}}
 {{ end }}

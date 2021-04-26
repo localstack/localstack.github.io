@@ -1,0 +1,35 @@
+# couldn't get the nested menus to work ...
+
+[[categories]]
+name = "LocalStack"
+
+  [[categories.entries]]
+  name = "About"
+  url = "/"
+
+  [[categories.entries]]
+  name = "Pricing"
+  url = "/pricing"
+
+  [[categories.entries]]
+  name = "App"
+  url = "/app"
+
+  [[categories.entries]]
+  name = "Blog"
+  url = "/blog"
+
+[[categories]]
+name = "Resources"
+
+  [[categories.entries]]
+  name = "GitHub"
+  url = "https://github.com/localstack"
+
+  [[categories.entries]]
+  name = "Docs"
+  url = "/docs"
+
+  [[categories.entries]]
+  name = "API Docs (coming soon)"
+  url = "#"
