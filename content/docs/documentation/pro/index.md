@@ -33,6 +33,7 @@ The Pro version of LocalStack includes, among others, the following features:
 * [Support for SageMaker](#sagemaker)
 * [Support for Glue](#glue)
 * [Support for Amplify](#amplify)
+* [Support for Route53](#route53)
 * [Support for Transfer](#aws-transfer)
 * [Support for Quantum Ledger Database (QLDB)](#quantum-ledger-database--qldb-)
 * [Support for SMTP in Simple Email Service (SES)](#smtp-in-simple-email-service--ses-)
@@ -440,6 +441,22 @@ Details following soon.
 ## Amplify
 
 Details following soon.
+
+### Route53
+
+The Route53 API in LocalStack Pro allows you to create hosted zones and to manage DNS entries (e.g., A records) which can then be queried via the built-in DNS server.
+
+The example below illustrates the creation of a hosted zone `example.com`, registration of an A record named `test.example.com` that points to `1.2.3.4`, and finally querying the DNS record by using the `dig` command against the DNS server running on `localhost` (inside the LocalStack container, on port `53`):
+```
+$ zone_id=$(awslocal route53 create-hosted-zone --name example.com --caller-reference r1 | jq -r '.HostedZone.Id')
+$ awslocal route53 change-resource-record-sets --hosted-zone-id $zone_id --change-batch 'Changes=[{Action=CREATE,ResourceRecordSet={Name=test.example.com,Type=A,ResourceRecords=[{Value=1.2.3.4}]}}]'
+$ dig @localhost test.example.com
+...
+;; ANSWER SECTION:
+test.example.com.	300	IN	A	1.2.3.4
+```
+
+**Note**: Using the built-in DNS capabilities requires privileged access for the LocalStack container (please also refer to the `DNS_ADDRESS` configuration variable).
 
 ## AWS Transfer
 
