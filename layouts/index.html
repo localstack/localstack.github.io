@@ -189,6 +189,35 @@
         {{ end -}}
       </div>
     </div>
+
+  </div>
+</section>
+
+
+<section class="section section-md container pt-0">
+  <h2 class="h2 text-center">Giving back <span class="h4"><i class="bi bi-heart-fill"></i></span></h2>
+  <div class="row justify-content-center text-center mt-2">
+    <div class="col-lg-10">
+      <div class="row">
+        <p>
+          At LocalStack, we're 100% committed to supporting the community.
+        </p>
+        <p>
+          We frequently contribute open source code, and support academic, student, or open source projects and non-profit/philanthropic organizations.
+          If you have a project like this, please reach out to us!
+        </p>
+        <p>
+          Here are some of the awesome projects we have supported with free pro subscriptions:
+        </p>
+        {{ range .Site.Data.community -}}
+        <div class="col customer-logo mb-4">
+          <a href="{{ .url }}" target="_blank">
+            <img src="{{ .logo }}" style="max-height: 80px">
+          </a>
+        </div>
+        {{ end -}}
+      </div>
+    </div>
   </div>
 </section>
 
