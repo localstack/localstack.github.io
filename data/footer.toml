@@ -17,7 +17,7 @@ name = "LocalStack <i class=\"bi bi-stack\"></i>"
 
   [[categories.entries]]
   name = "App"
-  url = "/app"
+  url = "https://app.localstack.cloud"
 
 [[categories]]
 name = "Resources"

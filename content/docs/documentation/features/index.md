@@ -77,4 +77,5 @@ LocalStack Pro spins up the following core Cloud APIs on your local machine.
 * **Transfer**
 * **XRay**
 
-Note that the list above contains a number of additional APIs and advanced features on top of the free open source version. Details about the Pro features are described in the section below.
+Note that the list above contains a number of additional APIs and advanced features on top of the free open source version.
+Details about the Pro features are described in the next section.
