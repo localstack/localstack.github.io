@@ -13,6 +13,12 @@ npm is used to manage the frontend dependencies.
 
     npm install
 
+### Build the static website
+
+   hugo --gc --minify
+
+And find the results in `public/`
+
 ### Run development server
 
 ... and to start the server
@@ -27,4 +33,4 @@ and navigate to http://localhost:1313
 
 ## Deploy
 
-TODO
+
