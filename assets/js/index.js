@@ -1,6 +1,8 @@
 var suggestions = document.getElementById('suggestions');
 var userinput = document.getElementById('userinput');
 
+if (userinput != null) {
+
 document.addEventListener('keydown', inputFocus);
 
 function inputFocus(e) {
@@ -16,6 +18,9 @@ function inputFocus(e) {
   }
 
 }
+}
+
+if (suggestions != null) {
 
 document.addEventListener('click', function(event) {
 
@@ -54,7 +59,6 @@ function suggestionFocus(e){
   }
 
 }
-
 
 /*
 Source:
@@ -144,3 +148,5 @@ Source:
   }
 
 }());
+
+}
