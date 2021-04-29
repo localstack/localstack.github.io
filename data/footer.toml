@@ -16,6 +16,10 @@ name = "LocalStack <i class=\"bi bi-stack\"></i>"
   url = "/blog"
 
   [[categories.entries]]
+  name = "Jobs"
+  url = "/jobs"
+
+  [[categories.entries]]
   name = "App"
   url = "https://app.localstack.cloud"
 
