@@ -1,10 +1,10 @@
 ---
 title: "Contributors"
-description: "The Doks contributors."
+description: "LocalStack contributors."
 date: 2020-10-06T08:50:29+00:00
 lastmod: 2020-10-06T08:50:29+00:00
-draft: true
+draft: false
 images: []
 ---
 
-The Doks contributors.
+LocalStack blog contributors.

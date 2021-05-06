@@ -7,8 +7,13 @@
         {{ partial "main/blog-meta.html" . }}
       </div>
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <div class="mt-4 mb-4 text-center"><i class="bi bi-stack"></i></div>
       {{ .Content }}
     </article>
   </div>
 </div>
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-md text-center mt-0 pt-0"><i class="bi bi-stack"></i></section>
 {{ end }}
