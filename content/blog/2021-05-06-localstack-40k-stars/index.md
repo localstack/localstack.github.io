@@ -16,8 +16,8 @@ model of clouds.
 
 {{< img-simple src="xkcd-deploying-to-cloud.png" >}}
 
-Developers are faced with* a slow and tedious
-code → deploy → test → redeploy → ... cycle* and often find themselves
+Developers are faced with a slow and tedious
+*code → deploy → test → redeploy → ... cycle* and often find themselves
 packaging and uploading their serverless applications tens or hundreds
 of times a day. These inherent limitations and hurdles in developing
 cloud applications have caused some folks to compare the cloud to the
@@ -38,14 +38,14 @@ dev&test loops in the cloud*.
 
 It all started out as a small open source project a couple of years ago,
 in August 2016. Back then, the main purpose of LocalStack was very
-simplistic: We wanted to help turn commute time on trains for some
-friends and colleagues into something more productive.
+simple: We wanted to help our friends and colleagues to turn their commute
+time on the train into something more productive.
 
-The initial commit ([`44326584`](https://github.com/localstack/localstack/commit/44326584)) added support for 8 core AWS APIs
+The initial commit ([`44326584`](https://github.com/localstack/localstack/commit/44326584))
+added support for 8 core AWS APIs
 (incl. API Gateway, Lambda, DynamoDB, and a few others).
 
 {{< img-simple src="first-commit.png" >}}
-
 
 Since then, the project has turned into *a flagship project on Github* -
 we've recently hit the landmark number of *30k stars* on Github, as well
