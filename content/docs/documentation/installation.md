@@ -35,7 +35,7 @@ localstack --help
 
 ## Environment Setup
 
-Using the Pro services requires a valid subscription with an API key. Your API keys are listed on the [subscriptions page](/account/subscriptions), and can be activated using the environment variable `LOCALSTACK_API_KEY`.
+Using the Pro services requires a valid subscription with an API key. Your API keys are listed on the [subscriptions page](https://app.localstack.cloud/account/subscriptions), and can be activated using the environment variable `LOCALSTACK_API_KEY`.
 
 **Example:** In order to use the API key `key123`, use the following command in your environment:
 ```

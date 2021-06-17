@@ -60,6 +60,7 @@ LocalStack Pro spins up the following core Cloud APIs on your local machine.
 * **Lambda (including layers)**
 * **Managed Streaming for Kafka (MSK)**
 * **MediaStore**
+* **Neptune DB**
 * **QLDB**
 * **RDS / Aurora Serverless**
 * **Redshift**
