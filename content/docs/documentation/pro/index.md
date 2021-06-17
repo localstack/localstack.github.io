@@ -355,7 +355,7 @@ module.exports.handler = function(event, context, callback) {
 ```
 ... then sending a message to the WebSocket at `ws://localhost:4510` will result in the same message getting returned as a response on the same WebSocket.
 
-For a simple, self-contained example please refer to this repository: https://github.com/localstack/localstack-pro-samples/tree/master/serverless-websockets
+For a simple, self-contained example please refer to [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/serverless-websockets).
 
 ## CloudFront
 
@@ -415,13 +415,13 @@ Once things have been wired up properly, and assuming the ID of your GraphQL API
 curl -d '{"query":"query {getPosts{id{S}}}"}' http://localhost:4605/graphql/api123
 ```
 
-For more details, please refer to the self-contained sample published here: https://github.com/localstack/localstack-pro-samples/tree/master/appsync-graphql-api
+For more details, please refer to the self-contained sample published in [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/appsync-graphql-api).
 
 ## SageMaker
 
 LocalStack Pro provides a local version of the SageMaker API, which allows running jobs to create machine learning models (e.g., using TensorFlow).
 
-A basic example using the `sagemaker.tensorflow.TensorFlow` class is provided in this Github repository: https://github.com/localstack/localstack-pro-samples/tree/master/sagemaker-ml-jobs . Essentially, the code boils down to these core lines:
+A basic example using the `sagemaker.tensorflow.TensorFlow` class is provided in [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/sagemaker-ml-jobs). Essentially, the code boils down to these core lines:
 ```
 inputs = ...  # load training data files
 mnist_estimator = TensorFlow(entry_point='mnist.py', role='arn:aws:...',
@@ -462,7 +462,7 @@ test.example.com.	300	IN	A	1.2.3.4
 
 The AWS Transfer API provides the ability to create FTP(S) servers to make files in S3 buckets accessible directly via FTP.
 
-A simple example using AWS Transfer is included in this Github repository: https://github.com/localstack/localstack-pro-samples/tree/master/transfer-ftp-s3 . The sample creates an FTP server via the Transfer API locally, uploads two files via FTP to S3, and then finally downloads the files from the target S3 bucket.
+A simple example using AWS Transfer is included in [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/transfer-ftp-s3). The sample creates an FTP server via the Transfer API locally, uploads two files via FTP to S3, and then finally downloads the files from the target S3 bucket.
 
 **Note:** The Transfer API does not provide a way to return the endpoint URL of created FTP servers. Hence, in order to determine the server endpoint, the local port is encoded as a suffix in the `ServerId` attribute, using the pattern `s-<id>:<port>`. For example, assume the following is the response from the `CreateServer` API call, then the FTP server is accessible on port `4511` (i.e., `ftp://localhost:4511`):
 ```
@@ -490,7 +490,7 @@ results = result_set.all().result()
 assert results == [1, 2, 3, 4]
 ```
 
-Please refer to this repo for a simple Neptune sample running on LocalStack: https://github.com/localstack/localstack-pro-samples/tree/master/neptune-graph-db
+For a simple Neptune sample running on LocalStack, please refer to [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/neptune-graph-db).
 
 ## Quantum Ledger Database (QLDB)
 
@@ -498,7 +498,7 @@ The Quantum Ledger Database (QLDB) API supports queries over cryptographically v
 
 QLDB uses the [Amazon ION data format](https://amzn.github.io/ion-docs), a data serialization format that represents a superset of JSON, with a number of additional features.
 
-A simple QLDB example running on LocalStack is provided in this Github repository: https://github.com/localstack/localstack-pro-samples/tree/master/qldb-ledger-queries . The sample consists of two simple scenarios: (1) to create and list tables via the `pyqldb` Python library, and (2) to insert data into two tables and perform a `JOIN` query that combines data from the two tables. The sample output is posted below:
+A simple QLDB example running on LocalStack is provided in [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/qldb-ledger-queries). The sample consists of two simple scenarios: (1) to create and list tables via the `pyqldb` Python library, and (2) to insert data into two tables and perform a `JOIN` query that combines data from the two tables. The sample output is posted below:
 ```
 Scenario 1: create and list tables in ledger
 -----------
@@ -532,7 +532,7 @@ The [Web user interface](https://app.localstack.cloud) then allows you to intera
 
 LocalStack Pro contains basic support for CodeCommit code repositories. The CodeCommit API can be used to create Git repositories, clone these repos to local folders, push commits with changes, etc.
 
-A simple example has been added to the sample repository on Github here: https://github.com/localstack/localstack-pro-samples/tree/master/codecommit-git-repo . The sample creates an Git repository via the AWS CodeCommit API locally, commits and pushes a test file to the repository, and then checks out the file in a fresh clone of the repository.
+A simple example has been added in [this Github repository](https://github.com/localstack/localstack-pro-samples/tree/master/codecommit-git-repo). The sample creates an Git repository via the AWS CodeCommit API locally, commits and pushes a test file to the repository, and then checks out the file in a fresh clone of the repository.
 
 Please note that CodeCommit is a fairly large API and currently not all methods are supported yet, but we are actively extending the implementation on an ongoing basis.
 
@@ -540,7 +540,7 @@ Please note that CodeCommit is a fairly large API and currently not all methods 
 
 The Kinesis Data Analytics API allows you to run continuous SQL queries directly over your Kinesis data streams. Basic support is included in LocalStack Pro - it allows you to create Kinesis Analytics applications, define input and output streams and schema types, and run continuous queries locally.
 
-A simple example has been added to the sample repository on Github here: https://github.com/localstack/localstack-pro-samples/tree/master/kinesis-analytics . More details are following soon.
+A simple example has been added to [this sample repository on Github](https://github.com/localstack/localstack-pro-samples/tree/master/kinesis-analytics). More details are following soon.
 
 ## IAM Security Enforcement
 
