@@ -3,7 +3,7 @@
 #   weight = 10
 #   identifier = "documentation"
 #   url = "/docs/documentation/introduction"
-# 
+#
 # [[docs]]
 #   name = "Help"
 #   weight = 60
@@ -47,7 +47,12 @@
 
 [[footerend]]
   name = "Privacy policy"
-  url = "/privacy-policy/"
+  url = "/privacy-policy"
+  weight = 20
+
+[[footerend]]
+  name = "Terms of Service"
+  url = "/terms"
   weight = 20
 
 [[footerend]]
