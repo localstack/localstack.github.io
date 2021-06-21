@@ -11,9 +11,10 @@ tr.no-border-bottom td {
   border-bottom-width: 0px;
 }
 
-.social-nav {
+/* comment out for now, until we have a better/reactive version of the "Sign in to the app" ribbon */
+/* .social-nav {
   margin-right: 200px;
-}
+} */
 
 #ribbon {
   position: fixed;
