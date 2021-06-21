@@ -14,10 +14,10 @@ We are strongly committed to our open source offering. Our philosophy is that to
 <table role="table" class="table pricing-table">
   <thead>
     <tr>
-      <th class="left">Feature</th>
-      <th>Community Edition</th>
-      <th>Pro Edition</th>
-      <th>Enterprise Edition</th>
+      <th class="left" style="width: 30%">Feature</th>
+      <th style="width: 20%">Community Edition</th>
+      <th style="width: 30%">Pro Edition</th>
+      <th style="width: 20%">Enterprise Edition</th>
     </tr>
   </thead>
   <tbody>
@@ -34,7 +34,7 @@ We are strongly committed to our open source offering. Our philosophy is that to
       <td>&#x2714;</td>
     </tr>
     <tr>
-      <td class="left">Extended AWS Services (RDS, ElastiCache, Cognito, and more)</td>
+      <td class="left">Extended AWS Services (<a href="/docs/documentation/pro/#features-overview">see here</a>)</td>
       <td>-</td>
       <td>&#x2714;</td>
       <td>&#x2714;</td>
@@ -58,7 +58,7 @@ We are strongly committed to our open source offering. Our philosophy is that to
       <td>&#x2714;</td>
     </tr>
     <tr>
-      <td class="left">Custom DNS / Single API Entrypoint</td>
+      <td class="left">Custom DNS Integration</td>
       <td>-</td>
       <td>&#x2714;</td>
       <td>&#x2714;</td>
@@ -69,11 +69,12 @@ We are strongly committed to our open source offering. Our philosophy is that to
       <td>frequently</td>
       <td>on demand support</td>
     </tr>
-    <!-- <tr>
-      <td class="left">Data Persistence</td>
-      <td>-</td>
+    <tr>
+      <td class="left">Data Persistence / Cloud Pods</td>
+      <td>- (only basic)</td>
       <td>&#x2714; &#42;</td>
-    </tr> -->
+      <td>&#x2714; &#42;</td>
+    </tr>
     <tr>
       <td class="left">CloudFormation Support</td>
       <td>basic</td>
@@ -126,9 +127,19 @@ We are strongly committed to our open source offering. Our philosophy is that to
       <td class="left">Monthly Price</td>
       <td>Free</td>
       <td>
-        <span style="text-decoration: line-through; color: grey">&euro; 20</span>
-        <span style="font-size: 20px">&euro; 15</span> / month &#42;&#42;
-        <br/>per developer + 14 days free trial
+        <table style="margin: 0px; border-width: 0px;">
+          <tr><th style="border-right: 1px solid #E9ECEF">Developer</th><th>CI System</th></tr>
+          <tr class="no-border-bottom">
+            <td style="border-right: 1px solid #E9ECEF; border-bottom-width: 0px">
+              <span style="text-decoration: line-through; color: grey">&euro; 20</span>
+              <span style="font-size: 20px">&euro; 15</span> / month &#42;&#42;
+              <br/>per user + 14 days free trial
+            </td><td style="border-bottom-width: 0px">
+              <span style="font-size: 20px">&euro; 20</span> for 200 build credits
+              (&euro; 0.1 per CI build &#42;&#42;&#42;)
+            </td>
+          </tr>
+        </table>
       </td>
       <td>Contact Us</td>
     </tr>
@@ -154,5 +165,10 @@ We are strongly committed to our open source offering. Our philosophy is that to
 
 <p style="font-size: 0.8rem">
   &#42;&#42; Limited time offer valid for the first 2 months. Price will automatically increase from &euro; 15 to &euro; 20 per license after the first 2 months of active subscription. Please note that this discount only applies for online signups with credit card directly in the app.
+</p>
+
+<p style="font-size: 0.8rem">
+  &#42;&#42;&#42; Assuming one individual startup of the LocalStack CI Docker container per CI build. All CI systems, like CircleCI, Jenkins, Github Actions, etc. are supported, and each LocalStack CI Docker container startup consumes one CI build credit.
+
 </p>
 </div>
