@@ -3,11 +3,11 @@ title: "Pro Features"
 description: "LocalStack Pro Features"
 date: 2021-04-26T19:01:19+02:00
 lastmod: 2021-04-26T19:01:19+02:00
-draft: false
+draft: true
 images: ["kubernetes.png"]
 menu:
   docs:
-    parent: "documentation"
+    parent: "getting-started"
 weight: 93
 toc: true
 ---
