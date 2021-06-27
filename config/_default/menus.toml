@@ -1,14 +1,31 @@
-# [[docs]]
-#   name = "Documentation"
-#   weight = 10
-#   identifier = "documentation"
-#   url = "/docs/documentation/introduction"
-#
-# [[docs]]
-#   name = "Help"
-#   weight = 60
-#   identifier = "help"
-#   url = "/docs/help/"
+ [[docs]]
+   name = "Getting Started"
+   weight = 10
+   identifier = "getting-started"
+   url = "/docs/getting-started/"
+
+ [[docs]]
+   name = "How-to Guides"
+   weight = 20
+   identifier = "how-to"
+   url = "/docs/how-to/"
+
+ [[docs]]
+   name = "Reference"
+   weight = 30
+   identifier = "reference"
+   url = "/docs/reference/"
+
+ [[docs]]
+   name = "Help"
+   weight = 60
+   identifier = "help"
+   url = "/docs/help/"
+
+[[main]]
+  name = "Features"
+  url = "/features/"
+  weight = 1
 
 [[main]]
   name = "Pricing"
@@ -17,7 +34,7 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/documentation/introduction"
+  url = "/docs/getting-started/"
   weight = 10
 
 [[main]]

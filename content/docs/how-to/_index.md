@@ -1,19 +1,14 @@
 ---
-title: "Introduction"
-description: "Introduction to LocalStack."
-lead: "Welcome to the LocalStack documentation!"
-date: 2021-04-26T19:01:19+02:00
-lastmod: 2021-04-26T19:01:19+02:00
+title : "How-to Guides"
+description: "A collection of guides of how to integrate LocalStack with various tools."
+lead: ""
+date: 2020-10-06T08:48:23+00:00
+lastmod: 2020-10-06T08:48:23+00:00
 draft: false
 images: []
-menu:
-  docs:
-    parent: "documentation"
-weight: 89
-toc: true
 ---
 
-## What is LocalStack?
+## How-to guides?
 
 LocalStack provides an easy-to-use test/mocking framework for developing Cloud applications.
 It spins up a testing environment on your local machine that provides the same functionality and APIs as the real AWS cloud environment.

@@ -24,7 +24,18 @@
 					</ol>
 				</nav>
 			{{ end }}
-			<h1>{{ .Title }}</h1>
+			<h1>
+				<span style="display: block; font-size: 1rem; text-transform: uppercase; color: #979da4; margin-bottom: 0.6rem">
+				{{ if in .URL "reference" -}}
+				{{ if .Params.pro -}}
+					Pro
+				{{ else -}}
+					Open Source
+				{{ end -}}
+				{{ end -}}
+				</span>
+				{{ .Title }}
+			</h1>
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
 			{{ partial "main/headline-hash.html" .Content }}
 			{{ if .Site.Params.editPage -}}
