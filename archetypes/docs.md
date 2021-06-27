@@ -2,6 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 description: ""
 lead: ""
+pro: false
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
