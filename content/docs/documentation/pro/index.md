@@ -36,6 +36,7 @@ The Pro version of LocalStack includes, among others, the following features:
 * [Support for Route53](#route53)
 * [Support for Transfer](#aws-transfer)
 * [Support for Quantum Ledger Database (QLDB)](#quantum-ledger-database--qldb-)
+* [Support for Backup](#backup-api)
 * [Support for SMTP in Simple Email Service (SES)](#smtp-in-simple-email-service--ses-)
 * [Support for CodeCommit](#codecommit)
 * [Support for Kinesis Data Analytics](#kinesis-data-analytics)
@@ -512,6 +513,10 @@ Creating two test tables in ledger - "Vehicle" and "VehicleRegistration"
 Running a query that joins data from the two tables
 Query result: [{'Vehicle': {'id': 'v1'}}, {'Vehicle': {'id': 'v2'}}, {'Vehicle': {'id': 'v3'}}]
 ```
+
+## Backup API
+
+The Backup API allows to manage backup plans, to create scheduled or on-demand backups of certain resource types like DynamoDB tables or RDS databases. Details following soon...
 
 ## SMTP in Simple Email Service (SES)
 
