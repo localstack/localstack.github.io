@@ -51,6 +51,8 @@ In addition to the above, the Pro version of LocalStack supports additional APIs
 * **API Gateway V2**
 * **AppSync**
 * **Athena**
+* **Backup**
+* **Batch**
 * **CloudFormation**
 * **CloudFront**
 * **CloudTrail**
@@ -98,4 +100,3 @@ In addition to the above, the Pro version of LocalStack supports additional APIs
 * **Timestream**
 * **Transfer**
 * **XRay**
-

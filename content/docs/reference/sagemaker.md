@@ -1,12 +1,13 @@
 ---
 title: "SageMaker"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T18:00:16+02:00
 lastmod: 2021-06-25T18:00:16+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "reference"
 weight: 999

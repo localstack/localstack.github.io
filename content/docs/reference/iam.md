@@ -1,12 +1,13 @@
 ---
 title: "Identity and Access Management (IAM)"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T18:19:14+02:00
 lastmod: 2021-06-25T18:19:14+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     name: "IAM"
     parent: "reference"

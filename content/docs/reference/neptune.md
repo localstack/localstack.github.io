@@ -1,12 +1,13 @@
 ---
 title: "Amazon Neptune"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T18:07:18+02:00
 lastmod: 2021-06-25T18:07:18+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     name: "Neptune"
     parent: "reference"

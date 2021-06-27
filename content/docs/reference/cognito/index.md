@@ -2,11 +2,12 @@
 title: "Cognito"
 description: ""
 lead: ""
+pro: true
 date: 2021-06-25T17:49:09+02:00
 lastmod: 2021-06-25T17:49:09+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "reference"
 weight: 999
@@ -62,4 +63,3 @@ The login form should look similar to the screenshot below:
 {{< img-simple src="cognitoLogin.png" alt="Cognito Login" >}}
 
 After successful login, the page will redirect to the specified redirect URI, with a path parameter `?code=<code>` appended, e.g., `http://example.com?code=test123`. This authentication code can then be used to obtain a token via the Cognito OAuth2 TOKEN endpoint documented [here](https://docs.aws.amazon.com/cognito/latest/developerguide/token-endpoint.html).
-

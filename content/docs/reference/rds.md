@@ -1,12 +1,13 @@
 ---
 title: "Relational Database Service (RDS)"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T17:21:21+02:00
 lastmod: 2021-06-25T17:21:21+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "reference"
 weight: 999

@@ -1,12 +1,13 @@
 ---
 title: "Elastic Container Service (ECS)"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T17:36:22+02:00
 lastmod: 2021-06-25T17:36:22+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "reference"
 weight: 999

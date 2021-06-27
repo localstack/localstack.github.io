@@ -1,19 +1,18 @@
 ---
 title: "CloudFront"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T17:57:25+02:00
 lastmod: 2021-06-25T17:57:25+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "reference"
 weight: 999
 toc: true
 ---
-
-## CloudFront
 
 LocalStack Pro supports creation of local CloudFront distributions, which allows you to transparently access your applications and file artifacts via CloudFront URLs like `https://abc123.cloudfront.net`.
 

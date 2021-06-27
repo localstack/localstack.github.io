@@ -1,12 +1,13 @@
 ---
 title: "Local DNS Server"
 description: ""
+pro: true
 lead: ""
 date: 2021-06-25T18:24:58+02:00
 lastmod: 2021-06-25T18:24:58+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "reference"
 weight: 999
