@@ -21,7 +21,7 @@
   {{ if .HasChildren -}}
   <ul id="{{ .Name }}-children" class="list-unstyled{{ if and $collapsible }} collapse{{ end }}{{ if $active }} show{{ end }}">
     {{ range .Children -}}
-      {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
+    {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
     <li>
       <a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">
         <span style="vertical-align: middle">{{ .Name }}</span>

@@ -10,7 +10,7 @@ menu:
   docs:
     name: "Serverless Framework"
     parent: "how-to"
-weight: 999
+weight: 202
 toc: true
 ---
 

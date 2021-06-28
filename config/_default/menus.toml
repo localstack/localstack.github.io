@@ -1,24 +1,24 @@
  [[docs]]
    name = "Getting Started"
-   weight = 10
+   weight = 100
    identifier = "getting-started"
-   url = "/docs/getting-started/"
+   url = "/docs/getting-started/overview/"
 
  [[docs]]
    name = "How-to Guides"
-   weight = 20
+   weight = 200
    identifier = "how-to"
-   url = "/docs/how-to/"
+   url = "/docs/how-to/overview/"
 
  [[docs]]
    name = "Reference"
-   weight = 30
+   weight = 300
    identifier = "reference"
    url = "/docs/reference/"
 
  [[docs]]
    name = "Help"
-   weight = 60
+   weight = 600
    identifier = "help"
    url = "/docs/help/"
 
@@ -34,7 +34,7 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/getting-started/"
+  url = "/docs/getting-started/overview/"
   weight = 10
 
 [[main]]

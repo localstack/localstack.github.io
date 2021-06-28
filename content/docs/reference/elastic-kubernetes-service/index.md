@@ -10,7 +10,7 @@ images: []
 menu:
   docs:
     parent: "reference"
-weight: 999
+weight: 410
 toc: true
 ---
 LocalStack Pro allows you to use the [EKS](https://docs.aws.amazon.com/eks/) API to create Kubernetes clusters and easily deploy containerized apps locally.
