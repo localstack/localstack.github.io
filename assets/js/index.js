@@ -152,15 +152,18 @@ if (suggestions != null) {
 }
 
 var referenceChildren = document.getElementById('Reference-children')
-var referenceCollapseBtn = document.getElementById('Reference-btn')
-referenceChildren.addEventListener('hide.bs.collapse', function () {
-  const icon = referenceCollapseBtn.getElementsByTagName('i')[0]
-  icon.classList.add('bi-chevron-compact-left')
-  icon.classList.remove('bi-chevron-compact-down')
-})
+if (referenceChildren != null) {
 
-referenceChildren.addEventListener('show.bs.collapse', function () {
-  const icon = referenceCollapseBtn.getElementsByTagName('i')[0]
-  icon.classList.add('bi-chevron-compact-down')
-  icon.classList.remove('bi-chevron-compact-left')
-})
+  var referenceCollapseBtn = document.getElementById('Reference-btn')
+  referenceChildren.addEventListener('hide.bs.collapse', function () {
+    const icon = referenceCollapseBtn.getElementsByTagName('i')[0]
+    icon.classList.add('bi-chevron-compact-left')
+    icon.classList.remove('bi-chevron-compact-down')
+  })
+
+  referenceChildren.addEventListener('show.bs.collapse', function () {
+    const icon = referenceCollapseBtn.getElementsByTagName('i')[0]
+    icon.classList.add('bi-chevron-compact-down')
+    icon.classList.remove('bi-chevron-compact-left')
+  })
+}
