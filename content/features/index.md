@@ -100,3 +100,7 @@ In addition to the above, the Pro version of LocalStack supports additional APIs
 * **Timestream**
 * **Transfer**
 * **XRay**
+
+## Further Details
+
+For a more comprehensive overview of the Pro features as well as detailed usage examples, please refer to our [documentation](https://docs.localstack.cloud) and our [samples repo on Github](https://github.com/localstack/localstack-pro-samples).

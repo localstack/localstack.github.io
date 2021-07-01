@@ -34,7 +34,7 @@ We are strongly committed to our open source offering. Our philosophy is that to
       <td>&#x2714;</td>
     </tr>
     <tr>
-      <td class="left">Extended AWS Services (<a href="/docs/documentation/pro/#features-overview">see here</a>)</td>
+      <td class="left">Extended AWS Services (<a href="/features/#pro">see here</a>)</td>
       <td>-</td>
       <td>&#x2714;</td>
       <td>&#x2714;</td>
