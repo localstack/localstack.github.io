@@ -42,7 +42,7 @@ The environment variables `SMTP_HOST`/`SMTP_USER`/`SMTP_PASS`/`SMTP_EMAIL` can b
 (host, username, password, and sender address) to use when sending automated test emails in the platform 
 (e.g., to send Cognito signup confirmation codes)
 
-### ENFORE_IAM
+### ENFORCE_IAM
 Variable `ENFORCE_IAM` determines whether to enforce IAM security policies when processing client requests (default: `false`)
 
 ### AUTOSTART_UTIL_CONTAINERS
