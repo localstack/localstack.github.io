@@ -6,7 +6,7 @@ date: 2021-06-25T17:25:34+02:00
 lastmod: 2021-06-25T17:25:34+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "getting-started"
 weight: 103
@@ -32,11 +32,10 @@ services:
   localstack:
     image: localstack/localstack
     ports:
-      - "53:53"
-      - "443:443"
-      - "4510-4520:4510-4520"
-      - "4566-4620:4566-4620"
-      - "${PORT_WEB_UI-8080}:${PORT_WEB_UI-8080}"
+      - "127.0.0.1:53:53"
+      - "127.0.0.1:443:443"
+      - "127.0.0.1:4510-4530:4510-4530"
+      - "127.0.0.1:4566-4620:4566-4620"
     environment:
       - LOCALSTACK_API_KEY=...
       - SERVICES=serverless,cognito,rds
