@@ -12,9 +12,9 @@ images: []
 <h4 id="backend-dev">Open Source Developer Advocate / DevRel Engineer</h4>
 <h5>About You</h5>
 <p>
-Are you passionate about engaging with the developer community, striking up conversations about deep technological questions, the culture in engineering organizations and the impact developers have on the companies they work for?
+Are you passionate about engaging with the developer community? Do you find yourself striking up interesting conversations about technology topics, the culture in engineering organizations, and the impact developers have on the companies they work for?
 </p><p>
-Are you up to date on all the new tools and stacks the world has to offer, with the ability to jump between different technological discussions in the drop of a hat?
+Do you keep yourself up to date on all the new tools and stacks in the cloud&AI space, with the ability to jump between different tech discussions about the entire DevSecOps cycle at the drop of a hat?
 </p><p>
 Do you enjoy creating valuable & educational content that developers can enjoy and engage with in various mediums, including writing, video, and audio?
 </p><p>
@@ -22,7 +22,7 @@ Do you like working in a fast-paced, highly technical startup environment with l
 </p><p>
 If you are -- then you might be a great fit for LocalStack!
 </p><p>
-  This is a truly <b>unique opportunity</b> to work with the global developer community and shape the future of cloud application development.
+This is a truly <b>unique opportunity</b> to work with the global developer community and shape the future of cloud application development.
 </p>
 
 <h5>About LocalStack</h5>
@@ -38,17 +38,15 @@ If you want to be a driving force in <i>making cloud development fun again</i>, 
 </p>
 <h6>What you will do</h6>
 <p>
-  The main tasks and responsibilities will include:
+You will use your creativity and come up with exciting new ways to engage with the broader developer community, to make the product shine. Your main tasks and responsibilities will include:
   <ul>
-    <li>Developer advocacy</li>
-    <li>Improve developer experience</li>
-    <li>Write engaging feature documentation</li>
-    <li>Help shape product direction</li>
-    <li>Flesh out code examples</li>
-    <li>Engage with our community</li>
-    <li>Spearhead community events</li>
-    <li>Curate content for social media</li>
+    <li>Improve developer experience and write engaging educational content, including blog posts, feature documentation, code samples, tutorials, and demo apps</li>
+    <li>Record demo videos showcasing key product features, interesting use cases for the product, and various technical areas of application you come up with while using LocalStack. LocalStack shines on multiple fronts - make it sparkle!</li>
+    <li>Get involved in the sales cycle and demonstrate the value of LocalStack</li>
     <li>Provide training to our users and customers</li>
+    <li>Spearhead community events, curate content for social media, and create new and exciting initiatives to build engagement with the developer community (e.g. open-source, meetups, forums, twitter spaces, hackathons, contests ...)
+    </li>
+    <li>Distill and take the community feedback back to the team, to help shape our product direction</li>
   </ul>
 </p>
 <h6>Your profile</h6>
