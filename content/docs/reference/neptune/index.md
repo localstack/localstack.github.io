@@ -19,6 +19,8 @@ The Neptune API provides a graph database to store nodes and edges that can be a
 
 For example, you can create a Neptune cluster like this:
 ```
+import boto3
+from gremlin_python.driver import client as gremlin_client
 client = boto3.client('neptune', endpoint_url='http://localhost:4566')
 cluster = client.create_db_cluster(DBClusterIdentifier='c1', Engine='neptune')['DBCluster']
 cluster_url = 'ws://localhost:%s/gremlin' % cluster['Port']
