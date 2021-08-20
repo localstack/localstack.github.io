@@ -49,54 +49,39 @@ In addition to the above, the Pro version of LocalStack supports additional APIs
 * **Amplify**
 * **API Gateway V2 (WebSockets support)**
 * **API Gateway V2**
+* **AppConfig**
+* **Application AutoScaling**
 * **AppSync**
 * **Athena**
 * **Backup**
 * **Batch**
-* **CloudFormation**
 * **CloudFront**
 * **CloudTrail**
-* **CloudWatch**
-* **CloudWatch Logs**
 * **CodeCommit**
 * **Cognito Identity**
 * **Cognito Identity Provider (IdP)**
-* **DynamoDB**
-* **DynamoDB Streams**
-* **EC2**
+* **DocumentDB**
+* **EC2 (advanced features, launching VMs)**
 * **ECR**
 * **ECS**
 * **EKS**
 * **ElastiCache**
-* **Elasticsearch**
 * **EMR**
-* **ES (Elasticsearch Service)**
-* **EventBridge (CloudWatch Events)**
-* **Firehose**
-* **Glacier**
+* **Glacier / S3 Select**
 * **Glue**
-* **IAM**
+* **IAM (security/policy enforcement)**
 * **IoT (including IoT Analytics, IoT Data)**
 * **Kinesis**
 * **Kinesis Data Analytics**
-* **KMS**
-* **Lambda (including layers)**
+* **Lambda (including Lambda Layers & Container Images)**
 * **Managed Streaming for Kafka (MSK)**
 * **MediaStore**
 * **Neptune DB**
 * **QLDB**
 * **RDS / Aurora Serverless**
-* **Redshift**
-* **Route53**
-* **S3**
+* **Redshift (Postgres DB support)**
+* **Route53 (DNS integration)**
 * **SageMaker**
-* **SecretsManager**
-* **SES**
-* **SNS**
-* **SQS**
-* **SSM**
-* **StepFunctions**
-* **STS**
 * **Timestream**
 * **Transfer**
 * **XRay**
