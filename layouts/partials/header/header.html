@@ -19,6 +19,9 @@
           <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="ms-2 visually-hidden">{{ .Name | safeHTML }}</span></a>
         </li>
       {{ end -}}
+      <li class="nav-item">
+        <a class="btn btn-primary" type="link" href="https://app.localstack.cloud"><i class="bi bi-laptop"></i> Sign up</a>
+      </li>
     </ul>
     <div class="collapse navbar-collapse order-4 order-md-1">
       <ul class="navbar-nav main-nav me-auto order-5 order-md-2">
