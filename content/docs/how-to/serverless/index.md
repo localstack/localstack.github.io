@@ -30,7 +30,12 @@ This guide assumes that you have the following tools installed.
 * LocalStack ([Install](https://localstack.cloud/docs/getting-started/installation/))
 * Serverless ([Install](https://www.serverless.com/framework/docs/getting-started/))
 
-It also assumes that you already have a Serverless app set up consisting of a couple of Lambda functions and a `serverless.yml` file similar to the following. An example Serverless app integrated with LocalStack can be found [here](https://github.com/localstack/serverless-python-rest-api-with-dynamodb). 
+It also assumes that you already have a Serverless app set up consisting of a couple of Lambda functions and a `serverless.yml` file similar to the following. An example Serverless app integrated with LocalStack can be found here:
+
+<div class="callout">
+  <a href="https://github.com/localstack/serverless-python-rest-api-with-dynamodb">Simple REST API using the Serverless Framework and LocalStack</a>
+</div>
+
 
 ```yaml
 service: my-service
@@ -175,5 +180,45 @@ layers:
 
 Use the displayed endpoint `http://localhost:4566/restapis/XXXXXXXXXX/local/_user_request_/my/custom/endpoint` to make requests to the deployed service. 
 
+
+## Advanced topics
+
+### Local code mounting for lambda functions
+
+serverless-localstack supports a feature for lambda functions that allows local code mounting:
+
+```yaml
+# serverless.yml
+
+custom:
+  localstack:
+    # ...
+    lambda:
+      mountCode: True
+```
+
+When this flag is set, the lambda code will be mounted into the container running the function directly from your local directory instead of packaging and uploading it.
+
+If you want to use this feature together with the local lambda executor (`LAMBDA_EXECUTOR=local`), you need to make sure the container running localstack itself can find the code.
+To do that, you need to manually mount the code into the localstack container, here is a snippet using a `docker-compose.yml` with the essentials.
+Where `/absolute/path/to/todos` is the path on your local machine that points to the `todos/` directory containing the lambda code from our previous example.
+
+```yaml
+# docker-compose.yml to start localstack
+
+services:
+  localstack:
+    # ...
+    environment:
+      - LAMBDA_EXECUTOR=local
+      - LAMBDA_REMOTE_DOCKER=0
+      # ...
+    volumes:
+      # ...
+      - "/absolute/path/to/todos:/absolute/path/to/todos"
+```
+
+
 ## Ran into trouble?
+
 If you run into any issues or problems while integrating LocalStack with your Serverless app, please [submit an issue](https://github.com/localstack/serverless-localstack/issues).

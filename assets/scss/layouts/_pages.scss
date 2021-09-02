@@ -43,3 +43,11 @@ p.meta {
   margin-top: 2.25rem;
   font-size: $font-size-base;
 }
+
+.callout {
+    border: 1px solid $gray-500;
+    border-left: 5px solid $primary;
+    background: $gray-100;
+    @extend .rounded-2;
+    padding: 1rem;
+}
