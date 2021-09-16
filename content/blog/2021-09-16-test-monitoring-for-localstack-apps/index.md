@@ -1,14 +1,14 @@
 ---
 title: "Test Monitoring for LocalStack Apps"
-description: "Developing Serverless Applications Locally with LocalStack and Debugging Tests with Thundra Foresight"
-lead: "Developing Serverless Applications Locally with LocalStack and Debugging Tests with Thundra Foresight"
+description: "Developing Serverless Applications Locally with LocalStack and Debugging Tests with Thundra Foresight."
+lead: "Developing Serverless Applications Locally with LocalStack and Debugging Tests with Thundra Foresight. (Guest blog post by Oguzhan Ozdemir, Solutions Engineer @ Thundra)"
 date: 2021-09-16T13:10:00+02:00
 lastmod: 2021-09-16T13:10:00+02:00
-draft: true
 images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png", "image9.png"]
-contributors: ["Oguzhan Ozdemir, Solutions Engineer @ Thundraio"]
+contributors: ["Oguzhan Ozdemir, Solutions Engineer @ Thundra"]
 ---
-LocalStack helps developers prevent receiving scary cloud bills by the end of the month! It has an amazing community of developers and I think everybody loves the product because it not only saves money, but also enables a highly efficient local development and test loop for developing cloud apps. The best part of LocalStack is that it is open-source by the inception of its initial release.
+
+LocalStack gives developers the freedom to develop their cloud applications locally (even offline) - enabling a highly efficient dev&amp;test loop. It also helps prevent scary cloud bills at the end of every month! LocalStack has an amazing community of users, contributors, and supporters - and generally demonstrates a very strong commitment to supporting open source.
 
 The community uses LocalStack for many use cases such as developing microservice cloud applications. One of the strongest use cases why developers use LocalStack is “testing”. Since the local testing framework is provided, the need for setting up multiple testing environments on the cloud disappears and distributed microservice applications can easily be developed, tested, and deployed with green tests.
 
@@ -75,8 +75,6 @@ Let’s see what Thundra Foresight can do now. We can kill the current LocalStac
 #### How to integrate Foresight into LocalStack
 
 Thundra Java Agent comes built-in with LocalStack v0.12.16 and later. If you have the latest version of LocalStack, all you need to do is set `THUNDRA_APIKEY` as an environment variable and you are good to go with application monitoring. To enable Foresight as well, `THUNDRA_AGENT_TEST_PROJECT_ID` environment variable must be set.
-
-<!-- TODO: highlight! -->
 
 You can get your API Key and Project ID at https://foresight.thundra.io.
 
@@ -145,7 +143,7 @@ Now, let’s see how we can fix this. But, as you might have guessed, there isn�
 
 Well, usually developers write tests to ensure their application doesn’t break when they develop new features, fix bugs, or change anything in their codebase. Generally, this will give you a good estimate of how robust your application is. But not all errors come from our inability to write bug-free code.
 
-Let’s face it. Some of the things we do feel like magic. There are a lot of things that can go wrong between your local environment and your production that we don’t understand at first sight. Even when you successfully push your code to production, things can still fail your efforts. A network partition, latency in the network where your code runs, or some disk failures... All of these could cost you a lot and this isn’t a perfect world. Some of these have already happened to you or might happen in the future. The best you can do is to be prepared for all of these as much as possible. 
+Let’s face it. Some of the things we do feel like magic. There are a lot of things that can go wrong between your local environment and your production that we don’t understand at first sight. Even when you successfully push your code to production, things can still fail your efforts. A network partition, latency in the network where your code runs, or some disk failures... All of these could cost you a lot and this isn’t a perfect world. Some of these have already happened to you or might happen in the future. The best you can do is to be prepared for all of these as much as possible.
 
 Purposefully injecting a bug, an exception, or latency might seem counterintuitive, but it’s better than the unexpected. This practice of doing a controlled experiment on your distributed system is called [Chaos Engineering](https://apm.docs.thundra.io/monitoring/chaos-engineering-with-thundra). At Thundra, we value the chaos, do our best to be prepared for the unexpected and we want our customers to be the same, if not more. By using Thundra Agent in your project, you’ll have the capability to engineer your own chaos experiment for your applications and your tests.
 
