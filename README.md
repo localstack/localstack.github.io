@@ -25,9 +25,9 @@ And find the results in `public/`
 
     npm run server
 
-Or alternatively
+Or alternatively (`-D` activates blog drafts)
 
-    hugo server --watch=true --disableFastRender
+    hugo server --watch=true --disableFastRender -D
 
 and navigate to http://localhost:1313
 
