@@ -193,4 +193,4 @@ Summing up; LocalStack users can now have a granular view of their tests by plug
 
 Foresight brings the power of observability that we have for production workloads into the tests for LocalStack users. If you want to learn more about how the integration works, you can check the documentation here.
 
-**You can [signup for Thundra](http://start.thundra.io) and integrate your open source project for "free forever and with full functionality"**.
+**You can [signup for Thundra](https://start.thundra.io/signup?utm_source=LocalStack&utm_medium=GuestBlog) and integrate your open source project for "free forever and with full functionality"**.
