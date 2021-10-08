@@ -2,13 +2,13 @@
 
 ## Homepage
 title = "LocalStack"
-logo = "/images/localstack.png"
+logo = "/images/header-logo.svg"
 titleSeparator = "-"
 titleAddition = "A fully functional local cloud stack"
 description = "Develop and test your cloud apps offline"
 
 ## Open Graph + Twitter Cards
-images = ["/images/localstack.png"]
+images = ["/images/localstack.png", "/images/header-logo.svg"]
 twitterSite = "_localstack"
 twitterCreator = "_localstack"
 #facebookAuthor = "localstack"
