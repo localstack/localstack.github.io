@@ -7,7 +7,7 @@ draft: false
 images: []
 ---
 
-LocalStack comes in two flavors - as a free, open source **Community Edition**, and as a **Pro Edition** with extended features and support. See the table below for a comparison. If you need support for large organizations, please contact us for the **Enterprise Edition**.
+LocalStack comes in two flavors - as a free, open source **Community Edition**, and as a **Pro Edition** with extended features and support. See the table below for a comparison. If you need support for large organizations, please contact us for the **Enterprise Edition**. If you are a student or an educator, you can avail 6 months educational access to LocalStack through our [free educational license](https://localstack.notion.site/Free-Educational-Licenses-441d1788ac4149cabc7b9f1cc25642ba).
 
 We are strongly committed to our open source offering. Our philosophy is that today's best software is built by great people in an open collaboration, and therefore we will continue to contribute significantly to the Community Edition of LocalStack. If you are using LocalStack in your company (startup or enterprise), we only ask for a small contribution which helps support the future success and growth of the platform and its ecosystem.
 
