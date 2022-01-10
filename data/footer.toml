@@ -24,6 +24,10 @@ name = "LocalStack <i class=\"bi bi-stack\"></i>"
   url = "https://app.localstack.cloud"
 
   [[categories.entries]]
+  name = "Community"
+  url = "/community"
+
+  [[categories.entries]]
   name = "FAQ"
   url = "/faq"
 
