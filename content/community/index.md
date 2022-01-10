@@ -1,6 +1,6 @@
 ---
 title : "LocalStack Community"
-description: ""
+description: "Community Page for LocalStack to discover about our meetups, resources, contribution streams and how you can engage with the wider community."
 date: 2022-01-09T08:47:36+00:00
 lastmod: 2022-01-09T08:47:36+00:00
 draft: false
@@ -9,7 +9,7 @@ images: []
 
 The LocalStack community focuses on servicing the users, contributors and the open-source culture that has heralded our flagship open-source software! Our community works together on multiple fronts: filing issues and creating pull requests, providing community support to users, advocating for its adoption among the wider community, and helping us further innovate our project.
   
-The community page aims to serve our diverse contributors to discover ways in which they can involve with the rest of the community, stay up-to-date with the recent news and events, and discover how they can contribute to our projects.
+The community page aims to serve our diverse contributors to discover ways in which they can engage with the rest of the community, stay up-to-date with the recent news and events, and discover how they can contribute to our projects.
 
 
 ## Get involved
@@ -22,7 +22,7 @@ We have a vibrant discussion workspace on Slack which serves as the best place t
 
 We are also active on various Social media channels where you can reach out to us to share your general feedback, check our new events, announcements and engage with the rest of the community!
 
--   [LocalStack Slack workspace](https://localstack-community.slack.com/)
+-   [LocalStack Slack workspace](https://localstack-community.slack.com/) - If you don't have access yet, please send a request to [info@localstack.cloud][mailto:info@localstack.cloud].
 -   [LocalStack Twitter](https://twitter.com/_localstack)
 -   [LocalStack GitHub](https://github.com/localstack/)
 -   [LocalStack Stack Overflow](https://stackoverflow.com/questions/tagged/localstack)
