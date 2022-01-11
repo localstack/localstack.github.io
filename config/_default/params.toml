@@ -8,7 +8,7 @@ titleAddition = "A fully functional local cloud stack"
 description = "Develop and test your cloud apps offline"
 
 ## Open Graph + Twitter Cards
-images = ["/images/localstack.png", "/images/header-logo.svg"]
+images = ["/images/localstack.webp", "/images/header-logo.svg"]
 twitterSite = "_localstack"
 twitterCreator = "_localstack"
 #facebookAuthor = "localstack"
@@ -17,7 +17,7 @@ ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaLogo = "/images/localstack.png"
+schemaLogo = "/images/localstack.webp"
 schemaTwitter = "https://twitter.com/_localstack"
 schemaLinkedIn = "https://www.linkedin.com/"
 schemaGitHub = "https://github.com/localstack"

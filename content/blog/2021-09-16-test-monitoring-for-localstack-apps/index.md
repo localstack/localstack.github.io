@@ -4,7 +4,18 @@ description: "Developing Serverless Applications Locally with LocalStack and Deb
 lead: "Developing Serverless Applications Locally with LocalStack and Debugging Tests with Thundra Foresight. (Guest blog post by Oguzhan Ozdemir, Solutions Engineer @ Thundra)"
 date: 2021-09-16T13:10:00+02:00
 lastmod: 2021-09-16T13:10:00+02:00
-images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png", "image9.png"]
+images:
+  [
+    "image1.webp",
+    "image2.webp",
+    "image3.webp",
+    "image4.webp",
+    "image5.webp",
+    "image6.webp",
+    "image7.webp",
+    "image8.webp",
+    "image9.webp",
+  ]
 contributors: ["Oguzhan Ozdemir, Solutions Engineer @ Thundra"]
 ---
 
@@ -24,7 +35,7 @@ This is when Thundra comes to the rescue with Foresight for those who use LocalS
 
 Let’s talk about how we can get the best out of these two products. For this purpose, we’ve developed a small application. An application that’ll spawn multiple AWS services on your local machine with LocalStack and monitor your distributed architecture and its tests with Thundra Foresight.
 
-{{< img src="image8.png" >}}
+{{< img src="image8.webp" >}}
 
 What we’ve planned here is somewhat simple. An AWS Lambda function, let’s call this Lambda #1, with an HTTP endpoint to take a request then writes to an SQS queue for further processing and then writes the same request into a DynamoDB database for bookkeeping purposes. Then, that SQS queue will pass the incoming message to our processor Lambda, our Lamda #2.
 
@@ -33,7 +44,6 @@ Once the processing is successful, Lambda #2 will notify an SNS topic, which tri
 This might seem a lot, but all it does is pass the body of an HTTP request between different services and manipulate it along the way. This project is developed by Thundra’s Software Engineer [Tolga Takır](https://twitter.com/tolgatakir) and the source code is available in [our GitHub repository](https://github.com/thundra-io/thundra-demo-localstack-java). In there, you’ll find the documentation on how to run this project on your machine.
 
 After having all the requirements set up on our computer, we can simply run `make start` to spin up our application with LocalStack. This will take a couple of minutes, but once it’s completed, we’ll have our API running inside the LocalStack container.
-
 
 At this point, we can run the following command to see if our API is up and running.
 
@@ -105,31 +115,31 @@ but could not find the following element(s):
 
 Looks like our test has failed. By looking at the logs, I can tell that we didn’t get the `FINISHED` state in our collection. Let’s check Foresight and then click to our test to see if we can see what went wrong.
 
-{{< img src="image3.png" >}}
+{{< img src="image3.webp" >}}
 
 When you are on the test detail page, you can click the `Trace Map` button on the top right, it’ll open a window and will automatically redirect you to your invocations trace map. Here, we can see the whole flow, identical to what we’ve designed at the beginning of this post. We will also be able to tell where the error comes from.
 
-{{< img src="image9.png" >}}
+{{< img src="image9.webp" >}}
 
 The red arrow that goes from our Lambda #3 to DynamoDB means there is a problem there. If we click on that, we’ll see a trace chart and summary of this request.
 
-{{< img src="image1.png" >}}
+{{< img src="image1.webp" >}}
 
 Hmm... An `AmazonDynamoDBException` and a message that says everything fails. Let’s click on that up-arrow and see what’s the source of this.
 
-{{< img src="image4.png" >}}
+{{< img src="image4.webp" >}}
 
 It looks like our `addRequest` method has failed when saving the item into our DynamoDB database. Let’s see our trace map again. If we click the JUnit 5 node on our map, we’ll see the whole trace chart for our test.
 
-{{< img src="image2.png" >}}
+{{< img src="image2.webp" >}}
 
 On the right hand side of the screen, we see the original assertion error and it’s method marked as red on the trace chart. Let’s click to that second red row.
 
-{{< img src="image7.png" >}}
+{{< img src="image7.webp" >}}
 
 This opened our debugging window again. Now, let’s zoom in on that and play the execution until the end.
 
-{{< img src="image5.png" >}}
+{{< img src="image5.webp" >}}
 
 We can see that our `getResponse` list doesn’t have the `FINISHED` state as expected.
 
@@ -137,7 +147,7 @@ Now, we have some idea where our error originated and what variables were presen
 
 Now, let’s see how we can fix this. But, as you might have guessed, there isn’t any bug in the code and the error is made up.
 
-*Or is it?*
+_Or is it?_
 
 #### Chaos is the Answer
 
@@ -149,7 +159,7 @@ Purposefully injecting a bug, an exception, or latency might seem counterintuiti
 
 So, that’s what we did here. If you go to the following file, you’ll see that we’ve implemented a class for chaos injection and injected an error to our Lambda #3.
 
-{{< img src="image6.png" >}}
+{{< img src="image6.webp" >}}
 
 To fix the error, we can simply comment out these lines. Let’s run the tests again and see our tests become successful.
 
