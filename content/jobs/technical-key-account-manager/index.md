@@ -1,7 +1,7 @@
 ---
 title: "Technical Key Account Manager"
-description: "Technical Key Account Manager to help establish a strong relationship with our customers."
-lead: "Technical Key Account Manager to help establish a strong relationship with our customers."
+description: "Entrepreneurial minded Technical Key Account Manager who thrives on establishing a strong relationship with our global customer base."
+lead: "Entrepreneurial minded Technical Key Account Manager who thrives on establishing a strong relationship with our global customer base."
 date: 2022-01-13T08:40:06+02:00
 lastmod: 2022-01-13T08:40:06+02:00
 draft: false
