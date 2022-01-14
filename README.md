@@ -1,5 +1,4 @@
-LocalStack Website
-==================
+# LocalStack Website
 
 The website uses [Hugo](https://github.com/gohugoio/hugo) and the [doks theme](https://github.com/h-enk/doks).
 
@@ -35,3 +34,8 @@ and navigate to http://localhost:1313
 
 Pushing to `main` will trigger a github actions workflow that deploys the website via the `gh-pages` branch to github pages.
 
+## Best Practices
+
+Please follow these best practices here:
+
+- Every image should be of `.webp` form apart from `.svg` and `.gif` and favicons images. So make sure to use the `.webp` version of the image.
