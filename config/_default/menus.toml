@@ -25,6 +25,11 @@
   url = "https://app.localstack.cloud"
   weight = 30
 
+[[main]]
+  name = "<i class=\"bi bi-window\"></i> Cockpit"
+  url = "/cockpit/"
+  weight = 40
+
 
 [[social]]
   name = "Twitter"
