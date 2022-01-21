@@ -27,7 +27,7 @@
 
 [[main]]
   name = "<i class=\"bi bi-window\"></i> Cockpit"
-  url = "/cockpit/"
+  url = "/products/cockpit/"
   weight = 40
 
 
