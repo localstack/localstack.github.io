@@ -6,6 +6,7 @@ date: 2021-09-16T13:10:00+02:00
 lastmod: 2021-09-16T13:10:00+02:00
 images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png", "image9.png"]
 contributors: ["Oguzhan Ozdemir, Solutions Engineer @ Thundra"]
+tags: ["showcase"]
 ---
 
 LocalStack gives developers the freedom to develop their cloud applications locally (even offline) - enabling a highly efficient dev&amp;test loop. It also helps prevent scary cloud bills at the end of every month! LocalStack has an amazing community of users, contributors, and supporters - and generally demonstrates a very strong commitment to supporting open source.

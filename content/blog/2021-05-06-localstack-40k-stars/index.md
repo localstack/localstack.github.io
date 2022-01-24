@@ -7,6 +7,7 @@ lastmod: 2021-05-06T14:48:49+02:00
 draft: false
 images: ["xkcd-deploying-to-cloud.png", "first-commit.png"]
 contributors: ["LocalStack Team"]
+tags: ["news"]
 ---
 
 While cloud environments offer great characteristics for production
