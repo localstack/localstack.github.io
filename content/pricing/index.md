@@ -88,12 +88,6 @@ We are strongly committed to our open source offering. Our philosophy is that to
       <td>on demand support</td>
     </tr>
     <tr>
-      <td class="left">Multi-Region Support</td>
-      <td>-</td>
-      <td>&#x2714;</td>
-      <td>&#x2714;</td>
-    </tr>
-    <tr>
       <td class="left">Test Report Dashboards</td>
       <td>-</td>
       <td>&#x2714; &#42;</td>
