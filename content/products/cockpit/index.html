@@ -25,7 +25,7 @@ buttons:
                 <a href="https://docs.localstack.cloud/" class="btn btn-outline-primary btn-lg mr-2">
                     Learn more
                 </a>
-                <a class="btn btn-primary btn-lg" data-bs-toggle="modal" href="#downloadModalToggle" role="button">
+                <a class="btn btn-primary btn-lg" data-bs-toggle="modal" href="#cockpitDownloadModal" role="button">
                     Download
                 </a>
             </div>
@@ -86,31 +86,32 @@ buttons:
     </div>
 </section>
 
-<div class="modal fade" id="downloadModalToggle" aria-hidden="true" aria-labelledby="downloadModalToggleLabel" tabindex="-1">
+<div class="modal fade" id="cockpitDownloadModal" aria-hidden="true" aria-labelledby="cockpitDownloadModalLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="downloadModalToggleLabel">
+                <h5 class="modal-title" id="cockpitDownloadModalLabel">
                     Download LocalStack Cockpit
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="http://localhost:5000/download">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Platform</span>
+                <form method="POST" action="{{ .Site.Params.localStackApiEndpoint }}" id="cockpitDownloadForm">
+                    <div class="mb-3">
+                        <span class="form-label">Platform: </span>
+                        <div class="input-group">
+                            <input value="cockpit/v0.1.0/LocalStack Desktop Setup 0.1.0.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="artifact-windows"><i class="bi bi-windows"></i> Windows</label>
 
-                        <input value="cockpit/v0.1.0/LocalStack Desktop Setup 0.1.0.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
-                        <label class="btn btn-outline-primary" for="artifact-windows"><i class="bi bi-windows"></i> Windows</label>
+                            <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0-mac.zip" type="radio" class="btn-check" name="artifact" id="artifact-mac-intel" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="artifact-mac-intel"><i class="bi bi-apple"></i> Mac (Intel)</label>
 
-                        <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0-mac.zip" type="radio" class="btn-check" name="artifact" id="artifact-mac-intel" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="artifact-mac-intel"><i class="bi bi-apple"></i> Mac (Intel)</label>
+                            <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0-arm64-mac.zip" type="radio" class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="artifact-mac-m1"><i class="bi bi-apple"></i> Mac (M1)</label>
 
-                        <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0-arm64-mac.zip" type="radio" class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="artifact-mac-m1"><i class="bi bi-apple"></i> Mac (M1)</label>
-
-                        <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0.AppImage" type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="artifact-linux">Linux (AppImage)</label>
+                            <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0.AppImage" type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="artifact-linux">Linux (AppImage)</label>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Please enter your email address, so we can send you a download link.</label>
@@ -121,25 +122,41 @@ buttons:
                         <div id="email-help" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Download</button>
+                        <button type="submit" class="btn btn-primary">Send download link</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="downloadModalToggle2" aria-hidden="true" aria-labelledby="downloadModalToggleLabel2" tabindex="-1">
+<div class="modal fade" id="cockpitDownloadThanksModal" aria-hidden="true" aria-labelledby="cockpitDownloadThanksModalLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="downloadModalToggleLabel2">Modal 2</h5>
+                <h5 class="modal-title" id="cockpitDownloadThanksModalLabel">Enjoy LocalStack Cockpit!</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Hide this modal and show the first with the button below.
+                <p>We have sent a download link to your email address.<br>(Please check you junk folder.)</p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-target="#downloadModalToggle" data-bs-toggle="modal">Back to first</button>
+                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Got it</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="cockpitErrorModal" aria-hidden="true" aria-labelledby="cockpitErrorModalModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cockpitErrorModalLabel">Error</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="cockpitErrorModalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
             </div>
         </div>
     </div>
