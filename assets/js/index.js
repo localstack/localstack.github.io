@@ -167,3 +167,59 @@ if (referenceChildren != null) {
     icon.classList.remove('bi-chevron-compact-left')
   })
 }
+
+(function () {
+  var cockpitDownloadModalEl = document.getElementById('cockpitDownloadModal');
+  if (cockpitDownloadModalEl == null) return;
+  var cockpitDownloadModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadModalEl);
+
+  var cockpitDownloadThanksModalEl = document.getElementById('cockpitDownloadThanksModal');
+  var cockpitDownloadThanksModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadThanksModalEl);
+
+  var cockpitErrorModalEl = document.getElementById('cockpitErrorModal');
+  var cockpitErrorModal = bootstrap.Modal.getOrCreateInstance(cockpitErrorModalEl);
+  var showError = (title, message) => {
+    cockpitErrorModalEl.querySelector('#cockpitErrorModalLabel').textContent = title;
+    cockpitErrorModalEl.querySelector('#cockpitErrorModalMessage').textContent = message;
+    cockpitErrorModal.show();
+  };
+
+  var cockpitDownloadFormEl = document.getElementById('cockpitDownloadForm');
+  cockpitDownloadFormEl.onsubmit = function (event) {
+    event.preventDefault();
+
+    var artifactRadios = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
+    var selectedArtifactRadio = Array.from(artifactRadios).find(radio => radio.checked);
+
+    var emailField = cockpitDownloadFormEl.querySelector('[name="email"]');
+
+    var requestBody = {
+      artifact: selectedArtifactRadio.value,
+      email: emailField.value,
+    }
+
+    fetch('{{ .Site.Params.localStackApiEndpoint -}}', {
+      method: 'POST',
+      body: JSON.stringify(requestBody),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+    }).then(response => {
+      return response.json().then(data => [response.status, data]);
+    }).then(([status, data]) => {
+      if (status === 200) {
+        cockpitDownloadModal.hide();
+        cockpitDownloadThanksModal.show();
+      } else if (status === 400) {
+        alert('Error occurred: ' + data.message);
+      } else if (status === 404) {
+        cockpitDownloadModal.hide();
+        showError("Error: " + data.message, "This is probably a problem on our side. Please contact us and let us know. Thanks!");
+      } else {
+        cockpitDownloadModal.hide();
+        showError("Unknown error occurred", "Please contact us and let us know. Thanks!");
+      }
+    });
+  }
+})();
