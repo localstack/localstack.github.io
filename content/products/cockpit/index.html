@@ -25,7 +25,7 @@ buttons:
                 <a href="https://docs.localstack.cloud/" class="btn btn-outline-primary btn-lg mr-2">
                     Learn more
                 </a>
-                <a href="https://github.com/localstack/cockpit/releases" class="btn btn-primary btn-lg">
+                <a class="btn btn-primary btn-lg" data-bs-toggle="modal" href="#downloadModalToggle" role="button">
                     Download
                 </a>
             </div>
@@ -85,3 +85,62 @@ buttons:
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="downloadModalToggle" aria-hidden="true" aria-labelledby="downloadModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadModalToggleLabel">
+                    Download LocalStack Cockpit
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="http://localhost:5000/download">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Platform</span>
+
+                        <input value="cockpit/v0.1.0/LocalStack Desktop Setup 0.1.0.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="artifact-windows"><i class="bi bi-windows"></i> Windows</label>
+
+                        <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0-mac.zip" type="radio" class="btn-check" name="artifact" id="artifact-mac-intel" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="artifact-mac-intel"><i class="bi bi-apple"></i> Mac (Intel)</label>
+
+                        <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0-arm64-mac.zip" type="radio" class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="artifact-mac-m1"><i class="bi bi-apple"></i> Mac (M1)</label>
+
+                        <input value="cockpit/v0.1.0/LocalStack Desktop-0.1.0.AppImage" type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="artifact-linux">Linux (AppImage)</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Please enter your email address, so we can send you a download link.</label>
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="email-help" required>
+                        </div>
+                        <div id="email-help" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Download</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="downloadModalToggle2" aria-hidden="true" aria-labelledby="downloadModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadModalToggleLabel2">Modal 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Hide this modal and show the first with the button below.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#downloadModalToggle" data-bs-toggle="modal">Back to first</button>
+            </div>
+        </div>
+    </div>
+</div>
