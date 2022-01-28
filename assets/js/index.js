@@ -184,6 +184,9 @@ if (referenceChildren != null) {
     cockpitErrorModal.show();
   };
 
+  var cockpitDownloadFormAcceptTCEl = document.getElementById('acceptTC');
+  var cockpitDownloadFormAcceptPrivacyPolicyEl = document.getElementById('acceptPrivacyPolicy');
+
   var cockpitDownloadFormEl = document.getElementById('cockpitDownloadForm');
   cockpitDownloadFormEl.onsubmit = function (event) {
     event.preventDefault();
@@ -193,9 +196,20 @@ if (referenceChildren != null) {
 
     var emailField = cockpitDownloadFormEl.querySelector('[name="email"]');
 
+    if(!cockpitDownloadFormAcceptTCEl.checked) {
+      alert('Please accept our T&C.');
+      return;
+    }
+    if(!cockpitDownloadFormAcceptPrivacyPolicyEl.checked) {
+      alert('Please accept our Privacy Policy.');
+      return;
+    }
+
     var requestBody = {
       artifact: selectedArtifactRadio.value,
       email: emailField.value,
+      acceptTC: cockpitDownloadFormAcceptTCEl.checked,
+      acceptPrivacyPolicy: cockpitDownloadFormAcceptPrivacyPolicyEl.checked
     }
 
     fetch('{{ .Site.Params.localStackApiEndpoint -}}', {
