@@ -1,9 +1,4 @@
 [[main]]
-  name = "Features"
-  url = "/features/"
-  weight = 1
-
-[[main]]
   name = "Pricing"
   url = "/pricing/"
   weight = 5
@@ -25,11 +20,30 @@
   url = "https://app.localstack.cloud"
   weight = 30
 
-[[main]]
-  name = "<i class=\"bi bi-window\"></i> Cockpit"
-  url = "/products/cockpit/"
-  weight = 40
+[[products]]
+  name = "LocalStack Community Edition"
+  url = "/features/"
+  weight = 10
 
+[[products]]
+  name = "LocalStack Pro Edition"
+  url = "/features/"
+  weight = 20
+
+[[products]]
+  name = "LocalStack Enterprise"
+  url = "/features/"
+  weight = 25
+
+[[products]]
+  name = "LocalStack App"
+  url = "https://app.localstack.cloud"
+  weight = 30
+
+[[products]]
+  name = "LocalStack Cockpit"
+  url = "/products/cockpit"
+  weight = 40
 
 [[social]]
   name = "Twitter"

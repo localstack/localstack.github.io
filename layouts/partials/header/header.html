@@ -26,6 +26,18 @@
     <div class="collapse navbar-collapse order-4 order-md-1">
       <ul class="navbar-nav main-nav me-auto order-5 order-md-2">
         {{- $current := . -}}
+        <!-- TODO: generalize into a dropdown menu for hugo -->
+        <li class="nav-item dropdown">
+          <!-- TODO: determine active state based on whether a child is selected -->
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="productsDropdown">
+            {{ range .Site.Menus.products -}}
+              <a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+            {{ end -}}
+          </div>
+        </li>
         {{ range .Site.Menus.main -}}
           {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
           {{- $active = or $active (eq .Name $current.Title) -}}
