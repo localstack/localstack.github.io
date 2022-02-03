@@ -22,7 +22,7 @@ buttons:
         </div>
         <div class="row justify-content-center text-center">
             <div class="col-12">
-                <a href="https://docs.localstack.cloud/" class="btn btn-outline-primary btn-lg mr-2">
+                <a href="https://docs.localstack.cloud/getting-started/cockpit" class="btn btn-outline-primary btn-lg mr-2">
                     Learn more
                 </a>
                 <a class="btn btn-primary btn-lg" data-bs-toggle="modal" href="#cockpitDownloadModal" role="button">
@@ -98,6 +98,12 @@ buttons:
             <div class="modal-body">
                 <form method="POST" action="{{ .Site.Params.localStackApiEndpoint }}" id="cockpitDownloadForm">
                     <div class="mb-3">
+                        <label for="version" class="form-label"><strong>Version:</strong></label>
+                      <select class="form-control" id="version">
+                        <option selected>Latest: v0.1.0 (beta)</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
                         <span class="form-label">Platform: </span>
                         <div class="input-group">
                             <input value="cockpit/v0.1.0/LocalStack Desktop Setup 0.1.0.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
@@ -121,16 +127,16 @@ buttons:
                         </div>
                         <div id="email-help" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="acceptTC">
-                        <label class="form-check-label" for="acceptTC">
-                            BY DOWNLOADING OR USING THE SOFTWARE YOU EXPRESSLY ACCEPT AND AGREE TO THE TERMS AND CONDITIONS  STATED AT <a href="https://localstack.cloud/terms/" target="_blank">HTTPS://LOCALSTACK.CLOUD/TERMS/</a> . IF YOU ARE AN INDIVIDUAL AGREEING TO THE TERMS OF THIS AGREEMENT ON BEHALF OF AN ENTITY, SUCH AS YOUR EMPLOYER, YOU REPRESENT THAT YOU HAVE THE LEGAL AUTHORITY TO BIND THAT ENTITY AND “YOU” AND “YOUR” SHALL REFER HEREIN TO SUCH ENTITY. IF YOU DO NOT HAVE SUCH AUTHORITY, OR IF YOU DO NOT AGREE WITH ALL THE TERMS OF THIS AGREEMENT, YOU MUST NOT DOWNLOAD, INSTALL, DEPLOY, OR USE THE SOFTWARE.
+                    <div class="form-check form-control-sm mb-1">
+                        <input class="form-check-input" type="checkbox" value="" id="acceptPrivacyPolicy" required>
+                        <label class="form-check-label" for="acceptPrivacyPolicy">
+                            I have read and accept the <a href="/terms/">Terms and Conditions</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.
                         </label>
                     </div>
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="acceptPrivacyPolicy">
-                        <label class="form-check-label" for="acceptPrivacyPolicy">
-                            I have read and accept the <a href="https://localstack.cloud/privacy-policy/" target="_blank">Privacy Policy</a>.
+                    <div class="form-check form-control-sm mb-3">
+                        <input class="form-check-input" type="checkbox" value="" name="newsletter" id="newsletter">
+                        <label class="form-check-label" for="newsletter">
+                            I would like to receive occasional product updates for LocalStack.
                         </label>
                     </div>
                     <div class="mb-3">
