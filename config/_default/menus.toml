@@ -1,7 +1,13 @@
+# TODO: add Solutions section
+# [[main]]
+#   name = "Solutions"
+#   url = "/solutions/"
+#   weight = 5
+
 [[main]]
   name = "Pricing"
   url = "/pricing/"
-  weight = 5
+  weight = 7
 
 # Redirect to /docs
 # GH pages redirects to docs.localstack.cloud automatically
@@ -21,18 +27,13 @@
   weight = 30
 
 [[products]]
-  name = "LocalStack Community Edition"
-  url = "/features/"
-  weight = 10
-
-[[products]]
-  name = "LocalStack Pro Edition"
-  url = "/features/"
+  name = "LocalStack Core Emulation"
+  url = "/products/emulation/"
   weight = 20
 
 [[products]]
-  name = "LocalStack Enterprise"
-  url = "/features/"
+  name = "LocalStack Team/Enterprise"
+  url = "/products/enterprise/"
   weight = 25
 
 [[products]]
