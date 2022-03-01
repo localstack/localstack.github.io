@@ -27,6 +27,7 @@
     "lint:scripts": "eslint assets/js assets/lambda config",
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint:markdown": "markdownlint *.md content/**/*.md",
+    "write-blog": "node ./scripts/write-blog.js",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
     "server": "hugo server",
@@ -63,6 +64,9 @@
     "shx": "^0.3.3",
     "standard-version": "^9.2",
     "stylelint": "^13.12",
-    "stylelint-config-standard": "^21.0"
+    "stylelint-config-standard": "^21.0",
+    "dedent": "^0.7.0",
+    "inquirer": "^8.2.0",
+    "moment": "^2.29.1"
   }
 }
