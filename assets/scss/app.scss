@@ -6,7 +6,7 @@
 
 /** Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
-@import 'bootstrap-icons/font/bootstrap-icons.scss';
+// @import 'bootstrap-icons/font/bootstrap-icons.scss';
 
 /** Import highlight.js */
 // @import "highlight.js/scss/dracula";
@@ -28,10 +28,13 @@
 @import "components/images";
 @import "components/search";
 @import "components/tables";
+
 @import "layouts/footer";
 @import "layouts/header";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/sidebar";
+
+@import "pages/pricing";
 
 @import "vendor/misc";
