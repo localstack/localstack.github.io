@@ -123,6 +123,6 @@ LocalStack comes in multiple flavors - as a free, open source **Community Editio
 </p>
 
 <p style="font-size: 0.8rem">
-  &#42;&#42;&#42; Monthly package starts at &euro; 20 for 200 build credits, followed by &euro; 0.10 / build. Assuming one individual startup of the LocalStack CI Docker container per CI build. All CI systems, like CircleCI, Jenkins, Github Actions, etc. are supported, and each LocalStack CI Docker container startup consumes one CI build credit.
+  &#42;&#42;&#42; Monthly package starts at &euro; 20 for 200 build credits. Assuming one individual startup of the LocalStack CI Docker container per CI build. All CI systems (CircleCI, Github Actions, Gitlab, Jenkins, etc.) are supported, and each LocalStack CI Docker container startup consumes one CI build credit.
 </p>
 </div>
