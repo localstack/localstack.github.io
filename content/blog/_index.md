@@ -10,4 +10,5 @@ images: []
 <div class="blog-tags">
   <a href="/tags/news" class="btn btn-outline-primary">News</a>
   <a href="/tags/showcase" class="btn btn-outline-primary">Showcase</a>
+  <a href="/tags/tutorial" class="btn btn-outline-primary">Tutorial</a>
 </div>
