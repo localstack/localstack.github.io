@@ -1,6 +1,6 @@
 # LocalStack
-localStackApiEndpoint = "http://localhost:5000/download"
-#localStackApiEndpoint = "https://api.localstack.cloud/download"
+#localStackApiEndpoint = "http://localhost:5000/download"
+localStackApiEndpoint = "https://api.localstack.cloud/download"
 
 
 # Meta Data for SEO
