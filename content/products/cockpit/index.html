@@ -100,22 +100,22 @@ buttons:
                     <div class="mb-3">
                         <label for="version" class="form-label"><strong>Version:</strong></label>
                       <select class="form-control" id="version">
-                        <option selected>Latest: v0.1.0 (beta)</option>
+                        <option value="v0.1.1" selected>Latest: v0.1.1 (beta)</option>
                       </select>
                     </div>
                     <div class="mb-3">
                         <span class="form-label">Platform: </span>
                         <div class="input-group">
-                            <input value="cockpit/v0.1.0/LocalStack Cockpit 0.1.0.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
+                            <input data-platform="Win32" value="cockpit/v0.1.1/LocalStack Cockpit 0.1.1.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
                             <label class="btn btn-outline-primary" for="artifact-windows"><i class="bi bi-windows"></i> Windows</label>
 
-                            <input value="cockpit/v0.1.0/LocalStack Cockpit-0.1.0.dmg" type="radio" class="btn-check" name="artifact" id="artifact-mac-intel" autocomplete="off">
+                            <input data-platform="MacIntel" value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1.dmg" type="radio" class="btn-check" name="artifact" id="artifact-mac-intel" autocomplete="off">
                             <label class="btn btn-outline-primary" for="artifact-mac-intel"><i class="bi bi-apple"></i> Mac (Intel)</label>
 
-                            <input value="cockpit/v0.1.0/LocalStack Cockpit-0.1.0-arm64.dmg" type="radio" class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
+                            <input value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1-arm64.dmg" type="radio" class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
                             <label class="btn btn-outline-primary" for="artifact-mac-m1"><i class="bi bi-apple"></i> Mac (M1)</label>
 
-                            <input value="cockpit/v0.1.0/LocalStack Cockpit-0.1.0.AppImage" type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
+                            <input data-platform="Linux.*" value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1.AppImage" type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
                             <label class="btn btn-outline-primary" for="artifact-linux">Linux (AppImage)</label>
                         </div>
                     </div>
