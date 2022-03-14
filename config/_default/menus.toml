@@ -41,10 +41,10 @@
   url = "https://app.localstack.cloud"
   weight = 30
 
-# [[products]]
-#   name = "LocalStack Cockpit"
-#   url = "/products/cockpit"
-#   weight = 40
+ [[products]]
+   name = "LocalStack Cockpit"
+   url = "/products/cockpit"
+   weight = 40
 
 [[social]]
   name = "Twitter"
