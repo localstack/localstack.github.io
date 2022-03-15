@@ -151,10 +151,10 @@ if (suggestions != null) {
 
 }
 
-var referenceChildren = document.getElementById('Reference-children')
+const referenceChildren = document.getElementById('Reference-children')
 if (referenceChildren != null) {
 
-  var referenceCollapseBtn = document.getElementById('Reference-btn')
+  const referenceCollapseBtn = document.getElementById('Reference-btn')
   referenceChildren.addEventListener('hide.bs.collapse', function () {
     const icon = referenceCollapseBtn.getElementsByTagName('i')[0]
     icon.classList.add('bi-chevron-compact-left')
@@ -168,33 +168,50 @@ if (referenceChildren != null) {
   })
 }
 
+function preSelectPlatformArtifact(artifacts) {
+  const platform = navigator.platform;
+  artifacts[0].checked = false;
+  for (let i = 0; i < artifacts.length; i++) {
+    const platformPattern = artifacts[i].getAttribute('data-platform');
+    if (platform.match(platformPattern)) {
+      artifacts[i].checked = true;
+      return;
+    }
+  }
+  artifacts[0].checked = true;
+}
+
 (function () {
-  var cockpitDownloadModalEl = document.getElementById('cockpitDownloadModal');
+  const cockpitDownloadModalEl = document.getElementById('cockpitDownloadModal');
   if (cockpitDownloadModalEl == null) return;
-  var cockpitDownloadModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadModalEl);
+  const cockpitDownloadModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadModalEl);
 
-  var cockpitDownloadThanksModalEl = document.getElementById('cockpitDownloadThanksModal');
-  var cockpitDownloadThanksModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadThanksModalEl);
+  const cockpitDownloadThanksModalEl = document.getElementById('cockpitDownloadThanksModal');
+  const cockpitDownloadThanksModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadThanksModalEl);
 
-  var cockpitErrorModalEl = document.getElementById('cockpitErrorModal');
-  var cockpitErrorModal = bootstrap.Modal.getOrCreateInstance(cockpitErrorModalEl);
-  var showError = (title, message) => {
+  const cockpitErrorModalEl = document.getElementById('cockpitErrorModal');
+  const cockpitErrorModal = bootstrap.Modal.getOrCreateInstance(cockpitErrorModalEl);
+  const showError = (title, message) => {
     cockpitErrorModalEl.querySelector('#cockpitErrorModalLabel').textContent = title;
     cockpitErrorModalEl.querySelector('#cockpitErrorModalMessage').textContent = message;
     cockpitErrorModal.show();
   };
 
-  var cockpitDownloadFormEl = document.getElementById('cockpitDownloadForm');
+  const cockpitDownloadFormEl = document.getElementById('cockpitDownloadForm');
+
+  const artifacts = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
+  preSelectPlatformArtifact(artifacts);
+
   cockpitDownloadFormEl.onsubmit = function (event) {
     event.preventDefault();
 
-    var artifactRadios = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
-    var selectedArtifactRadio = Array.from(artifactRadios).find(radio => radio.checked);
+    const artifactRadios = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
+    const selectedArtifactRadio = Array.from(artifactRadios).find(radio => radio.checked);
 
-    var emailField = cockpitDownloadFormEl.querySelector('[name="email"]');
-    var newsletterField = cockpitDownloadFormEl.querySelector('[name="newsletter"]');
+    const emailField = cockpitDownloadFormEl.querySelector('[name="email"]');
+    const newsletterField = cockpitDownloadFormEl.querySelector('[name="newsletter"]');
 
-    var requestBody = {
+    const requestBody = {
       artifact: selectedArtifactRadio.value,
       email: emailField.value,
       newsletter: newsletterField.checked ? "1" : "0"
@@ -217,7 +234,7 @@ if (referenceChildren != null) {
         alert('Error occurred: ' + data.message);
       } else if (status === 404) {
         cockpitDownloadModal.hide();
-        showError("Error: " + data.message, "This is probably a problem on our side. Please contact us and let us know. Thanks!");
+        showError("Error: " + data.message, "This is probably a problem on our side, sorry! Please contact us and let us know at info@localstack.cloud");
       } else {
         cockpitDownloadModal.hide();
         showError("Unknown error occurred", "Please contact us and let us know. Thanks!");
