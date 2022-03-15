@@ -151,10 +151,10 @@ if (suggestions != null) {
 
 }
 
-const referenceChildren = document.getElementById('Reference-children')
+var referenceChildren = document.getElementById('Reference-children')
 if (referenceChildren != null) {
 
-  const referenceCollapseBtn = document.getElementById('Reference-btn')
+  var referenceCollapseBtn = document.getElementById('Reference-btn')
   referenceChildren.addEventListener('hide.bs.collapse', function () {
     const icon = referenceCollapseBtn.getElementsByTagName('i')[0]
     icon.classList.add('bi-chevron-compact-left')
@@ -182,36 +182,36 @@ function preSelectPlatformArtifact(artifacts) {
 }
 
 (function () {
-  const cockpitDownloadModalEl = document.getElementById('cockpitDownloadModal');
+  var cockpitDownloadModalEl = document.getElementById('cockpitDownloadModal');
   if (cockpitDownloadModalEl == null) return;
-  const cockpitDownloadModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadModalEl);
+  var cockpitDownloadModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadModalEl);
 
-  const cockpitDownloadThanksModalEl = document.getElementById('cockpitDownloadThanksModal');
-  const cockpitDownloadThanksModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadThanksModalEl);
+  var cockpitDownloadThanksModalEl = document.getElementById('cockpitDownloadThanksModal');
+  var cockpitDownloadThanksModal = bootstrap.Modal.getOrCreateInstance(cockpitDownloadThanksModalEl);
 
-  const cockpitErrorModalEl = document.getElementById('cockpitErrorModal');
-  const cockpitErrorModal = bootstrap.Modal.getOrCreateInstance(cockpitErrorModalEl);
-  const showError = (title, message) => {
+  var cockpitErrorModalEl = document.getElementById('cockpitErrorModal');
+  var cockpitErrorModal = bootstrap.Modal.getOrCreateInstance(cockpitErrorModalEl);
+  var showError = (title, message) => {
     cockpitErrorModalEl.querySelector('#cockpitErrorModalLabel').textContent = title;
     cockpitErrorModalEl.querySelector('#cockpitErrorModalMessage').textContent = message;
     cockpitErrorModal.show();
   };
 
-  const cockpitDownloadFormEl = document.getElementById('cockpitDownloadForm');
+  var cockpitDownloadFormEl = document.getElementById('cockpitDownloadForm');
 
-  const artifacts = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
+  var artifacts = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
   preSelectPlatformArtifact(artifacts);
 
   cockpitDownloadFormEl.onsubmit = function (event) {
     event.preventDefault();
 
-    const artifactRadios = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
-    const selectedArtifactRadio = Array.from(artifactRadios).find(radio => radio.checked);
+    var artifactRadios = cockpitDownloadFormEl.querySelectorAll('[name="artifact"]');
+    var selectedArtifactRadio = Array.from(artifactRadios).find(radio => radio.checked);
 
-    const emailField = cockpitDownloadFormEl.querySelector('[name="email"]');
-    const newsletterField = cockpitDownloadFormEl.querySelector('[name="newsletter"]');
+    var emailField = cockpitDownloadFormEl.querySelector('[name="email"]');
+    var newsletterField = cockpitDownloadFormEl.querySelector('[name="newsletter"]');
 
-    const requestBody = {
+    var requestBody = {
       artifact: selectedArtifactRadio.value,
       email: emailField.value,
       newsletter: newsletterField.checked ? "1" : "0"
