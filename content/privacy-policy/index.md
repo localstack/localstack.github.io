@@ -131,6 +131,24 @@ Our Service does not address anyone under the age of 18. We do not knowingly col
 
 If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
 
+## Your Rights
+
+As set out in locally applicable Personal Data protection law, You may have:
+
+* **The right to access** You may have the right to obtain from Us a confirmation as to whether or not Personal Data concerning You are being processed, and, where that is the case, to request access to Your Personal Data. However, this is not an absolute right and the interests of other individuals may restrict Your right of access. Further, You may have the right to obtain a copy of Your Personal Data undergoing processing. For additional copies requested, We may charge a reasonable fee based on administrative costs.
+
+* **The right to rectification** You may have the right to obtain from Us the rectification of inaccurate Personal Data. Depending on the purposes of the processing, You may have the right to have incomplete Personal Data made complete, in particular by providing a supplementary statement.
+
+* **The right to erasure** Under certain circumstances, You may have the right to require Us to delete Your Personal Data.
+
+* **The right to restrict processing** Under certain circumstances, You may have the right to require Us to restrict the processing of Your Personal Data. In this case, the respective Personal Data will be marked and may only be processed by Us for certain purposes.
+
+* **The right to object to processing** Under certain circumstances, You may have the right to object, on grounds relating to their particular situation, at any time to the processing of Your Personal Data by Us and We can be required to no longer process Your Personal Data.
+
+* **The right to data portability** Under certain circumstances, You may have the right to receive the Personal Data concerning You, which You have provided to Us, in a structured, commonly used, and machine-readable format, and to transmit these Personal Data to another entity.
+
+If You make a request, we have one month to respond to You. If You would like to exercise any of these rights, please contact Us at our email: info@localstack.cloud
+
 ## Links to Other Websites
 
 Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
@@ -143,5 +161,9 @@ We may update our Privacy Policy from time to time. We will notify You of any ch
 
 You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
 
+## How to contact Us
+
+If you have any questions or comments about this Privacy Policy or Our privacy practices, you can contact Us at any time at info@localstack.cloud
+
 ---
-Last updated: December, 2019 (2019.v1)
+Last updated: March, 2022 (2022.v1)
