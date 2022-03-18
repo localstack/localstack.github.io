@@ -9,7 +9,7 @@ images: ["localstack-cockpit-start.gif", "localstack-cockpit-logs.png"]
 tags: ["news"]
 ---
 
-{{< img-simple src="localstack-cockpit-banner.png" >}}
+{{< img src="localstack-cockpit-banner.png" >}}
 
 The new [LocalStack Cockpit](https://localstack.cloud/products/cockpit/) is now available. LocalStack Cockpit is a fully-integrated desktop experience for our LocalStack users. It allows our users to control, access, and manage LocalStack with a click of a button. No matter if you are a seasoned LocalStack user or just starting up to use LocalStack, Cockpit helps you use LocalStack more effectively!
 
@@ -17,7 +17,7 @@ The new [LocalStack Cockpit](https://localstack.cloud/products/cockpit/) is now 
 
 You can now download the LocalStack Cockpit from our [website](https://localstack.cloud) by signing up for our v0.1.0 beta release. You can choose the platform you would like to try LocalStack Cockpit on and enter the email address so that we can send you the download link. After downloading LocalStack Cockpit, you can get started with running it on your machine and increase your development productivity.
 
-{{< img-simple src="localstack-cockpit-start.gif" >}}
+{{< img src="localstack-cockpit-start.gif" >}}
 
 Here are some things to look out for:
 
@@ -28,7 +28,7 @@ Here are some things to look out for:
 
 Navigate to our [documentation](https://docs.localstack.cloud/get-started/cockpit/) to better understand how to use LocalStack Cockpit.
 
-{{< img-simple src="localstack-cockpit-logs.png" >}}
+{{< img src="localstack-cockpit-logs.png" >}}
 
 ## What's next?
 
