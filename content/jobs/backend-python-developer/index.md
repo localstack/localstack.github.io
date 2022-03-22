@@ -7,6 +7,7 @@ lastmod: 2021-04-29T13:40:06+02:00
 draft: false
 weight: 50
 images: []
+department: "Engineering"
 ---
 
 <h4 id="backend-dev">Backend/Python Developer</h4>

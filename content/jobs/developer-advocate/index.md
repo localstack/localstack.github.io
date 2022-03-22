@@ -7,6 +7,7 @@ lastmod: 2021-08-03T13:40:06+02:00
 draft: false
 weight: 50
 images: []
+department: "Engineering"
 ---
 
 <h4 id="backend-dev">Open Source Developer Advocate / DevRel Engineer</h4>

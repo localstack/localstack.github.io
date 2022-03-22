@@ -7,6 +7,7 @@ lastmod: 2022-01-13T08:40:06+02:00
 draft: false
 weight: 50
 images: []
+department: "Customer success"
 ---
 
 ### About You
@@ -16,7 +17,7 @@ If that’s you, you may be the driving force we’re looking for.
 
 ### About LocalStack
 
-We are a young, fast-growing startup, headquartered in Zurich, Switzerland, with a development office in Vienna, Austria and remote team members from around the world. At LocalStack, we’re building world-class tooling to support highly efficient dev&test loops for cloud application developers. Our core product is the LocalStack cloud emulator - a light-weight cloud sandbox running in Docker that allows our users to develop cloud applications entirely on their local machines. LocalStack has a large and active open source community (38k+ stars on Github) with several 100k active users worldwide. With a growing international customer base across the Fortune Global 500 companies for our Pro and Enterprise offerings, as well as a growing, globally distributed team of top-notch engineers and BizDev experts, we are on an exciting growth journey to become the world’s leading platform for local cloud software development.
+{{< jobs/about-localstack >}}
 
 ### About the role
 

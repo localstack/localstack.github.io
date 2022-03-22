@@ -7,11 +7,12 @@ lastmod: 2021-12-05T13:40:06+02:00
 draft: false
 weight: 50
 images: []
+department: "Engineering"
 ---
 
 ### About LocalStack
 
-We are a young, fast-growing startup, headquartered in Zurich, Switzerland, with a development office in Vienna, Austria and remote employees from around the world. At LocalStack, we’re building world-class tooling to support highly efficient dev&test loops for cloud application developers. Our core product is the LocalStack cloud emulator - a light-weight cloud sandbox running in Docker that allows our users to develop cloud applications entirely on their local machines, or run tests against a local cloud in their CI pipelines. LocalStack has a large and active open source community (37k+ stars on Github, 7500 Slack members) with several 100k active users worldwide. With a growing international customer base for our Pro and Enterprise offerings, as well as a growing, globally distributed team of top-notch engineers and BizDev experts, we are on an exciting growth journey to become the world’s leading platform for local cloud software development.
+{{< jobs/about-localstack >}}
 
 ### About the role
 
