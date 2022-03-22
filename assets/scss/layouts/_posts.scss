@@ -1,7 +1,8 @@
 .home .card,
 .contributors.list .card,
 .tags.list .card,
-.blog.list .card {
+.blog.list .card,
+.jobs.list .card {
   margin-top: 2rem;
   margin-bottom: 2rem;
   transition: transform 0.3s;
@@ -10,14 +11,16 @@
 .home .card:hover,
 .contributors.list .card:hover,
 .tags.list .card,
-.blog.list .card:hover {
+.blog.list .card:hover,
+.jobs.list .card:hover {
   transform: scale(1.025);
 }
 
 .home .card-body,
 .contributors.list .card-body,
 .tags.list .card,
-.blog.list .card-body {
+.blog.list .card-body,
+.jobs.list .card-body {
   padding: 0 2rem 1rem;
 }
 
