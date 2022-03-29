@@ -2,8 +2,8 @@
 title: Hot Swapping Python Lambda Functions using LocalStack
 description: "Debugging and testing AWS Lambda functions using Hot code swapping with LocalStack’s code mounting"
 lead: "Debugging and testing AWS Lambda functions using Hot code swapping with LocalStack’s code mounting"
-date: 2022-03-07T8:53:01+05:30
-lastmod: 2022-03-07T8:53:01+05:30
+date: 2022-03-22T8:53:01+05:30
+lastmod: 2022-22-07T8:53:01+05:30
 draft: false
 images: []
 contributors: ["LocalStack Team"]
@@ -12,17 +12,17 @@ tags: ["tutorial"]
 
 {{< img src="hot-swapping-python-lambda-functions.png" >}}
 
-AWS Lambda is a serverless function system that allows you to write code in various popular languages and run it on the AWS ecosystem. Unlike deploying your code on a server, you can now break down your application into many independent functions and deploy them as a singular units. With the help of AWS Lambda, you can strive for more modular code that can be tested and debugged while integrated with the AWS infrastructure and your core system.
+AWS Lambda is a Serverless Function as a Service (FaaS) system that allows you to write code in your favorite programming language and run it on the AWS ecosystem. Unlike deploying your code on a server, you can now break down your application into many independent functions and deploy them as a singular units. With the help of AWS Lambda, you can strive for more modular code that can be tested and debugged while integrated with the AWS infrastructure and your core system.
 
-However, iterating over your Lambda functions can be tiresome to manage. The primary reason is that the Lambda function would need to be deployed on every change before you can test or debug. It is especially true when you have many functions dependent on each other. Without testing, you can end up with a higher chance of having critical bugs in the production, and you will find it much more expensive to find the defect and fix it.
+However, iterating over your Lambda functions can be a slow process. When developing with AWS, Lambda functions need to be re-deployed on every change before you can test or debug. Having many functions that depend on each other or rely on other AWS services can create really slow development loops that impede progress and cost money. These slow loops incentivizes developers to deploy changes without testing them properly. Suddenly, you may be deploying critical bugs to production, and it will be much more expensive to find the defect and fix it.
 
-LocalStack was created to solve this kind of problem! LocalStack is a cloud-service emulator that can run in a single container on your local machine and provide you with the capability to run your cloud and serverless applications without connecting to a remote provider. LocalStack facilitates a simplified testing and development workflow by providing a local container where all your "cloud" resources are available and can be configured to run automated tests based on any changes. 
+LocalStack was created to solve this kind of problem. LocalStack is a cloud service emulator that can run in a single container on your local machine or in your CI environment, which lets you run your cloud and serverless applications without connecting to an AWS account. All cloud resources your application depend on are now available locally, allowing you to run automated tests of your application in an AWS environment without the need for costly AWS developer accounts, slow re-deployments, or transient errors from remote connections.
 
-With LocalStack, you can avoid deploying your Lambdas with every change , to debug and test it, and rather mount your code directly into the container and run it. It is a great way to test your code from your source directory without having to deploy it on AWS.
+Moreover, with LocalStack, you can avoid deploying your Lambdas with every change to debug and test it. Rather, LocalStack can mount your source code directly into a Lambda and run it. It is a great way to test your code on every change without having to deploy it on AWS, or even re-running your deployment scripts.
 
 ## Anatomy of a Lambda Function
 
-Let's take a look at a simple Python Lambda example:
+To understand how this works and how it can help you, let's first take a look at a simple Python Lambda example:
 
 ```python
 import json
@@ -34,7 +34,7 @@ def lambda_handler(event, context):
     }
 ```
 
-You can see that we have defined a `lambda_handler`, the function which is executed by the Lambda service every time a particular event occurs. It takes two arguments: `event` and `context`. The `event` argument is the input data that contains detailed information about the event that triggered the execution, while the `context` argument contains methods and properties that provide information about the invocation. Lambda is an event-driven service, which implies that every Lambda execution happens when it is triggered by another AWS service. 
+You can see that we have defined a `lambda_handler`, the function which is executed by the Lambda service every time a trigger event occurs. It takes two arguments: `event` and `context`. The `event` argument is the input data that contains detailed information about the event that triggered the execution, while the `context` argument contains methods and properties that provide information about the invocation. Lambda is an event-driven service, which implies that every Lambda execution happens when it is triggered by another AWS service.
 
 While deploying it on AWS, you would need to specify the handler (`lambda_handler` in our case), which will serve as the entry point for the Lambda function. Second, we would choose a runtime environment (Python in our case), which is the language that the Lambda function will run in. Finally, a trigger is configured and you can save the code to AWS Lambda and then test the function. You will get the following output:
 
@@ -47,7 +47,7 @@ While deploying it on AWS, you would need to specify the handler (`lambda_handle
 
 ## Setting up LocalStack
 
-LocalStack allows you to run your Lambda functions locally. You can run the Lambda by either deploying it locally or mounting your code directly into LocalStack. This blog covers the latter, where we will test our Lambda function by mounting our code directly into the container. It will facilitate blazing-fast testing and debugging our Lambda functions while ensuring that a watcher will continue to look at your code, compile it and update the local Lambda inside the LocalStack container.
+LocalStack allows you to run your Lambda functions locally. You can run the Lambda by either deploying it locally or mounting your code directly into LocalStack. This blog covers the latter, where we will test our Lambda function by mounting our code directly into the container. It will facilitate blazing-fast testing and debugging our Lambda functions while ensuring that a watcher will continue to look at your code, compile it and update the local Lambda inside the LocalStack container on every change.
 
 Let's get started with LocalStack. To install LocalStack, you need to ensure that the LocalStack CLI is installed. Through `pip`, you can easily do that using the following command:
 
@@ -136,7 +136,7 @@ pip install awscli-local
 
 ## Hot Swapping Lambda functions
 
-Before we get started with hot-swapping the Lambda function, we would need to create one on LocalStack. It can be done by deploying the Lambda function via a "mock" S3 bucket, where we use a magic variable `__local__` as the bucket. Next, we can set the S3 keypath to the directory where our Lambda function resides. You can save the above example as a file in a directory of your choice. The handler is referenced by the filename of your Lambda function where the code inside of it is invoked. Let's try it out:
+Before we get started with hot-swapping the Lambda function, we first need to create it on LocalStack. We will deploy the Lambda using a special S3 bucket indicated by using `__local__` as the bucket name. The S3 key path should point to the directory of your Lambda function code. You can save the above example as a file in a directory of your choice. The handler is referenced by the filename of your Lambda function where the code inside of it is invoked. Let's try it out:
 
 
 ```sh
@@ -147,7 +147,9 @@ awslocal lambda create-function --function-name my-cool-local-function \
     --role cool-stacklifter
 ```
 
-The `--function-name` is the name of the Lambda function that we are trying to deploy. The `--code` specifies the code for the function which has been configured inside a "mock" S3 bucket using `S3Bucket`, by mounting a local directory with `S3Key` which references the directory path. The `--handler` is the name of the method within your code that Lambda calls to execute your function while the `--runtime` is the identifier of the runtime (using Python as an example here). The `--role` specifies the Amazon Resource Name (ARN) of the function's execution role.
+Let's break that down.
+
+The `--function-name` is the name of the Lambda function that we are trying to deploy. The `--code` specifies the code for the function which has been configured inside the special S3 bucket using `S3Bucket`, by mounting a local directory with `S3Key` which references the directory path. The `--handler` is the name of the method within your code that Lambda calls to execute your function while the `--runtime` is the identifier of the runtime (using Python as an example here). The `--role` specifies the Amazon Resource Name (ARN) of the function's execution role.
 
 We can now test out Lambda function by specifying a simple payload:
 
@@ -171,7 +173,7 @@ The `output.txt` contains:
 {"result":9}
 ```
 
-Let's change our Lambda code now and see how things work. Interestingly this time, the function has already been mounted as a file in the executing container. It means that we do not need to deploy the Lambda once again to test our code. We can go ahead, make changes to our file and the output would be reflected in an instant.
+Let's change our Lambda code now and see how things work. This time, the function has already been mounted as a file in the executing container. It means that we do not need to deploy the Lambda once again to test our code. We can go ahead, make changes to our file and the output would be reflected in an instant.
 
 Let us change this line `response = {'result': result}` to `response = {'math_result': result}`. The result of the previous request (without redeploying or updating) would look like:
 
@@ -179,7 +181,9 @@ Let us change this line `response = {'result': result}` to `response = {'math_re
 {"math_result":9}
 ```
 
-But that's just a simple arithmetic script, right? How can we hot swap Lambda functions with external dependencies? For this purpose, we recommend using a virtual environment. You can specify a `requirements.txt` where all your dependencies are specified and you can install them by activating the environment and running the command: `pip install -r requirements.txt`. Now we can prepare a special folder and a watchman script for hot code swapping!
+### Testing every change
+
+But that's just a simple plain Python Lambda, right? How can we hot swap Lambda functions with external dependencies? For this purpose, we recommend using a virtual environment. You can specify a `requirements.txt` where all your dependencies are specified and you can install them by activating the environment and running the command: `pip install -r requirements.txt`. Now we can prepare a special folder and a watchman script for hot code swapping!
 
 We will specify a `watchman.sh` script that will act as a wrapper while we mount our folder as mounting point for Lambdas. We will use `build/hot` as an example here. Here is an example of what the script would look like:
 
@@ -216,10 +220,10 @@ watch:
 .PHONY: build-hot watch
 ```
 
-It will copy the `PROJECT_MODULE_NAME` along with all dependenices to `build/hot` folder which will then be mounted to the Lambda inside LocalStack container. Just start this with `make watch` and see the magic!
+It will copy the `PROJECT_MODULE_NAME` along with all dependencies to `build/hot` folder which will then be mounted to the Lambda inside LocalStack container. Just start this with `make watch` and see the magic!
 
 ## Conclusion
 
-Testing your Lambda function with LocalStack is a great way to test your code and make sure that it works as expected. With LocalStack, you can instil greater confidence in your code and deploy it to production over AWS, while meeting the standards and compatibility with your core system. LocalStack Tools helps improve your development efficiency with LocalStack Cloud Developer Tools. You can not only hot-swap your Lambda function but also remotely debug them, inject LocalStack service endpoints inside your application, persist the state of your AWS services using cloud pods and much more! With a few lines of code, you can make your life as a cloud developer easier.
+Testing your Lambda function with LocalStack is a great way to test your code and make sure you're not pushing faulty code to the cloud. With LocalStack, you can instill greater confidence in your code when deploying it to your AWS production account, while meeting the standards and compatibility with your core system. LocalStack Tools help improve your development efficiency with LocalStack Cloud Developer Tools. You can not only hot-swap your Lambda function but also remotely debug them, inject LocalStack service endpoints inside your application, persist the state of your AWS services using cloud pods and much more! With a few lines of code, you can make your life as a cloud developer easier.
 
 Find the documentation for [LocalStack Tools](https://docs.localstack.cloud/tools/) and the code on [LocalStack repository](https://github.com/localstack/localstack). You can create an issue on [GitHub](https://github.com/localstack/localstack/issues/new) or connect with us on [LocalStack Slack](https://localstack.cloud/contact) to get help.
