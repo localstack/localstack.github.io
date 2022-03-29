@@ -10,6 +10,8 @@ contributors: ["LocalStack Team"]
 tags: ["tutorial"]
 ---
 
+{{< img src="hot-swapping-python-lambda-functions.png" >}}
+
 AWS Lambda is a serverless function system that allows you to write code in various popular languages and run it on the AWS ecosystem. Unlike deploying your code on a server, you can now break down your application into many independent functions and deploy them as a singular units. With the help of AWS Lambda, you can strive for more modular code that can be tested and debugged while integrated with the AWS infrastructure and your core system.
 
 However, iterating over your Lambda functions can be tiresome to manage. The primary reason is that the Lambda function would need to be deployed on every change before you can test or debug. It is especially true when you have many functions dependent on each other. Without testing, you can end up with a higher chance of having critical bugs in the production, and you will find it much more expensive to find the defect and fix it.
@@ -112,10 +114,10 @@ def lambda_handler(event, context):
 To get started with hot swapping the above Lambda function, start the LocalStack container by configuring the `LAMBDA_REMOTE_DOCKER`:
 
 ```sh
-LAMBDA_REMOTE_DOCKER=0 localstack start -d --host
+LAMBDA_REMOTE_DOCKER=0 localstack start -d
 ```
 
-We are running LocalStack in host mode, which might install more developer dependencies and is not supported on Windows. The `LAMBDA_REMOTE_DOCKER` is configured as `false` to ensure that the Lambda volume mounts works while we are mounting a temporary folder on the host. If you are using a Docker-Compose setup to start LocalStack, you can add the following option to your `docker-compose.yml` file:
+The `LAMBDA_REMOTE_DOCKER` is configured as `false` to ensure that the Lambda volume mounts works while we are mounting a temporary folder on the host. If you are using a Docker-Compose setup to start LocalStack, you can add the following option to your `docker-compose.yml` file:
 
 ```yml
 services:
