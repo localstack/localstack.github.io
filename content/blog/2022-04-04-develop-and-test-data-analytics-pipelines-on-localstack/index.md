@@ -74,7 +74,7 @@ First we stand up a Kinesis stream for our event data. Next, we import the log g
 * Contains an `event_type` field
 
 This filter was chosen based on the particular analytics event format we use at LocalStack.
-Finally, let's deploy a "loader Lambda" function to consume events from Kinesis and load them into Tinybird. You can find the function code [here](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/lambdas/kinesis_tinybird_loader/kinesis_tinybird_loader.py)
+Finally, let's deploy a "loader Lambda" function to consume events from Kinesis and load them into Tinybird. You can find the function code [here](https://github.com/localstack/serverless-streaming-data-pipeline/blob/main/lambdas/kinesis_tinybird_loader/kinesis_tinybird_loader.py)
 
 ```python
 # data_pipeline_stack.py
@@ -130,7 +130,7 @@ def handler(event, context):
 
 ### Mock Tinybird Endpoint
 
-Tinybird has a convenient API for ingesting data. For the purposes of testing the data pipeline, we just need a local HTTP endpoint that accepts POST requests from the loader Lambda. We'll use a simple Flask server that records requests with the help of the [http-server-mock](https://pypi.org/project/http-server-mock/) library. You can find the code [here](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/tests/integration/mocks/tinybird_request_recorder.py).
+Tinybird has a convenient API for ingesting data. For the purposes of testing the data pipeline, we just need a local HTTP endpoint that accepts POST requests from the loader Lambda. We'll use a simple Flask server that records requests with the help of the [http-server-mock](https://pypi.org/project/http-server-mock/) library. You can find the code [here](https://github.com/localstack/serverless-streaming-data-pipeline/blob/main/tests/integration/mocks/tinybird_request_recorder.py).
 
 ## Deploying Locally
 
@@ -138,7 +138,7 @@ With our data pipeline stack defined and external resource mocks in order, it's 
 
 ### Define a Local App
 
-To keep things tidy, we'll create a [separate stack](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/deployments/cdk/external_test_resources_stack.py) for the test logger Lambda and deploy it alongside the data pipeline stack under a single CDK app specifically for local testing. This way the data pipeline stack itself stays identical to what we deploy to AWS in production.
+To keep things tidy, we'll create a [separate stack](https://github.com/localstack/serverless-streaming-data-pipeline/blob/main/deployments/cdk/external_test_resources_stack.py) for the test logger Lambda and deploy it alongside the data pipeline stack under a single CDK app specifically for local testing. This way the data pipeline stack itself stays identical to what we deploy to AWS in production.
 
 ```python
 # local_app.py
@@ -233,10 +233,10 @@ The entire data pipeline is now up and running on our local development machine.
 ```
 
 This proves that our data pipeline stack is defined and configured correctly. It's reading event data emitted from the logger Lambda into CloudWatch, streaming it through Kinesis, and finally delivering it to our data warehouse API - all running locally!
-With this local deployment pattern established, we can build a robust test suite to validate the correctness of the pipeline. Incorporating cloud infrastructure tests into a CI pipeline ensures that any bugs will be caught prior to deployment. You can view a sample integration test case [here](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/tests/integration/e2e/test_pipeline.py).
+With this local deployment pattern established, we can build a robust test suite to validate the correctness of the pipeline. Incorporating cloud infrastructure tests into a CI pipeline ensures that any bugs will be caught prior to deployment. You can view a sample integration test case [here](https://github.com/localstack/serverless-streaming-data-pipeline/blob/main/tests/integration/e2e/test_pipeline.py).
 
 ## Conclusion
 
 Serverless infrastructure allows organizations to deploy sophisticated, interconnected cloud services with minimal code. But this strategy requires developers to shift their energy towards configuring connections between serverless components. Developers can leverage LocalStack to validate infrastructure before it hits the cloud, shortening feedback loops and keeping systems robust.
 
-Thanks for reading. You can find the complete serverless data pipeline deployment example codebase [here](https://github.com/localstack/support-bot-analytics/tree/simplified-blog).
+Thanks for reading. You can find the complete serverless data pipeline deployment example codebase [here](https://github.com/localstack/serverless-streaming-data-pipeline).
