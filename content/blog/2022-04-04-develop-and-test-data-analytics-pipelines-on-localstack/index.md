@@ -21,6 +21,7 @@ In this pipeline, a Lambda function writes analytics event data as structured JS
 You may notice that the data pipeline is itself serverless! This approach requires very little code to maintain, but comes with the tradeoff of configuring multiple AWS services. Testing interconnected serverless cloud components can be tricky, but luckily we can use LocalStack to run the entire pipeline locally. This allows us to catch configuration issues before they're deployed, shortening feedback loops and accelerating development.
 
 ## Defining the Data Pipeline
+
 At LocalStack we use AWS [Cloud Development Kit](https://aws.amazon.com/cdk/) (CDK) to define our infrastructure as code. We can use the [cdklocal](https://github.com/localstack/aws-cdk-local) tool to deploy the same CDK stacks on our development machines under LocalStack as we do in production. This allows us to test our CDK code, and therefore our infrastructure itself, without needing to deploy.
 Okay, let's define a CDK stack for our data pipeline! We'll start with a boilerplate class definition:
 
@@ -109,9 +110,11 @@ loader_lambda.add_event_source(
 ```
 
 ## Mocking External Resources
+
 We've defined the data pipeline, but in order to test it end-to-end locally we need to mock two additional components. We need to set up a Lambda function with a log group that we can monitor for events, plus a local endpoint that can imitate the Tinybird API.
 
 ### Logger Lambda for Testing
+
 Since CloudWatch logging is integrated with Lambda out of the box the code for emitting a structured analytics event as a log message is dead simple:
 
 ```python
@@ -126,12 +129,15 @@ def handler(event, context):
 ```
 
 ### Mock Tinybird Endpoint
+
 Tinybird has a convenient API for ingesting data. For the purposes of testing the data pipeline, we just need a local HTTP endpoint that accepts POST requests from the loader Lambda. We'll use a simple Flask server that records requests with the help of the [http-server-mock](https://pypi.org/project/http-server-mock/) library. You can find the code [here](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/tests/integration/mocks/tinybird_request_recorder.py).
 
 ## Deploying Locally
+
 With our data pipeline stack defined and external resource mocks in order, it's time to deploy everything locally using `cdklocal`.
 
 ### Define a Local App
+
 To keep things tidy, we'll create a [separate stack](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/deployments/cdk/external_test_resources_stack.py) for the test logger Lambda and deploy it alongside the data pipeline stack under a single CDK app specifically for local testing. This way the data pipeline stack itself stays identical to what we deploy to AWS in production.
 
 ```python
@@ -172,6 +178,7 @@ if __name__ == "__main__":
 Note how the `DataPipelineStack` uses the log group ARN value imported from the `ExternalTestResources` stack.
 
 ### Deploy Locally
+
 Alright, let's deploy! First, we need to start LocalStack, bootstrap the local CDK environment, and deploy the logger Lambda. Please note that you will need [LocalStack Pro](https://localstack.cloud/pricing/) enabled for the log subscription feature to work.
 
 ```bash
@@ -217,6 +224,7 @@ cdklocal deploy --app "python local_app.py" DataPipelineStack
 ```
 
 ### Test End-to-End
+
 The entire data pipeline is now up and running on our local development machine. To test it we just need to invoke the logger lambda and observe the event arrive at our mock Tinybird endpoint. Make sure you have the mock Tinybird server running. In a separate shell, invoke the logger lambda as shown above. You should see output similar to this appear in the mock server window:
 
 ```bash
