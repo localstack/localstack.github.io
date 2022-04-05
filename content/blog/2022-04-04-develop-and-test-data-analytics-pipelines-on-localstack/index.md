@@ -1,7 +1,7 @@
 ---
 title: Develop and Test Real-time Data Pipelines with LocalStack
-description: "LocalStack makes it easy to develop and test real-time data pipelines that are built with AWS services. Learn how to deploy Cloudwatch, Kinesis, Lambda, and external services using CDK on LocalStack."
-lead: "LocalStack makes it easy to develop and test real-time data pipelines that are built with AWS services. Learn how to deploy Cloudwatch, Kinesis, Lambda, and external services using CDK on LocalStack."
+description: "LocalStack makes it easy to develop and test real-time data pipelines that are built with AWS services. Learn how to deploy CloudWatch, Kinesis, Lambda, and external services using CDK on LocalStack."
+lead: "LocalStack makes it easy to develop and test real-time data pipelines that are built with AWS services. Learn how to deploy CloudWatch, Kinesis, Lambda, and external services using CDK on LocalStack."
 date: 2022-04-04
 lastmod: 2022-04-04
 draft: false
@@ -9,8 +9,6 @@ images: []
 contributors: ["Sam Watson"]
 tags: ["tutorial"]
 ---
-
-{{< img src="teaser.png" >}}
 
 At LocalStack, we rely on AWS Lambda as a key part of our serverless infrastructure toolkit. As with any critical service, we want to extract analytics event data from running Lambda functions and aggregate it in our data warehouse so that we can track user stories and squash bugs. But this presents a challenge: how can we emit detailed analytics data while keeping Lambda code simple and performant? To solve this, we developed a serverless streaming data pipeline using CloudWatch Logs and Kinesis that allows us to decouple decouple analytics from application logic.
 
@@ -114,7 +112,7 @@ loader_lambda.add_event_source(
 We've defined the data pipeline, but in order to test it end-to-end locally we need to mock two additional components. We need to set up a Lambda function with a log group that we can monitor for events, plus a local endpoint that can imitate the Tinybird API.
 
 ### Logger Lambda for Testing
-Since Cloudwatch logging is integrated with Lambda out of the box the code for emitting a structured analytics event as a log message is dead simple:
+Since CloudWatch logging is integrated with Lambda out of the box the code for emitting a structured analytics event as a log message is dead simple:
 
 ```python
 # test_logger.py
@@ -196,7 +194,7 @@ arn:aws:cloudformation:us-east-2:000000000000:stack/ExternalTestResourcesStack/b
 
 ✨  Total time: 13.53s
 ```
-Before we can deploy the data pipeline itself we have to invoke the logger Lambda. Cloudwatch log groups for Lambda functions aren't created until the function is executed for the first time. Unless we do this step first the deployment will fail because CDK won't be able to locate the log group resource.
+Before we can deploy the data pipeline itself we have to invoke the logger Lambda. CloudWatch log groups for Lambda functions aren't created until the function is executed for the first time. Unless we do this step first the deployment will fail because CDK won't be able to locate the log group resource.
 Another small wrinkle is that CDK creates a name for our logger Lambda funtion with a randomly generated suffix. You can automatically identify the function name and invoke it like so:
 
 ```bash
@@ -219,14 +217,14 @@ cdklocal deploy --app "python local_app.py" DataPipelineStack
 ```
 
 ### Test End-to-End
-The entire data pipeline is now up and running on our local development machine. To test it we just need to invoke the logger Lambda and observe the event arrive at our mock Tinybird endpoint. Make sure you have the mock Tinybird server running. In a separate shell, invoke the logger lambda as shown above. You should see output similar to this appear in the mock server window:
+The entire data pipeline is now up and running on our local development machine. To test it we just need to invoke the logger lambda and observe the event arrive at our mock Tinybird endpoint. Make sure you have the mock Tinybird server running. In a separate shell, invoke the logger lambda as shown above. You should see output similar to this appear in the mock server window:
 
 ```bash
 {"event_class": "test", "event_type": "test", "message": "hello world"}
 127.0.0.1 - - [01/Apr/2022 12:30:16] "POST /tinybird HTTP/1.1" 200 -
 ```
 
-This proves that our data pipeline stack is defined and configured correctly. It's reading event data emitted from the logger lambda into CloudWatch, streaming it through Kinesis, and finally delivering it to our data warehouse API - all running locally!
+This proves that our data pipeline stack is defined and configured correctly. It's reading event data emitted from the logger Lambda into CloudWatch, streaming it through Kinesis, and finally delivering it to our data warehouse API - all running locally!
 With this local deployment pattern established, we can build a robust test suite to validate the correctness of the pipeline. Incorporating cloud infrastructure tests into a CI pipeline ensures that any bugs will be caught prior to deployment. You can view a sample integration test case [here](https://github.com/localstack/support-bot-analytics/blob/simplified-blog/tests/integration/e2e/test_pipeline.py).
 
 ## Conclusion
