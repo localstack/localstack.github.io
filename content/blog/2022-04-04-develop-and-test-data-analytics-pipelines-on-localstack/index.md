@@ -10,7 +10,7 @@ contributors: ["Sam Watson"]
 tags: ["tutorial"]
 ---
 
-At LocalStack, we rely on AWS Lambda as a key part of our serverless infrastructure toolkit. As with any critical service, we want to extract analytics event data from running Lambda functions and aggregate it in our data warehouse so that we can track user stories and squash bugs. But this presents a challenge: how can we emit detailed analytics data while keeping Lambda code simple and performant? To solve this, we developed a serverless streaming data pipeline using CloudWatch Logs and Kinesis that allows us to decouple decouple analytics from application logic.
+At LocalStack, we rely on AWS Lambda as a key part of our serverless infrastructure toolkit. As with any critical service, we want to extract analytics event data from running Lambda functions and aggregate it in our data warehouse so that we can track user stories and squash bugs. But this presents a challenge: how can we emit detailed analytics data while keeping Lambda code simple and performant? To solve this, we developed a serverless streaming data pipeline using CloudWatch Logs and Kinesis that allows us to decouple analytics from application logic.
 
 
 {{< img src="pipeline.png" >}}
