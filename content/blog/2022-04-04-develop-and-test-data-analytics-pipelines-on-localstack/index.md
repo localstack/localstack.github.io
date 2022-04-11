@@ -16,7 +16,8 @@ At LocalStack, we rely on AWS Lambda as a key part of our serverless infrastruct
 {{< img src="pipeline.png" >}}
 
 
-In this pipeline, a Lambda function writes analytics event data as structured JSON payloads to CloudWatch Logs. From there, we use a [subscription filter](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions.html) to extract the events from the function's log group and deliver them directly to a Kinesis stream. Finally, a separate Lambda function consumes events off the stream in batches and delivers them to our [Tinybird](https://tinybird.co) data warehouse via their API.
+In this pipeline, a Lambda function writes analytics event data as structured JSON payloads to CloudWatch Logs. From there, we use a [subscription filter](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions.html) to extract the events from the function's log group and deliver them directly to a Kinesis stream. Finally, a separate Lambda function consumes events off the stream in batches and delivers them to our [Tinybird](https://tinybird.co) data warehouse via their HTTP API.
+Tinybird is a managed data platform that helps developers build real-time data solutions with familiar tools like HTTP APIs and SQL on top of fully managed ClickHouse clusters.
 
 You may notice that the data pipeline is itself serverless! This approach requires very little code to maintain, but comes with the tradeoff of configuring multiple AWS services. Testing interconnected serverless cloud components can be tricky, but luckily we can use LocalStack to run the entire pipeline locally. This allows us to catch configuration issues before they're deployed, shortening feedback loops and accelerating development.
 
@@ -130,7 +131,7 @@ def handler(event, context):
 
 ### Mock Tinybird Endpoint
 
-Tinybird has a convenient API for ingesting data. For the purposes of testing the data pipeline, we just need a local HTTP endpoint that accepts POST requests from the loader Lambda. We'll use a simple Flask server that records requests with the help of the [http-server-mock](https://pypi.org/project/http-server-mock/) library. You can find the code [here](https://github.com/localstack/serverless-streaming-data-pipeline/blob/main/tests/integration/mocks/tinybird_request_recorder.py).
+Tinybird has a convenient and simple HTTP API for ingesting data. For the purposes of testing the data pipeline, we just need a local HTTP endpoint that accepts POST requests from the loader Lambda. We'll use a simple Flask server that records requests with the help of the [http-server-mock](https://pypi.org/project/http-server-mock/) library. You can find the code [here](https://github.com/localstack/serverless-streaming-data-pipeline/blob/main/tests/integration/mocks/tinybird_request_recorder.py).
 
 ## Deploying Locally
 
