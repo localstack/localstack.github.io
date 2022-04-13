@@ -10,11 +10,11 @@ contributors: ["Sam Watson"]
 tags: ["tutorial"]
 ---
 
+{{< img src="develop-test-data-pipelines-localstack.png" >}}
+
 At LocalStack, we rely on AWS Lambda as a key part of our serverless infrastructure toolkit. As with any critical service, we want to extract analytics event data from running Lambda functions and aggregate it in our data warehouse so that we can track user stories and squash bugs. But this presents a challenge: how can we emit detailed analytics data while keeping Lambda code simple and performant? To solve this, we developed a serverless streaming data pipeline using CloudWatch Logs and Kinesis that allows us to decouple analytics from application logic.
 
-
 {{< img src="pipeline.png" >}}
-
 
 In this pipeline, a Lambda function writes analytics event data as structured JSON payloads to CloudWatch Logs. From there, we use a [subscription filter](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions.html) to extract the events from the function's log group and deliver them directly to a Kinesis stream. Finally, a separate Lambda function consumes events off the stream in batches and delivers them to our [Tinybird](https://tinybird.co) data warehouse via their HTTP API.
 Tinybird is a managed data platform that helps developers build real-time data solutions with familiar tools like HTTP APIs and SQL on top of fully managed ClickHouse clusters.
