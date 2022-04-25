@@ -1,7 +1,7 @@
 ---
 title: LocalStack — 40K stars, 88M Pulls and an engaged community!
-description: At LocalStack, we are aiming to revolutionize cloud service emulation to help you develop & test your cloud applications locally. Touching the milestone of over 40K GitHub Stargazers, 88M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their development & testing loops!
-lead: At LocalStack, we are aiming to revolutionize cloud service emulation to help you develop & test your cloud applications locally. Touching the milestone of over 40K GitHub Stargazers, 88M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their development & testing loops!
+description: At LocalStack, we are aiming to propel cloud developer productivity by allowing development teams to quickly and conveniently develop & test their cloud applications directly in their local environments. Touching the milestone of over 40K GitHub Stargazers, 88M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their environments for efficient development & testing loops!
+lead: At LocalStack, we are aiming to propel cloud developer productivity by allowing development teams to quickly and conveniently develop & test their cloud applications directly in their local environments. Touching the milestone of over 40K GitHub Stargazers, 88M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their environments for efficient development & testing loops!
 date: 2022-04-22T10:34:04+05:30
 lastmod: 2022-04-22T10:34:04+05:30
 images: []
@@ -9,7 +9,7 @@ contributors: ["LocalStack Team"]
 tags: ['news']
 ---
 
-LocalStack provides a cloud emulation platform that simplifies developing, testing, and debugging cloud apps locally and across CI/CD. Our core emulation service which provides emulated LocalStack Cloud APIs, currently focused on AWS cloud, shipped as a Docker image, is currently being used by a large and active open source community with over 100K active users worldwide.
+LocalStack provides a local cloud development platform that simplifies developing, testing, and debugging cloud apps locally and across CI/CD. Our core emulation service which provides emulated LocalStack Cloud APIs (currently focused on AWS cloud), is shipped as a Docker image and is currently being used by a large and active open source community with over 100K active users worldwide.
 
 We recently crossed 40,000 Stargazers over GitHub and hit a new milestone of over 88,000,000 Docker pulls. Ever since our last community-focussed blog, our Slack community has grown to over 11,000+ developers who are actively using LocalStack and helping engineering teams build a consistent local development & test loop for cloud applications.
 
@@ -17,7 +17,7 @@ We recently crossed 40,000 Stargazers over GitHub and hit a new milestone of ove
 
 ## What’s new in LocalStack?
 
-Since our last community blog, we have had over 17 releases spanning a time period of over 11 months. In this timeframe, we have released a number of new features, enhancements, bug fixes and more that helps you drive you to a better cloud development experience.
+Since our last community blog, we have published over 17 releases in a time period of 11 months. In this timeframe, we have released a number of new features, enhancements, bug fixes and more for a better cloud development experience.
 
 In the past few months, we worked on a number of new enhancements:
 
@@ -27,18 +27,18 @@ In the past few months, we worked on a number of new enhancements:
 - Advanced persistence support.
 - Refurbished Web user interface & Desktop Application.
 
-We now also feature a lot of services which aims to shape the next-gen software team collaboration patterns for LocalStack. Some of these include:
+We now also feature a lot of services which are aimed at shaping the next-gen software team collaboration patterns for LocalStack. Some of these include:
 
 - Compute services (e.g., Lambda, ECS, EKS) 
 - Databases (e.g., DynamoDB, RDS) 
 - Messaging (e.g., SQS, Kinesis, MSK) 
 - Sophisticated/exotic APIs (e.g., QLDB, Athena, Glue)
 
-Our range of integrations now  a wide range of tools from the cloud development ecosystem. Whether you are using Infrastructure-as-Code (IaC) to manage your AWS infrastructure, or are developing applications using AWS SDKs like Boto, LocalStack now supports your local workflow runs independently.
+Our supported integrations now cover a wide range of tools from the cloud development ecosystem. Whether you are using Infrastructure-as-Code (IaC) to manage your AWS infrastructure, or are developing applications using AWS SDKs like Boto, LocalStack now supports your local workflow runs independently.
 
 {{< img src="localstack-integrations.png" >}}
 
-For our LocalStack SaaS as part of our Pro offering, we have innovated in a new Web User interface with a simple usage dashboard and a simplified AWS console. Take it for a run on app.localstack.cloud and visualize your LocalStack usage through a Web interface.
+Our LocalStack Pro SaaS platform now also covers a new Web User interface with a practical usage dashboard and a resource browser (console) that allows you to inspect the state of your locally deployed resources. Take it for a run on app.localstack.cloud and visualize your LocalStack usage through a Web interface.
 
 {{< img src="localstack-web-dashboard.png" >}}
 
@@ -46,7 +46,7 @@ We have also invested in improving the developer experience and the usability of
 
 ## What’s next in LocalStack?
 
-While talking to our customers and users at LocalStack, we realize that they are mostly driven by the following motivation:
+The main use cases and motivations our customers and users mention for leveraging LocalStack services, include:
 
 - Increased agility / efficiency through local development (reproducibility, speed & ease → higher quality).
 - Operating in a regulated environment with restricted access to Cloud.    
@@ -63,30 +63,30 @@ To support new AWS features, we are working on:
 -  Authentication & User management (e.g., Cognito, IAM, STS, SecretsManager, Amplify)
 -  Monitoring (e.g., CloudWatch, XRay, CloudTrail)
 
-To further support this, we are now working on the LocalStack Cloud Pods. With Cloud Pods you can now take a persistent snapshot of your LocalStack instance and share it with your team members. With features like branching, versioning, you can treat your cloud environment similar to your Git-based workflow to collaboratively take a snapshot of your entire LocalStack instance, tear down and start up LocalStack with the same application state.
+To further support team collaboration, the next exciting product we are pushing forward are the LocalStack Cloud Pods. With Cloud Pods you can now take a persistent snapshot of your LocalStack instance and share it with your team members. With branching and versioning features, you can treat your cloud environment similar to your Git-based workflows: take a snapshot of your LocalStack instance, tear down and start up LocalStack with the same application state ingested, and collaborate with your team members on your own application state or across your CI pipeline.
 
 {{< img src="localstack-ci-analytics.png" >}}
 
-We are also looking forward to support seamless integration with the CI/CD systems, where we can sync state and test data from production into the development/CI environment. It will also help the developers to capitalize on the Local Cloud Pods Storage Backend where application state can be pushed or pulled easily and easy collaboration can be made possibly by shared state. LocalStack is now also compatible with all major CI providers like GitHub Actions, TravisCI, CircleCI, GitLab CI and Jenkins.
+We are supporting seamless integrations across your CI/CD systems and LocalStack is compatible with all major CI providers like GitHub Actions, TravisCI, CircleCI, GitLab CI and Jenkins. Soon you will also be able to sync the state and test data from production directly into your development/CI environments. Development teams can then  capitalize on the Local Cloud Pods storage backend by pushing or pulling the application state and collaborating with team members on the shared state.
 
-We now also feature the beta release of our CI Time Travel Analytics and LocalStack Cockpit. While the CI analytics allow you to visualize your CI runs from your browser, the LocalStack Cockpit brings a Desktop experience of managing your LocalStack instance. Through Cockpit, you can inspect the service status view, debug logs, define configuration profiles and more! Try it out by downloading LocalStack Cockpit!
+We now also feature beta releases of the LocalStack Cockpit as well as our new CI Time Travel Analytics product, which allows you to visualize your CI runs directly in your browser. The LocalStack Cockpit brings a Desktop experience for managing your LocalStack instance to your local machine. In the Cockpit, you can inspect the service status, debug logs, define configuration profiles and much more! Try it out by downloading LocalStack Cockpit!
 
 {{< img src="localstack-cockpit.png" >}}
 
 ## Building the LocalStack Community
 
-While we focus on engineering the LocalStack core, we also aim to support our ever-growing community with all the support they need! LocalStack Slack community has grown to over 11,000+ developers from all parts of the world, currently engaging in using LocalStack to build a great cloud development experience!
+While we focus on engineering the LocalStack core, we also aim to give our ever-growing community all the support they need! Our LocalStack Slack community has grown to over 11,000+ developers from all parts of the world, who are engaging with LocalStack to facilitate a great cloud development experience across their teams!
 
-To support our LocalStack Pro users, we now have the LocalStack Pro Support Bot, which is designed to be used in private conversations for 1:1 resolution of your problem. If you are an open-source user, you can send in your query over the `#community-support` channel or create an issue over the LocalStack GitHub repository.
+To better support our LocalStack Pro users, we offer the LocalStack Pro Support Application in our community, which is designed to facilitate private 1:1 conversations between our Pro users and our technical team for resolution of your technical issues. Open-source users can send in questions over the `#community-support` channel in our LocalStack Slack community or create an issue over the LocalStack GitHub repository.
 
-At LocalStack, we have put forward a 100% commitment to open source code, and support academic, student, or open source projects and non-profit/philanthropic organizations. To further support this, we launched the LocalStack Educational License plan, that supports educators and students to work on local cloud development without spending significantly on real cloud resources! 
+At LocalStack, we have put forward a 100% commitment to open source code, and support academic, student, or open source projects and non-profit/philanthropic organizations. We are very proud to have launched the LocalStack Pro Educational License plan, that supports educators and students in exploring local cloud development without the headache of spending on real cloud resources! 
 
-With the LocalStack GitHub repository touching 40,000+ stars, we also aim to support new contributors in the community. In the past six months, we have onboarded more than 25 new contributors, who are either a part of LocalStack Developers or have submitted voluntary contributions! We aim to support this further and help more and more developers contribute towards our goal of a growing open-source community!
+With the LocalStack GitHub repository touching 40,000+ stars, we also aim to support new contributors in the community. In the past six months, we have onboarded over 25 new contributors, who are either a part of the LocalStack Development team or have submitted voluntary contributions! We aim to support this further and help more and more developers contribute towards our goal of a growing open-source community!
 
 ## The games should continue
 
-At LocalStack, we are actively growing and we will be further sharing the upcoming updates on our social handles and our blog! To be a part of the rocket-ship, check out our careers page or drop a star on our GitHub repository and tune in the notifications! 
+At LocalStack, we are rapidly growing and we will be further sharing upcoming updates on our social handles and our blog! To get on the rocket-ship, check out our careers page or drop a star on our GitHub repository and tune in the notifications! 
 
-We are also actively looking for feedback from our users and customers on our 40K feedback! Take out five minutes to fill up this form really quick, to steer the future of our focus in making cloud development easier for you!
+We are also always actively looking to get your feedback and would highly appreciate if you could take out five minutes to fill in this form, and help us prioritize and focus on the main pain points you want us to tackle for making cloud development a breeze for you!
 
 Let’s make cloud development fun again!
