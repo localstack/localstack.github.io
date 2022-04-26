@@ -9,6 +9,8 @@ contributors: ["LocalStack Team"]
 tags: ['news']
 ---
 
+{{< img src="localstack-banner.png" >}}
+
 [LocalStack](https://localstack.cloud) provides a local cloud development platform that simplifies developing, testing, and debugging cloud apps locally and across CI/CD. Our core emulation service which provides emulated LocalStack Cloud APIs (currently focused on [AWS cloud](https://aws.amazon.com/)), is shipped as a Docker image and is currently being used by a large and active open source community with over 100K active users worldwide.
 
 We recently crossed 40,000 Stargazers over [GitHub](https://github.com/localstack/localstack) and hit a new milestone of over 90,000,000 [Docker pulls](https://hub.docker.com/r/localstack/localstack). Ever since our [last community-focussed blog](https://localstack.cloud/blog/2021-05-06-localstack-40k-stars/), our Slack community has grown to over 11,000+ developers who are actively using LocalStack and helping engineering teams build a consistent local development & test loop for cloud applications.
