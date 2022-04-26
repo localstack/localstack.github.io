@@ -9,9 +9,9 @@ contributors: ["LocalStack Team"]
 tags: ['news']
 ---
 
-LocalStack provides a local cloud development platform that simplifies developing, testing, and debugging cloud apps locally and across CI/CD. Our core emulation service which provides emulated LocalStack Cloud APIs (currently focused on AWS cloud), is shipped as a Docker image and is currently being used by a large and active open source community with over 100K active users worldwide.
+[LocalStack](https://localstack.cloud) provides a local cloud development platform that simplifies developing, testing, and debugging cloud apps locally and across CI/CD. Our core emulation service which provides emulated LocalStack Cloud APIs (currently focused on [AWS cloud](https://aws.amazon.com/)), is shipped as a Docker image and is currently being used by a large and active open source community with over 100K active users worldwide.
 
-We recently crossed 40,000 Stargazers over GitHub and hit a new milestone of over 88,000,000 Docker pulls. Ever since our last community-focussed blog, our Slack community has grown to over 11,000+ developers who are actively using LocalStack and helping engineering teams build a consistent local development & test loop for cloud applications.
+We recently crossed 40,000 Stargazers over [GitHub](https://github.com/localstack/localstack) and hit a new milestone of over 90,000,000 [Docker pulls](https://hub.docker.com/r/localstack/localstack). Ever since our [last community-focussed blog](https://localstack.cloud/blog/2021-05-06-localstack-40k-stars/), our Slack community has grown to over 11,000+ developers who are actively using LocalStack and helping engineering teams build a consistent local development & test loop for cloud applications.
 
 {{< img src="localstack-star-history.png" >}}
 
@@ -21,9 +21,9 @@ Since our last community blog, we have published over 17 releases in a time peri
 
 In the past few months, we worked on a number of new enhancements:
 
-- Improved performance & startup time (From 10s to 1s)
+- Improved performance & startup time (From 10 seconds to 1 second).
 - New plugin system, enhanced request routing.
-- Multi-arch build (incl. ARM64 / Apple M1).
+- Multi-arch build (including ARM64 / Apple M1).
 - Advanced persistence support.
 - Refurbished Web user interface & Desktop Application.
 
@@ -38,11 +38,11 @@ Our supported integrations now cover a wide range of tools from the cloud develo
 
 {{< img src="localstack-integrations.png" >}}
 
-Our LocalStack Pro SaaS platform now also covers a new Web User interface with a practical usage dashboard and a resource browser (console) that allows you to inspect the state of your locally deployed resources. Take it for a run on app.localstack.cloud and visualize your LocalStack usage through a Web interface.
+Our LocalStack Pro SaaS platform now also covers a new Web User interface with a practical usage dashboard and a resource browser (console) that allows you to inspect the state of your locally deployed resources. Take it for a run on [app.localstack.cloud](https://app.localstack.cloud/) and visualize your LocalStack usage through a Web interface.
 
 {{< img src="localstack-web-dashboard.png" >}}
 
-We have also invested in improving the developer experience and the usability of LocalStack through our open-sourced documentation. You can navigate to docs.localstack.cloud and check out the various services, integrations, tools and guides that can help you understand LocalStack and start developing on it!
+We have also invested in improving the developer experience and the usability of LocalStack through our [open-sourced documentation](https://github.com/localstack/docs). You can navigate to [docs.localstack.cloud](https://docs.localstack.cloud/) and check out the various services, integrations, tools and guides that can help you understand LocalStack and start developing on it!
 
 ## What’s next in LocalStack?
 
@@ -69,7 +69,7 @@ To further support team collaboration, the next exciting product we are pushing 
 
 We are supporting seamless integrations across your CI/CD systems and LocalStack is compatible with all major CI providers like GitHub Actions, TravisCI, CircleCI, GitLab CI and Jenkins. Soon you will also be able to sync the state and test data from production directly into your development/CI environments. Development teams can then  capitalize on the Local Cloud Pods storage backend by pushing or pulling the application state and collaborating with team members on the shared state.
 
-We now also feature beta releases of the LocalStack Cockpit as well as our new CI Time Travel Analytics product, which allows you to visualize your CI runs directly in your browser. The LocalStack Cockpit brings a Desktop experience for managing your LocalStack instance to your local machine. In the Cockpit, you can inspect the service status, debug logs, define configuration profiles and much more! Try it out by downloading LocalStack Cockpit!
+We now also feature beta releases of the LocalStack Cockpit as well as our new CI Time Travel Analytics product, which allows you to visualize your CI runs directly in your browser. The [LocalStack Cockpit](https://localstack.cloud/products/cockpit/) brings a Desktop experience for managing your LocalStack instance to your local machine. In the Cockpit, you can inspect the service status, debug logs, define configuration profiles and much more! Try it out by downloading LocalStack Cockpit!
 
 {{< img src="localstack-cockpit.png" >}}
 
@@ -87,6 +87,6 @@ With the LocalStack GitHub repository touching 40,000+ stars, we also aim to sup
 
 At LocalStack, we are rapidly growing and we will be further sharing upcoming updates on our social handles and our blog! To get on the rocket-ship, check out our careers page or drop a star on our GitHub repository and tune in the notifications! 
 
-We are also always actively looking to get your feedback and would highly appreciate if you could take out five minutes to fill in this form, and help us prioritize and focus on the main pain points you want us to tackle for making cloud development a breeze for you!
+We are also always actively looking to get your feedback and would highly appreciate if you could take out five minutes to fill in this [feedback form](https://form.typeform.com/to/REn2U10O), and help us prioritize and focus on the main pain points you want us to tackle for making cloud development a breeze for you!
 
 Let’s make cloud development fun again!
