@@ -1,7 +1,7 @@
 ---
-title: LocalStack — 40K stars, 88M Pulls and an engaged community!
-description: At LocalStack, we are aiming to propel cloud developer productivity by allowing development teams to quickly and conveniently develop & test their cloud applications directly in their local environments. Touching the milestone of over 40K GitHub Stargazers, 88M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their environments for efficient development & testing loops!
-lead: At LocalStack, we are aiming to propel cloud developer productivity by allowing development teams to quickly and conveniently develop & test their cloud applications directly in their local environments. Touching the milestone of over 40K GitHub Stargazers, 88M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their environments for efficient development & testing loops!
+title: LocalStack — 40K stars, 90M Pulls and an engaged community!
+description: At LocalStack, we are aiming to propel cloud developer productivity by allowing development teams to quickly and conveniently develop & test their cloud applications directly in their local environments. Touching the milestone of over 40K GitHub Stargazers, 90M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their environments for efficient development & testing loops!
+lead: At LocalStack, we are aiming to propel cloud developer productivity by allowing development teams to quickly and conveniently develop & test their cloud applications directly in their local environments. Touching the milestone of over 40K GitHub Stargazers, 90M Docker Pulls and over a 11K+ strong community, further motivates us to provide the best possible cloud dev experience - giving developers back control over their environments for efficient development & testing loops!
 date: 2022-04-22T10:34:04+05:30
 lastmod: 2022-04-22T10:34:04+05:30
 images: []
