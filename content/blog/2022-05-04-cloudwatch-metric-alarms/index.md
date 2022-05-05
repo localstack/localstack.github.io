@@ -1,38 +1,45 @@
 ---
-title: CloudWatch in Action - Get Notified when your Lambda suddenly fails
-description: "Understanding AWS CloudWatch and configuring simple metric alarms with LocalStack"
-lead: "Understanding AWS CloudWatch and configuring simple metric alarms with LocalStack"
+title: CloudWatch in Action - Get notified when your Lambda suddenly fails
+description: "LocalStack now supports CloudWatch metric alarms! In this article, you will learn how to configure and test a simple AWS CloudWatch metric alarm with LocalStack, to get notified on infrastructure failures."
+lead: "LocalStack now supports CloudWatch metric alarms! In this article, you will learn how to configure and test a simple AWS CloudWatch metric alarm with LocalStack, to get notified on infrastructure failures."
 date: 2022-05-04
 lastmod: 2022-05-04
-draft: true
+draft: false
 images: []
 contributors: ["Stefanie"]
 tags: ["tutorial"]
 ---
 
 
-AWS CloudWatch enables easy monitoring of AWS resources by collecting metrics. If you are interested in certain metrics (e.g. the disk or CPU usage) and you want to react to these metrics immediately, you can configure an alarm with actions. These actions will be triggered automatically when the defined thresholds are hit.
+[AWS CloudWatch](https://docs.aws.amazon.com/cloudwatch/index.html) is a service that enables monitoring of your AWS infrastructure by collecting logs and operational metrics of your deployment. An integral part of infrastructure operations is reacting in real-time to anomalous changes in metrics, e.g., spiking disk or CPU usage, or failures in your serverless functions. This is where CloudWatch metric alarms and actions come into play, which you can now develop and test using LocalStack!
 
-LocalStack now supports CloudWatch metric alarms with `statistic` and `comparison-operator`. 
-In this article, we will discuss how you can use a CloudWatch metric alarm to get automatically notified when your Lambda function starts failing for whatever reason. In our example, we want to get notified via email. 
+LocalStack now supports CloudWatch metric alarms with `statistic` and `comparison-operator`.
+In this article, we will discuss how you can use a CloudWatch metric alarm to get notified automatically when your Lambda function invocations fail. In our example, we will set up an email notification using the Simple Email Service (SES).
 
-## Prerequesites
-In order to follow to this tutorial, you will need to run LocalStack Pro, as sending emails is only supported in the Pro version.
+## Prerequisites
 
-You will also need to prepare a SMTP server, if you want to receive the notification via email. If you are just getting started and exploring this functionality, we would advice using a simple SMTP mock. 
+For this tutorial you will need:
+* [LocalStack Pro](https://localstack.cloud), to send emails via SMTP and SES.
+* The [awslocal](https://docs.localstack.cloud/integrations/aws-cli/#localstack-aws-cli-awslocal) command line utility
+* A mock SMTP server like [smtp4dev](https://github.com/rnwood/smtp4dev) or [Papercut SMTP](https://github.com/ChangemakerStudios/Papercut-SMTP) to receive the email notifications locally.
 
-There are some opensource tools available, for example [smtp4dev](https://github.com/rnwood/smtp4dev) or [Papercut SMTP](https://github.com/ChangemakerStudios/Papercut-SMTP). Those tools can be started with docker, and are instantly ready to use.
-
-In order to connect LocalStack with the SMTP server, you need [configure some SMTP environment variables](https://docs.localstack.cloud/aws/cognito/#smtp-integration): 
- * `SMTP_HOST` this should contain the hostname and the port
+In order to connect LocalStack with the SMTP server, you need to [configure the following SMTP environment variables](https://docs.localstack.cloud/aws/ses/#pro) when starting LocalStack:
+ * `SMTP_HOST` this should contain the hostname and the port of your mock SMTP server
  * `SMTP_USER` optional, if there is user to connect
- * `SMTP_PASS` optional 
+ * `SMTP_PASS` optional
+
+For example, when using smtp4dev, simply run:
+
+    docker run --rm -it -p 3000:80 -p 2525:25 rnwood/smtp4dev
+
+and set `SMTP_HOST=localhost:2525`.
+Navigating to `http://localhost:3000` will open a UI to access the email notifications.
 
 
 ## CloudWatch Basics
-CloudWatch can help you to get a better understanding about how your resources behave over time. While some metrics are collected automatically, e.g., the execution of Lambdas, you can also define custom metrics you would like to monitor. Therefore you can use the CloudWatch API [`put-metric-data`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-data.html).
+CloudWatch can help you to get a better understanding about how your AWS infrastructure resources behave over time. While some metrics are collected automatically, e.g., the execution of Lambdas, you can also define custom metrics you would like to monitor. To that end, you can use the CloudWatch API [`put-metric-data`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-data.html).
 
-If you want to get started with Cloudwatch, here are some basic commands:
+Here are some basic commands to get started:
 ```sh
 # add new metric data
 $ awslocal cloudwatch put-metric-data \
@@ -82,13 +89,13 @@ LocalStack supports metric alarms with simple statics. This typically includes:
 * **threshold** - a double value
 * **comparison-operator** - e.g. _GreaterThanThreshold_, _LessThanThreshold_, _GreaterThanOrEqualToThreshold_, _LessThanOrEqualToThreshold_
 * **statistic** - e.g. _SampleCount_, _Average_, _Sum_, _Minimum_, _Maximum_
-* **period** - the intervall in seconds used to calculate the metric
+* **period** - the interval in seconds used to calculate the metric
 * **evaluation-periods** - defines the number of periods that will be evaluated to check the threshold
 * **treat-missing-data** - defines how missing data points should be evaluated: _missing_, _ignore_, _notBreaching_, _breaching_
 
 For a deeper understanding of alarm evaluation, we advice to consult the official [AWS docs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation).
 
-Eventhough LocalStack's implementation of CloudWatch is not yet feature complete, you can already cover a range of use-cases. Next, we look into how we can make use of Cloudwatch alarms with Lambdas.
+Even though LocalStack's implementation of CloudWatch is not yet feature complete, you can already cover a range of use-cases. Next, we look into how we can make use of CloudWatch alarms with Lambdas.
 
 ## Setup a Lambda Function
 For the sake of simplicity, we will create a Lambda that will always fail. This will make it easier to demonstrate the alarms functionality. If you are interested in further learning about Lambdas, you can check our previous blog post on [Hot Swapping Python Lambda Functions using LocalStack](../2022-03-07-hot-swapping-python-lambda-functions-using-localstack), which also gives a solid introduction to Lambdas.
@@ -118,8 +125,8 @@ When this lambda is invoked, it will fail immediately. Also the metrics are coll
 ## Metric alarms
 Now let's think about when we want to trigger the alarm. We need to define which metrics we are interested in, and how thresholds should be calculated.
 If you invoke the lambda once, and run `list-metrics` you will see that we already have some metrics here:
+
 ```sh
-$ awslocal lambda invoke --function-name my-failing-lambda out.txt
 $ awslocal cloudwatch list-metrics
 {
     "Metrics": [
@@ -153,7 +160,7 @@ For the alarm, we will need the `Namespace`, `MetricName`, and the `Dimensions`.
 
 Now, we just need to think about reasonable evaluation criteria - what is reasonable will depend a lot on your specific use case.
 
-Let's say we want to get notified, if the lambda fails at least once within the past minute.
+Let's say we want to get notified if the lambda fails at least once within the past minute.
 Then the `evaluation-periods` would be 1, and `period` would be 60. 
 
 For the `statistic` we use _Sum_ (failing invocation within the last minute will be summed up), and our `threshold` is 1, with the `comparison-operator` _GreaterThanOrEqualToThreshold_. 
@@ -202,7 +209,7 @@ $ awslocal cloudwatch put-metric-alarm \
 
 ```
 
-If we invoke the lamba now, you should get an email notification after some time:
+If we invoke the Lambda function now, you should get an email notification after some time:
 ```sh
 $ awslocal lambda invoke --function-name my-failing-lambda out.txt
 ```
@@ -220,10 +227,8 @@ To: stefanie@example.com
 ```
 
 ## Conclusion
-CloudWatch can be very useful for monitoring metrics of interest. Metric-alarms are periodically evaluated and make you aware if thresholds are breached. 
+CloudWatch is an integral part of infrastructure management to monitor and react to operational metrics. Metric alarms are periodically evaluated and make you aware if thresholds of metrics are breached.
 
 The configured actions trigger automatically once the alarm state changes and can therefore help to respond quick to any anomalies.
 
-In our example we showed how to use email notifications, but this is just one way to do it. You could also use webhooks, SQS queues, or other SNS topic subscribers. 
-
-
+In our example we showed how to use email notifications, but this is just one way to do it. You could also use webhooks, SQS queues, or other SNS topic subscribers.
