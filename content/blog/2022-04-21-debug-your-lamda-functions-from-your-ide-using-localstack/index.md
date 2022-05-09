@@ -23,13 +23,7 @@ In this blog, we already presume that you have installed LocalStack and tried ru
 pip install localstack
 ```
 
-It will install the `localstack-cli`, which runs the Docker image that hosts the LocalStack runtime. You can start LocalStack in a detached mode by running the following command:
-
-```sh
-localstack start -d
-```
-
-To ensure that we can use the remote debugging feature, we need to start LocalStack using specific configurations. These are detailed on our [Lambda configuration page](https://docs.localstack.cloud/localstack/configuration/#lambda). Push the following command onto your terminal:
+It will install the `localstack-cli`, which runs the Docker image that hosts the LocalStack runtime. To ensure that we can use the remote debugging feature, we need to start LocalStack using specific configuration options. These are detailed on our [Lambda configuration page](https://docs.localstack.cloud/localstack/configuration/#lambda). Copy the following command into your terminal:
 
 ```sh
 LAMBDA_REMOTE_DOCKER=0 \ 
@@ -37,7 +31,7 @@ LAMBDA_DOCKER_FLAGS='-p 19891:19891' \
 DEBUG=1 localstack start -d
 ```
 
-The `LAMBDA_REMOTE_DOCKER` is configured as false to ensure that the Lambda volume mounts work while we are mounting a temporary folder on the host. The `LAMBDA_DOCKER_FLAGS` defines a Docker flag that exposes port 19891 for debugging the Lambda handler code that will run inside the container.
+The `LAMBDA_REMOTE_DOCKER` option is set to `0` (deactivated) to ensure that the Lambda volume mounts work while we are mounting a temporary folder on the host. The `LAMBDA_DOCKER_FLAGS` defines a Docker flag that exposes port 19891 for debugging the Lambda handler code that will run inside the container.
 
 You will also need to install our LocalStack AWS CLI, which is a thin wrapper around the aws command line interface for use with LocalStack, using `pip`:
 
@@ -58,6 +52,8 @@ debugpy.wait_for_client()
 ```
 
 The `wait_for_client()` function blocks execution until client is attached. You can also use the `wait_for_debug_client` function which implements the start of the debug server and also adds an automatic cancellation of the wait task if the debug client (i.e. VSCode) doesn’t connect.
+
+Please note that in the code snippet below we assume that the debugpy package has been installed into a `virtualenv` folder named `.venv` inside the same directory where the Lambda handler (`handler.py`) is stored on the local disk (see further below). Hence, adding `.venv/lib/python*/site-packages` to the Python system path ensures that debugpy is available to the Lambda handler execution at runtime.
 
 ```python
 def wait_for_debug_client(timeout=15):
@@ -81,7 +77,7 @@ def wait_for_debug_client(timeout=15):
 
 ## Creating a Python Lambda function
 
-For the purpose of this blog, we will use a simple AWS Lambda function which will just wait for the debugger to be attached and print the invocation event, over a file named `handler.py`:
+For the purpose of this blog, we will use a simple AWS Lambda function which will just wait for the debugger to be attached and print the invocation event:
 
 ```python
 def handler(event, context):
@@ -116,9 +112,9 @@ if __name__ == "__main__":
     handler({}, {})
 ```
 
-Before debugging it, we first need to create it on LocalStack. We will deploy the Lambda using a unique S3 bucket indicated by `__local__` as the bucket name.
+To start debugging, we first need to create the Lambda function on LocalStack. We will deploy the Lambda using a unique S3 bucket indicated by `__local__` as the bucket name.
 
-The S3 key path should point to the directory of your Lambda function code. You can save the above example as a file in a directory of your choice. The handler is referenced by the filename of your Lambda function, where the code inside of it is invoked. Push the following command to your terminal:
+The S3 key path should point to the directory of your Lambda function code. You can save the above example as a file in a directory of your choice. The handler is referenced by the filename of your Lambda function, where the code inside of it is invoked. Copy and paste the following command in your terminal:
 
 ```sh
 awslocal lambda create-function --function-name my-cool-local-function \
@@ -128,14 +124,14 @@ awslocal lambda create-function --function-name my-cool-local-function \
     --role cool-stacklifter
 ```
 
-We can test out the above Lambda function by specifying a payload:
+We can test the above Lambda function by invoking it with a payload:
 
 ```sh
 awslocal lambda invoke --function-name my-cool-local-function --payload '{"message": "Hello from LocalStack!"}' output.txt
 ```
 Configuring Visual Studio Code for Python Lambda debugging
 
-For attaching the debug server from Visual Studio Code, you need to add a run configuration.
+For attaching the debug server from Visual Studio Code, you need to add a run configuration. The run view displays all the information related to running and debugging with a top bar which has all the debugging commands and configuration settings. Create a `launch.json` file in the `.vscode` directory of your project and add the following:
 
 ```json
 {
@@ -180,7 +176,7 @@ services:
       - LAMBDA_DOCKER_FLAGS=-p 127.0.0.1:5050:5050
 ```
 
-The `suspend=y` option delays the code execution until debugger is attached to debgger server. To change the behavior, turn it to `suspend=n`. 
+The `suspend=y` option delays the code execution until debugger is attached to debugger server. To change the behavior, turn it to `suspend=n`. 
 
 ## Configuring Visual Studio Code for JVM Lambda debugging
 
@@ -199,7 +195,7 @@ To configure Visual Studio Code, for JVM Lambda debugging, we need to install th
 }
 ```
 
-Create a new `launch.json` file or edit an existing one from the Run and Debug tab, then add the following configuration:
+Create a new `launch.json` file or edit an existing one from the `Run and Debug` tab, then add the following configuration:
 
 ```json
 {
@@ -222,7 +218,7 @@ To debug your lambda function, click on the `Debug` icon with `Remote JVM on LS 
 
 ## Conclusion
 
-Debugging your Lambda function with LocalStack on your IDE is a great way to test and validate your Lambda functions before pushing them to production. Since you have already mounted the local Lambda function from your local filesystem into the Lambda container, LocalStack would immediately reflect the changes in the above section. Here is an example where you change the implementation of the handler as follows:
+Debugging your Lambda function with LocalStack in your IDE is a great way to enable quick feedback cycles, and to test and validate your code logic before pushing it to production. Since you have already mounted the local Lambda function from your local filesystem into the Lambda container, LocalStack would immediately reflect the changes in the above section. Here is an example where you change the implementation of the handler as follows:
 
 ```py
 def handler(event, context):
