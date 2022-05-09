@@ -1,15 +1,15 @@
 ---
-title: Debug your Lamda functions from your IDE using LocalStack
-description: LocalStack makes it easier to develop, test & debug your Lamda functions locally. Learn how you can attach a debugger to your Lambda function from your IDE using LocalStack. 
-lead: LocalStack makes it easier to develop, test & debug your Lamda functions locally. Learn how you can attach a debugger to your Lambda function from your IDE using LocalStack. 
+title: Debug Lambda functions from your IDE using LocalStack
+description: LocalStack makes it easier to develop, test & debug your Lambda functions locally. Learn how you can attach a debugger to your Lambda function from your IDE using LocalStack. 
+lead: LocalStack makes it easier to develop, test & debug your Lambda functions locally. Learn how you can attach a debugger to your Lambda function from your IDE using LocalStack.
 date: 2022-05-09T5:08:41+05:30
 lastmod: 2022-05-09T5:08:41+05:30
-images: ["debug-your-lamda-functions-from-your-ide-using-localstack.png"]
+images: ["debug-your-lambda-functions-from-your-ide-using-localstack.png"]
 contributors: ["LocalStack Team"]
 tags: ['tutorial']
 ---
 
-{{< img src="debug-your-lamda-functions-from-your-ide-using-localstack.png" >}}
+{{< img src="debug-your-lambda-functions-from-your-ide-using-localstack.png" >}}
 
 In the [previous blog](https://localstack.cloud/blog/2022-03-07-hot-swapping-python-lambda-functions-using-localstack/), we checked out how to hot-swap Lambda functions locally using LocalStack. Using LocalStack, you can execute your Lambda functions locally without the need to deploy them to AWS. This is a great way to test your code and learn more about how your Lambda functions work before deploying them to AWS. But there is always a question about debugging the Lambda functions from your IDE before deploying it. This is a tricky problem because, with hot reload, you would have to invoke your Lambda function multiple times to figure out where the bug is, and we don’t have a proper way to set breakpoints in our debugger to inspect the code later on.
 
