@@ -5,7 +5,7 @@ lead: LocalStack makes it easier to develop, test & debug your Lambda functions 
 date: 2022-05-09T5:08:41+05:30
 lastmod: 2022-05-09T5:08:41+05:30
 images: ["debug-your-lambda-functions-from-your-ide-using-localstack.png"]
-contributors: ["LocalStack Team"]
+contributors: ["Harsh Mishra"]
 tags: ['tutorial']
 ---
 

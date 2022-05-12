@@ -6,7 +6,7 @@ date: 2022-03-22T8:53:01+05:30
 lastmod: 2022-22-07T8:53:01+05:30
 draft: false
 images: []
-contributors: ["LocalStack Team"]
+contributors: ["Harsh Mishra"]
 tags: ["tutorial"]
 ---
 
