@@ -1,9 +1,9 @@
 ---
-title: CloudWatch in Action - Get notified when your Lambda suddenly fails
+title: Monitor your failing Lambdas with CloudWatch and LocalStack
 description: "LocalStack now supports CloudWatch metric alarms! In this article, you will learn how to configure and test a simple AWS CloudWatch metric alarm with LocalStack, to get notified on infrastructure failures."
 lead: "LocalStack now supports CloudWatch metric alarms! In this article, you will learn how to configure and test a simple AWS CloudWatch metric alarm with LocalStack, to get notified on infrastructure failures."
-date: 2022-05-04
-lastmod: 2022-05-04
+date: 2022-05-20
+lastmod: 2022-05-20
 draft: false
 images: []
 contributors: ["Stefanie"]
@@ -40,6 +40,7 @@ Navigating to `http://localhost:3000` will open a UI to access the email notific
 CloudWatch can help you to get a better understanding of how your AWS infrastructure resources behave over time. While some metrics are collected automatically, e.g., the execution of Lambdas, you can also define custom metrics you would like to monitor. To that end, you can use the CloudWatch API [`put-metric-data`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-data.html).
 
 Here are some basic commands to get started:
+
 ```sh
 # add new metric data
 $ awslocal cloudwatch put-metric-data \
@@ -79,6 +80,7 @@ $ awslocal cloudwatch get-metric-data \
     ]
 }
 ```
+
 You can also use our **LocalStack WebApp** and navigate to [https://app.localstack.cloud/resources/monitoring](https://app.localstack.cloud/resources/monitoring). Here you can add metrics (and alarms) as well, supported by a nice UI, which already gives you configurable parameters.
 
 
@@ -98,6 +100,7 @@ For a deeper understanding of alarm evaluation, we advice to consult the officia
 Even though LocalStack's implementation of CloudWatch is not yet feature complete, you can already cover a range of use-cases. Next, we look into how we can make use of CloudWatch alarms with Lambdas.
 
 ## Setup a Lambda Function
+
 For simplicity, we will create a Lambda that will always fail. This will make it easier to demonstrate the alarm's functionality. Suppose you are interested in further learning about Lambdas. In that case, you can check our previous blog post on [Hot Swapping Python Lambda Functions using LocalStack](../2022-03-07-hot-swapping-python-lambda-functions-using-localstack), which also gives a solid introduction to Lambdas.
 
 ```py
@@ -109,6 +112,7 @@ def lambda_handler(event, context):
 ```
 
 Next we zip `failing-lambda.py` and create our lambda-function:
+
 ```sh
 $ zip failing-lambda.zip failing-lambda.py
 
@@ -123,6 +127,7 @@ $ awslocal lambda create-function \
 When this lambda is invoked, it will fail immediately. Also the metrics are collected automatically, so we can now define a metric alarm that will notify us, once this happens.
 
 ## Metric alarms
+
 Now let's think about when we want to trigger the alarm. We need to define which metrics we are interested in, and how thresholds should be calculated.
 If you invoke the lambda once, and run `list-metrics` you will see that we already have some metrics here:
 
@@ -153,6 +158,7 @@ $ awslocal cloudwatch list-metrics
     ]
 }
 ```
+
 Obviously, there are metrics reported for every invocation of a Lambda - we can see the metric name "Invocations". 
 
 Additionally, there is a metric for "Errors". This is the one we want to track.
@@ -170,17 +176,20 @@ In case the lambda was not invoke, we assume everything is fine. So we set `trea
 At this time we know how we want to evaluate the metrics. So the only thing left is configuring the action that should be executed, once the alarm changes its state to _ALARM_.
 
 ## Alarm actions
+
 Actions are optional parameters that we can configure for alarms. There is one configuration for every state: `alarm-actions`, `ok-actions`, and `insufficient-data-actions`. We will execute the action once the alarm state changes. 
 
 LocalStack supports SNS Topics as actions. We must create the topic beforehand, and we need to know the topic's ARN for the metric-alarm configuration.
 
 Before we can use the email feature, we have to do some preparations: We need to verify the email address where you want to send the messages to:
+
 ```sh
 $ awslocal ses verify-email-identity --email-address stefanie@example.com
 ```
 
 Next, we can create the SNS topic. Remember: we need this ARN for the alarm configuration.
 We also need to create a subscription to this topic, so the that the email will be sent to our address.
+
 ```sh
 $ awslocal sns create-topic --name my-topic-alarm
 {
@@ -192,6 +201,7 @@ $ awslocal sns subscribe --topic-arn arn:aws:sns:us-east-1:000000000000:my-topic
 ```
 
 Finally, we have everything we need to create the metric-alarm:
+
 ```sh
 $ awslocal cloudwatch put-metric-alarm \
   --alarm-name my-lambda-alarm \
@@ -209,11 +219,13 @@ $ awslocal cloudwatch put-metric-alarm \
 ```
 
 If we invoke the Lambda function now, you should get an email notification after some time:
+
 ```sh
 $ awslocal lambda invoke --function-name my-failing-lambda out.txt
 ```
 
 The email will contain plain text, and gives you information about the alarm that was triggered:
+
 ```sh
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
@@ -226,6 +238,7 @@ To: stefanie@example.com
 ```
 
 ## Conclusion
+
 CloudWatch is an integral part of infrastructure management to monitor and react to operational metrics. Metric alarms are periodically evaluated and make you aware if thresholds of metrics are breached.
 		
 The configured actions automatically trigger once the alarm state changes and can help respond quickly to any anomalies.
