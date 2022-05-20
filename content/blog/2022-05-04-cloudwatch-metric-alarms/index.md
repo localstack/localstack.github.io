@@ -11,10 +11,9 @@ tags: ["tutorial"]
 ---
 
 
-[AWS CloudWatch](https://docs.aws.amazon.com/cloudwatch/index.html) is a service that enables monitoring of your AWS infrastructure by collecting logs and operational metrics of your deployment. An integral part of infrastructure operations is reacting in real-time to anomalous changes in metrics, e.g., spiking disk or CPU usage, or failures in your serverless functions. This is where CloudWatch metric alarms and actions come into play, which you can now develop and test using LocalStack!
+[AWS CloudWatch](https://docs.aws.amazon.com/cloudwatch/index.html) is a service that enables monitoring of your AWS infrastructure by collecting logs and operational metrics of your deployment. An integral part of infrastructure operations is reacting in real-time to anomalous changes in metrics, e.g., spiking disk or CPU usage or failures in your serverless functions. This is where CloudWatch metric alarms and actions come into play, which you can now develop and test using LocalStack!
 
-LocalStack now supports CloudWatch metric alarms with `statistic` and `comparison-operator`.
-In this article, we will discuss how you can use a CloudWatch metric alarm to get notified automatically when your Lambda function invocations fail. In our example, we will set up an email notification using the Simple Email Service (SES).
+LocalStack now supports CloudWatch metric alarms with `statistic` and `comparison-operator`. This article will discuss how you can use a CloudWatch metric alarm to get notified automatically when your Lambda function invocations fail. We will set up an email notification using the Simple Email Service (SES) in our example.
 
 ## Prerequisites
 
@@ -23,7 +22,7 @@ For this tutorial you will need:
 * The [awslocal](https://docs.localstack.cloud/integrations/aws-cli/#localstack-aws-cli-awslocal) command line utility
 * A mock SMTP server like [smtp4dev](https://github.com/rnwood/smtp4dev) or [Papercut SMTP](https://github.com/ChangemakerStudios/Papercut-SMTP) to receive the email notifications locally.
 
-In order to connect LocalStack with the SMTP server, you need to [configure the following SMTP environment variables](https://docs.localstack.cloud/aws/ses/#pro) when starting LocalStack:
+To connect LocalStack with the SMTP server, you need to [configure the following SMTP environment variables](https://docs.localstack.cloud/aws/ses/#pro) when starting LocalStack:
  * `SMTP_HOST` this should contain the hostname and the port of your mock SMTP server
  * `SMTP_USER` optional, if there is user to connect
  * `SMTP_PASS` optional
@@ -37,7 +36,8 @@ Navigating to `http://localhost:3000` will open a UI to access the email notific
 
 
 ## CloudWatch Basics
-CloudWatch can help you to get a better understanding about how your AWS infrastructure resources behave over time. While some metrics are collected automatically, e.g., the execution of Lambdas, you can also define custom metrics you would like to monitor. To that end, you can use the CloudWatch API [`put-metric-data`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-data.html).
+
+CloudWatch can help you to get a better understanding of how your AWS infrastructure resources behave over time. While some metrics are collected automatically, e.g., the execution of Lambdas, you can also define custom metrics you would like to monitor. To that end, you can use the CloudWatch API [`put-metric-data`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudwatch/put-metric-data.html).
 
 Here are some basic commands to get started:
 ```sh
@@ -98,7 +98,7 @@ For a deeper understanding of alarm evaluation, we advice to consult the officia
 Even though LocalStack's implementation of CloudWatch is not yet feature complete, you can already cover a range of use-cases. Next, we look into how we can make use of CloudWatch alarms with Lambdas.
 
 ## Setup a Lambda Function
-For the sake of simplicity, we will create a Lambda that will always fail. This will make it easier to demonstrate the alarms functionality. If you are interested in further learning about Lambdas, you can check our previous blog post on [Hot Swapping Python Lambda Functions using LocalStack](../2022-03-07-hot-swapping-python-lambda-functions-using-localstack), which also gives a solid introduction to Lambdas.
+For simplicity, we will create a Lambda that will always fail. This will make it easier to demonstrate the alarm's functionality. Suppose you are interested in further learning about Lambdas. In that case, you can check our previous blog post on [Hot Swapping Python Lambda Functions using LocalStack](../2022-03-07-hot-swapping-python-lambda-functions-using-localstack), which also gives a solid introduction to Lambdas.
 
 ```py
 # failing-lambda.py
@@ -170,10 +170,9 @@ In case the lambda was not invoke, we assume everything is fine. So we set `trea
 At this time we know how we want to evaluate the metrics. So the only thing left is configuring the action that should be executed, once the alarm changes its state to _ALARM_.
 
 ## Alarm actions
-Actions are optional parameters that can be configured for alarms. There is one configuration for every state: `alarm-actions`, `ok-actions`, and `insufficient-data-actions`. The action will be executed once the alarm state changes. 
+Actions are optional parameters that we can configure for alarms. There is one configuration for every state: `alarm-actions`, `ok-actions`, and `insufficient-data-actions`. We will execute the action once the alarm state changes. 
 
-LocalStack supports SNS Topics as actions. 
-The topic must be created beforehand, and we need to know the topic's ARN for the metric-alarm configuration.
+LocalStack supports SNS Topics as actions. We must create the topic beforehand, and we need to know the topic's ARN for the metric-alarm configuration.
 
 Before we can use the email feature, we have to do some preparations: We need to verify the email address where you want to send the messages to:
 ```sh
@@ -228,7 +227,7 @@ To: stefanie@example.com
 
 ## Conclusion
 CloudWatch is an integral part of infrastructure management to monitor and react to operational metrics. Metric alarms are periodically evaluated and make you aware if thresholds of metrics are breached.
-
-The configured actions trigger automatically once the alarm state changes and can therefore help to respond quick to any anomalies.
-
-In our example we showed how to use email notifications, but this is just one way to do it. You could also use webhooks, SQS queues, or other SNS topic subscribers.
+		
+The configured actions automatically trigger once the alarm state changes and can help respond quickly to any anomalies.
+		
+In our example, we showed how to use email notifications, but this is just one way. You could also use webhooks, SQS queues, or other SNS topic subscribers.
