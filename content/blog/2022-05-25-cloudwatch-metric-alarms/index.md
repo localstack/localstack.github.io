@@ -2,14 +2,15 @@
 title: Monitor your failing Lambdas with CloudWatch and LocalStack
 description: "LocalStack now supports CloudWatch metric alarms! In this article, you will learn how to configure and test a simple AWS CloudWatch metric alarm with LocalStack, to get notified on infrastructure failures."
 lead: "LocalStack now supports CloudWatch metric alarms! In this article, you will learn how to configure and test a simple AWS CloudWatch metric alarm with LocalStack, to get notified on infrastructure failures."
-date: 2022-05-20
-lastmod: 2022-05-20
+date: 2022-05-25
+lastmod: 2022-05-25
 draft: false
-images: []
+images: ["monitoring-failing-lambdas-cloudwatch-localstack-banner.png"]
 contributors: ["Stefanie"]
 tags: ["tutorial"]
 ---
 
+{{< img src="monitoring-failing-lambdas-cloudwatch-localstack-banner.png" >}}
 
 [AWS CloudWatch](https://docs.aws.amazon.com/cloudwatch/index.html) is a service that enables monitoring of your AWS infrastructure by collecting logs and operational metrics of your deployment. An integral part of infrastructure operations is reacting in real-time to anomalous changes in metrics, e.g., spiking disk or CPU usage or failures in your serverless functions. This is where CloudWatch metric alarms and actions come into play, which you can now develop and test using LocalStack!
 
@@ -101,7 +102,7 @@ Even though LocalStack's implementation of CloudWatch is not yet feature complet
 
 ## Setup a Lambda Function
 
-For simplicity, we will create a Lambda that will always fail. This will make it easier to demonstrate the alarm's functionality. Suppose you are interested in further learning about Lambdas. In that case, you can check our previous blog post on [Hot Swapping Python Lambda Functions using LocalStack](../2022-03-07-hot-swapping-python-lambda-functions-using-localstack), which also gives a solid introduction to Lambdas.
+For simplicity, we will create a Lambda that will always fail. This will make it easier to demonstrate the alarm's functionality. Suppose you are interested in further learning about Lambdas. In that case, you can check our previous blog post on [Hot Swapping Python Lambda Functions using LocalStack](https://localstack.cloud/blog/2022-03-07-hot-swapping-python-lambda-functions-using-localstack/), which also gives a solid introduction to Lambdas.
 
 ```py
 # failing-lambda.py
