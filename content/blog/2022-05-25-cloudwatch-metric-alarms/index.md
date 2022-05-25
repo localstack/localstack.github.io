@@ -242,6 +242,4 @@ To: stefanie@example.com
 
 CloudWatch is an integral part of infrastructure management to monitor and react to operational metrics. Metric alarms are periodically evaluated and make you aware if thresholds of metrics are breached.
 		
-The configured actions automatically trigger once the alarm state changes and can help respond quickly to any anomalies.
-		
-In our example, we showed how to use email notifications, but this is just one way. You could also use webhooks, SQS queues, or other SNS topic subscribers.
+The configured actions automatically trigger once the alarm state changes and can help respond quickly to any anomalies. In our example, we showed how to use email notifications, but this is just one way. You could also use webhooks, SQS queues, or other SNS topic subscribers. Check out the code over our [samples repository](https://github.com/localstack/localstack-pro-samples/tree/master/cloudwatch-metrics-aws) and create an issue on [GitHub](https://github.com/localstack/localstack/issues/new) or connect with us on [LocalStack Slack](https://localstack.cloud/contact) to get help.
