@@ -1,11 +1,11 @@
 ---
 title: Announcing LocalStack Discussion Pages
-description:  
-lead:  
+description: "Introducing, LocalStack's Community Discussion Pages. Get started with conversations around feedback/bugs/suggestions for the LocalStack as a product and platform!"
+lead: "Introducing, LocalStack's Community Discussion Pages. Get started with conversations around feedback/bugs/suggestions for the LocalStack as a product and platform!"
 date: 2022-06-08T12:51:11+05:30
 lastmod: 2022-06-08T12:51:11+05:30
 images: []
-contributors: []
+contributors: ["Harsh Mishra"]
 tags: ['news']
 ---
 
