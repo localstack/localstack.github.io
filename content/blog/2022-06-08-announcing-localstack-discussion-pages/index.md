@@ -1,31 +1,30 @@
 ---
 title: Announcing LocalStack Discussion Pages
-description: "Introducing, LocalStack's Community Discussion Pages. Get started with conversations around feedback/bugs/suggestions for the LocalStack as a product and platform!"
-lead: "Introducing, LocalStack's Community Discussion Pages. Get started with conversations around feedback/bugs/suggestions for the LocalStack as a product and platform!"
-date: 2022-06-08T12:51:11+05:30
-lastmod: 2022-06-08T12:51:11+05:30
+description: "Introducing, LocalStack's Community Discussion Pages - a space for conversations, feedback and suggestions around the LocalStack platform!"
+lead: "Introducing, LocalStack's Community Discussion Pages - a space for conversations, feedback and suggestions around the LocalStack platform!"
+date: 2022-06-15T12:51:11+05:30
+lastmod: 2022-06-15T12:51:11+05:30
 images: []
 contributors: ["Harsh Mishra"]
 tags: ['news']
 ---
 
-With the rise of the LocalStack Community on GitHub, Slack, and Social-media platforms like LinkedIn and Twitter, we have received a lot of feedback from our users. These feedbacks range from new feature requests for our LocalStack Team and Web Application platform, bug reports, enhancements, and further additions from various developers distributed across our user base. 
+What a journey — we are delighted to see our LocalStack community grow across GitHub, Slack and social media platforms like Twitter and LinkedIn on a daily basis. We receive lots of valuable feedback from our users, ranging from new feature requests for the LocalStack platform, bug reports, enhancements and code contributions from various developers distributed across our user base.
 
-We have been handling these requests through our GitHub Issue tracker, which has been limited to our open-sourced cloud emulation and doesn't cover our premium features. To address this and collaborate with our community better, we announce the all-new LocalStack Discussion Pages. 
+To better collaborate with our community and create a space where LocalStack users can share experiences and discuss topics in a discoverable manner, we are glad to be introducing the all-new LocalStack Discussion Pages.
 
-LocalStack Discuss form is also a positive step in engaging with our community members and listening to their feedback. While our Slack community is limited to taking immediate bug reports and feature requests and working with our community from a close quarter, our Discussion Pages will help developers to give us feedback, join the discussions on our core emulation framework, Team & Enterprise product, and future direction of LocalStack as a company.
+With LocalStack Discussion Pages we want to engage with our community members, listen to feedback and create a space where best answers to recurring questions and discussion topics can be located and extended. While our existing Slack community is limited to taking immediate bug reports and feature requests and quickly collaborate on emerging topics with our community, our Discussion Pages will allow developers to directly share experiences and best practices with the broader community, give us feedback, join the discussions on our existing platform and products, and shape the future direction of LocalStack.
 
-## Being a part of LocalStack Discuss
+## Participating in LocalStack Discussions
 
-The LocalStack Discussion Pages will be the dedicated place to discuss topics and questions related to:
+The LocalStack Discussion Pages will be the dedicated place to discuss topics, best practices, and questions related to:
 
-- Discussions and announcements about LocalStack Pro and Community releases.
-- LocalStack Documentation, reference guides, case studies, and more.
+- Discussions and announcements about LocalStack Pro, Team, Enterprise, and Community releases.
 - Useful LocalStack tips, tricks, and best practices for developing your cloud & serverless applications locally.
 - Contributing to the LocalStack Community codebase and steering the development of our open-source projects.
-- Send constructive feedback about LocalStack as a product and as a company and how we can do better!
+- Giving constructive feedback about the LocalStack platform and our future roadmap, as well as how our team can better support you in increasing your developer experience with our products and services!
 
-However, it will not be a place for ad-hoc reports or support questions; Please connect with our support team on [Slack](https://localstack.cloud/contact) or create a GitHub issue on our open-source [GitHub Issue tracker](https://github.com/localstack/localstack/issues) for our help with your issues.
+However, LocalStack Discussion Pages will not be a place for ad-hoc reports or support requests; Please connect with our support team on [Slack](https://localstack.cloud/contact) for real time support which requires quick resolution and iteration cycles with our team or the community. For error and bug reports related to our codebase, please create a GitHub issue on our open-source [GitHub Issue tracker](https://github.com/localstack/localstack/issues). Discussion Pages will be the best place for general feature requests, best practice and usage related questions, and should serve as a comprehensive archive useful to the growing community over time.
 
 Create an account on [discuss.localstack.cloud](https://discuss.localstack.cloud/) and discuss away!
 
@@ -35,15 +34,15 @@ If you are new to Discourse, consider looking at [Discourse New User guide](http
 
 Our Discussion Pages has an initial selection of categories which we can adjust over time:
 
-- Announcements: Announcing LocalStack features, product updates, and any upcoming news that we should notify our broader community!
+- Announcements: Announcing LocalStack features, product updates, and any upcoming news we want to notify our broader community about!
 - Feature Requests: Requests for new features or suggestions to improve the existing ones!
-- Platform: Questions, bugs, feedback on the product workflow alongside dashboard, integration, documentation, and more!
-- Wizards: Share your LocalStack workflow, best practices, and suggestions for improving the development & testing workflow for the next generation of cloud & serverless developers!
+- Platform: Questions and feedback on the core product, workflows, integration, documentation, and more!
+- Wizards: Share your LocalStack use cases and workflows, best practices, and suggestions for improving the dev & test loop for the next generation of cloud and serverless developers!
 
-To ensure that you are up-to-date about the recent happenings with LocalStack, we will also notify you via email! Using our Discussion Pages, you can edit your email preferences and define how often you want to receive emails. We suggest you mute any topic or category that doesn't interest you for a clutter-free mailbox!
+To ensure that you are up-to-date with the latest around LocalStack, we will also send you notifications about LocalStack Discussion Pages via email! You can edit your email preferences and define how often you want to receive emails. We suggest you mute any topic or category that doesn't interest you for a clutter-free mailbox!
 
 ## Conclusion
 
-At LocalStack, we are rapidly growing, and we will be further using our Discuss community to share upcoming updates on our product. We will be closely communicating with the conversations, iterate on our product and post the updates as and when we ship it.
+LocalStack is growing rapidly, and Discourse will help us scale community interaction. We will also use the Discourse community to share upcoming updates on our product and communicate the roadmap. At LocalStack, we are rapidly growing, and we are looking forward to be working closely with our community and engaging via Discussion Pages on upcoming updates.
 
-Let’s work together and make cloud development real fun! 🚀
+Let’s work together to create a superb developer experience and make cloud development fun! 🚀
