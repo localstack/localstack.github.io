@@ -13,9 +13,9 @@ tags: ['news']
 
 What a journey — we are delighted to see our LocalStack community grow across GitHub, Slack and social media platforms like Twitter and LinkedIn on a daily basis. We receive lots of valuable feedback from our users, ranging from new feature requests for the LocalStack platform, bug reports, enhancements and code contributions from various developers distributed across our user base.
 
-To better collaborate with our community and create a space where LocalStack users can share experiences and discuss topics in a discoverable manner, we are glad to be introducing the all-new LocalStack Discussion Pages.
+To better collaborate with our community and create a space where LocalStack users can share experiences and discuss topics in a discoverable manner, we are excited to introduce the all-new LocalStack Discussion Pages.
 
-With LocalStack Discussion Pages we want to engage with our community members, listen to feedback and create a space where best answers to recurring questions and discussion topics can be located and extended. While our existing Slack community is limited to taking immediate bug reports and feature requests and quickly collaborate on emerging topics with our community, our Discussion Pages will allow developers to directly share experiences and best practices with the broader community, give us feedback, join the discussions on our existing platform and products, and shape the future direction of LocalStack.
+With LocalStack Discussion Pages we want to engage with our community members, listen to your feedback, and create a space where best answers to recurring questions and discussion topics can be located and extended. While our existing Slack community is limited to taking bug reports and feature requests and to quickly collaborate on technical topics with our users, our Discussion Pages will allow developers to directly share experiences and best practices with the broader community, give us feedback, join the discussions on our existing platform and products, and shape the future direction of LocalStack.
 
 ## Participating in LocalStack Discussions
 
@@ -26,7 +26,7 @@ The LocalStack Discussion Pages will be the dedicated place to discuss topics, b
 - Contributing to the LocalStack Community codebase and steering the development of our open-source projects.
 - Giving constructive feedback about the LocalStack platform and our future roadmap, as well as how our team can better support you in increasing your developer experience with our products and services!
 
-However, LocalStack Discussion Pages will not be a place for ad-hoc reports or support requests; Please connect with our support team on [Slack](https://localstack.cloud/contact) for real time support which requires quick resolution and iteration cycles with our team or the community. For error and bug reports related to our codebase, please create a GitHub issue on our open-source [GitHub Issue tracker](https://github.com/localstack/localstack/issues). Discussion Pages will be the best place for general feature requests, best practice and usage related questions, and should serve as a comprehensive archive useful to the growing community over time.
+However, LocalStack Discussion Pages will not be a place for ad-hoc reports or support requests; Please connect with our support team on [Slack](https://localstack.cloud/contact) for real-time support which requires quick resolution and iteration cycles with our team or the community. For error and bug reports related to our codebase, please create a GitHub issue on our open-source [GitHub Issue tracker](https://github.com/localstack/localstack/issues). Discussion Pages will be the best place for general feature requests, best practice and usage related questions, and should serve as a comprehensive archive useful to the growing community over time.
 
 Create an account on [discuss.localstack.cloud](https://discuss.localstack.cloud/) and discuss away!
 
@@ -45,6 +45,6 @@ To ensure that you are up-to-date with the latest around LocalStack, we will als
 
 ## Conclusion
 
-LocalStack is growing rapidly, and Discourse will help us scale community interaction. We will also use the Discourse community to share upcoming updates on our product and communicate the roadmap. At LocalStack, we are rapidly growing, and we are looking forward to be working closely with our community and engaging via Discussion Pages on upcoming updates.
+LocalStack is growing rapidly, and Discourse will help us scale community interaction. We will also use the Discourse community to share updates on our product and to communicate the roadmap. We are looking forward to be working closely with our growing community and engaging via Discussion Pages on all the exciting topics and updates that are upcoming.
 
 Let’s work together to create a superb developer experience and make cloud development fun! 🚀
