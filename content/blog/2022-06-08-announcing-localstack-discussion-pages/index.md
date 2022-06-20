@@ -2,12 +2,14 @@
 title: Announcing LocalStack Discussion Pages
 description: "Introducing, LocalStack's Community Discussion Pages - a space for conversations, feedback and suggestions around the LocalStack platform!"
 lead: "Introducing, LocalStack's Community Discussion Pages - a space for conversations, feedback and suggestions around the LocalStack platform!"
-date: 2022-06-15T12:51:11+05:30
-lastmod: 2022-06-15T12:51:11+05:30
-images: []
+date: 2022-06-20T12:51:11+05:30
+lastmod: 2022-06-20T12:51:11+05:30
+images: ["announcing-localstack-discussion-pages.png"]
 contributors: ["Harsh Mishra"]
 tags: ['news']
 ---
+
+{{< img src="announcing-localstack-discussion-pages.png" >}}
 
 What a journey — we are delighted to see our LocalStack community grow across GitHub, Slack and social media platforms like Twitter and LinkedIn on a daily basis. We receive lots of valuable feedback from our users, ranging from new feature requests for the LocalStack platform, bug reports, enhancements and code contributions from various developers distributed across our user base.
 
