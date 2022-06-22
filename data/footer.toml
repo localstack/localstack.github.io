@@ -45,3 +45,21 @@ name = "Resources"
   [[categories.entries]]
   name = "Docs"
   url = "/docs"
+
+[[categories]]
+name = "Social"
+  [[categories.entries]]
+  name = "LinkedIn"
+  url = "https://https://www.linkedin.com/company/localstack-cloud"
+
+  [[categories.entries]]
+  name = "Twitter"
+  url = "https://twitter.com/_localstack"
+
+  [[categories.entries]]
+  name = "Meetup"
+  url = "https://www.meetup.com/localstack-community/"
+
+  [[categories.entries]]
+  name = "YouTube"
+  url = "https://www.youtube.com/channel/UC2V1JvfnVBoRqErIXa3eCFw"

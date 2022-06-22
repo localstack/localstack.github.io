@@ -30,6 +30,10 @@ Please join us in our Slack channel: [https://localstack-community.slack.com](ht
 
 Don't have access to `localstack-community` yet? Please contact us at [info@localstack.cloud](mailto:info@localstack.cloud) to receive an invite.
 
+### Forum
+
+To participate in wider community discussions and steer the development of LocalStack, please join us on our Discourse forum: [discuss.localstack.cloud](https://discuss.localstack.cloud).
+
 ### Email
 
 For any administrative questions regarding your account (e.g., subscriptions, billing), please contact us directly at [info@localstack.cloud](mailto:info@localstack.cloud). (Note: Please do not post any personal details or private information in any of the public communication channels!)
