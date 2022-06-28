@@ -22,8 +22,10 @@
   color: $body-color;
 }
 
-.navbar-light .navbar-nav .active .nav-link {
-  color: $primary;
+.nav-item, .nav-item > .btn {
+  font-size: $font-size-sm;
+  font-weight: 700;
+  color: $white;
 }
 
 @include media-breakpoint-up(md) {
@@ -69,9 +71,11 @@
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid $gray-200;
-  margin-top: 4px;
+  background-color: transparent;
+  // border-bottom: 1px solid $gray-200;
+  // margin-top: 4px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .header-bar {
