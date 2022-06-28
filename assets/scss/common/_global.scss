@@ -27,7 +27,7 @@ h6,
 @include media-breakpoint-up(md) {
   body {
     font-size: $font-size-md;
-    padding-top: 4rem !important;
+    // padding-top: 4rem !important;
   }
 
   h1,
@@ -86,7 +86,7 @@ a.btn:focus {
 */
 
 body {
-  padding-top: 3.5625rem;
+  // padding-top: 3.5625rem;
 }
 
 .docs-sidebar {
