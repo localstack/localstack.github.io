@@ -1,6 +1,15 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
+<section class="section container pb-7 pt-7">
+  <div class="d-flex gap-5 justify-content-center align-items-center">
+    <div class="text-white">
+      <h1>LocalStack</h1>
+      <p>A fully functional local cloud stack</p>
+      <p>Develop and test your cloud and serverless<br>apps offline!</p>
+      <a class="btn btn-primary btn-lg" style="width: 300px">GET STARTED</a>
+    </div>
+    <img src="/images/landing/laptop_stacks.svg"></img>
+  </div>
+  <!-- <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
       <h1 class="mt-0"><img src="/images/localstack.svg" alt="LocalStack Logo" style="max-width: 180px" class="mb-4"> {{ .Title }}</h1>
     </div>
@@ -17,11 +26,34 @@
         <iframe src="https://ghbtns.com/github-btn.html?user=localstack&amp;repo=localstack&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
+<section class="section section-md floating-section">
+  <div class="container section-container">
+    <div class="row justify-content-center gap-4 text-center">
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">400<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.875rem; font-weight: 700">CONTRIBUTORS</span>
+      </div>
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">11 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.87rem; font-weight: 700">SLACK MEMBERS</span>
+      </div>
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">40 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.87rem; font-weight: 700">GITHUB STARS</span>
+      </div>
+      <div class="col col-md-4 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">94 M<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.87rem; font-weight: 700">DOCKER PULLS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section-sm">
   <div class="container">
     <div class="row justify-content-center text-center">
@@ -36,29 +68,6 @@
       <div class="col-8 col-sm-7 col-md-5 col-lg-4">
         <img src="/images/icons/ci.png" style="max-width: 50px" class="mb-3">
         <p>Improve software quality through continuous integration. Stop rolling out untested changes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-md section-alt">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">400+</span><br>
-        Contributors
-      </div>
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">13,000+</span><br>
-        Slack members
-      </div>
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">41,000+</span><br>
-        GitHub stars
-      </div>
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">94,000,000+</span><br>
-        Docker Pulls
       </div>
     </div>
   </div>
