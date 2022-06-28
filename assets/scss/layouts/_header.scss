@@ -25,7 +25,6 @@
 .nav-item, .nav-item > .btn {
   font-size: $font-size-sm;
   font-weight: 700;
-  color: $white;
 }
 
 @include media-breakpoint-up(md) {
