@@ -7,7 +7,7 @@ localStackApiEndpoint = "https://api.localstack.cloud/download"
 
 ## Homepage
 title = "LocalStack"
-logo = "/images/header-logo.svg"
+logo = "/images/header-logo-new.svg"
 titleSeparator = "-"
 titleAddition = "A fully functional local cloud stack"
 description = "Develop and test your cloud apps offline"
