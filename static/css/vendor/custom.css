@@ -61,6 +61,21 @@ tr.no-border-bottom td {
   opacity: 100%;
 }
 
+.card-top-photo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -90px;
+  width: 100%;
+}
+
+.card-top-photo img {
+  width: 120px;
+  height: 120px;
+  border: 10px solid #6A56E7;
+  border-radius: 50%;
+}
+
 .solution-card {
   display: flex;
   flex-direction: column;
@@ -96,5 +111,5 @@ tr.no-border-bottom td {
 
 .divider {
   border: 2px solid #79F0A9;
-  width: 66px;
+  width: 66px !important;
 }
