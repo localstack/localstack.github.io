@@ -57,3 +57,23 @@ tr.no-border-bottom td {
   color: #1B183E;
   padding: 2rem;
 }
+
+//font weights
+.fw-800 {
+  font-weight: 800
+}
+
+.black-border {
+  -webkit-text-stroke: 1px black; /* width and color */
+}
+
+.customerLogo {
+  max-height: 65px; 
+  filter: grayscale(100%); 
+  opacity: 50%;
+}
+
+.customerLogo:hover {
+  filter: none;
+  opacity: 100%;
+}
