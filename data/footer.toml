@@ -1,7 +1,6 @@
 # couldn't get the nested menus to work ...
 
 [[categories]]
-name = "LocalStack <i class=\"bi bi-stack\"></i>"
 
   [[categories.entries]]
   name = "Contact"
@@ -19,6 +18,8 @@ name = "LocalStack <i class=\"bi bi-stack\"></i>"
   name = "Jobs"
   url = "/jobs"
 
+[[categories]]
+
   [[categories.entries]]
   name = "App"
   url = "https://app.localstack.cloud"
@@ -32,7 +33,6 @@ name = "LocalStack <i class=\"bi bi-stack\"></i>"
   url = "/faq"
 
 [[categories]]
-name = "Resources"
 
   [[categories.entries]]
   name = "GitHub"
@@ -45,21 +45,3 @@ name = "Resources"
   [[categories.entries]]
   name = "Docs"
   url = "/docs"
-
-[[categories]]
-name = "Social"
-  [[categories.entries]]
-  name = "LinkedIn"
-  url = "https://https://www.linkedin.com/company/localstack-cloud"
-
-  [[categories.entries]]
-  name = "Twitter"
-  url = "https://twitter.com/_localstack"
-
-  [[categories.entries]]
-  name = "Meetup"
-  url = "https://www.meetup.com/localstack-community/"
-
-  [[categories.entries]]
-  name = "YouTube"
-  url = "https://www.youtube.com/channel/UC2V1JvfnVBoRqErIXa3eCFw"
