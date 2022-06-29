@@ -1,13 +1,15 @@
 <!-- <div class="header-bar fixed-top"></div> -->
-<header class="navbar fixed-top navbar-expand-md navbar-light">
-  <div class="container p-0">
-    <div class="d-flex justify-content-between w-100">
+<header class="navbar fixed-top navbar-expand-lg navbar-light">
+  <div class="container">
+    <div class="d-flex justify-content-lg-between w-100 flex-wrap flex-sm-nowrap">
       <input class="menu-btn order-0" type="checkbox" id="menu-btn">
       <label class="menu-icon order-0 d-lg-none" for="menu-btn"><span class="navicon"></span></label>
       <a class="navbar-brand order-1 order-md-0" href="{{ "/" | relURL }}">
         <img src="{{ .Site.Params.Logo }}" height="43px" alt="Logo" style="margin-bottom: -10px;">
         <!-- {{ .Site.Params.Title }} -->
       </a>
+
+      <div class="flex-grow-1 order-2 d-lg-none"></div>
 
       {{ if .Site.Params.options.darkMode -}}
       <button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
@@ -16,7 +18,7 @@
       </button>
       {{ end -}}
 
-      <ul class="navbar-nav social-nav order-3 order-md-5">
+      <ul class="navbar-nav social-nav order-3 order-md-4">
         {{ range .Site.Menus.social -}}
         <li class="nav-item">
           <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
@@ -27,8 +29,8 @@
         </li>
       </ul>
 
-      <div class="collapse navbar-collapse order-4 flex-grow-0 order-md-1">
-        <ul class="navbar-nav main-nav me-auto order-5 order-md-2 gap-xl-4">
+      <div class="collapse navbar-collapse order-4 order-md-3 flex-grow-0">
+        <ul class="navbar-nav main-nav me-auto gap-xl-4">
           {{- $current := . -}}
           <!-- TODO: generalize into a dropdown menu for hugo -->
           <li class="nav-item dropdown">
