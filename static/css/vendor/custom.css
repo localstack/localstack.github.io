@@ -87,6 +87,13 @@ tr.no-border-bottom td {
   margin: 0
 }
 
+.benefit-card {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 3rem;
+}
+
 .divider {
   border: 2px solid #79F0A9;
   width: 66px;
