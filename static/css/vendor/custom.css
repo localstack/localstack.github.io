@@ -60,3 +60,34 @@ tr.no-border-bottom td {
   filter: none;
   opacity: 100%;
 }
+
+.solution-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  background: linear-gradient(339.94deg, #2A245B 0.17%, #403777 93.6%);
+  border-radius: 20px;
+  gap: 2rem;
+}
+
+.solution-card-border {
+  display: flex;
+  padding: 1px;
+  background: linear-gradient(200deg, #26C076 0%, #595482 100%);
+  border-radius: 20px;
+}
+
+.solution-card img {
+  width: 288px;
+}
+
+.solution-card h3 {
+  margin: 0
+}
+
+.divider {
+  border: 2px solid #79F0A9;
+  width: 66px;
+}
