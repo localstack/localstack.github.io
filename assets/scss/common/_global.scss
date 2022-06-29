@@ -76,6 +76,14 @@ a.btn:focus {
   padding-bottom: 1rem;
 }
 
+.overlay-card {
+  box-shadow: 10px 30px 150px rgba(46, 38, 92, 0.25);
+  border-radius: 20px;
+  background-color: white;
+  color: #1B183E;
+  padding: 2rem;
+}
+
 /*
 .section svg {
   display: inline-block;
