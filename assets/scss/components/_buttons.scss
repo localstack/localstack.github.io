@@ -10,11 +10,18 @@
 .btn {
   border-radius: 10px;
   padding: 10px 24px;
+  font-size: $font-size-sm;
+  font-weight: 700;
 };
 
 .btn-primary {
   background: linear-gradient(89deg, #6A56E7 -43.06%, #AB8DFF 108.29%);
-  border: 0
+  border: 0;
+}
+
+.btn-lg {
+  font-size: $font-size-md;
+  padding: 18px;
 }
 
 .btn-link:focus {
