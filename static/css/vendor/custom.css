@@ -46,10 +46,6 @@ tr.no-border-bottom td {
   background: linear-gradient(77.63deg, #12123E 23.04%, #12123E 23.05%, #3E3174 122.36%);
 }
 
-.floating-section {
-  margin-top: -7.5rem;
-}
-
 .section-container {
   box-shadow: 10px 30px 150px rgba(46, 38, 92, 0.25);
   border-radius: 20px;
