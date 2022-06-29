@@ -46,6 +46,10 @@ tr.no-border-bottom td {
   background: linear-gradient(77.63deg, #12123E 23.04%, #12123E 23.05%, #3E3174 122.36%);
 }
 
+.bg-gradient-light {
+  background: linear-gradient(82.25deg, #1E1E5A -9.44%, #7E5ACA 175.9%);
+}
+
 .black-border {
   -webkit-text-stroke: 1px black; /* width and color */
 }
@@ -128,4 +132,16 @@ tr.no-border-bottom td {
 
 .overflow-x-visible {
   overflow-x: visible;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 15px 20px !important;
+}
+
+.form-button {
+  padding: 15px !important;
+  width: 235px
 }
