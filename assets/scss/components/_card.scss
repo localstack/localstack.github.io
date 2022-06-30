@@ -2,3 +2,17 @@
     padding: $spacer * 3;
     box-shadow: 10px 10px 150px rgba(46, 38, 92, 0.12);
 }
+
+.card-img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-footer-text {
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: $font-size-xs;
+    color: #8D8B9F;
+}

@@ -6,33 +6,40 @@
     </div>
   </div>
 </section>
-<div class="row justify-content-center mt-8">
-  <div class="col-md-12 col-lg-10 col-xl-8">
+<section class="section">
+  <div class="container">
+<div class="row justify-content-center">
+  <div class="col-12">
     <article>
         <div class="text-center">{{ .Content }}</div>
         <div class="card-list">
           {{ range .Data.Pages -}}
             <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-3">
-                    {{ $image := .Page.Resources.GetMatch (.Params.leadimage) }}
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) }}
                     {{ with $image }}
-                    <img src="{{ .RelPermalink }}" width="300"/> 
+                    <img class="card-img" src="{{ .RelPermalink }}"/> 
                     {{end}}
                   </div>
-                  <div class="col-9">
+                  <div class="col-8">
+                    <div class="d-flex gap-3">
+                      {{ range .Params.tags }}
+                        <div class="btn btn-primary btn-pill text-uppercase">{{ . }}</div>
+                      {{ end -}}
+                    </div>
                     <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
                     <p>{{ .Params.lead | safeHTML }}</p>
+                    <hr>
                     {{ partial "main/blog-meta.html" . -}}
                   </div>
                 </div>
-              </div>
             </div>
           {{ end -}}
         </div>
       </article>
     </div>
   </div>
-
+</div>
+</section>
 {{ end }}

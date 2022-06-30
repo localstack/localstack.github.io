@@ -154,3 +154,8 @@ tr.no-border-bottom td {
   padding: 15px !important;
   width: 235px
 }
+
+hr {
+  background-color: #1B183E !important;
+  opacity: 0.15 !important; 
+}
