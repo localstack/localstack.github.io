@@ -16,8 +16,10 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-3">
-                    {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) -}}
-                    <img src="{{$image}}"/>
+                    {{ $image := .Page.Resources.GetMatch (.Params.leadimage) }}
+                    {{ with $image }}
+                    <img src="{{ .RelPermalink }}" width="300"/> 
+                    {{end}}
                   </div>
                   <div class="col-9">
                     <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
