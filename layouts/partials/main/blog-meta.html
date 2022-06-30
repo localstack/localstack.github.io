@@ -1,12 +1,15 @@
-<div class="d-flex align-items-center card-footer-text">
-    <p class="mb-0"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C17.5228 2.5 22 6.97715 22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5ZM12 4.5C7.58172 4.5 4 8.08172 4 12.5C4 16.9183 7.58172 20.5 12 20.5C16.4183 20.5 20 16.9183 20 12.5C20 8.08172 16.4183 4.5 12 4.5ZM12 6.5C12.5128 6.5 12.9355 6.88604 12.9933 7.38338L13 7.5V12.0858L14.7071 13.7929C15.0976 14.1834 15.0976 14.8166 14.7071 15.2071C14.3466 15.5676 13.7794 15.5953 13.3871 15.2903L13.2929 15.2071L11.2929 13.2071C11.1366 13.0508 11.0374 12.8481 11.0087 12.6314L11 12.5V7.5C11 6.94772 11.4477 6.5 12 6.5Z" fill="#8D8B9F"/>
+<div class="d-flex align-items-center flex-wrap card-footer-text">
+    <p class="mb-0">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2.5C17.5228 2.5 22 6.97715 22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5ZM12 4.5C7.58172 4.5 4 8.08172 4 12.5C4 16.9183 7.58172 20.5 12 20.5C16.4183 20.5 20 16.9183 20 12.5C20 8.08172 16.4183 4.5 12 4.5ZM12 6.5C12.5128 6.5 12.9355 6.88604 12.9933 7.38338L13 7.5V12.0858L14.7071 13.7929C15.0976 14.1834 15.0976 14.8166 14.7071 15.2071C14.3466 15.5676 13.7794 15.5953 13.3871 15.2903L13.2929 15.2071L11.2929 13.2071C11.1366 13.0508 11.0374 12.8481 11.0087 12.6314L11 12.5V7.5C11 6.94772 11.4477 6.5 12 6.5Z"
+                fill="#8D8B9F" />
         </svg>
-         {{ .ReadingTime -}}&nbsp;MIN READ</p>&nbsp;&#8212;&nbsp;
-         <p class="mb-0">posted {{ .PublishDate.Format "January 2, 2006" }} by {{ if .Params.contributors -}}{{ range $index,
+        {{ .ReadingTime -}}&nbsp;MIN READ&nbsp;&#8212;&nbsp;
+        posted {{ .PublishDate.Format "January 2, 2006" }} by {{ if .Params.contributors -}}{{ range $index,
         $contributor := .Params.contributors }}{{ if gt $index 0 }} and {{ end }}<a
             class="stretched-link position-relative" href="{{ " /contributors/" | relURL }}{{ . | urlize }}/">{{ .
             }}</a>{{ end -}}{{ end -}}
-        </p>
-<p>
+    </p>
+    <p>
 </div>
