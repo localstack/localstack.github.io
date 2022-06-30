@@ -94,9 +94,10 @@ tr.no-border-bottom td {
 
 .solution-card-border {
   display: flex;
-  padding: 1px;
+  padding: 1px !important;
   background: linear-gradient(200deg, #26C076 0%, #595482 100%);
   border-radius: 20px;
+  height: 100%;
 }
 
 .w-33 {
