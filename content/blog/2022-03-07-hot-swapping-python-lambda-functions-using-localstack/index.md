@@ -8,6 +8,7 @@ draft: false
 images: []
 contributors: ["Harsh Mishra"]
 tags: ["tutorial"]
+leadimage: "hot-swapping-python-lambda-functions.png"
 ---
 
 {{< img src="hot-swapping-python-lambda-functions.png" >}}

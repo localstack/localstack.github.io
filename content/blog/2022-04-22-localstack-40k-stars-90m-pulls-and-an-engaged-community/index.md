@@ -7,6 +7,7 @@ lastmod: 2022-04-26T10:34:04+05:30
 images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
+leadimage: "localstack-banner.png"
 ---
 
 {{< img src="localstack-banner.png" >}}

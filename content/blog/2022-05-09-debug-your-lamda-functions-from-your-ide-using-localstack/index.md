@@ -7,6 +7,7 @@ lastmod: 2022-05-09T5:08:41+05:30
 images: ["debug-your-lambda-functions-from-your-ide-using-localstack.png"]
 contributors: ["Harsh Mishra"]
 tags: ['tutorial']
+leadimage: "debug-your-lambda-functions-from-your-ide-using-localstack.png"
 ---
 
 {{< img src="debug-your-lambda-functions-from-your-ide-using-localstack.png" >}}

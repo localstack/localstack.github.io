@@ -8,6 +8,7 @@ draft: false
 images: ["monitoring-failing-lambdas-cloudwatch-localstack-banner.png"]
 contributors: ["Stefanie"]
 tags: ["tutorial"]
+leadimage: "monitoring-failing-lambdas-cloudwatch-localstack-banner.png"
 ---
 
 {{< img src="monitoring-failing-lambdas-cloudwatch-localstack-banner.png" >}}
