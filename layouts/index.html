@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section class="section section-sm bg-gradient-dark">
   <div class="container pb-7 pt-9 pt-sm-7">
-    <div class="d-flex gap-5 justify-content-center align-items-center">
-      <div class="text-white d-flex flex-column gap-4">
+    <div class="row justify-content-center align-items-center">
+      <div class="text-white align-items-center align-items-md-start d-flex flex-column gap-4 col-12 col-md-5 order-1 order-md-0">
         <h1 style="letter-spacing: 0.05em">LocalStack</h1>
         <div>
           <p>A fully functional local cloud stack</p>
@@ -10,7 +10,9 @@
         </div>
         <a class="btn btn-primary btn-lg" style="width: 315px">GET STARTED</a>
       </div>
-      <img src="/images/landing/laptop_stacks.svg"></img>
+      <div class="col-12 col-md-7 order-0 order-md-1">
+        <img style="max-width: 100%" src="/images/landing/laptop_stacks.svg"></img>
+      </div>
     </div>
   </div>
   <!-- <div class="row justify-content-center">
