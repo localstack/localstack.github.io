@@ -116,11 +116,10 @@ tr.no-border-bottom td {
   display: flex;
   align-items: center;
   text-align: start;
-  gap: 3rem;
 }
 
 .benefit-card img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .divider {
