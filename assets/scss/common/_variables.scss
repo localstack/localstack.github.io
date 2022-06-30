@@ -26,7 +26,9 @@ $pink-500: #d32e9d;
 $blue-mid:   #6577E7;
 $blue-dark:  #4755AC;
 
-$primary: $blue-dark;
+$dark-purple: #39227A;
+
+$primary: $dark-purple;
 
 // Options
 //
@@ -177,3 +179,6 @@ $alert-border-width:                0;
 $alert-bg-scale:                    0;
 $alert-border-scale:                0;
 $alert-color-scale:                 0;
+
+$card-border-radius: 30px !important;
+$card-border-color: none

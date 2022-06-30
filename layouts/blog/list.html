@@ -1,23 +1,36 @@
 {{ define "main" }}
-
-<div class="row justify-content-center">
+<section class="section section-sm bg-gradient-dark">
+  <div class="container pb-7 pt-9 pt-sm-7">
+    <div class="row justify-content-center align-items-center text-white">
+      <h1 class="text-center m-0 pt-5">{{ .Title }}</h1>
+    </div>
+  </div>
+</section>
+<div class="row justify-content-center mt-8">
   <div class="col-md-12 col-lg-10 col-xl-8">
     <article>
-      <h1 class="text-center">{{ .Title }}</h1>
-      <div class="text-center">{{ .Content }}</div>
-      <div class="card-list">
-        {{ range .Data.Pages -}}
-          <div class="card">
-            <div class="card-body">
-              <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-              <p>{{ .Params.lead | safeHTML }}</p>
-              {{ partial "main/blog-meta.html" . -}}
+        <div class="text-center">{{ .Content }}</div>
+        <div class="card-list">
+          {{ range .Data.Pages -}}
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) -}}
+                    <img src="{{$image}}"/>
+                  </div>
+                  <div class="col-9">
+                    <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+                    <p>{{ .Params.lead | safeHTML }}</p>
+                    {{ partial "main/blog-meta.html" . -}}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        {{ end -}}
-      </div>
-    </article>
+          {{ end -}}
+        </div>
+      </article>
+    </div>
   </div>
-</div>
 
 {{ end }}

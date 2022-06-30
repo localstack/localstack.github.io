@@ -7,8 +7,9 @@ draft: false
 images: []
 ---
 
-<div class="blog-tags">
-  <a href="/tags/news" class="btn btn-outline-primary">News</a>
-  <a href="/tags/showcase" class="btn btn-outline-primary">Showcase</a>
-  <a href="/tags/tutorial" class="btn btn-outline-primary">Tutorial</a>
+<div class="blog-tags d-flex gap-3">
+  <a href="/blog" class="btn btn-outline-primary btn-pill">ALL TOPICS</a>
+  <a href="/tags/news" class="btn btn-outline-primary btn-pill">NEWS</a>
+  <a href="/tags/showcase" class="btn btn-outline-primary btn-pill">SHOWCASE</a>
+  <a href="/tags/tutorial" class="btn btn-outline-primary btn-pill">TUTORIAL</a>
 </div>
