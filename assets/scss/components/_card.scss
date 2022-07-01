@@ -1,6 +1,12 @@
 .card {
-    padding: $spacer * 4;
+    padding: $spacer * 2;
     box-shadow: 10px 10px 150px rgba(46, 38, 92, 0.12);
+}
+
+@include media-breakpoint-up(md) {
+    .card {
+      padding: $spacer * 4;
+    }
 }
 
 .card-img {
