@@ -1,6 +1,6 @@
 ---
 title : "Pricing"
-description: "LocalStack comes in two flavors - as a free, open source Community Edition, and as a Pro Edition with extended features and support."
+description: "Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Netus et malesuada fames ac turpis egestas integer. Ac feugiat sed lectus vestibulum mattis."
 date: 2020-10-06T08:47:36+00:00
 lastmod: 2020-10-06T08:47:36+00:00
 draft: false

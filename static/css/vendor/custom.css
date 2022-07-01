@@ -92,7 +92,30 @@ tr.no-border-bottom td {
   width: 100%;
 }
 
-.solution-card-border {
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(13.75deg, #271E5A -34.68%, #7E5ACA 143.19%);;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.price-tag {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background: #39227A;
+  display: flex;
+  justify-content: center;
+}
+
+.price-tag h3 {
+  margin: 0;
+}
+
+.color-card-border {
   display: flex;
   padding: 1px !important;
   background: linear-gradient(200deg, #26C076 0%, #595482 100%);

@@ -1,0 +1,106 @@
+{{ define "main" }}
+<section class="section section-sm bg-gradient-dark pb-13">
+    <div class="container pb-6 pt-9 pt-sm-7">
+        <div class="row justify-content-center align-items-center text-white gap-3">
+            <h1 class="text-center m-0 pt-5">{{ .Title }}</h1>
+            <p class="text-center px-3 px-md-8">{{ .Description }}</p>
+        </div>
+    </div>
+    <div class="container mb-6">
+        <div class="row text-center gx-3 gy-3 text-white">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Community</h3>
+                        <div class="price-tag mb-3">
+                            <h3>Free</h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Basic APIs (add link to docs page)") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "LocalStack Cockpit UI") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Pro</h3>
+                        <div class="price-tag mb-3">
+                            <h3 class="d-flex align-items-center gap-1">$35<div class="fs-6">/month</div>
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="text-start fs-6">Everything in Community, plus:</div>
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced APIs") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Local cloud pods") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Best-effort support (Slack)") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI starter tier¹") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Team</h3>
+                        <div class="price-tag mb-3">
+                            <h3 class="d-flex align-items-center gap-1">$70<div class="fs-6">/month</div>
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="text-start fs-6">Everything in Pro, plus:</div>
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared cloud pods²") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Team usage analytics") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Prioritized best-effort support (Slack)") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI performance tier³") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Enterprise</h3>
+                        <div class="price-tag mb-3">
+                            <h3>Contact us</h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="text-start fs-6">Everything in Team, plus:</div>
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared cloud pods performance tier⁴") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI analytics") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "unlimited CI usage") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "SSO Support") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Dedicated tech support via Ticketing System with SLAs") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared instances") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Offline image") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Custom or on-premise installations") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-white fst-italic d-flex flex-column gap-2 fs-6">
+        <div>
+        1: 100 base credits for the first 3 users + 20 additional credits per additional user / month; additional CI credits can optionally be added - pay as you go 0.2 USD per build
+    </div>
+    <div>
+        2: managed cloud storage, limit of 500 MB per user
+    </div>
+    <div>
+        3: 1000 base credits for the first 3 users + 200 additional credits per user / month
+    </div>
+    <div>
+        4: managed cloud storage up to 5GB per seat
+    </div>
+    </div>
+</section>
+<section class="section section-sm mb-8">
+    <div class="container overlay-card mt-n8 pb-5 d-flex flex-column align-items-center">
+        <h1 class="text-center">Which one is for me?</h1>
+        <button class="btn btn-primary btn-lg" style="width: 300px">START QUIZ</button>
+    </div>
+</section>
+{{ end }}
