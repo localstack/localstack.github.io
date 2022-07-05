@@ -1,18 +1,19 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
+<section class="section bg-gradient-dark">
+  <div class="container pb-10 pt-9 pt-sm-7">
+    <div class="row justify-content-center align-items-center text-white">
+      <h1 class="text-center m-0 pt-5">{{ .Title }}</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section d-flex">
+  <div class="container overlay-card mt-n11 p-7">
     <article>
-      <div class="blog-header">
-        <h1>{{ .Title }}</h1>
-      </div>
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
     </article>
   </div>
-</div>
-{{ end }}
+</section>
 
-
-{{ define "sidebar-footer" }}
-<section class="section section-md text-center"><i class="bi bi-stack"></i></section>
+{{ partial "section/job-common.html" .}}
 {{ end }}
