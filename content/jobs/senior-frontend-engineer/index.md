@@ -8,6 +8,7 @@ draft: false
 weight: 50
 images: []
 department: "Engineering"
+leadimage: "senior-frontend-engineer"
 ---
 
 * **Engagement**: Full-time
