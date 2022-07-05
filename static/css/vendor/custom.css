@@ -182,3 +182,35 @@ hr {
   background-color: #1B183E !important;
   opacity: 0.15 !important; 
 }
+
+.contact-card-header {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.contact-textbox {
+    border: 1px solid #1b183E;
+    border-radius: 10px;
+    margin-top: 0.75rem;
+    height: 50px;
+    width: 240px;
+}
+
+.contact-bigcard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background: white;
+    box-shadow: 10px 30px 150px rgba(46, 38, 92, 0.25);
+    border-radius: 30px;
+    height: 900px;
+}
+
+.contact-section {
+  margin-top: -30rem;
+}
+
+.contact-pre {
+  padding-bottom: 30rem;
+}
