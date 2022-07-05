@@ -1,0 +1,55 @@
+<div class="container mb-6 mt-n5">
+    <div class="row gap-3">
+        <div class="col-5 gap-3 pt-7">
+            <div class="row gap-3">
+                {{ partial "misc/contact-card.html" (dict "contactName" "E-mail"
+                "text" "For any administrative questions"
+                "link" "info@localstack.cloud"
+                ) }}
+            </div>
+            <div class="row gap-3 mt-5">
+                {{ partial "misc/contact-card.html" (dict "contactName" "Slack"
+                "text" "Please join us in our Slack channel"
+                "link" "https://localstack-community.slack.com"
+                ) }}
+            </div>
+            <div class="row gap-3 mt-5">
+                {{ partial "misc/contact-card.html" (dict "contactName" "GitHub"
+                "text" "For any bug reports, please first consult the main GitHub repository"
+                "link" "https://github.com/localstack/localstack"
+                ) }}
+            </div>
+            {{/* TODO: discuss */}}
+        </div>
+        <div class="col">
+            <div class="contact-bigcard">
+                Neque ornare aenean euismod elementum nisi. Ut faucibus pulvinar elementum integer enim neque
+                volutpat ac tincidunt.
+                {{/* TODO: form */}}
+                <div class="row">
+                    <form>
+                        <div class="input-group col">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="contact-textbox" />
+                                    <input type="text" class="contact-textbox" />
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="contact-textbox" />
+                                    <input type="email" class="contact-textbox" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="text" class="contact-textbox" />
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-primary form-button" type="submit" name="submit">get in
+                                    touch</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
