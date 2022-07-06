@@ -9,8 +9,12 @@ contributors: [""]
 tags: ['news']
 ---
 
-Parity has been a major concern for LocalStack since the very beginning. Our goal is to provide the best possible experience for cloud developer. Naturally we want to make sure that LocalStack is reliable - meaning that running the same commands against AWS and LocalStack results in the same outcome. 
+Parity has been a major concern for LocalStack since the very beginning. Our goal is to provide the best possible experience for cloud developer. 
 
+**TODO**
+In general the nature of distributed cloud systems, like AWS, comes with a lot of complexity. As LocalStack runs on your local machine, certain implementation details are already simplfied. Further, some services can be fully emulated fairly easy, e.g., by CRUD functionality. 
+
+Naturally we want to make sure that LocalStack is reliable - meaning that running the same commands against AWS and LocalStack results in the same outcome. 
 Recently we have introduced some mechanics to ensure the parity of AWS and LocalStack increases steadily, and that the implemenation stays up-to-date.
 
 This approach includes weekly, automated updates of API stubs, which verifies the operation definitions of each service in LocalStack are compatible with the latest changes in `botocore`.
@@ -22,7 +26,7 @@ Additionally, we have started to collect parity metrics, which will give a handy
 
 Our AWS Service Framework (ASF) contains the service and operations definitions of all AWS services supported by LocalStack.
 To generate these APIs LocalStack uses the definitions of the python package `botocore` - which is also a major part of the AWS CLI, and `boto3`. 
-We have a Github action in place, that checks for any API changes and will raise a pull request (PR) automatically in case changes are detected. As the PR still runs all integration tests, and further has to be approved and merged manually, we ensure that nothing breaks accidentially. 
+We have a weekly running Github action in place, that checks for any API changes and will raise a pull request (PR) automatically in case changes are detected. As the PR still runs all integration tests, and further has to be approved and merged manually, we ensure that nothing breaks accidentially. 
 Of course, newly added operations will not work out-of-the box - by default all operations that are not implemented will throw a `NotImplementedError` upon calling. However, we ensure that the declaration of each operation is compatible with AWS.
 
 
@@ -34,9 +38,9 @@ Over time, as more parity tests are added, LocalStack's parity will be improved 
 
 ### Importance of Parity
 
-Parity helps build trust in LocalStack's service implementation. While this should already be reason enough, to put focus on parity tests, there are sometimes also internals that rely on responses in a certain format, or an exact wording.
+Parity helps build trust in LocalStack's service implementation. While this should already be reason enough to put focus on parity tests, there are sometimes also internals that rely on responses to be in a certain format, or to have an exact wording.
 
-Recently, [we had a case](https://github.com/localstack/localstack/pull/5978), where a slightly different message from a `ValidationException` caused a cdk-deployment to fail. In turned out that [aws-cdk verified the message of the exception](https://github.com/aws/aws-cdk/blob/v1-main/packages/aws-cdk/lib/api/util/cloudformation.ts#L35), e.g. 
+Recently, [we had a case](https://github.com/localstack/localstack/pull/5978), where a slightly different message from a `ValidationException` caused a cdk-deployment to fail. In turned out that the [aws-cdk verified the message of the exception](https://github.com/aws/aws-cdk/blob/v1-main/packages/aws-cdk/lib/api/util/cloudformation.ts#L35), e.g. 
 
 ```typescript
 ...
@@ -54,7 +58,7 @@ Thus parity tests are even important when verifying error messages.
 
 ### Parity Tests in a Nutshell
 
-Initially, a parity test is executed against AWS. In the test certain responses are marked to be part of the "snapshot". Those responses will be collected and stored in json-format in a separate *<test_file_name>.snapshot.json* file. This snapshot contains the recorded responses that will be used to verify the behavior of LocalStack later on.
+Initially, a parity test is executed against AWS. In the test case certain responses are marked to be part of the "snapshot". Those responses will be collected and stored in json-format in a separate *<test_file_name>.snapshot.json* file. This snapshot with the recorded responses will be used to verify the behavior of LocalStack later on.
 In general this initial test run against AWS is executed for the sake of collecting the "ground truth". Consequent test runs will only run against LocalStack.
 
 During the test execution against LocalStack, the test collects the same responses that are marked in the test, and then compares the result with the recorded snapshot from AWS. This way we can ensure that LocalStack behaves just like AWS.
@@ -70,7 +74,8 @@ Let's see in an example how this framework can be used.
 
 
 ### Example of a Snapshot Integration Test
-Assume we want to verify that creation of two Lambda functions and their invocations has the same outcome in AWS and LocalStack:
+
+Assume we want to verify that the creation of two Lambda functions and their invocation has the same outcome in AWS and LocalStack:
 
 - We construct our test case by adding the fixture _snapshot_.
 - Next, we define all responses that should be part of the recorded snapshot.
@@ -175,8 +180,13 @@ Next, the test can be run with LocalStack. Simply remove the ENV for `TEST_TARGE
 
 **TODO** mention decorator for `pytest.mark.skip_snapshot_verify`?
 
+**TODO** mention moto?
+
 ## Parity Metrics
 
+**TODO** -> where and how will the metrics be available?
+
+Starting with our latest release we will provide regular metric updates and insights about supported and tested services and operations. This will make our communication more transparent in terms of implemented APIs, and further improve 
 
 
 ## Outlook
