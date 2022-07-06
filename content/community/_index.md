@@ -7,7 +7,7 @@ draft: false
 images: []
 ---
 
-The LocalStack community focuses on servicing the users, contributors and the open-source culture that has heralded our flagship open-source software! Our community works together on multiple fronts: filing issues and creating pull requests, providing community support to users, advocating for its adoption among the wider community, and helping us further innovate our project.
+<!-- The LocalStack community focuses on servicing the users, contributors and the open-source culture that has heralded our flagship open-source software! Our community works together on multiple fronts: filing issues and creating pull requests, providing community support to users, advocating for its adoption among the wider community, and helping us further innovate our project.
   
 The community page aims to serve our diverse contributors to discover ways in which they can engage with the rest of the community, stay up-to-date with the recent news and events, and discover how they can contribute to our projects.
 
@@ -89,4 +89,4 @@ Check out more of our community projects on [GitHub](https://github.com/topics/l
 -   [Sample Terraform LocalStack](https://github.com/UlisesGascon/sample-terraform-localstack): Sample project to use Terraform, Localstack and Docker compose with NodeJS.    
 -   [LocalStack Spring Boot Starter](https://github.com/sivalabs/localstack-spring-boot-starter): SpringBoot Starter for Localstack.
 
-To add an example, make sure it uses the [latest release of LocalStack](https://github.com/localstack/localstack/releases).
+To add an example, make sure it uses the [latest release of LocalStack](https://github.com/localstack/localstack/releases). -->

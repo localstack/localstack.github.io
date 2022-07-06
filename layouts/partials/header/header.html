@@ -54,6 +54,17 @@
               <a class="nav-link" style="white-space: nowrap" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
             </li>
           {{ end -}}
+          <li class="nav-item dropdown">
+            <!-- TODO: determine active state based on whether a child is selected -->
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              COMMUNITY 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="productsDropdown">
+              {{ range .Site.Menus.community -}}
+              <a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+              {{ end -}}
+            </div>
+          </li>
         </ul>
         <div class="break order-6 d-md-none"></div>
         {{ if (eq $current.Section "docs") -}} <!-- only show search bar when in docs context -->

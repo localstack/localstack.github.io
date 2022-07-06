@@ -11,20 +11,26 @@
 
 # Redirect to /docs
 # GH pages redirects to docs.localstack.cloud automatically
-[[main]]
-  name = "COMPANY"
-  url = "/docs/"
-  weight = 10
+# [[main]]
+#   name = "COMPANY"
+#   url = "/docs/"
+#   weight = 10
 
-[[main]]
-  name = "COMMUNITY"
-  url = "/blog/"
-  weight = 20
+# [[main]]
+#   name = "COMMUNITY"
+#   url = "/community/"
+#   weight = 20
 
 [[main]]
   name = "RESOURCES"
-  url = "https://app.localstack.cloud"
+  url = "https://docs.localstack.cloud"
   weight = 30
+
+[[main]]
+  name = "BLOG"
+  url = "/blog/"
+  weight = 440
+
 
 [[products]]
   name = "LocalStack Core Emulation"
@@ -41,10 +47,20 @@
   url = "https://app.localstack.cloud"
   weight = 30
 
- [[products]]
-   name = "LocalStack Cockpit"
-   url = "/products/cockpit"
-   weight = 40
+[[products]]
+  name = "LocalStack Cockpit"
+  url = "/products/cockpit"
+  weight = 40
+
+[[community]]
+  name = "Stay informed"
+  url  = "/community/"
+  weight = 10
+
+[[community]]
+  name = "Get involved"
+  url  = "/community/"
+  weight = 15
 
 
 [[social]]
