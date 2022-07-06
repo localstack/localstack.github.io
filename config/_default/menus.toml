@@ -54,7 +54,7 @@
 
 [[community]]
   name = "Stay informed"
-  url  = "/community/"
+  url  = "/community/stay-informed"
   weight = 10
 
 [[community]]
