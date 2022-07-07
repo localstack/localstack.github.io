@@ -1,14 +1,20 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-	<div class="row justify-content-center">
-		<div class="col-lg-9 col-xl-8 text-center">
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
-		</div>
-	</div>
+{{ partial "heroes/base.html" (dict "Title" .Title) }}
+{{ if (not (eq .Content ""))}}
+<section class="section container">
+    {{ .Content }}
 </section>
-<section class="row justify-content-center">
-	<div class="col-md-12 col-lg-10 col-xl-8">
-		<div>{{ .Content }}</div>
-	</div>
+{{ end }}
+<section class="section container mt-n7">
+    {{ partial "misc/social-card.html" (dict "Title" "Get involved"
+    "Lead" "Contribute to making LocalStack even better!"
+    "Link" "/community/get-involved"
+    "LinkText" "MORE INFO"
+    )}}
+    {{ partial "misc/social-card.html" (dict "Title" "Stay informed"
+    "Lead" "Stay informed about LocalStack, and receive the latest news."
+    "Link" "/community/stay-informed"
+    "LinkText" "SHOW LINKS"
+    )}}
 </section>
 {{ end }}
