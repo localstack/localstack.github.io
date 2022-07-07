@@ -1,42 +1,44 @@
 ---
 title: "LocalStack Cockpit"
 description: "Get a desktop experience and work with your local LocalStack instance via the UI."
-lead: "LocalStack Cockpit, a fully-integrated desktop experience for LocalStack. Start using LocalStack, without the fuss."
+lead: "LocalStack Cockpit, a fully-integrated desktop experience for LocalStack. Start using LocalStack, without the
+fuss."
 date: 2020-08-27T19:25:12+02:00
 lastmod: 2020-08-27T19:25:12+02:00
 draft: false
 images: []
 buttons:
-    - hello
-    - there
+- hello
+- there
 ---
-<section class="section section-md bg-light">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-4">
-            <div class="col-12">
-                <h1>LocalStack Cockpit (Beta)</h1>
-                <p class="lead">
-                    LocalStack Cockpit, a fully-integrated desktop experience for LocalStack. Start using LocalStack, without the fuss
-                </p>
-            </div>
+<section class="section section-sm bg-gradient-dark ">
+    <div class="container pb-7 pt-9 pt-sm-7">
+        <div class="row justify-content-center align-items-center text-white">
+            <h1 class="text-center m-0 pt-5">LocalStack Cockpit (Beta)</h1>
+            <p class="text-center mt-4 mb-n6" style="font-size: 1.5rem">
+                LocalStack Cockpit, a fully-integrated desktop experience for LocalStack.
+                <br/>
+                Start using LocalStack - without the fuss
+            </p>
         </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-12">
-                <a href="https://docs.localstack.cloud/get-started/cockpit" class="btn btn-outline-primary btn-lg mr-2">
-                    Learn more
-                </a>
-                <a class="btn btn-primary btn-lg" data-bs-toggle="modal" href="#cockpitDownloadModal" role="button">
-                    Download
-                </a>
-            </div>
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-12">
+            <a href="https://docs.localstack.cloud/get-started/cockpit" class="btn btn-outline-secondary btn-lg mb-9">
+                LEARN MORE
+            </a>
+            <a href="https://docs.localstack.cloud/get-started" data-bs-toggle="modal" href="#cockpitDownloadModal"
+                role="button" class="btn btn-primary btn-lg mb-9">
+                DOWNLOAD
+            </a>
         </div>
     </div>
 </section>
-<section class="section section-md section-alt">
-    <div class="container-xxl">
+<section class="section section-md pb-17">
+    <div class="container overlay-card mt-n8">
         <div class="row mb-5 mt-5">
             <div class="col">
-                <img src="cockpit-localstack-start.gif" class="img-fluid shadow"/>
+                <img src="cockpit-localstack-start.gif" class="img-fluid shadow" />
             </div>
             <div class="col">
                 <h2 class="h1">Control LocalStack without the fuss</h2>
@@ -51,8 +53,8 @@ buttons:
         </div>
     </div>
 </section>
-<section class="section section-md">
-    <div class="container-xxl">
+<section class="section section-md bg-gradient-dark">
+    <div class="container overlay-card mt-n15">
         <div class="row mb-5">
             <div class="col">
                 <h2 class="h1">Instant insights</h2>
@@ -63,16 +65,14 @@ buttons:
                 </ul>
             </div>
             <div class="col">
-                <img src="cockpit-logs.png" class="img-fluid shadow"/>
+                <img src="cockpit-logs.png" class="img-fluid shadow" />
             </div>
         </div>
     </div>
-</section>
-<section class="section section-md section-alt">
-    <div class="container-xxl">
+    <div class="container overlay-card mt-7">
         <div class="row mb-5 mt-5">
             <div class="col">
-                <img src="cockpit-runconfigs.png" class="img-fluid shadow"/>
+                <img src="cockpit-runconfigs.png" class="img-fluid shadow" />
             </div>
             <div class="col">
                 <h2 class="h1">Manage your LocalStack configurations</h2>
@@ -86,7 +86,8 @@ buttons:
     </div>
 </section>
 
-<div class="modal fade" id="cockpitDownloadModal" aria-hidden="true" aria-labelledby="cockpitDownloadModalLabel" tabindex="-1">
+<div class="modal fade" id="cockpitDownloadModal" aria-hidden="true" aria-labelledby="cockpitDownloadModalLabel"
+    tabindex="-1">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -99,38 +100,50 @@ buttons:
                 <form method="POST" action="{{ .Site.Params.localStackApiEndpoint }}" id="cockpitDownloadForm">
                     <div class="mb-3">
                         <label for="version" class="form-label"><strong>Version:</strong></label>
-                      <select class="form-control" id="version">
-                        <option value="v0.1.1" selected>Latest: v0.1.1 (beta)</option>
-                      </select>
+                        <select class="form-control" id="version">
+                            <option value="v0.1.1" selected>Latest: v0.1.1 (beta)</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <span class="form-label">Platform: </span>
                         <div class="input-group">
-                            <input data-platform="Win32" value="cockpit/v0.1.1/LocalStack Cockpit 0.1.1.exe" type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary" for="artifact-windows"><i class="bi bi-windows"></i> Windows</label>
+                            <input data-platform="Win32" value="cockpit/v0.1.1/LocalStack Cockpit 0.1.1.exe"
+                                type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off"
+                                checked>
+                            <label class="btn btn-outline-primary" for="artifact-windows"><i class="bi bi-windows"></i>
+                                Windows</label>
 
-                            <input data-platform="MacIntel" value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1.dmg" type="radio" class="btn-check" name="artifact" id="artifact-mac-intel" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="artifact-mac-intel"><i class="bi bi-apple"></i> Mac (Intel)</label>
+                            <input data-platform="MacIntel" value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1.dmg"
+                                type="radio" class="btn-check" name="artifact" id="artifact-mac-intel"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="artifact-mac-intel"><i class="bi bi-apple"></i>
+                                Mac (Intel)</label>
 
-                            <input value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1-arm64.dmg" type="radio" class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="artifact-mac-m1"><i class="bi bi-apple"></i> Mac (M1)</label>
+                            <input value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1-arm64.dmg" type="radio"
+                                class="btn-check" name="artifact" id="artifact-mac-m1" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="artifact-mac-m1"><i class="bi bi-apple"></i> Mac
+                                (M1)</label>
 
-                            <input data-platform="Linux.*" value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1.AppImage" type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
+                            <input data-platform="Linux.*" value="cockpit/v0.1.1/LocalStack Cockpit-0.1.1.AppImage"
+                                type="radio" class="btn-check" name="artifact" id="artifact-linux" autocomplete="off">
                             <label class="btn btn-outline-primary" for="artifact-linux">Linux (AppImage)</label>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Please enter your email address, so we can send you a download link.</label>
+                        <label for="email" class="form-label">Please enter your email address, so we can send you a
+                            download link.</label>
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
-                            <input type="email" class="form-control" name="email" id="email" aria-describedby="email-help" required>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="email-help" required>
                         </div>
                         <div id="email-help" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="form-check form-control-sm mb-1">
                         <input class="form-check-input" type="checkbox" value="" id="acceptPrivacyPolicy" required>
                         <label class="form-check-label" for="acceptPrivacyPolicy">
-                            I have read and accept the <a href="/terms/">Terms and Conditions</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.
+                            I have read and accept the <a href="/terms/">Terms and Conditions</a> and <a
+                                href="/privacy-policy/" target="_blank">Privacy Policy</a>.
                         </label>
                     </div>
                     <div class="form-check form-control-sm mb-3">
@@ -147,7 +160,8 @@ buttons:
         </div>
     </div>
 </div>
-<div class="modal fade" id="cockpitDownloadThanksModal" aria-hidden="true" aria-labelledby="cockpitDownloadThanksModalLabel" tabindex="-1">
+<div class="modal fade" id="cockpitDownloadThanksModal" aria-hidden="true"
+    aria-labelledby="cockpitDownloadThanksModalLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -163,7 +177,8 @@ buttons:
         </div>
     </div>
 </div>
-<div class="modal fade" id="cockpitErrorModal" aria-hidden="true" aria-labelledby="cockpitErrorModalModalLabel" tabindex="-1">
+<div class="modal fade" id="cockpitErrorModal" aria-hidden="true" aria-labelledby="cockpitErrorModalModalLabel"
+    tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
