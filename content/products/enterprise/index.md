@@ -9,28 +9,25 @@ images: []
 weight: 92
 toc: true
 ---
-
-<section class="section section-md bg-light">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-4">
-            <div class="col-12">
-                <h1>LocalStack Team / Enterprise</h1>
-                <p class="lead">
-                    Advanced use cases and collaboration features that natively scale with your development team
-                </p>
-            </div>
+<section class="section section-sm bg-gradient-dark ">
+    <div class="container pb-7 pt-9 pt-sm-7">
+        <div class="row justify-content-center align-items-center text-white">
+            <h1 class="text-center m-0 pt-5">LocalStack Team/Enterprise</h1>
+            <p class="text-center mt-4 mb-n6" style="font-size: 1.5rem">
+                Advanced use cases and collaboration features that natively scale with your development team
+            </p>
         </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-12">
-                <a class="btn btn-primary btn-lg" href="mailto:info@localstack.cloud" class="btn btn-outline-primary btn-lg mr-2">
-                    Contact us now!
-                </a>
-            </div>
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-12">
+            <a href="mailto:info@localstack.cloud" class="btn btn-primary btn-lg mb-9">
+                CONTACT US
+            </a>
         </div>
     </div>
 </section>
-<section class="section section-md section-alt">
-    <div class="container-xxl">
+<section class="section section-md pb-10">
+    <div class="container overlay-card mt-n8">
         <div class="row mb-5 mt-5">
             <div class="col" style="text-align: center">
                 <img src="cloudpods.png" class="img-fluid shadow" style="width: 400px; background-color: #dde"/>
@@ -47,8 +44,8 @@ toc: true
         </div>
     </div>
 </section>
-<section class="section section-md">
-    <div class="container-xxl">
+<section class="section section-md bg-gradient-dark pb-13">
+    <div class="container overlay-card mt-n7">
         <div class="row mb-5">
             <div class="col">
                 <h2 class="h1">Bootstrap and replicate environments in your CI builds</h2>
@@ -65,8 +62,8 @@ toc: true
         </div>
     </div>
 </section>
-<section class="section section-md section-alt">
-    <div class="container-xxl">
+<section class="section section-md">
+    <div class="container overlay-card mt-n9">
         <div class="row mb-5 mt-5">
             <div class="col">
                 <img src="ci-analytics.png" class="img-fluid"/>
