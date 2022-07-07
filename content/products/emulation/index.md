@@ -9,28 +9,25 @@ images: []
 weight: 92
 toc: true
 ---
-
-<section class="section section-md bg-light">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-4">
-            <div class="col-12">
-                <h1>LocalStack Cloud Emulation</h1>
-                <p class="lead">
+<section class="section section-sm bg-gradient-dark ">
+    <div class="container pb-7 pt-9 pt-sm-7">
+      <div class="row justify-content-center align-items-center text-white">
+        <h1 class="text-center m-0 pt-5">LocalStack Cloud Emulation</h1>
+        <p class="text-center mt-4 mb-n6" style="font-size: 1.5rem"> 
                     LocalStack provides a fully functional local cloud stack - develop your cloud apps offline!
-                </p>
-            </div>
-        </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-12">
-                <a href="https://docs.localstack.cloud/get-started" class="btn btn-outline-primary btn-lg mr-2">
-                    Get started now!
-                </a>
-            </div>
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-12">
+            <a href="https://docs.localstack.cloud/get-started" class="btn btn-primary btn-lg mb-9">
+                    GET STARTED NOW!
+            </a>
         </div>
     </div>
 </section>
-<section class="section section-md section-alt">
-    <div class="container-xxl">
+<section class="section section-sm pb-15">
+    <div class="container overlay-card mt-n8">
         <div class="row mb-5 mt-5">
             <div class="col" style="text-align: center">
                 <img src="commands.png" class="img-fluid shadow" style="width: 500px"/>
@@ -48,8 +45,8 @@ toc: true
         </div>
     </div>
 </section>
-<section class="section section-md">
-    <div class="container-xxl">
+<section class="section section-md bg-gradient-dark">
+    <div class="container overlay-card mt-n13">
         <div class="row mb-5">
             <div class="col">
                 <h2 class="h1">Turbocharge your inner dev loop - dev cycles in seconds</h2>
@@ -65,9 +62,7 @@ toc: true
             </div>
         </div>
     </div>
-</section>
-<section class="section section-md section-alt">
-    <div class="container-xxl">
+    <div class="container overlay-card mt-7">
         <div class="row mb-5 mt-5">
             <div class="col">
                 <img src="e2e-flow.png" class="img-fluid shadow" style="background-color: #dde"/>
