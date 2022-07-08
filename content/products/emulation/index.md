@@ -30,7 +30,7 @@ toc: true
     <div class="container overlay-card mt-n8">
         <div class="row mb-5 mt-5">
             <div class="col" style="text-align: center">
-                <img src="commands.png" class="img-fluid shadow" style="width: 500px"/>
+                <img src="awslocal.svg" class="img-fluid" style="width: 500px"/>
             </div>
             <div class="col">
                 <h2 class="h1">Truly shift left - get productive with cloud dev from day 1</h2>
