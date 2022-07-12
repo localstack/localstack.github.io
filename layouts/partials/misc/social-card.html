@@ -4,7 +4,7 @@
             {{if (eq .Title "LinkedIn")}}
             <img class="card-img" src="/images/social/linkedin.png" />
             {{else}}
-                {{if in "Discussion Upcoming events Meetups Get involved Stay informed" .Title}}
+                {{if in "Upcoming events Meetups Get involved Stay informed" .Title}}
                     <img class="card-img" src="/images/social/blog.svg" />
                 {{else}}
                     <img class="card-img" src="/images/social/{{lower .Title}}.svg" />
