@@ -25,6 +25,12 @@
         </span>
     </div>
     <p style="word-wrap: break-word">
-    {{ .text }} <a href="{{ .link }}"> {{ .link }}</a> 
+    {{ .text }} 
+    {{ if eq .type "link" }}
+        <a href="https://{{ .link }}"> {{ .link }}</a> 
+    {{ end }}
+    {{ if eq .type "mail" }}
+        <a href="mailto:{{ .link }}"> {{ .link }}</a> 
+    {{ end }}
     </p>
 </div>

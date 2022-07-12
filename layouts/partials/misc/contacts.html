@@ -4,18 +4,22 @@
                 {{ partial "misc/contact-card.html" (dict "contactName" "Discussion"
                 "text" "Our new discussion platform:"
                 "link" "discuss.localstack.cloud"
+                "type" "link"
                 ) }}
                 {{ partial "misc/contact-card.html" (dict "contactName" "E-mail"
                 "text" "For any administrative questions"
                 "link" "info@localstack.cloud"
+                "type" "mail"
                 ) }}
                 {{ partial "misc/contact-card.html" (dict "contactName" "Slack"
                 "text" "Please join us in our Slack channel"
-                "link" "https://localstack-community.slack.com"
+                "link" "localstack-community.slack.com"
+                "type" "link"
                 ) }}
                 {{ partial "misc/contact-card.html" (dict "contactName" "GitHub"
                 "text" "For any bug reports, please first consult the main GitHub repository"
-                "link" "https://github.com/localstack/localstack"
+                "link" "github.com/localstack/localstack"
+                "type" "link"
                 ) }}
             {{/* TODO: discuss */}}
         </div>
