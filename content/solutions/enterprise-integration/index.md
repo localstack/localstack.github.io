@@ -10,9 +10,10 @@ weight: 92
 toc: true
 ---
 <section class="section section-sm bg-gradient-dark pb-8">
-    <div class="container pb-6 pt-9 pt-sm-7">
+    <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Enterprise Integration</h1>
+        <p class="text-center mt-4 mb-n6" style="font-size: 18px">Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Netus et malesuada fames ac turpis egestas integer. Ac feugiat sed lectus vestibulum mattis </p>
       </div>
     </div>
 </section>
@@ -20,7 +21,7 @@ toc: true
     <div class="container overlay-card mt-n8">
         <div class="row align-items-center gy-3 p-3">
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="ci-e2e-flow.png" class="img-fluid"/>
+                <img src="sandbox.svg" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Detailed insights and traceability across the CI/CD pipeline</h2>
@@ -36,9 +37,6 @@ toc: true
 <section class="section section-sm bg-gradient-dark">
     <div class="container overlay-card mt-n12">
         <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="ci-e2e-flow.png" class="img-fluid"/>
-            </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Custom integrations to fit into the Enterprise IT landscape</h2>
                 <ul>
@@ -47,12 +45,15 @@ toc: true
                     <li>Custom emulators for additional APIs to be plugged into the LocalStack platform</li>
                 </ul>
             </div>
+            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+                <img src="sandbox.svg" class="img-fluid"/>
+            </div>
         </div>
     </div>
     <div class="container overlay-card mt-7 mb-6">
         <div class="row align-items-center gy-3 p-3">
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="ci-e2e-flow.png" class="img-fluid"/>
+                <img src="sandbox.svg" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Dedicated technical support with SLAs</h2>
