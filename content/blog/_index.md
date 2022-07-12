@@ -8,8 +8,8 @@ images: []
 ---
 
 <div class="blog-tags d-flex flex-wrap gap-3">
-  <a href="/blog" class="btn btn-primary btn-pill">ALL TOPICS</a>
-  <a href="/tags/news" class="btn btn-outline-primary btn-pill">NEWS</a>
-  <a href="/tags/showcase" class="btn btn-outline-primary btn-pill">SHOWCASE</a>
-  <a href="/tags/tutorial" class="btn btn-outline-primary btn-pill">TUTORIAL</a>
+  <button class="btn btn-primary btn-pill filterButton" id="allFilterButton" onClick="toggleTag('all')">ALL TOPICS</a>
+  <button class="btn btn-outline-primary btn-pill filterButton" id="newsFilterButton" onClick="toggleTag('news')">NEWS</a>
+  <button class="btn btn-outline-primary btn-pill filterButton" id="showcaseFilterButton" onClick="toggleTag('showcase')">SHOWCASE</a>
+  <button class="btn btn-outline-primary btn-pill filterButton" id="tutorialFilterButton" onClick="toggleTag('tutorial')">TUTORIAL</a>
 </div>

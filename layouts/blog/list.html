@@ -8,7 +8,9 @@
             <div class="text-center">{{ .Content }}</div>
             <div class="card-list d-flex flex-column gap-1">
               {{ range .Data.Pages -}}
-                <div class="card">
+
+                {{ $tagClass := (delimit .Params.tags " tag-") }}
+                <div class="card tag-{{ $tagClass }} tag-all">
                     <div class="row align-items-center gy-3">
                       <div class="col-12 col-md-5 col-lg-4">
                         {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) }}
@@ -17,7 +19,7 @@
                         {{end}}
                       </div>
                       <div class="col-12 col-md-7 col-lg-8 d-flex flex-column gap-1">
-                        <div class="d-flex justify-content-center justify-content-md-start">
+                        <div class="d-flex justify-content-center justify-content-md-start gap-3">
                           {{ range .Params.tags }}
                             <div class="btn btn-primary btn-pill text-uppercase">{{ . }}</div>
                           {{ end -}}
@@ -29,6 +31,7 @@
                       </div>
                     </div>
                 </div>
+
               {{ end -}}
             </div>
           </article>
@@ -37,4 +40,7 @@
     </div>
   </div>
 </section>
+
+<script>
+</script>
 {{ end }}
