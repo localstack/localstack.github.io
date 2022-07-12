@@ -201,3 +201,59 @@ hr {
   outline: none;
   border: 1px solid #1B183E !important;
 }
+
+/* .carousel-control-prev,
+.carousel-control-next{
+  align-items: flex-start !important
+} */
+
+.carousel-indicators > .active {
+  background-color: #1B183E !important;
+}
+
+.carousel-indicators > button{
+  background-color: grey !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url(/images/common/rightarrow.svg) !important
+}
+
+.carousel-control-prev-icon {
+  background-image: url(/images/common/leftarrow.svg) !important
+}
+
+
+
+.strike {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+.strike > * {
+  position: relative;
+  display: inline-block;
+}
+
+.strike > *:before,
+.strike > *:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: #1B183E;
+  opacity: 0.15;
+}
+
+.strike > *:before {
+  right: 100%;
+  margin-right: 30px;
+}
+
+.strike > *:after {
+  left: 100%;
+  margin-left: 30px;
+}
