@@ -189,20 +189,15 @@ hr {
 }
 
 .contact-textbox {
-    border: 1px solid #1b183E;
+    border: 1px solid #8D8B9F;
     border-radius: 10px;
     margin-top: 0.75rem;
     height: 50px;
-    width: 240px;
+    padding: 1.25rem;
+    width: 100%;
 }
 
-.contact-bigcard {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
-    background: white;
-    box-shadow: 10px 30px 150px rgba(46, 38, 92, 0.25);
-    border-radius: 30px;
-    height: 900px;
+.contact-textbox:focus-visible {
+  outline: none;
+  border: 1px solid #1B183E !important;
 }

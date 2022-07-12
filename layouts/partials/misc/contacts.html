@@ -1,50 +1,49 @@
 <div class="container mb-6 mt-n5">
-    <div class="row gap-3">
-        <div class="col-5 gap-3 pt-7">
-            <div class="row gap-3">
+    <div class="d-flex flex-column flex-md-row gap-3 ">
+        <div class="col col-md-5 d-flex flex-column gap-3 flex-grow-1 jusitfy-space-between">
+                {{ partial "misc/contact-card.html" (dict "contactName" "Discussion"
+                "text" "Our new discussion platform:"
+                "link" "discuss.localstack.cloud"
+                ) }}
                 {{ partial "misc/contact-card.html" (dict "contactName" "E-mail"
                 "text" "For any administrative questions"
                 "link" "info@localstack.cloud"
                 ) }}
-            </div>
-            <div class="row gap-3 mt-5">
                 {{ partial "misc/contact-card.html" (dict "contactName" "Slack"
                 "text" "Please join us in our Slack channel"
                 "link" "https://localstack-community.slack.com"
                 ) }}
-            </div>
-            <div class="row gap-3 mt-5">
                 {{ partial "misc/contact-card.html" (dict "contactName" "GitHub"
                 "text" "For any bug reports, please first consult the main GitHub repository"
                 "link" "https://github.com/localstack/localstack"
                 ) }}
-            </div>
             {{/* TODO: discuss */}}
         </div>
-        <div class="col">
-            <div class="contact-bigcard">
+        <div class="col col-md-7">
+            <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
                 Neque ornare aenean euismod elementum nisi. Ut faucibus pulvinar elementum integer enim neque
                 volutpat ac tincidunt.
                 {{/* TODO: form */}}
                 <div class="row">
                     <form>
-                        <div class="input-group col">
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="contact-textbox" />
-                                    <input type="text" class="contact-textbox" />
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="contact-textbox" />
-                                    <input type="email" class="contact-textbox" />
-                                </div>
+                        <div class="row form-group gy-1 gy-md-3">
+                            <div class="col-12 col-xl-6">
+                                <input type="text" class="contact-textbox" placeholder="First name*" required />
                             </div>
-                            <div class="row">
-                                <input type="text" class="contact-textbox" />
+                            <div class="col-12 col-xl-6">
+                                <input type="text" class="contact-textbox w-100" placeholder="Last name*" required />
                             </div>
-                            <div class="row">
-                                <button class="btn btn-primary form-button" type="submit" name="submit">get in
-                                    touch</button>
+                            <div class="col-12 col-xl-6">
+                                <input type="text" class="contact-textbox w-100" placeholder="E-mail*" required/>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <input type="email" class="contact-textbox w-100" placeholder="Phone number" />
+                            </div>
+                            <div class="col-12">
+                                <textarea type="text" style="height: 300px;" class="contact-textbox w-100" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary form-button" type="submit" name="submit">GET IN TOUCH</button>
                             </div>
                         </div>
                     </form>
