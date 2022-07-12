@@ -245,9 +245,7 @@ function preSelectPlatformArtifact(artifacts) {
 
 // will hide all elements which tag-${tag} as className
 // requires you to add the tag-${tag} to your elements
-// can be done like this, assuming .tags is a string array:
-  // {{ $tagClass := (delimit .Params.tags " tag-") }}
-  // <div class="card tag-{{ $tagClass }} tag-all">
+// can be done like this, assuming .tags is a string array, check out blog/list.html
 // dont forget tag-all for resetting the filter
 // also sets correct classes on the buttons for filtering based on id: ${tag}FilterButton
 // requires you to add the filterButton class to your buttons, and ${tag}FilterButton as the id for these buttons
