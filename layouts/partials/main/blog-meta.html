@@ -8,7 +8,7 @@
         {{ .ReadingTime -}}&nbsp;MIN READ&nbsp;&#8212;&nbsp;
         posted {{ .PublishDate.Format "January 2, 2006" }} by {{ if .Params.contributors -}}{{ range $index,
         $contributor := .Params.contributors }}{{ if gt $index 0 }} and {{ end }}<a
-            class="stretched-link position-relative" href="{{ " /contributors/" | relURL }}{{ . | urlize }}/">{{ .
+            class="stretched-link position-relative">{{ .
             }}</a>{{ end -}}{{ end -}}
     </p>
     <p>
