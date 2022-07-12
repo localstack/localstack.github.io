@@ -186,7 +186,11 @@ hr {
 .contact-card-header {
     font-weight: 700;
     margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
+
 
 .contact-textbox {
     border: 1px solid #8D8B9F;
