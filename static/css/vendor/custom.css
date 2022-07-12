@@ -229,7 +229,9 @@ hr {
   background-image: url(/images/common/leftarrow.svg) !important
 }
 
-
+li::marker {
+  color: #79F0A9
+}
 
 .strike-dark {
   display: block;
