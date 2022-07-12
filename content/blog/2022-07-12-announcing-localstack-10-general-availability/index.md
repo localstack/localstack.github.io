@@ -117,7 +117,19 @@ The main change from a user perspective: we used to configure `DATA_DIR` to poin
 
 ## Get started with LocalStack 1.0
 
-Migration instructions can be found in the [release notes on GitHub](https://github.com/localstack/localstack/issues/6398).
+We have many LocalStack 1.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 1.0 you can:
+
+-   View our release notes on [GitHub]() and [Discussion Pages]().    
+-   Check out our new [documentation]() on using services and integrations locally.    
+-   Attend our [LocalStack Community Event Meetup]() to discuss the 1.0 release!
+
+To get started with using LocalStack 1.0 features:
+
+-   Migrate to LocalStack 1.0 by following our [documentation]().
+-   Navigate to our [LocalStack samples]() and try out the examples.
+-   Reach out to us on [discussion pages]() for any feedback, bug report or suggestion.
+
+We are thankful to our community and our users for providing a lot of suggestions, feedback, and bug reports through GitHub Issues and our Slack community. It would not have been possible without all the support that we have got and we are thankful for that!
 
 ## What's next?
 
