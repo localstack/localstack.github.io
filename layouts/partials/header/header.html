@@ -39,7 +39,7 @@
               SOLUTIONS
             </a>
             <div class="dropdown-menu" aria-labelledby="productsDropdown">
-              {{ range .Site.Menus.products -}}
+              {{ range .Site.Menus.solutions -}}
               <a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
               {{ end -}}
             </div>

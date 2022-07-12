@@ -31,34 +31,33 @@
   url = "/blog/"
   weight = 440
 
+[[solutions]]
+  name = "CLOUD EMULATION"
+  url = "/solutions/cloud-emulation"
+  weight = 10
 
-[[products]]
-  name = "LocalStack Core Emulation"
-  url = "/products/emulation/"
+[[solutions]]
+  name = "TEAM COLLABORATION"
+  url = "/solutions/team-collaboration"
   weight = 20
 
-[[products]]
-  name = "LocalStack Team/Enterprise"
-  url = "/products/enterprise/"
-  weight = 25
-
-[[products]]
-  name = "LocalStack Web App"
-  url = "https://app.localstack.cloud"
+[[solutions]]
+  name = "ENTERPRISE INTEGRATION"
+  url = "/solutions/enterprise-integration"
   weight = 30
 
-[[products]]
-  name = "LocalStack Cockpit"
-  url = "/products/cockpit"
+[[solutions]]
+  name = "ECOSYSTEM"
+  url = "/solutions/ecosystem"
   weight = 40
 
 [[community]]
-  name = "Stay informed"
+  name = "STAY INFORMED"
   url  = "/community/stay-informed"
   weight = 10
 
 [[community]]
-  name = "Get involved"
+  name = "GET INVOLVED"
   url  = "/community/get-involved"
   weight = 15
 

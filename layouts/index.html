@@ -12,7 +12,7 @@
         <a class="btn btn-primary btn-lg" style="width: 315px">GET STARTED</a>
       </div>
       <div class="col-12 col-md-7 order-0 order-md-1">
-        <img style="max-width: 100%" src="/images/landing/laptop_stacks.svg"></img>
+        <img style="max-width: 100%" src="/images/landing/laptop_stacks.svg" alt="Illustration of a laptop in a cloud hosting stacks"></img>
       </div>
     </div>
   </div>
@@ -42,19 +42,19 @@
   <div class="container overlay-card stats-card">
     <div class="row text-center">
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">400<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">430<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.875rem; font-weight: 700">CONTRIBUTORS</span>
       </div>
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">11 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">13 k<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.87rem; font-weight: 700">SLACK MEMBERS</span>
       </div>
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">40 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">42 k<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.87rem; font-weight: 700">GITHUB STARS</span>
       </div>
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">94 M<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">96 M<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.87rem; font-weight: 700">DOCKER PULLS</span>
       </div>
     </div>
@@ -69,7 +69,7 @@
         {{ range .Site.Data.customers -}}
         <div class="col customer-logo mb-4">
           <a href="{{ .url }}" target="_blank">
-            <img src="{{ .logo }}" class="customerLogo">
+            <img src="{{ .logo }}" class="customerLogo" alt="LocalStack customer">
           </a>
         </div>
         {{ end -}}
@@ -88,10 +88,10 @@
             <p>Feugiat faucibus sagittis gravida orci facilisis ipsum, iaculis condimentum. Sed morbi nec nascetur vel
               volutpat nulla.</p>
           </div>
-          <a class="btn btn-primary btn-lg" style="width: 315px">REQUEST A DEMO</a>
+          <a class="btn btn-primary btn-lg" href="mailto:info@localstack.cloud" style="width: 315px">REQUEST A DEMO</a>
       </div>
       <div class="col-12 col-lg-6">
-        <img style="max-width: 100%" src="/images/landing/video_player.svg"></img>
+        <img style="max-width: 100%" src="/images/landing/sandbox.svg" alt="Demo image"></img>
       </div>
     </div>
 </section>
@@ -103,7 +103,7 @@
       <div class="col-12 col-md-6 col-lg-4">
         <div class="color-card-border">
           <div class="solution-card">
-            <img src="/images/landing/boxes.svg"></img>
+            <img src="/images/landing/boxes.svg" alt="core cloud emulation"></img>
             <h3>Core Cloud Emulation</h3>
             <div class="divider"></div>
             <p>Run our high-fidelity cloud stack on your machine to develop locally and accelerate dev cycles</p>
@@ -113,7 +113,7 @@
       <div class="col-12 col-md-6 col-lg-4">
         <div class="color-card-border">
           <div class="solution-card">
-            <img src="/images/landing/people.svg"></img>
+            <img src="/images/landing/people.svg" alt="team collaboration"></img>
             <h3>Team Collaboration</h3>
             <div class="divider"></div>
             <p>Easily share the state of your instance with team members and browse your local cloud resources for
@@ -124,7 +124,7 @@
       <div class="col-12 col-md-6 col-lg-4">
         <div class="color-card-border">
           <div class="solution-card">
-            <img src="/images/landing/enterprise.svg"></img>
+            <img src="/images/landing/enterprise.svg" alt="enterprise"></img>
             <h3>Enterprise Integration</h3>
             <div class="divider"></div>
             <p>Gain insights across the CI/CD pipeline and seamlessly fit LocalStack into the Enterprise IT ecosystem.
@@ -135,7 +135,7 @@
       <div class="col-12 col-md-6 col-lg-12">
         <div class="color-card-border">
           <div class="solution-card flex-lg-row">
-            <img src="/images/landing/iterate.svg"></img>
+            <img src="/images/landing/iterate.svg" alt="ecosystem"></img>
             <div class="d-flex flex-column align-items-center align-items-lg-start gap-4">
               <h3 class="">Ecosystem</h3>
               <div class="divider"></div>
@@ -157,7 +157,7 @@
         <div class="benefit-card">
           <div class="row">
             <div class="col-6 col-md-6">
-              <img src="/images/landing/lightning.svg" />
+              <img src="/images/landing/lightning.svg" alt="lightning"/>
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center flex-column">
               <h2>Speed</h2>
@@ -170,7 +170,7 @@
         <div class="benefit-card">
           <div class="row justify-content-end">
             <div class="col-6 col-md-6 order-md-1">
-              <img src="/images/landing/wallet.svg" />
+              <img src="/images/landing/wallet.svg" alt="wallet"/>
             </div>
             <div class="col-12 col-md-6 order-md-0 d-flex justify-content-center flex-column">
               <h2>Cost</h2>
@@ -183,7 +183,7 @@
         <div class="benefit-card">
           <div class="row">
             <div class="col-6 col-md-6">
-              <img src="/images/landing/checkmark.svg" />
+              <img src="/images/landing/checkmark.svg" alt="checkmark"/>
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center flex-column">
               <h2>Quality</h2>
