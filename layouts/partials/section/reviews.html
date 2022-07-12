@@ -1,8 +1,12 @@
 
 <section class="section section-md container">
-  <h2 class="h2 text-center pb-5">Reviews</h2>
+  <div class="px-5">
+    <div class="strike-dark pb-5">
+      <h2 class="h2 text-center">Reviews</h2>
+    </div>
+  </div>
   <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="container overlay-card stats-card mb-17">
+    <div class="container overlay-card stats-card mb-8">
       <div class="carousel-inner">
         {{ partial "misc/review-carousel-item.html" (dict
           "active" "active"

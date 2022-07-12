@@ -204,8 +204,14 @@ hr {
 
 /* .carousel-control-prev,
 .carousel-control-next{
-  align-items: flex-start !important
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+.carousel-control-next{
+  justify-content: flex-end !important;
 } */
+
 
 .carousel-indicators > .active {
   background-color: #1B183E !important;
