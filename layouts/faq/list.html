@@ -3,20 +3,12 @@
 <section class="section section-sm mb-4">
   <div class="container mt-5">
     <div class="blog-tags d-flex flex-wrap gap-3">
-      <a href="/blog" class="btn btn-primary btn-pill">ALL TOPICS</a>
-      <a href="/tags/news" class="btn btn-outline-primary btn-pill">GENERAL</a>
-      <a href="/tags/showcase" class="btn btn-outline-primary btn-pill"
-        >PRICING</a
-      >
-      <a href="/tags/tutorial" class="btn btn-outline-primary btn-pill"
-        >APPLICATION</a
-      >
-      <a href="/tags/tutorial" class="btn btn-outline-primary btn-pill"
-        >PRODUCT</a
-      >
-      <a href="/tags/tutorial" class="btn btn-outline-primary btn-pill"
-        >MISCELLANEOUS</a
-      >
+      <button onclick="toggleTag('all')" id="allFilterButton" class="btn btn-primary btn-pill filterButton">ALL TOPICS</button>
+      <button onclick="toggleTag('General')" id="GeneralFilterButton" class="btn btn-outline-primary btn-pill filterButton">GENERAL</button>
+      <button onclick="toggleTag('Pricing')" id="PricingFilterButton" class="btn btn-outline-primary btn-pill filterButton">PRICING</button>
+      <button onclick="toggleTag('Application')" id="ApplicationFilterButton" class="btn btn-outline-primary btn-pill filterButton">APPLICATION</button>
+      <button onclick="toggleTag('Product')" id="ProductFilterButton" class="btn btn-outline-primary btn-pill filterButton">PRODUCT</button>
+      <button onclick="toggleTag('Miscellaneous')" id="MiscellaneousFilterButton" class="btn btn-outline-primary btn-pill filterButton">MISCELLANEOUS</button>
     </div>
   </div>
 </section>
@@ -26,7 +18,8 @@
     <div class="row justify-content-center">
       <div class="card-list d-flex flex-column gap-4">
         {{ range .Data.Pages -}}
-        <div class="card">
+        {{ $tagClass := (delimit .Params.tags " tag-") }}
+        <div class="card tag-{{ $tagClass }} tag-all">
           <div class="row align-items-center">
             <div class="col-12 flex-column d-flex gap-3">
               <!-- <div class="d-flex justify-content-center align-items-center justify-content-md-start">
