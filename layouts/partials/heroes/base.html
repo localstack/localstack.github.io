@@ -1,10 +1,146 @@
 <section class="section section-sm bg-gradient-dark">
-    <div class="container pb-7 pt-9 pt-sm-7">
-      <div class="row justify-content-center align-items-center text-white">
-        <h1 class="text-center m-0 pt-5">{{ .Title }}</h1>
-        {{ with .Subtitle }}
-        <p class="text-center mt-4 mb-n6" style="font-size: 1.5rem"> {{ . }} </p>
-        {{ end }}
+  
+  {{ if eq .HeroIcon "search" }}
+    <div class="position-absolute w-100 section pb-7 pt-9 pt-sm-7 d-none d-md-block">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: scale(2); opacity: .65;"
+              src="/images/heroes/magnify.svg"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(60deg) scale(1.25); opacity: .8;"
+              src="/images/heroes/magnify.svg"
+            />
+          </div>
+          <div class="col-2"></div>
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(15deg) scale(1.6); opacity: .9;"
+              src="/images/heroes/magnify.svg"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(34deg) scale(1.2); opacity: .75;"
+              src="/images/heroes/magnify.svg"
+            />
+          </div>
+        </div>
       </div>
     </div>
+  {{ else if eq .HeroIcon "blog" }} 
+  <div class="position-absolute w-100 section pb-7 pt-9 pt-sm-7 d-none d-md-block">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-2">
+          <img
+            class="w-100"
+            style="transform: scale(2); opacity: .65;"
+            src="/images/heroes/blog.svg"
+          />
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+          <img
+            class="w-100"
+            style="transform: rotate(35deg) scale(1.4); opacity: .9;"
+            src="/images/heroes/blog.svg"
+          />
+        </div>
+        <div class="col-2">
+          <img
+            class="w-100"
+            style="transform: rotate(0deg) scale(1.5); opacity: .75;"
+            src="/images/heroes/blog.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ else if eq .HeroIcon "Computer" }} 
+  
+  {{ else if eq .HeroIcon "cloud" }} 
+    <div class="position-absolute w-100 section pb-7 pt-9 pt-sm-7 d-none d-md-block">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-3">
+            <img
+              class="w-100"
+              style="transform: scale(1.75); opacity: .9;"
+              src="/images/heroes/cloud.svg"
+            />
+          </div>
+          <div class="col-1">
+          </div>
+          <div class="col-2"></div>
+          <div class="col-1">
+          </div>
+          <div class="col-3">
+            <img
+              class="w-100"
+              style="transform: scaleX(-1) scale(1.2)"
+              src="/images/heroes/cloud.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ else if eq .HeroIcon "question" }}
+    <div class="position-absolute w-100 section pb-7 pt-9 pt-sm-7 d-none d-md-block">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(-65deg) scale(1.5); opacity: .65;"
+              src="/images/heroes/question.svg"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(-20deg) scale(1); opacity: .8;"
+              src="/images/heroes/question.svg"
+            />
+          </div>
+          <div class="col-2"></div>
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(-55deg) scale(1); opacity: .9;"
+              src="/images/heroes/question.svg"
+            />
+          </div>
+          <div class="col-2">
+            <img
+              class="w-100"
+              style="transform: rotate(15deg) scale(1.4); opacity: .75;"
+              src="/images/heroes/question.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+
+
+  <div class="container pb-7 pt-9 pt-sm-7 {{ .heroClasses }}">
+    <div class="row justify-content-center align-items-center text-white">
+      <h1 class="text-center m-0 pt-lg-5">{{ .Title }}</h1>
+      {{ with .Subtitle }}
+      <p class="text-center mt-4 mb-n6" style="font-size: 1.5rem">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
 </section>

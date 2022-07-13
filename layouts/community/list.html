@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "heroes/base.html" (dict "Title" .Title) }}
+{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "cloud") }}
 {{ if (not (eq .Content ""))}}
 <section class="section container">
     {{ .Content }}
