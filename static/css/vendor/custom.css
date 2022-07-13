@@ -321,3 +321,8 @@ li::marker {
   letter-spacing: 0.1rem;
   font-weight: 700;
 }
+
+.navbar-visible {
+  background: linear-gradient(77.63deg, #12123E 23.04%, #12123E 23.05%, #3E3174 122.36%);
+  box-shadow: 0px 10px 40px rgba(46, 38, 92, 0.25);
+}
