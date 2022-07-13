@@ -302,3 +302,9 @@ li::marker {
   left: 100%;
   margin-left: 30px;
 }
+
+.benefit-tag {
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
