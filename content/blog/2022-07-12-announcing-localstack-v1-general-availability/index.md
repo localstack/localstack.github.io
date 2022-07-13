@@ -11,19 +11,19 @@ tags: ['news']
 
 Today, we are excited to announce the general availability of LocalStack 1.0. This major release is a significant milestone towards our vision to propel developer productivity - by allowing dev teams to quickly and conveniently develop & test their cloud applications locally and across the CI/CD pipeline.
 
-LocalStack 1.0 is available with our Docker image, shipped for both our Community and Pro users. LocalStack's core emulation platform provides emulated cloud APIs, currently primarily focused on the AWS cloud. It is presently being used by a large and active open source community with over 100K active users worldwide. With various features for individual productivity and team collaboration, we provide a comprehensive ecosystem of local AWS services, integrations and tools to make cloud development a breeze.
+LocalStack 1.0 is available with our Docker image, shipped for both our Community and Pro users, as well as all users of our newly introduced Team product tier. LocalStack's core emulation platform provides emulated cloud APIs, currently primarily focused on AWS cloud. It is presently being used by a large and active open source community with over 100K active users worldwide. With various features for individual productivity and team collaboration, we provide a comprehensive ecosystem of local AWS services, integrations and tools to make cloud development a breeze.
 
-With LocalStack 1.0, we mark the first milestone of LocalStack's mission to become the go-to platform for local cloud development. We have spent the last year significantly re-shaping the codebase to make it easier to introduce and extend AWS services, improving parity with AWS, introducing mechanisms to monitor parity, and adding new Pro features. This blog looks at what's new in LocalStack and what it means for our community and users.
+With LocalStack 1.0, we mark the first milestone of LocalStack's mission to become the go-to platform for local cloud development. We have spent the last year significantly re-shaping the codebase to make it easier to introduce and extend AWS services, improving parity with AWS, introducing mechanisms to monitor parity, adding new Pro features and introducing a completely new Team tier focused on cross team collaboration. This blog looks at what's new in LocalStack and what it means for our community and users.
 
 ## What’s new in LocalStack?
 
-LocalStack started as an open-source project in August 2016, with the initial commit adding support for eight-core AWS APIs, including API Gateway, Lambda, DynamoDB, and a few others. With the v1 release, we now support over 80 services distributed across our community and pro versions to power your local development and testing productivity and better cover your use-cases ranging from individual needs to enterprise use-cases.  
+LocalStack started as an open-source project in August 2016, with the initial commit adding support for eight-core AWS APIs, including API Gateway, Lambda, DynamoDB, and a few others. With the v1 release, we now support over 80 services distributed across our community and pro versions as well as a number of advanced team collaboration features in our new product tier to power your local development and testing productivity and better cover your use-cases ranging from individual needs to wide enterprise use-cases.
 
 A 1.0 release for LocalStack is a significant milestone for us after over 1,000,000 PyPI downloads and over 100,000,000 Docker pulls. LocalStack now satisfied the requirements we laid out in our previous blog to fix the broken cloud software development model. LocalStack currently operates with greater interoperability with the real AWS cloud, provides stability to our APIs and protocols, introduces new ways of reporting parity with AWS, persistence support and much more!
 
 These features include:
 
-### New Pro Features
+### New Pro and Team Features
 
 -   Polished Cloud Pods experience
 -   Revamp of multi-account setups (experimental)
@@ -66,7 +66,7 @@ LocalStack now supports IAM enforcement for all supported AWS services! In addit
 
 ### Detailed stack analytics
 
-As part of an upcoming Pro feature we call “Stack Insights”, we have instrumented LocalStack to report AWS API usage telemetry of LocalStack runs to your LocalStack Pro account. We can now show you which APIs you are using, which clients of your integrations use particular services and API operations, and which services cause the most API errors, and more. No sensitive data of your stacks are collected! Over the next weeks we will be rolling out new UI features to give you fine-grained access to this data.
+As part of an upcoming Team feature we call “Stack Insights”, we have instrumented LocalStack to report AWS API usage telemetry of LocalStack runs to your LocalStack Team account. We can now show you which APIs you are using, which clients of your integrations use particular services and API operations, and which services cause the most API errors, and more. No sensitive data of your stacks are collected! Over the next weeks we will be rolling out new UI features to give you fine-grained access to this data.
 
 > Note: You can disable all type of event logging by starting LocalStack with `DISABLE_EVENTS=1`.
 
@@ -109,9 +109,9 @@ When `DEBUG=1` is enabled, errors inside LocalStack are now reported to the clie
 
 ### Improved persistence support
 
-We are introducing an enhanced persistence mechanism that allows you to preserve state across LocalStack container restarts (available in the Pro version).
+We are introducing an enhanced persistence mechanism that allows you to preserve your state across LocalStack container restarts (available in the Pro version).
 
-In the past, there used to be a naive persistence implementation based on record&replay of API calls. This mechanism had several conceptual flaws and was hence deprecated in version. The all-new persistence experience is much more performand and more reliable.
+In the past, there used to be a naive persistence implementation based on record&replay of API calls. This mechanism had several conceptual flaws and was hence deprecated in version. The all-new persistence experience is much more performant and more reliable.
 
 The main change from a user perspective: we used to configure `DATA_DIR` to point to a persistent local directory, but with our new filesystem hierarchy (see above) you can now simply configure `PERSISTENCE=1` in your LocalStack environment to enable persistence, and the data will be automatically stored on disk (by default inside `<cache>/localstack/volume`).
 
