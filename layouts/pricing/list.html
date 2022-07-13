@@ -17,7 +17,7 @@
                         </div>
                         <div class="d-flex flex-column gap-4">
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "Basic APIs") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "LocalStack Cockpit UI") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "LocalStack Cockpit UI" "link" "/products/cockpit") }}
                         </div>
                         <div class="w-100 flex-grow-1 d-flex align-items-end">
                             <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <div class="text-start fs-6">Everything in Community, plus:</div>
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced APIs" "link" "https://docs.localstack.cloud/aws/feature-coverage/") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced APIs" "link" "https://docs.localstack.cloud/aws/feature-coverage/" "linktext" "See full feature coverage") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "CI starter tier¹") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "IAM security enforcement") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "State persistence for individual debugging") }}
