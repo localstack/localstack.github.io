@@ -102,6 +102,19 @@ tr.no-border-bottom td {
   width: 100%;
 }
 
+.value-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  background: linear-gradient(339.94deg, #2A245B 0.17%, #403777 93.6%);
+  border-radius: 20px;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 550px;
+}
+
 .price-tag {
   width: 100%;
   padding: 1rem 2rem;
