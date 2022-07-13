@@ -13,7 +13,10 @@ toc: true
     <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Core Cloud Emulation</h1>
-        <p class="text-center mt-4 mb-n6" style="font-size: 18px">Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Netus et malesuada fames ac turpis egestas integer. Ac feugiat sed lectus vestibulum mattis </p>
+        <p class="text-center mt-4 mb-n6" style="font-size: 18px">
+            LocalStack's cloud emulation technology provides a fully functional cloud stack on your local machine.
+            Develop and test your cloud applications with the full cloud experience, but without the hassle of the remote cloud.
+        </p>
       </div>
     </div>
 </section>

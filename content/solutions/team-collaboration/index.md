@@ -13,7 +13,9 @@ toc: true
     <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Team Collaboration</h1>
-        <p class="text-center mt-4 mb-n6" style="font-size: 18px">Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Netus et malesuada fames ac turpis egestas integer. Ac feugiat sed lectus vestibulum mattis </p>
+        <p class="text-center mt-4 mb-n6" style="font-size: 18px">
+            Resolve the friction and improve productivity of your cloud development teams with LocalStack's advanced collaboration features that natively scale with your workflow.
+        </p>
       </div>
     </div>
 </section>

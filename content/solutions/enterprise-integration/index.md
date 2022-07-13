@@ -13,7 +13,10 @@ toc: true
     <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Enterprise Integration</h1>
-        <p class="text-center mt-4 mb-n6" style="font-size: 18px">Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Netus et malesuada fames ac turpis egestas integer. Ac feugiat sed lectus vestibulum mattis </p>
+        <p class="text-center mt-4 mb-n6" style="font-size: 18px">
+            Organization-wide observability and and traceability of your enterprise cloud application workflow.
+            With dedicated support to help you and your enterprise make the best of LocalStack.
+        </p>
       </div>
     </div>
 </section>
@@ -58,8 +61,9 @@ toc: true
             <div class="col-12 col-md-6, col-lg-6">
                 <h2>Dedicated technical support with SLAs</h2>
                 <ul>
-                    <li>Help with custom implementations</li>
-                    <li>TODO...</li>
+                    <li>Persoinalized and dedicated technical support for you and your teams</li>
+                    <li>Consulting for custom use cases and implementations</li>
+                    <li>Prioritization of feature requirements</li>
                 </ul>
             </div>
         </div>
