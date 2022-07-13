@@ -58,7 +58,7 @@ Use cases for extensions include:
 -   Starting custom services together with LocalStack in the same container (see our [LocalStack Stripe example](https://github.com/localstack/localstack-extensions/tree/main/stripe))
 -   Instrumenting AWS requests with additional information before they reach your Lambdas (see [case study with Thundra](https://localstack.cloud/blog/2021-09-16-test-monitoring-for-localstack-apps/))
 -   Logging AWS API calls to custom data backends
--   … and much more!
+-   ... and much more!
 
 ### IAM enforcement for all services
 
@@ -119,18 +119,27 @@ The main change from a user perspective: we used to configure `DATA_DIR` to poin
 
 We have many LocalStack 1.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 1.0 you can:
 
--   View our release notes on [GitHub]() and [Discussion Pages]().    
--   Check out our new [documentation]() on using services and integrations locally.    
--   Attend our [LocalStack Community Event Meetup]() to discuss the 1.0 release!
+-   View our release notes on [GitHub](https://github.com/localstack/localstack/issues/6398).
+-   Check out our new [documentation](https://docs.localstack.cloud) on using services and integrations locally.
+-   Attend our [LocalStack Community Event Meetup](https://www.meetup.com/localstack-community/) to discuss the 1.0 release!
 
 To get started with using LocalStack 1.0 features:
 
--   Migrate to LocalStack 1.0 by following our [documentation]().
--   Navigate to our [LocalStack samples]() and try out the examples.
--   Reach out to us on [discussion pages]() for any feedback, bug report or suggestion.
+-   Migrate to LocalStack 1.0 by following our [How to Migrate documentation](https://github.com/localstack/localstack/issues/6398).
+-   Navigate to our [LocalStack samples](https://github.com/localstack/localstack-pro-samples) and try out the examples.
+-   Reach out to us on [discussion pages](https://discuss.localstack.cloud) for any feedback, bug report or suggestion.
 
 We are thankful to our community and our users for providing a lot of suggestions, feedback, and bug reports through GitHub Issues and our Slack community. It would not have been possible without all the support that we have got and we are thankful for that!
 
 ## What's next?
 
-## Conclusion
+LocalStack's mission is to become the standard platform for local cloud development.
+We are planning to branch out to new cloud providers, while also solidifying the AWS developer experience.
+Next to the continuous increase in parity with AWS, here are some of things you can expect in the upcoming months:
+
+* Additional Cloud Pods functionality
+* Advanced analytics capabilities for enterprise customers
+* Improved developer tools for building LocalStack extensions
+* Better IAM support and tools to develop and test IAM policies
+
+Stay tuned!
