@@ -21,7 +21,7 @@ toc: true
     <div class="container overlay-card mt-n8">
         <div class="row align-items-center gy-3 p-3">
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="cloud-pods.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Local Cloud Pods - advanced persistence for sharing application state</h2>
@@ -47,14 +47,14 @@ toc: true
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="debug.webp" class="img-fluid"/>
             </div>
         </div>
     </div>
     <div class="container overlay-card mt-7 mb-6">
         <div class="row align-items-center gy-3 p-3">
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="tracing.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Tracing and analytics to gain deep insights into your application and the usage of LocalStack</h2>
