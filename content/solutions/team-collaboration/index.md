@@ -9,7 +9,7 @@ images: []
 weight: 92
 toc: true
 ---
-<section class="section section-sm bg-gradient-dark pb-8">
+<section class="section section-sm bg-gradient-dark pb-10">
     <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Team Collaboration</h1>
@@ -17,13 +17,19 @@ toc: true
       </div>
     </div>
 </section>
-<section class="section section-sm pb-15">
-    <div class="container overlay-card mt-n8">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+<section class="section pb-n8">
+    <div class="container overlay-card mt-n11">
+      <div class="row px-8">
+        <div class="strike-dark">
+          <h2 style="letter-spacing: 0.05em">Benefits</h2>
+        </div>
+      </div>
+      <div class="px-5 d-flex-column">
+        <div class="row align-items-center mt-6">
+            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
                 <img src="cloud-pods.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-7">
+            <div class="col-12 col-md-6, col-lg-6">
                 <h2>Local Cloud Pods - advanced persistence for sharing application state</h2>
                 <ul>
                     <li>Store a persistent snapshot of your LocalStack instance </li>
@@ -33,12 +39,8 @@ toc: true
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-<section class="section section-sm bg-gradient-dark">
-    <div class="container overlay-card mt-n12">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6, col-lg-7">
+        <div class="row align-items-center mt-6">
+            <div class="col-12 col-md-6, col-lg-6">
                 <h2>Enhanced debuggability and full reproducibility across CI/CD</h2>
                 <ul>
                     <li>Spin up LocalStack in your CI pipelines to run tests before pushing out changes to production </li>
@@ -46,17 +48,15 @@ toc: true
                     <li>Spin up ephemeral environments to test or showcase your changes</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
                 <img src="debug.webp" class="img-fluid"/>
             </div>
         </div>
-    </div>
-    <div class="container overlay-card mt-7 mb-6">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+        <div class="row align-items-center my-6">
+            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
                 <img src="tracing.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-7">
+            <div class="col-12 col-md-6, col-lg-6">
                 <h2>Tracing and analytics to gain deep insights into your application and the usage of LocalStack</h2>
                 <ul>
                     <li>Drill-down of most commonly used services and API calls</li>
@@ -66,5 +66,6 @@ toc: true
                 </ul>
             </div>
         </div>
+      </div>
     </div>
 </section>
