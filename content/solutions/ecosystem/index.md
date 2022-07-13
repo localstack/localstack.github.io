@@ -1,7 +1,7 @@
 ---
-title: "Cloud Emulation"
-description: "Cloud Emulation"
-lead: "LocalStack cloud emulation covers a huge range of AWS features."
+title: "Ecosystem"
+description: "The power of the cloud ecosystem, all in your local development platform with LocalStack."
+lead: "LocalStack offers its own ecosystem."
 date: 2022-02-20T18:56:25+02:00
 lastmod: 2022-02-20T18:56:25+02:00
 draft: false
@@ -46,17 +46,17 @@ toc: true
 </section>
 <section class="section pb-n8">
     <div class="container overlay-card mt-n11">
-        <div class="row px-8">
+      <div class="row px-4 px-md-8">
           <div class="strike-dark">
             <h2 style="letter-spacing: 0.05em">Benefits</h2>
           </div>
         </div>
-      <div class="px-5 d-flex-column">
+      <div class="px-4 px-md-5 d-flex-column">
         <div class="row align-items-center mt-6">
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6 order-1 order-lg-0" style="text-align: center">
                 <img src="ecosystem.png" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Leverage our growing system of integrations</h2>
                 <ul>
                     <li>Native integrations with key tools and platforms - from Infrastructure-as-Code frameworks to CI systems</li>
@@ -67,7 +67,7 @@ toc: true
             </div>
         </div>
         <div class="row align-items-center my-6">
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Extensions architecture - opening up the LocalStack platform for third-party plugins</h2>
                 <ul>
                   <li>Ability to plug in new emulators for third-party APIs (e.g., Stripe, Twitter, Dropbox, etc)</li>
@@ -75,7 +75,7 @@ toc: true
                   <li>Leverage the common functionality provided by the framework - request handling, state management, plugin loading, and more</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-8 col-lg-6">
                 <img src="extArchitecture.svg" class="img-fluid"/>
             </div>
         </div>
