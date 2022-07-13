@@ -1,6 +1,6 @@
 ---
-title: "Cloud Emulation"
-description: "Cloud Emulation"
+title: "Core Cloud Emulation"
+description: "LocalStack's cloud emulation technology provides a fully functional cloud stack on your local machine. Develop and test your cloud applications with the full cloud experience, but without the hassle of the remote cloud."
 lead: "LocalStack cloud emulation covers a huge range of AWS features."
 date: 2022-02-20T18:56:25+02:00
 lastmod: 2022-02-20T18:56:25+02:00
@@ -10,6 +10,31 @@ weight: 92
 toc: true
 ---
 <section class="section section-sm bg-gradient-dark pb-10">
+    <div class="position-absolute w-100 section pb-7 pt-9 pt-sm-7 d-none d-md-block">
+        <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-3">
+            <img
+                class="w-100"
+                style="transform: scale(1.75); opacity: .9;"
+                src="/images/heroes/cloud.svg"
+            />
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-2"></div>
+            <div class="col-1">
+            </div>
+            <div class="col-3">
+            <img
+                class="w-100"
+                style="transform: scaleX(-1) scale(1.2)"
+                src="/images/heroes/cloud.svg"
+            />
+            </div>
+        </div>
+        </div>
+    </div>
     <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Core Cloud Emulation</h1>
