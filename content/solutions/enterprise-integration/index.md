@@ -61,7 +61,7 @@ toc: true
             <div class="col-12 col-md-6, col-lg-6">
                 <h2>Dedicated technical support with SLAs</h2>
                 <ul>
-                    <li>Persoinalized and dedicated technical support for you and your teams</li>
+                    <li>Personalized and dedicated technical support for you and your teams</li>
                     <li>Consulting for custom use cases and implementations</li>
                     <li>Prioritization of feature requirements</li>
                 </ul>
