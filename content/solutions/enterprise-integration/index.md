@@ -55,7 +55,7 @@ toc: true
       <div class="px-5 d-flex-column">
         <div class="row align-items-center mt-6">
             <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="insights.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-6">
                 <h2>Detailed insights and traceability across the CI/CD pipeline</h2>
@@ -76,12 +76,12 @@ toc: true
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="sso.webp" class="img-fluid"/>
             </div>
         </div>
         <div class="row align-items-center my-6">
             <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="support.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-6">
                 <h2>Dedicated technical support with SLAs</h2>

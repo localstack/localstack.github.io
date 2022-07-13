@@ -54,7 +54,7 @@ toc: true
       <div class="px-5 d-flex-column">
         <div class="row align-items-center mt-6">
             <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="ecosystem.png" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-6">
                 <h2>Leverage our growing system of integrations</h2>
