@@ -45,14 +45,13 @@ toc: true
             <div class="col-12 col-md-6, col-lg-6">
                 <h2>Extensions architecture - opening up the LocalStack platform for third-party plugins</h2>
                 <ul>
-                    <li>Start up LocalStack as a Docker container - up and running in seconds</li>
-                    <li>Run your workloads and tests against the local API endpoints</li>
-                    <li>No need to write hand-crafted mocks for your unit and integration tests</li>
-                    <li>Remove the barrier for cloud dev - no more tedious cloud approvals!</li>
+                  <li>Ability to plug in new emulators for third-party APIs (e.g., Stripe, Twitter, Dropbox, etc)</li>
+                  <li>Develop your own services and advanced features, easily integrate them into the platform for local development</li>
+                  <li>Leverage the common functionality provided by the framework - request handling, state management, plugin loading, and more</li>
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="extArchitecture.svg" class="img-fluid"/>
             </div>
         </div>
         </div>
