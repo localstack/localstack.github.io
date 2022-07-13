@@ -105,7 +105,7 @@ tr.no-border-bottom td {
 .value-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 30px 40px;
   background: linear-gradient(339.94deg, #2A245B 0.17%, #403777 93.6%);
