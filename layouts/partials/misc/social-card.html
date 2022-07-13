@@ -1,6 +1,6 @@
 <div class="overlay-card mb-5">
     <div class="row align-items-center gy-2">
-        <div class="col-12 col-md-5 col-lg-3">
+        <div class="col-6 col-md-5 col-lg-3">
             {{if in "Upcoming events Get involved Stay informed" .Title}}
                 <img class="card-img" src="/images/social/blog.svg" />
             {{else}}
@@ -11,7 +11,7 @@
             <h2 class="mt-0">{{ .Title }}</h2>
             <p>{{ .Lead | safeHTML }}</p>
             {{if .Link}}
-            <a class="btn btn-second btn-lg col-4" target="_blank"  href="{{.Link}}">
+            <a class="btn btn-second btn-lg col-12 col-md-5 col-lg-4" target="_blank"  href="{{.Link}}">
                 {{if .LinkText}}
                 {{.LinkText}}
                 {{else}}

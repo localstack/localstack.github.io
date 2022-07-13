@@ -44,4 +44,4 @@
 
   [[categories.entries]]
   name = "Docs"
-  url = "/docs"
+  url = "https://docs.localstack.cloud"
