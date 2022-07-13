@@ -14,7 +14,7 @@ toc: true
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Enterprise Integration</h1>
         <p class="text-center mt-4 mb-n6" style="font-size: 18px">
-            Organization-wide observability and and traceability of your enterprise cloud application workflow.
+            Organization-wide observability and traceability of your enterprise cloud application workflow.
             With dedicated support to help you and your enterprise make the best of LocalStack.
         </p>
       </div>
