@@ -9,7 +9,7 @@ images: []
 weight: 92
 toc: true
 ---
-<section class="section section-sm bg-gradient-dark pb-8">
+<section class="section section-sm bg-gradient-dark pb-10">
     <div class="container pb-7 pt-9 pt-sm-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Core Cloud Emulation</h1>
@@ -17,13 +17,19 @@ toc: true
       </div>
     </div>
 </section>
-<section class="section section-sm pb-15">
-    <div class="container overlay-card mt-n8">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.webp" class="img-fluid"/>
+<section class="section pb-n8">
+    <div class="container overlay-card mt-n11">
+      <div class="row px-8">
+        <div class="strike-dark">
+          <h2 style="letter-spacing: 0.05em">Benefits</h2>
+        </div>
+      </div>
+      <div class="px-5 d-flex-column">
+        <div class="row align-items-center mt-6">
+            <div class="col-12 col-md-6 col-lg-6">
+                <img src="sandbox.webp" width="100%"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-7">
+            <div class="col-12 col-md-6, col-lg-6 ">
                 <h2>Your local cloud sandbox for development, testing, and experimentation</h2>
                 <ul>
                     <li>More than 60+ emulated AWS cloud services, running entirely on your local machine</li>
@@ -33,12 +39,8 @@ toc: true
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-<section class="section section-sm bg-gradient-dark">
-    <div class="container overlay-card mt-n12">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6, col-lg-7">
+        <div class="row align-items-center mt-6">
+            <div class="col-12 col-md-6, col-lg-6">
                 <h2>Truly shift left - get productive with cloud dev from day 1</h2>
                 <ul>
                     <li>Start up LocalStack as a Docker container - up and running in seconds</li>
@@ -47,17 +49,15 @@ toc: true
                     <li>Remove the barrier for cloud dev - no more tedious cloud approvals!</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
                 <img src="terminal.webp" class="img-fluid"/>
             </div>
         </div>
-    </div>
-    <div class="container overlay-card mt-7 mb-n6">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+        <div class="row align-items-center mt-6">
+            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
                 <img src="devloop.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-7">
+            <div class="col-12 col-md-6, col-lg-6">
                 <h2>Turbocharge your inner dev loop - dev cycles in seconds</h2>
                 <ul>
                     <li>Reduce deploy times from minutes to seconds</li>
@@ -67,12 +67,8 @@ toc: true
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container overlay-card mt-7">
-        <div class="row align-items-center gy-3 p-3">
-            <div class="col-12 col-md-6, col-lg-7">
+        <div class="row align-items-center mt-6 mb-6">
+            <div class="col-12 col-md-6, col-lg-6">
                 <h2>Use the Web user interface to browse and inspect resources locally</h2>
                 <ul>
                     <li>Visual representation of the current state of your LocalStack instance</li>
@@ -81,10 +77,10 @@ toc: true
                     <li>Drill into the state of your application and leverage the debugging capabilities directly in the Web UI</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
+            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
                 <img src="stepfunction.webp" class="img-fluid"/>
             </div>
         </div>
+      </div>
     </div>
-
 </section>
