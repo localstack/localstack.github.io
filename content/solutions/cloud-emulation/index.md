@@ -87,3 +87,12 @@ toc: true
       </div>
     </div>
 </section>
+<section class="section container">
+  <div class="strike-dark">
+    <h2 class="text-center">FAQ</h2>
+  </div>
+    <div class="container overlay-card mt-6 pb-5 d-flex flex-column align-items-center">
+        <h1 class="text-center">Any Questions?</h1>
+        <a class="btn btn-primary btn-lg" style="width: 300px" href="/faq">CHECK OUT OUR FAQ</a>
+    </div>
+</section>
