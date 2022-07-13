@@ -21,7 +21,7 @@ toc: true
     <div class="container overlay-card mt-n8">
         <div class="row align-items-center gy-3 p-3">
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="sandbox.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Your local cloud sandbox for development, testing, and experimentation</h2>
@@ -48,14 +48,14 @@ toc: true
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="terminal.svg" class="img-fluid"/>
+                <img src="terminal.webp" class="img-fluid"/>
             </div>
         </div>
     </div>
     <div class="container overlay-card mt-7 mb-n6">
         <div class="row align-items-center gy-3 p-3">
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="devloop.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-md-6, col-lg-7">
                 <h2>Turbocharge your inner dev loop - dev cycles in seconds</h2>
@@ -82,7 +82,7 @@ toc: true
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-5" style="text-align: center">
-                <img src="sandbox.svg" class="img-fluid"/>
+                <img src="stepfunction.webp" class="img-fluid"/>
             </div>
         </div>
     </div>
