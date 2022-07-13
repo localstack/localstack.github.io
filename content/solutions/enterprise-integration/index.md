@@ -1,6 +1,6 @@
 ---
-title: "Cloud Emulation"
-description: "Cloud Emulation"
+title: "Enterprise Integration"
+description: "Organization-wide observability and traceability of your enterprise cloud application workflow. With dedicated support to help you and your enterprise make the best of LocalStack."
 lead: "LocalStack cloud emulation covers a huge range of AWS features."
 date: 2022-02-20T18:56:25+02:00
 lastmod: 2022-02-20T18:56:25+02:00
@@ -47,17 +47,17 @@ toc: true
 </section>
 <section class="section pb-n8">
     <div class="container overlay-card mt-n11">
-      <div class="row px-8">
+      <div class="row px-4 px-md-8">
         <div class="strike-dark">
           <h2 style="letter-spacing: 0.05em">Benefits</h2>
         </div>
       </div>
-      <div class="px-5 d-flex-column">
+      <div class="px-4 px-md-5 d-flex-column">
         <div class="row align-items-center mt-6">
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6 order-1 order-lg-0" style="text-align: center">
                 <img src="insights.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Detailed insights and traceability across the CI/CD pipeline</h2>
                 <ul>
                     <li>Record all interactions happening throughout a CI build to get a detailed timeline of API calls and application states</li>
@@ -67,7 +67,7 @@ toc: true
             </div>
         </div>
         <div class="row align-items-center mt-6">
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Custom integrations to fit into the Enterprise IT landscape</h2>
                 <ul>
                     <li>SSO integration with your preferred authentication provider</li>
@@ -75,15 +75,15 @@ toc: true
                     <li>Custom emulators for additional APIs to be plugged into the LocalStack platform</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6" style="text-align: center">
                 <img src="sso.webp" class="img-fluid"/>
             </div>
         </div>
         <div class="row align-items-center my-6">
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6 order-1 order-lg-0" style="text-align: center">
                 <img src="support.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Dedicated technical support with SLAs</h2>
                 <ul>
                     <li>Personalized and dedicated technical support for you and your teams</li>

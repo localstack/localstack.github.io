@@ -1,6 +1,6 @@
 ---
-title: "Cloud Emulation"
-description: "Cloud Emulation"
+title: "Team Collaboration"
+description: "Resolve the friction and improve productivity of your cloud development teams with LocalStack's advanced collaboration features that natively scale with your workflow."
 lead: "LocalStack cloud emulation covers a huge range of AWS features."
 date: 2022-02-20T18:56:25+02:00
 lastmod: 2022-02-20T18:56:25+02:00
@@ -46,17 +46,17 @@ toc: true
 </section>
 <section class="section pb-n8">
     <div class="container overlay-card mt-n11">
-      <div class="row px-8">
+      <div class="row px-4 px-md-8">
         <div class="strike-dark">
           <h2 style="letter-spacing: 0.05em">Benefits</h2>
         </div>
       </div>
-      <div class="px-5 d-flex-column">
+      <div class="px-4 px-md-5 d-flex-column">
         <div class="row align-items-center mt-6">
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6 order-1 order-lg-0" style="text-align: center">
                 <img src="cloud-pods.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Local Cloud Pods - advanced persistence for sharing application state</h2>
                 <ul>
                     <li>Store a persistent snapshot of your LocalStack instance </li>
@@ -67,7 +67,7 @@ toc: true
             </div>
         </div>
         <div class="row align-items-center mt-6">
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Enhanced debuggability and full reproducibility across CI/CD</h2>
                 <ul>
                     <li>Spin up LocalStack in your CI pipelines to run tests before pushing out changes to production </li>
@@ -75,15 +75,15 @@ toc: true
                     <li>Spin up ephemeral environments to test or showcase your changes</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6" style="text-align: center">
                 <img src="debug.webp" class="img-fluid"/>
             </div>
         </div>
         <div class="row align-items-center my-6">
-            <div class="col-12 col-md-6 col-lg-6" style="text-align: center">
+            <div class="col-12 col-md-8 col-lg-6 order-1 order-lg-0" style="text-align: center">
                 <img src="tracing.webp" class="img-fluid"/>
             </div>
-            <div class="col-12 col-md-6, col-lg-6">
+            <div class="col-12 col-lg-6">
                 <h2>Tracing and analytics to gain deep insights into your application and the usage of LocalStack</h2>
                 <ul>
                     <li>Drill-down of most commonly used services and API calls</li>
