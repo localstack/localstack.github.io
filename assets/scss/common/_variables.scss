@@ -26,7 +26,9 @@ $pink-500: #d32e9d;
 $blue-mid:   #6577E7;
 $blue-dark:  #4755AC;
 
-$primary: $blue-dark;
+$dark-purple: #39227A;
+
+$primary: $dark-purple;
 
 // Options
 //
@@ -61,8 +63,8 @@ $navbar-light-toggler-icon-bg: none;
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white;
-$body-color:                $black;
+$body-bg:                   #fbfbfb;
+$body-color:                #1B183E;
 
 // Links
 //
@@ -79,8 +81,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1240px,
-  xxl: 1320px
+  xl: 1156px,
+  xxl: 1156px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -89,7 +91,7 @@ $container-max-widths: (
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:                16;
+$grid-columns:                12;
 $grid-gutter-width:           48px;
 $grid-row-columns:            6;
 
@@ -104,7 +106,7 @@ $border-color:                $gray-200;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif:      "Exo", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-monospace:       sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case
@@ -114,11 +116,12 @@ $font-size-xl:                $font-size-base * 1.375;
 $font-size-lg:                $font-size-base * 1.25;
 $font-size-md:                $font-size-base * 1.125;
 $font-size-sm:                $font-size-base * 0.875;
+$font-size-xs:                $font-size-base * 0.75;
 
 $line-height-base:            1.5;
 
 $headings-font-family:        null;
-$headings-font-weight:        700;
+$headings-font-weight:        800;
 
 $lead-font-weight:            400;
 
@@ -130,6 +133,27 @@ $lead-font-weight:            400;
 
 $spacer: 1rem;
 
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 5),
+  7: ($spacer * 7),
+  8: ($spacer * 9),
+  9: ($spacer * 11),
+  10: ($spacer * 13),
+  11: ($spacer * 15),
+  12: ($spacer * 17),
+  13: ($spacer * 19),
+  14: ($spacer * 21),
+  15: ($spacer * 23),
+  16: ($spacer * 25),
+  17: ($spacer * 27),
+);
+
 // Navbar
 
 $navbar-padding-y:                  $spacer / 2;
@@ -137,9 +161,9 @@ $navbar-padding-x:                  null;
 
 $navbar-nav-link-padding-x:         0.5rem;
 
-$navbar-light-color:                $black;
-$navbar-light-hover-color:          $primary;
-$navbar-light-active-color:         $primary;
+$navbar-light-color:                rgba(256,256,256,0.7);
+$navbar-light-hover-color:          $white;
+$navbar-light-active-color:         $white;
 
 // Cards
 
@@ -159,3 +183,6 @@ $alert-border-width:                0;
 $alert-bg-scale:                    0;
 $alert-border-scale:                0;
 $alert-color-scale:                 0;
+
+$card-border-radius: 30px !important;
+$card-border-color: none

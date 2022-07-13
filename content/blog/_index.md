@@ -7,8 +7,9 @@ draft: false
 images: []
 ---
 
-<div class="blog-tags">
-  <a href="/tags/news" class="btn btn-outline-primary">News</a>
-  <a href="/tags/showcase" class="btn btn-outline-primary">Showcase</a>
-  <a href="/tags/tutorial" class="btn btn-outline-primary">Tutorial</a>
+<div class="blog-tags d-flex flex-wrap gap-3">
+  <button class="btn btn-primary btn-pill bg-purple filterButton" id="allFilterButton" onClick="toggleTag('all')">ALL TOPICS</button>
+  <button class="btn btn-outline-primary btn-pill filterButton" id="newsFilterButton" onClick="toggleTag('news')">NEWS</button>
+  <button class="btn btn-outline-primary btn-pill filterButton" id="showcaseFilterButton" onClick="toggleTag('showcase')">SHOWCASE</button>
+  <button class="btn btn-outline-primary btn-pill filterButton" id="tutorialFilterButton" onClick="toggleTag('tutorial')">TUTORIAL</button>
 </div>

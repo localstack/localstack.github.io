@@ -27,7 +27,7 @@ h6,
 @include media-breakpoint-up(md) {
   body {
     font-size: $font-size-md;
-    padding-top: 4rem !important;
+    // padding-top: 4rem !important;
   }
 
   h1,
@@ -76,6 +76,18 @@ a.btn:focus {
   padding-bottom: 1rem;
 }
 
+.overlay-card {
+  box-shadow: 10px 30px 150px rgba(46, 38, 92, 0.25);
+  border-radius: 30px;
+  background-color: white;
+  color: #1B183E;
+  padding: 2rem;
+}
+
+#stats-card {
+  border-radius: 20px;
+}
+
 /*
 .section svg {
   display: inline-block;
@@ -86,7 +98,7 @@ a.btn:focus {
 */
 
 body {
-  padding-top: 3.5625rem;
+  // padding-top: 3.5625rem;
 }
 
 .docs-sidebar {
@@ -189,7 +201,7 @@ body {
 }
 
 ::selection {
-  background: rgba(212, 53, 159, 0.2);
+  background: rgba(116, 255, 230, 0.3);
 }
 
 .bg-dots {

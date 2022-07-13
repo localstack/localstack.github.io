@@ -8,6 +8,7 @@ draft: false
 images: []
 contributors: ["Sam Watson"]
 tags: ["tutorial"]
+leadimage: "develop-test-data-pipelines-localstack.png"
 ---
 
 {{< img src="develop-test-data-pipelines-localstack.png" >}}

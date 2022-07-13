@@ -1,6 +1,23 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
+<section class="section section-sm bg-gradient-dark">
+  <div class="container pb-7 pt-9 pt-sm-7">
+    <div class="row justify-content-center align-items-center">
+      <div
+        class="text-white align-items-center align-items-md-start d-flex flex-column gap-4 col-12 col-md-5 order-1 order-md-0">
+        <h1 style="letter-spacing: 0.05em">LocalStack</h1>
+        <div>
+          <p>A fully functional local cloud stack</p>
+          <p>Develop and test your cloud and serverless<br>apps offline!</p>
+        </div>
+        <a class="btn btn-primary btn-lg" style="width: 315px">GET STARTED</a>
+      </div>
+      <div class="col-12 col-md-7 order-0 order-md-1">
+        <img style="max-width: 100%" src="/images/landing/laptop_stacks.svg"
+          alt="Illustration of a laptop in a cloud hosting stacks"></img>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
       <h1 class="mt-0"><img src="/images/localstack.svg" alt="LocalStack Logo" style="max-width: 180px" class="mb-4"> {{ .Title }}</h1>
     </div>
@@ -17,54 +34,181 @@
         <iframe src="https://ghbtns.com/github-btn.html?user=localstack&amp;repo=localstack&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-8 col-sm-7 col-md-5 col-lg-4">
-        <img src="/images/icons/flash.png" style="max-width: 50px" class="mb-3">
-        <p>Enables a highly efficient dev&test loop. Deploy your application locally in Docker, within seconds.</p>
+<section class="section section-md" style="margin-top: -7.5rem">
+  <div class="container overlay-card stats-card">
+    <div class="row text-center">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">430<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.875rem; font-weight: 700">CONTRIBUTORS</span>
       </div>
-      <div class="col-8 col-sm-7 col-md-5 col-lg-4">
-        <img src="/images/icons/money.png" style="max-width: 50px" class="mb-3">
-        <p>Huge cost savings for development teams of all sizes. No cloud infrastructure needed.</p>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">13 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.87rem; font-weight: 700">SLACK MEMBERS</span>
       </div>
-      <div class="col-8 col-sm-7 col-md-5 col-lg-4">
-        <img src="/images/icons/ci.png" style="max-width: 50px" class="mb-3">
-        <p>Improve software quality through continuous integration. Stop rolling out untested changes.</p>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">42 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.87rem; font-weight: 700">GITHUB STARS</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-md section-alt">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">400+</span><br>
-        Contributors
-      </div>
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">13,000+</span><br>
-        Slack members
-      </div>
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">41,000+</span><br>
-        GitHub stars
-      </div>
-      <div class="col col-md-4 col-lg-3">
-        <span style="font-size: 2.2rem">94,000,000+</span><br>
-        Docker Pulls
+      <div class="col-12 col-sm-6 col-lg-3">
+        <span style="font-size: 2.5rem; font-weight: 800">96 M<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 0.87rem; font-weight: 700">DOCKER PULLS</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-sm container">
+<section class="section section-md container">
+  <div class="strike-dark">
+    <h2 class="text-center">Our trusted clients</h2>
+  </div>
+  <div class="row justify-content-center text-center mt-6">
+    <div class="col-lg-10">
+      <div class="row gy-3">
+        {{ range .Site.Data.customers -}}
+        <div class="col mb-4 d-flex align-items-center justify-content-center">
+          <a href="{{ .url }}" target="_blank">
+            <img src="{{ .logo }}" class="customer-logo" alt="LocalStack customer">
+          </a>
+        </div>
+        {{ end -}}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section d-flex">
+  <div class="container overlay-card">
+    <div class="row gy-3 p-2 p-md-5 justify-content-around">
+      <div class="d-flex flex-column gap-4 justify-content-center col-12 col-lg-5">
+        <h2 style="letter-spacing: 0.05em">Request a demo</h1>
+          <div>
+            <p>If you want to see LocalStack in action and what we can offer you, don't hesitate to contact us!</p>
+          </div>
+          <a class="btn btn-primary btn-lg" href="mailto:info@localstack.cloud" style="width: 315px">REQUEST A DEMO</a>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img style="max-width: 100%" src="/images/landing/demo.webp" alt="Demo image"></img>
+      </div>
+    </div>
+</section>
+
+<section class="section section-sm bg-gradient-dark mt-n12 pb-14">
+  <div class="container mt-12">
+    <div class="row text-center gx-3 gy-3 text-white">
+      <div class="strike-light mb-6">
+        <h2 style="letter-spacing: 0.05em">Solutions</h2>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="color-card-border">
+          <div class="solution-card">
+            <img src="/images/landing/boxes.svg" alt="core cloud emulation"></img>
+            <h3>Core Cloud Emulation</h3>
+            <div class="divider"></div>
+            <p>Run our high-fidelity cloud stack on your machine to develop locally and accelerate dev cycles</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="color-card-border">
+          <div class="solution-card">
+            <img src="/images/landing/people.svg" alt="team collaboration"></img>
+            <h3>Team Collaboration</h3>
+            <div class="divider"></div>
+            <p>Easily share the state of your instance with team members and browse your local cloud resources for
+              collaborative debugging</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="color-card-border">
+          <div class="solution-card">
+            <img src="/images/landing/enterprise.svg" alt="enterprise"></img>
+            <h3>Enterprise Integration</h3>
+            <div class="divider"></div>
+            <p>Gain insights across the CI/CD pipeline and seamlessly fit LocalStack into the Enterprise IT ecosystem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-12">
+        <div class="color-card-border">
+          <div class="solution-card flex-lg-row">
+            <img src="/images/landing/iterate.svg" alt="ecosystem"></img>
+            <div class="d-flex flex-column align-items-center align-items-lg-start gap-4">
+              <h3 class="">Ecosystem</h3>
+              <div class="divider"></div>
+              <p class="text-lg-start">Powerful Ecosystem of Emulator Plugin Extensions and third party Integrations and
+                across CI/CD Systems, IaC tools, Programming languages and many more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sm mt-n11 mb-5">
+  <div class="container overlay-card">
+    <div class="d-flex flex-column px-4 py-2 px-md-6 py-md-5 px-lg-6 pb-md-6 gap-6">
+      <div class="row">
+        <div class="strike-dark">
+          <h2 style="letter-spacing: 0.05em">Benefits</h2>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-between">
+        <div class="col-6 col-md-12 col-lg-6">
+          <img src="/images/landing/lightning.svg" alt="lightning" />
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center flex-column">
+          <p class="benefit-tag">SPEED</p>
+          <h2 class="mt-0">Accelerate your<br/>Dev and Test Loop</h2>
+          <ul>
+            <li>Test your cloud apps from the first line of code and get immediate feedback of your local changes without having to wait on cloud resources. </li>
+            <li>Use generic, reusable local API emulators - instead of mocking out cloud dependencies manually for each project.</li>
+            <li>Foster digital transformation by giving developers back control over their environments with sandboxes for quick experimentation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-between">
+        <div class="col-6 col-md-12 col-lg-6 order-md-1">
+          <img src="/images/landing/checkmark.svg" alt="wallet" />
+        </div>
+        <div class="col-6 col-md-12 col-lg-6 order-md-0 d-flex justify-content-center flex-column">
+          <p class="benefit-tag">QUALITY</p>
+          <h2 class="mt-0">Improve your cloud application's quality through simplified testing</h2>
+          <ul>
+            <li>Test more frequently and easily debug your applications through reproducible test environments.</li>
+            <li>Enable a DevOps mindset throughout your organization by individual empowerment and fast collaborative debugging on a shared application state</li>
+            <li>Avoid resource conflicts in shared dev. environments - simply use an isolated instance when testing your IaC scripts before pushing them to production</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-between">
+        <div class="col-6 col-md-12 col-lg-6">
+          <img src="/images/landing/wallet.svg" alt="checkmark" />
+        </div>
+        <div class="col-6 col-md-12 col-lg-6 d-flex justify-content-center flex-column">
+          <p class="benefit-tag">COST</p>
+          <h2 class="mt-0">Save time and resources</h2>
+          <ul>
+              <li>Keep your cloud bill manageable and predictable, avoid unpleasant surprises due to an accumulation of idle cloud resources and a lack of resource cleanups in your development and testing environments.</li>
+              <li>Enhance developer experience and team productivity by removing barriers and giving each team member access to their local cloud sandbox environment.</li>
+              <li>Save developer’s time spent on waiting for unnecessarily long resource deployment cycles against the cloud and dev environment cleanups.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+
+{{ partial "section/reviews.html" . }}
+
+<!-- <section class="section section-sm container">
   <div class="row justify-content-center">
     <div class="col-lg-10">
       <h2 class="h2 text-center">What is LocalStack?</h2>
@@ -111,7 +255,8 @@
       <p class="text-center">
         Interact with LocalStack via the CLI or our hosted web application:
       </p>
-      <!-- feature carousel -->
+
+
       <div id="featureCarousel" class="featureCarousel carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -169,30 +314,11 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- /feature carousel -->
+
 
     </div>
   </div>
-</section>
-
-<section class="section section-md container">
-  <h2 class="h2 text-center">LocalStack is trusted by 10,000s of developers worldwide</h2>
-  <div class="row justify-content-center text-center mt-5">
-    <div class="col-lg-10">
-      <div class="row">
-        {{ range .Site.Data.customers -}}
-        <div class="col customer-logo mb-4">
-          <a href="{{ .url }}" target="_blank">
-            <img src="{{ .logo }}" style="max-height: 80px">
-          </a>
-        </div>
-        {{ end -}}
-      </div>
-    </div>
-
-  </div>
-</section>
-
+</section> 
 
 <section class="section section-md container pt-0">
   <h2 class="h2 text-center">Giving back <span class="h4"><i class="bi bi-heart-fill"></i></span></h2>
@@ -219,43 +345,7 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="section section-md section-alt">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <h2 class="h2 text-center">Stay in the loop</h2>
-        <p>If you have any questions or feedback, please shoot us a message at
-          <a href="mailto:info@localstack.cloud">info@localstack.cloud</a>
-        </p>
-
-        <p>
-          We'd love to get in touch with you.
-          Please subscribe with your email to stay tuned for release notes and product updates.
-          We promise never to send an excessive amount of emails (we hate spam, too).
-        </p>
-
-        <div class="center text-center">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <form class="center text-center validate" action="https://sendy.localstack.cloud/subscribe" method="POST" accept-charset="utf-8">
-                <div class="input-group mb-3">
-                  <input type="email" class="form-control email" name="email" id="email" placeholder="email address" aria-label="email address" aria-describedby="basic-addon2">
-                  <input type="hidden" name="list" value="bZ8926jt167PVq0OXTjaMgag"/>
-                  <input type="hidden" name="subform" value="yes"/>
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit" name="submit">Subscribe</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</section> -->
 {{ end }}
 
 {{ define "sidebar-footer" }}

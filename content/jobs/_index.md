@@ -7,7 +7,10 @@ draft: false
 images: []
 ---
 
-We are looking for top-notch people to support us in our journey in becoming the world's leading platform to support efficient dev&test loops for cloud applications.
-Let's make Cloud development fun again!
-
-Here are some of our current openings.
+<!-- TODO: make functional -->
+<div class="blog-tags d-flex flex-wrap gap-3">
+    <button onClick="toggleTag('all')" id="allFilterButton" class="btn filterButton btn-primary bg-purple btn-pill">ALL JOBS</button>
+    <button onClick="toggleTag('Engineering')" id="EngineeringFilterButton" class="btn filterButton btn-outline-primary btn-pill">TECH</button>
+    <button onClick="toggleTag('BizOps')" id="BizOpsFilterButton" class="btn filterButton btn-outline-primary btn-pill">ADMINISTRATIVE</button>
+    <button onClick="toggleTag('Customersuccess')" id="CustomersuccessFilterButton" class="btn filterButton btn-outline-primary btn-pill">GO TO MARKET</button>
+</div>

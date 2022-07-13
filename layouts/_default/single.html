@@ -1,10 +1,14 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-12 col-xl-12">
-    <article>
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-    </article>
+{{ partial "heroes/base.html" (dict "Title" .Title ) }}
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-12 col-xl-12">
+        <article>
+          {{ .Content }}
+        </article>
+      </div>
+    </div>
   </div>
-</div>
+</section> 
 {{ end }}

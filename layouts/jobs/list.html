@@ -1,25 +1,49 @@
 {{ define "main" }}
+{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "search")}}
 
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
-    <article>
-      <h1 class="text-center">{{ .Title }}</h1>
-      <div class="text-center">{{ .Content }}</div>
-      {{ range .Pages.GroupByParam "Department" }}
-      <h2 class="text-center pb-3 border-bottom">{{ .Key }}</h2>
-      <div class="card-list">
-        {{ range .Pages -}}
-          <div class="card mb-3">
-            <div class="card-body bg-light">
-              <h3 class="h4"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
-              <p>{{ .Params.lead | safeHTML }}</p>
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <article>
+          <div class="text-center">{{ .Content }}</div>
+          {{/* {{ range .Pages.GroupByParam "Department" }}
+          <h2 class="text-center pb-3 border-bottom">{{ .Key }}</h2> */}}
+          <div class="card-list d-flex flex-column gap-1">
+            {{ range .Data.Pages -}}
+
+            {{ $department := (replaceRE "(\\s)" "" .Params.department) }}
+            <div class="card mb-3 tag-{{ $department }} tag-all">
+              <div class="row align-items-center gy-3">
+                <div class="col-12 col-md-5 col-lg-4">
+                  {{ if isset .Params "leadimage"}}
+                  {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) }}
+                  <img class="card-img" src="{{ .RelPermalink }}" />
+                  {{ else }}
+                  <img class="card-img" src="/images/jobs/wallet.svg" />
+                  {{ end }}
+                </div>
+                <div class="col-12 col-md-7 col-lg-8 d-flex flex-column gap-1">
+                  <div class="d-flex justify-content-center justify-content-md-start">
+                    {{ with .Params.department }}
+                    <div class="btn btn-primary btn-pill bg-purple text-uppercase">{{ . }}</div>
+                    {{ end -}}
+                  </div>
+                  <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a>
+                  </h2>
+                  <p>{{ .Params.lead | safeHTML }}</p>
+                  <hr>
+                  <a class="btn btn-primary btn-lg" href="{{ .RelPermalink }}" style="width: 266px">APPLY</a>
+                </div>
+              </div>
             </div>
+            {{ end -}}
           </div>
-        {{ end -}}
+          {{/* {{ end }} */}}
+        </article>
       </div>
-      {{ end }}
-    </article>
+    </div>
   </div>
-</div>
+</section>
 
 {{ end }}

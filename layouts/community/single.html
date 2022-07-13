@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "cloud") }}
+{{ if (not (eq .Content ""))}}
+<section class="section container">
+    {{ .Content }}
+</section>
+{{end}}
+{{ if (eq .Description "Stay informed")}}
+<section class="section container">
+    {{ partial "misc/social-card.html" (dict "Title" "Twitter"
+    "Lead" "Stay informed about LocalStack, and receive the latest news."
+    "Link" "https://twitter.com/intent/follow?screen_name=_localstack"
+    )}}
+    {{ partial "misc/social-card.html" (dict "Title" "LinkedIn"
+    "Lead" "Stay informed about LocalStack, and receive the latest news."
+    "Link" "https://www.linkedin.com/company/localstack-cloud"
+    )}}
+    {{ partial "misc/social-card.html" (dict "Title" "YouTube"
+    "Lead" "Stay informed about LocalStack, and receive the latest news."
+    "Link" "https://www.youtube.com/channel/UC2V1JvfnVBoRqErIXa3eCFw"
+    "LinkText" "SUBSCRIBE"
+    )}}
+    {{ partial "misc/social-card.html" (dict "Title" "Blog"
+    "Lead" "Check out our Blog to read the latest news, tutorials, and more!"
+    "Link" "/blog"
+    "LinkText" "DIVE IN"
+    )}}
+</section>
+{{else}}
+<section class="section container mt-n6">
+    {{ partial "misc/social-card.html" (dict "Title" "GitHub"
+    "Lead" "This is how you can make contributions to the code repository, and raise issues there. The LocalStack ecosystem can only grow through the efforts of our contributors. We appreciate all your contributions and the innovation that is brought in this community-driven project."
+    "Link" "https://github.com/localstack/localstack"
+    "LinkText" "CONTRIBUTE"
+    )}}
+    {{ partial "misc/social-card.html" (dict "Title" "Slack"
+    "Lead" "We have a vibrant discussion workspace on Slack which serves as the best place to get help with all your technical questions! We would like you to follow our Slack guidelines for effective and empathetic communication."
+    "Link" "https://localstack-community.slack.com/"
+    "LinkText" "JOIN US"
+    )}}
+    {{ partial "misc/social-card.html" (dict "Title" "Discussion"
+    "Lead" "To participate in wider community discussions and steer the development of LocalStack, please join us on our Discourse forum:"
+    "Link" "https://discuss.localstack.cloud"
+    "LinkText" "DISCUSS"
+    )}}
+    <!-- {{ partial "misc/social-card.html" (dict "Title" "Upcoming events"
+    "Lead" "Join us on our upcoming events"
+    "Link" "/"
+    "LinkText" "GET UPDATES"
+    )}} -->
+    {{ partial "misc/social-card.html" (dict "Title" "Meetups"
+    "Lead" "Check out our latest meetups, and join our meetup community"
+    "Link" "https://www.meetup.com/localstack-community?action=join"
+    "LinkText" "JOIN US"
+    )}}
+</section>
+{{end}}
+{{ end }}

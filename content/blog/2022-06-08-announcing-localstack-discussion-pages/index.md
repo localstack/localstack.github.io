@@ -7,6 +7,7 @@ lastmod: 2022-06-20T12:51:11+05:30
 images: ["announcing-localstack-discussion-pages.png"]
 contributors: ["Harsh Mishra"]
 tags: ['news']
+leadimage: "announcing-localstack-discussion-pages.png"
 ---
 
 {{< img src="announcing-localstack-discussion-pages.png" >}}

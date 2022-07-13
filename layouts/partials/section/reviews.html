@@ -1,0 +1,60 @@
+
+<section class="section section-md container">
+  <div class="px-5">
+    <div class="strike-dark pb-5">
+      <h2 class="h2 text-center">Reviews</h2>
+    </div>
+  </div>
+  <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="container overlay-card stats-card mb-8">
+      <div class="carousel-inner">
+        {{ partial "misc/review-carousel-item.html" (dict
+          "active" "active"
+          "review" "Xiatech is a global technology company based in London that leverages Hyper-Integration to connect systems, unify data and deliver advanced insights to customers through Xfuze, our platform, which orchestrates many AWS services. Our engineering team utilises localstack to provide a complete, localised AWS environment where developers can build, test, profile and debug infrastructure and code ahead of deployment to the cloud. We have enabled each software engineer to be fully independent with local development and testing tooling, and this has proved to be a key accelerator for our engineering team."
+          "image" "/images/landing/person.jpg"
+          "name" "Rick Timmis"
+          "description" "Rick Timmis, VP Engineering - Xiatech")
+        }}
+        {{ partial "misc/review-carousel-item.html" (dict
+          "review" "LocalStack has been a game changer in terms of development speed and efficiency for our team migrating our monolithic application to a serverless Node.js stack on AWS. While in the past we had to maintain our own tooling and local mocks, with LocalStack we can now empower our devs to iterate quickly without having to perform numerous code commits & waiting for AWS pipelines, - hence also saving money on infrastructure!"
+          "image" "/images/landing/person.jpg"
+          "name" "Kevin Breton"
+          "description" "Kevin Breton, VP of Engineering - KnowBe4")
+        }}
+        {{ partial "misc/review-carousel-item.html" (dict
+          "review" "Localstack is an incredibly beneficial tool for continuous integration (CI) pipelines. Provisioning AWS infrastructure against Localstack in a CI pipeline saves significant time and cost. Creating resources that would take multiple minutes in AWS takes only seconds with Localstack, significantly reducing pipeline execution time. Also, if your CI pipeline fails for any reason, you no longer have to worry about “orphaned” AWS resources that will cost you money."
+          "image" "/images/landing/person.jpg"
+          "name" "Jim Sheldon"
+          "description" "Jim Sheldon, senior DevRel - Harness.io")
+        }}
+        {{ partial "misc/review-carousel-item.html" (dict
+          "review" "Our cloud innovation is truly being turbocharged with fast iterations and prototyping using LocalStack. Security is of utmost importance for our organization, as we are developing critical cloud solutions for our healthcare departments. This leads to a series of internal gatekeepers and approval processes that are necessary to create any new system and drive innovation. LocalStack allows our developers to iterate quickly when creating prototypes and during early stage development, and also allows us write more realistic unit and integration tests for our AWS applications."
+          "image" "/images/landing/person.jpg"
+          "name" "Paul Tipper"
+          "description" "Paul Tipper, Senior Software Engineer - 3M")
+        }}
+        {{ partial "misc/review-carousel-item.html" (dict
+          "review" "LocalStack has been a game changer in terms of development speed and efficiency for our teams migrating apps on AWS. Security is of utmost importance for our organization LocalStack is a reliable and easy-to-use solution for implementation in the CD and CI pipeline. This allowed us to save a lot of development costs by using AWS locally before the production release!"
+          "image" "/images/landing/person.jpg"
+          "name" "Serreau Jovann"
+          "description" "Serreau Jovann, R&D manager - Site conseil")
+        }}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+    </div>
+  </div>
+</section>

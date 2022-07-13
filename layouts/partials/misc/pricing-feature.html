@@ -1,0 +1,18 @@
+<div class="d-flex align-items-center gap-2">
+    <div>
+        <img src="/images/checkmark.svg"></img>
+    </div>
+    <div class="text-start fs-6">
+        {{.featureName}}
+
+        {{ if .link }}
+            <a style="color: #79F0A9" href="{{.link}}">
+                {{ if .linktext }}
+                ({{ .linktext }})
+                {{ else }}
+                (Learn more)
+                {{ end }}
+            </a>
+        {{ end }}
+    </div>
+</div>

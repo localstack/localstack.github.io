@@ -7,6 +7,40 @@
   margin-right: 1.25rem;
 }
 
+.btn {
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: $font-size-sm;
+  font-weight: 700;
+};
+
+.btn-pill {
+  border-radius: 100px;
+  padding: 10px 30px;
+}
+
+.btn-primary {
+  background: linear-gradient(280deg, #63ECD3 0%, #835AF7 95%);
+  border: 0;
+}
+
+.bg-purple {
+  background: linear-gradient(89deg, #6A56E7 -43.06%, #AB8DFF 108.29%) !important;
+}
+
+.btn-second {
+  border: 1px solid #1b183e;
+}
+
+.btn-tertiary {
+  background: linear-gradient(278.94deg, #63ECD3 -4.84%, #7795E9 112.95%) !important;
+}
+
+.btn-lg {
+  font-size: $font-size-md;
+  padding: 18px;
+}
+
 .btn-link:focus {
   outline: 0;
   box-shadow: none;

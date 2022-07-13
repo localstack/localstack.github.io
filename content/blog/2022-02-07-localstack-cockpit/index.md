@@ -7,6 +7,7 @@ lastmod: 2022-02-18T13:10:00+02:00
 contributors: ["LocalStack Team"]
 images: ["localstack-cockpit-start.gif", "localstack-cockpit-logs.png"]
 tags: ["news"]
+leadimage: "localstack-cockpit-banner.png"
 ---
 
 {{< img src="localstack-cockpit-banner.png" >}}

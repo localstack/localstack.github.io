@@ -1,0 +1,140 @@
+{{ define "main" }}
+<section class="section section-sm bg-gradient-dark pb-6">
+    <div class="container pb-6 pt-9 pt-sm-7">
+        <div class="row justify-content-center align-items-center text-white gap-3">
+            <h1 class="text-center m-0 pt-5">{{ .Title }}</h1>
+            <p class="text-center px-4 px-md-8">{{ .Description }}</p>
+        </div>
+    </div>
+    <div class="container mb-6">
+        <div class="row text-center gx-3 gy-3 text-white">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Community</h3>
+                        <div class="price-tag mb-3">
+                            <h3>Free</h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Basic APIs") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "LocalStack Cockpit UI" "link" "/products/cockpit") }}
+                        </div>
+                        <div class="w-100 flex-grow-1 d-flex align-items-end">
+                            <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Pro</h3>
+                        <div class="price-tag mb-3">
+                            <h3 class="d-flex align-items-center gap-1">
+                                <div class="fs-6" style="text-decoration: line-through">$35</div>$28
+                                <div class="fs-6">/month*</div>
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="text-start fs-6">Everything in Community, plus:</div>
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced APIs" "link" "https://docs.localstack.cloud/aws/feature-coverage/" "linktext" "See full feature coverage") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI starter tier¹") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "IAM security enforcement") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "State persistence for individual debugging") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Best-effort support (Slack)") }}
+                        </div>
+                        <div class="w-100 flex-grow-1 d-flex align-items-end">
+                            <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Team</h3>
+                        <div class="price-tag mb-3">
+                            <h3 class="d-flex align-items-center gap-1">
+                                <div class="fs-6" style="text-decoration: line-through">$70</div>$35
+                                <div class="fs-6">/month**</div>
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="text-start fs-6">Everything in Pro, plus:</div>
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI performance tier²") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Team usage analytics") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared cloud pods for collaborative debugging") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Cloud pods storage³") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Prioritized best effort-support (Slack)") }}
+                        </div>
+                        <div class="w-100 flex-grow-1 d-flex align-items-end">
+                            <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="color-card-border">
+                    <div class="pricing-card gap-4">
+                        <h3>Enterprise</h3>
+                        <div class="price-tag mb-3">
+                            <h3>Contact us</h3>
+                        </div>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="text-start fs-6">Everything in Team, plus:</div>
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Unlimited CI usage") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI analytics") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced cloud pods storage⁴") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "SSO Support") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Dedicated tech support via ticketing system with SLAs") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared instances") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Offline image") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Custom or on-premise installations") }}
+                        </div>
+                        <div class="w-100">
+                            <a href="#contact" class="btn btn-primary btn-tertiary w-100">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-white fst-italic d-flex flex-column gap-2 fs-6">
+        <div>
+            * Introductory discount for the first 2 months
+        </div>
+        <div>
+            ** Introductory discount for the first 3 months
+        </div>
+        <div>
+            1: 100 base credits for the first 3 users + 20 additional credits per additional user / month
+        </div>
+        <div>
+            2: 1000 base credits for the first 3 users + 200 additional credits per user / month
+        </div>
+        <div>
+            3: managed cloud storage, limit of 500 MB per user
+        </div>
+        <div>
+            4: managed cloud storage, limit of 5 GB per seat
+        </div>
+    </div>
+</section>
+{{/*  Currently no Quiz available  */}}
+{{/*  <section class="section section-sm mb-5">
+    <div class="container overlay-card mt-n8 pb-5 d-flex flex-column align-items-center">
+        <h1 class="text-center">Which one is for me?</h1>
+        <button class="btn btn-primary btn-lg" style="width: 300px">START QUIZ</button>
+    </div>
+</section>  */}}
+
+{{ partial "section/reviews.html" . }}
+
+<section class="section mb-10">
+    
+</section>
+
+{{ partial "section/contact.html" . }}
+
+{{ end }}

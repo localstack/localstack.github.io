@@ -1,9 +1,5 @@
 .footer {
-  border-top: 1px solid $gray-400;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: $gray-700;
-  background-color: $gray-100;
+  color: $white;
 }
 
 .footer ul {
@@ -45,4 +41,19 @@
 
 .footer .footer-bottom .list-inline-item {
   font-size: $font-size-sm;
+}
+
+.footer-text {
+  color: white;
+  opacity: 0.7;
+}
+
+.footer-text:hover, .footer-last-text:hover {
+  color: white;
+  opacity: 1;
+}
+
+.footer-last-text {
+  color: white;
+  opacity: 0.5;
 }

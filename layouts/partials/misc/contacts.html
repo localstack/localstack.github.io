@@ -1,0 +1,67 @@
+<div class="container mb-6 mt-n5">
+    <div class="d-flex flex-column flex-md-row gap-4">
+        <div class="col col-md-5 d-flex flex-column gap-4 flex-grow-1 jusitfy-space-between">
+                {{ partial "misc/contact-card.html" (dict "contactName" "Discussion"
+                "text" "Our new discussion platform:"
+                "link" "discuss.localstack.cloud"
+                "type" "link"
+                ) }}
+                {{ partial "misc/contact-card.html" (dict "contactName" "E-mail"
+                "text" "For any administrative questions"
+                "link" "info@localstack.cloud"
+                "type" "mail"
+                ) }}
+                {{ partial "misc/contact-card.html" (dict "contactName" "Slack"
+                "text" "Please join us in our Slack channel"
+                "link" "localstack-community.slack.com"
+                "type" "link"
+                ) }}
+                {{ partial "misc/contact-card.html" (dict "contactName" "GitHub"
+                "text" "For any bug reports, please first consult the main GitHub repository"
+                "link" "github.com/localstack/localstack"
+                "type" "link"
+                ) }}
+            {{/* TODO: discuss */}}
+        </div>
+        <div class="col col-md-7">
+            <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
+                You can also get in touch with us directly via this form.
+                {{/* TODO: form */}}
+                <div class="row">
+                    <div class="row form-group gy-1 gy-md-3">
+                        <div class="col-12 col-xl-6">
+                            <input type="text" class="contact-textbox" placeholder="First name" id="firstname" required />
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <input type="text" class="contact-textbox w-100" placeholder="Last name" id="lastname" required />
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <input type="text" class="contact-textbox w-100" placeholder="E-mail" id="email" required/>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <input type="email" class="contact-textbox w-100" placeholder="Phone number" id="phonenumber" />
+                        </div>
+                        <div class="col-12">
+                            <textarea type="text" style="resize: none; height: 325px" class="contact-textbox w-100" id="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <a class="btn btn-primary form-button" onClick="submitForm()" type="submit" id="getInTouch" name="submit">GET IN TOUCH</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitForm() {
+        const firstname = document.getElementById('firstname')
+        const lastname = document.getElementById('lastname')
+        const email = document.getElementById('email')
+        const phonenumber = document.getElementById('phonenumber')
+        const message = document.getElementById('message')
+        const link = "mailto:info@localstack.cloud?subject="+firstname.value+" "+lastname.value+" "+phonenumber.value+"&body="+message.value
+        window.location.href = link
+    }
+</script>
