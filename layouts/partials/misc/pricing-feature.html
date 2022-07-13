@@ -2,5 +2,13 @@
     <div>
         <img src="/images/checkmark.svg"></img>
     </div>
-    <div class="text-start fs-6">{{.featureName}}</div>
+    <div class="text-start fs-6">
+        {{.featureName}}
+
+        {{ if .link }}
+            <a style="color: #79F0A9" href="{{.link}}">
+                (See full feature coverage)
+            </a>
+        {{ end }}
+    </div>
 </div>

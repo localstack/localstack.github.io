@@ -16,8 +16,11 @@
                             <h3>Free</h3>
                         </div>
                         <div class="d-flex flex-column gap-4">
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Basic APIs (add link to docs page)") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Basic APIs") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "LocalStack Cockpit UI") }}
+                        </div>
+                        <div class="w-100 flex-grow-1 d-flex align-items-end">
+                            <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
                         </div>
                     </div>
                 </div>
@@ -34,10 +37,14 @@
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <div class="text-start fs-6">Everything in Community, plus:</div>
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced APIs") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Local cloud pods") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Best-effort support (Slack)") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced APIs" "link" "https://docs.localstack.cloud/aws/feature-coverage/") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "CI starter tier¹") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "IAM security enforcement") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "State persistence for individual debugging") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Best-effort support (Slack)") }}
+                        </div>
+                        <div class="w-100 flex-grow-1 d-flex align-items-end">
+                            <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
                         </div>
                     </div>
                 </div>
@@ -48,16 +55,20 @@
                         <h3>Team</h3>
                         <div class="price-tag mb-3">
                             <h3 class="d-flex align-items-center gap-1">
-                                <div class="fs-6" style="text-decoration: line-through">$70</div>$30
-                                <div class="fs-6">/month*</div>
+                                <div class="fs-6" style="text-decoration: line-through">$70</div>$35
+                                <div class="fs-6">/month**</div>
                             </h3>
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <div class="text-start fs-6">Everything in Pro, plus:</div>
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared cloud pods²") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI performance tier²") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "Team usage analytics") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Prioritized best-effort support (Slack)") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "CI performance tier³") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared cloud pods for collaborative debugging") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Cloud pods storage³") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Prioritized best effort-support (Slack)") }}
+                        </div>
+                        <div class="w-100 flex-grow-1 d-flex align-items-end">
+                            <a href="https://app.localstack.cloud" target="_blank" class="btn btn-primary btn-tertiary w-100">GET STARTED</a>
                         </div>
                     </div>
                 </div>
@@ -71,14 +82,17 @@
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <div class="text-start fs-6">Everything in Team, plus:</div>
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared cloud pods performance tier⁴") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Unlimited CI usage") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "CI analytics") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "unlimited CI usage") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Advanced cloud pods storage⁴") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "SSO Support") }}
-                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Dedicated tech support via Ticketing System with SLAs") }}
+                            {{ partial "misc/pricing-feature.html" (dict "featureName" "Dedicated tech support via ticketing system with SLAs") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "Shared instances") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "Offline image") }}
                             {{ partial "misc/pricing-feature.html" (dict "featureName" "Custom or on-premise installations") }}
+                        </div>
+                        <div class="w-100">
+                            <a href="#contact" class="btn btn-primary btn-tertiary w-100">CONTACT US</a>
                         </div>
                     </div>
                 </div>
@@ -91,16 +105,19 @@
             * Introductory discount for the first 2 months
         </div>
         <div>
-            1: 100 base credits for the first 3 users + 20 additional credits per additional user / month; additional CI credits can optionally be added - pay as you go 0.2 USD per build
+            ** Introductory discount for the first 3 months
         </div>
         <div>
-            2: managed cloud storage, limit of 500 MB per user
+            1: 100 base credits for the first 3 users + 20 additional credits per additional user / month
         </div>
         <div>
-            3: 1000 base credits for the first 3 users + 200 additional credits per user / month
+            2: 1000 base credits for the first 3 users + 200 additional credits per user / month
         </div>
         <div>
-            4: managed cloud storage up to 5GB per seat
+            3: managed cloud storage, limit of 500 MB per user
+        </div>
+        <div>
+            4: managed cloud storage, limit of 5 GB per seat
         </div>
     </div>
 </section>

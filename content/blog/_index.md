@@ -8,7 +8,7 @@ images: []
 ---
 
 <div class="blog-tags d-flex flex-wrap gap-3">
-  <button class="btn btn-primary btn-pill filterButton" id="allFilterButton" onClick="toggleTag('all')">ALL TOPICS</button>
+  <button class="btn btn-primary btn-pill bg-purple filterButton" id="allFilterButton" onClick="toggleTag('all')">ALL TOPICS</button>
   <button class="btn btn-outline-primary btn-pill filterButton" id="newsFilterButton" onClick="toggleTag('news')">NEWS</button>
   <button class="btn btn-outline-primary btn-pill filterButton" id="showcaseFilterButton" onClick="toggleTag('showcase')">SHOWCASE</button>
   <button class="btn btn-outline-primary btn-pill filterButton" id="tutorialFilterButton" onClick="toggleTag('tutorial')">TUTORIAL</button>

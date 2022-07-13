@@ -271,12 +271,14 @@ function toggleTag(tag) {
   const filterButtons = document.getElementsByClassName('filterButton')
     for (let index = 0; index < filterButtons.length; index++) {
       const filterButton = filterButtons[index];
+      filterButton.classList.remove('bg-purple')
       filterButton.classList.remove('btn-primary')
       filterButton.classList.add('btn-outline-primary')
     }
 
     const buttonTag = tag + "FilterButton"
     const activeButton = document.getElementById(buttonTag)
+    activeButton.classList.add('bg-purple')
     activeButton.classList.add('btn-primary')
     activeButton.classList.remove('btn-outline-primary')
 }

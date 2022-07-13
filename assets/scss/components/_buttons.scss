@@ -24,8 +24,16 @@
   border: 0;
 }
 
+.bg-purple {
+  background: linear-gradient(89deg, #6A56E7 -43.06%, #AB8DFF 108.29%) !important;
+}
+
 .btn-second {
   border: 1px solid #1b183e;
+}
+
+.btn-tertiary {
+  background: linear-gradient(278.94deg, #63ECD3 -4.84%, #7795E9 112.95%) !important;
 }
 
 .btn-lg {
