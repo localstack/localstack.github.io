@@ -15,14 +15,14 @@
             {{ $department := (replaceRE "(\\s)" "" .Params.department) }}
             <div class="card mb-3 tag-{{ $department }} tag-all">
               <div class="row align-items-center gy-3">
-                <div class="col-12 col-md-5 col-lg-4">
+                <!-- <div class="col-12 col-md-5 col-lg-4">
                   {{ if isset .Params "leadimage"}}
                   {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) }}
                   <img class="card-img" src="{{ .RelPermalink }}" />
                   {{ else }}
                   <img class="card-img" src="/images/jobs/wallet.svg" />
                   {{ end }}
-                </div>
+                </div> -->
                 <div class="col-12 col-md-7 col-lg-8 d-flex flex-column gap-1">
                   <div class="d-flex justify-content-center justify-content-md-start">
                     {{ with .Params.department }}
