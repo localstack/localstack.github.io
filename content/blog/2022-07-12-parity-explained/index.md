@@ -2,8 +2,8 @@
 title: LocalStack and AWS Parity Explained
 description: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
 lead: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
-date: 2022-07-12
-lastmod: 2022-07-12
+date: 2022-07-13
+lastmod: 2022-07-13
 images: []
 contributors: [""]
 tags: ['news']
@@ -234,12 +234,10 @@ This can be helpful in a situation like in the test case `test_iam_username_defa
 This is not the expected behavior, but we would still be able to verify all other attributes from the response.
 
 
-## Parity Metrics
-
-Starting with our latest release we will provide regular metric updates and insights about supported services and operations. This will make our communication more transparent in terms of implemented APIs, and further improve the confidence overall. 
-
-**TODO add at least one more sentence**
-
 ## Outlook
-**TODO**
+With the new ASF framework we also introduced a metric collection utility. It enables us to collect details during the test execution, including used parameter values, exceptions etc.
+This information will help us to increase test coverage and consequently improve the parity with AWS. 
 
+Additionally, we will provide regular metric updates and insights about supported services and operations. This will make our communication more transparent in terms of implemented APIs, and further improve the confidence overall. 
+
+We hope you are as excited as we are about the new snapshot testing framework - and if you are contributor: we appreciate your support with enhancing the AWS parity!
