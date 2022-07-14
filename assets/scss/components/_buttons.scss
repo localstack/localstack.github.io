@@ -12,6 +12,7 @@
   padding: 10px 24px;
   font-size: $font-size-sm;
   font-weight: 700;
+  transition: transform 100ms ease-in-out;
 };
 
 .btn-pill {
