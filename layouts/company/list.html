@@ -1,0 +1,89 @@
+{{ define "main" }}
+{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "cloud" ) }}
+
+
+<div class="position-absolute w-100 section h-100" style="z-index: 1003">
+    <div class="container h-100">
+        <div class="row justify-content-center mt-11 h-100">
+            <div class="col-5">
+
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+                <div style="background-color: #AB8DFF; width: 20px" class="h-100"></div>
+            </div>
+            <div class="col-5">
+
+            </div>
+        </div>
+    </div>
+</div>
+<section class="section container">
+    <div class="strike-dark">
+        <h2 class="text-center">Timeline</h2>
+      </div>
+    
+    <div class="d-flex flex-column mt-6 gap-6">
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2016"
+            "cardText" "August 16th"
+            "cardDescription" "First open source commits of LocalStack in GitHub repository (initial support for 8 AWS services)"
+            "image" "/images/company/leafs.svg"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2017"
+            "cardText" "March 27th"
+            "cardDescription" "Tweet by Jeff Barr (AWS Chief Evangelist) about LocalStack"
+            "image" "/images/company/twittershout.svg"
+            "reverse" "true"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2018"
+            "cardText" "March"
+            "cardDescription" "Reaching 10.000 stars on Github"
+            "image" "/images/company/10k.svg"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2019"
+            "cardText" "July"
+            "cardDescription" "LocalStack Pro extensions - first version available"
+            "image" "/images/company/gears.svg"
+            "reverse" "true"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2020"
+            "cardText" "July"
+            "cardDescription" "Reaching 25.000 stars on Github, more than 50+ AWS services supported in LocalStack"
+            "image" "/images/company/leafs.svg"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2021"
+            "cardText" "March"
+            "cardDescription" "LocalStack GmbH founded in Switzerland"
+            "image" "/images/company/writing.svg"
+            "reverse" "true"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2022"
+            "cardText" "May"
+            "cardDescription" "Reached 20+ team members, and growing!"
+            "image" "/images/company/members.svg"
+            )
+        }}
+        {{ partial "misc/timeline-card.html" (dict
+            "cardHeading" "2022"
+            "cardText" "July"
+            "cardDescription" "Release of LocalStack version 1.0.0"
+            "image" "/images/company/release.svg"
+            "reverse" "true"
+            )
+        }}
+    </div>
+</section>
+
+{{ end }}

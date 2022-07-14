@@ -10,10 +10,10 @@
 
 # Redirect to /docs
 # GH pages redirects to docs.localstack.cloud automatically
-# [[main]]
-#   name = "COMPANY"
-#   url = "/docs/"
-#   weight = 10
+[[main]]
+  name = "COMPANY"
+  url = "/company/"
+  weight = 10
 
 [[main]]
   name = "COMMUNITY"
