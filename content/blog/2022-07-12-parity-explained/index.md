@@ -2,8 +2,8 @@
 title: LocalStack and AWS Parity Explained
 description: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
 lead: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
-date: 2022-07-13
-lastmod: 2022-07-13
+date: 2022-07-14
+lastmod: 2022-07-14
 images: []
 contributors: [""]
 tags: ['news']
@@ -70,7 +70,7 @@ Thus parity tests are a crucial technique to ensure consistency and boost the co
 Initially, a parity test is designed to run against AWS. Certain responses in the test will be marked to be part of the "snapshot". Those responses are collected and stored in json-format in a separate file, which we call the snapshot. 
 
 The snapshot will be used to verify the behavior of LocalStack later on. 
-As the initial test runs against AWS, we collect the "ground truth". Consequent test runs will run against LocalStack.
+As the initial test runs against AWS, we record the "ground truth". Consequent test runs will run against LocalStack.
 
 During the test execution against LocalStack the responses will be collected, and then compared to the recorded snapshot from AWS. This way we can ensure that LocalStack behaves just like AWS.
 
@@ -88,7 +88,7 @@ Let's see in an example how this framework can be used.
 
 #### Example of a Snapshot Integration Test
 
-Assume we want to verify that the creation of two Lambda functions and their invocation has the same outcome in AWS and LocalStack:
+Assume we want to verify that the creation and invocation of a Lambda function has the same outcome in AWS and LocalStack:
 
 - We construct our test case by adding the fixture _snapshot_.
 - Next, we define all responses that should be part of the recorded snapshot.
@@ -102,29 +102,18 @@ def test_basic_invoke(
     # custom transformers
     snapshot.add_transformer(snapshot.transform.lambda_api())
 
-    # predefined names for functions
+    # predefined name
     fn_name = f"ls-fn-{short_uid()}"
-    fn_name_2 = f"ls-fn-{short_uid()}"
 
-    # create function 1
+    # create the function
     response = create_lambda(FunctionName=fn_name, ...  )
     # record the response as part of the snapshot
     snapshot.match("lambda_create_fn", response)
 
-    # create function 2
-    response = create_lambda(FunctionName=fn_name_2, ...  )
-    # record the response as part of the snapshot
-    snapshot.match("lambda_create_fn_2", response)
+    # invoke function
+    invoke_result = lambda_client.invoke(FunctionName=fn_name, Payload=bytes("{}", "utf-8"))
+    snapshot.match("lambda_invoke_result", invoke_result)
 
-    # get function 1
-    get_fn_result = lambda_client.get_function(FunctionName=fn_name)
-    # record the response as part of the snapshot
-    snapshot.match("lambda_get_fn", get_fn_result)
-
-    # get function 2
-    get_fn_result_2 = lambda_client.get_function(FunctionName=fn_name_2)
-    # record the response as part of the snapshot
-    snapshot.match("lambda_get_fn_2", get_fn_result_2)
 ```
 
 - Now, we need to [configure the AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
@@ -133,47 +122,53 @@ def test_basic_invoke(
     This instructs the framework to run the test against AWS.
   - enable the snapshot file creation, by running the test with the parameter `--snapshot-update`
 
-The (simplified) snapshot recording will look similar to this one:
+The snapshot recording will look similar to this one:
 ```json
 {
   "test_lambda_api.py::TestLambda::test_basic_invoke": {
     "recorded-date": ...,
     "recorded-content": {
       "lambda_create_fn": {
-        ...,
+        "ResponseMetadata": {
+          "HTTPStatusCode": 201,
+          "HTTPHeaders": {}
+        },
         "FunctionName": "<function-name:1>",
         "FunctionArn": "arn:aws:lambda:<region>:111111111111:function:<function-name:1>",
         "Runtime": "python3.9",
         "Role": "arn:aws:iam::111111111111:role/<resource:1>",
-        ...
-      },
-      "lambda_create_fn_2": {
-        ...,
-        "FunctionName": "<function-name:2>",
-        "FunctionArn": "arn:aws:lambda:<region>:111111111111:function:<function-name:2>",
-        "Runtime": "python3.9",
-        "Role": "arn:aws:iam::111111111111:role/<resource:1>",
-        ...
-      },
-      "lambda_get_fn": {
-        ...,
-        "Configuration": {
-          "FunctionName": "<function-name:1>",
-          "FunctionArn": "arn:aws:lambda:<region>:111111111111:function:<function-name:1>",
-          "Runtime": "python3.9",
-          "Role": "arn:aws:iam::111111111111:role/<resource:1>",
-         ...
-      },
-      "lambda_get_fn_2": {
-        ...,
-        "Configuration": {
-          "FunctionName": "<function-name:2>",
-          "FunctionArn": "arn:aws:lambda:<region>:111111111111:function:<function-name:2>",
-          "Role": "arn:aws:iam::111111111111:role/<resource:1>",
-          ...
+        "Handler": "index.handler",
+        "CodeSize": 276,
+        "Description": "",
+        "Timeout": 3,
+        "MemorySize": 128,
+        "LastModified": "date",
+        "CodeSha256": "zMYxuJ0J/jyyHt1fYZUuOqZ/Gc9Gm64Wp8fT6XNiXro=",
+        "Version": "$LATEST",
+        "TracingConfig": {
+          "Mode": "PassThrough"
         },
+        "RevisionId": "<uuid:1>",
+        "State": "Pending",
+        "StateReason": "The function is being created.",
+        "StateReasonCode": "Creating",
+        "PackageType": "Zip",
+        "Architectures": [
+          "x86_64"
+        ],
+        "EphemeralStorage": {
+          "Size": 512
+        }
       },
-
+      "lambda_invoke_result": {
+        "ResponseMetadata": {
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {}
+        },
+        "StatusCode": 200,
+        "ExecutedVersion": "$LATEST",
+        "Payload": {}
+      }
     }
   }
 }
@@ -182,17 +177,27 @@ The (simplified) snapshot recording will look similar to this one:
 
 For each `snapshot.match` call in the test, we see a corresponding json-response in the snapshot-file. 
 
-The snapshot also indicates that some kind of transformation was applied on the actual response:
-- The function names were replaced with references and are now called `<function-name:1>` and `<function-name:2>`. This allows distinguishing the functions `fn_name` and `fn_name_2` without revealing the actual name of the function. This can be very handy when names are randomly generated in a test case.
-- We can see that the `FunctionName` is also contained in the `FunctionArn`, meaning that the function names were replaced everywhere.  
+The snapshot also indicates that some kind of transformation was applied on the actual response.
+
+To outline a few transformations:
+- The function names were replaced with `<function-name:1>` and allows to distinguish functions without revealing the actual name.
+  - This can be very useful, e.g., when names are randomly generated in a test case.
+  - We can see that the `FunctionName` is also contained in the `FunctionArn`, meaning that the function names were replaced everywhere.  
 - The actual region was replaced by the placeholder `<region>`.
 - The account-id was replaced by dummy account-id.
 - The role-name was also replaced with a reference in the field `Role`. 
 
 
+
 Next, the test can be run with LocalStack. Simply remove the ENV for `TEST_TARGET` and the parameter `--snapshot-update`.
 
-When running this example against LocalStack... **TODO add explanation and screenshot**
+When running this example against LocalStack, any differences between the recorded snapshots will be outlined:
+
+{{< img src="blog-snapshot-diff.png" >}}
+
+As you can see, there are some additional parameters in the AWS snapshot, that are missing in the LocalStack response, and vice versa. 
+
+This information is very important and helps us to access, improve, and fix expected responses. 
 
 While this is a just a simple example, it showcases the power of the snapshot recording and testing. 
 
@@ -231,13 +236,13 @@ def test_iam_username_defaultname(deploy_cfn_template, iam_client, snapshot):
 
 This can be helpful in a situation like in the test case `test_iam_username_defaultname` above: one attribute is added in the output, e.g., it is not returned by AWS, but returned by LocalStack. 
 
-This is not the expected behavior, but we would still be able to verify all other attributes from the response.
+This strategy allows us to collect and outline deviations, while making sure that existing behavior is not broken accidentially. 
 
 
 ## Outlook
 With the new ASF framework we also introduced a metric collection utility. It enables us to collect details during the test execution, including used parameter values, exceptions etc.
 This information will help us to increase test coverage and consequently improve the parity with AWS. 
 
-Additionally, we will provide regular metric updates and insights about supported services and operations. This will make our communication more transparent in terms of implemented APIs, and further improve the confidence overall. 
+Additionally, we will provide regular metric updates and insights about supported services and operations. Thus our communication will be more transparent in terms of implemented APIs, and further improve the confidence overall. 
 
 We hope you are as excited as we are about the new snapshot testing framework - and if you are contributor: we appreciate your support with enhancing the AWS parity!
