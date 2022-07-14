@@ -17,3 +17,16 @@
 .section-alt a {
   color: $gray-300;
 }
+
+// modal-lg and modal-xl not working when deployed :(
+@include media-breakpoint-up(lg) {
+  .modal-dialog {
+    max-width: 800px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .modal-dialog {
+    max-width: 1000px;
+  }
+}
