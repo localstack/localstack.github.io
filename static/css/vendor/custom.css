@@ -83,10 +83,10 @@ tr.no-border-bottom td {
 .solution-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: between;
   align-items: center;
-  padding: 30px 40px;
-  background: linear-gradient(339.94deg, #2A245B 0.17%, #403777 93.6%);
+  padding: 40px 40px;
+  background: linear-gradient(15deg, #271E5A -35%, #7E5ACA 145%);
   border-radius: 20px;
   gap: 2rem;
   width: 100%;
@@ -97,7 +97,7 @@ tr.no-border-bottom td {
   flex-direction: column;
   align-items: center;
   padding: 28px;
-  background: linear-gradient(13.75deg, #271E5A -34.68%, #7E5ACA 143.19%);;
+  background: linear-gradient(15deg, #271E5A -35%, #7E5ACA 145%);
   border-radius: 20px;
   width: 100%;
 }
