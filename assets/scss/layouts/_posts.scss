@@ -1,5 +1,6 @@
 .home .card,
 .contributors.list .card,
+.faq.list .card,
 .tags.list .card,
 .blog.list .card,
 .jobs.list .card {
@@ -11,6 +12,7 @@
 .home .card:hover,
 .contributors.list .card:hover,
 .tags.list .card,
+.faq.list .card:hover,
 .blog.list .card:hover,
 .jobs.list .card:hover {
   transform: scale(1.025);
