@@ -62,6 +62,12 @@ a.btn:focus {
   transform: scale(1.03);
 }
 
+button.btn:hover,
+button.btn:focus {
+  text-decoration: none;
+  transform: scale(1.03);
+}
+
 .section {
   padding-top: 5rem;
   padding-bottom: 5rem;
