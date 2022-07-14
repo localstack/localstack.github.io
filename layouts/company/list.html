@@ -100,12 +100,24 @@
     
       return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);  
     }
-    
-    const elems = document.getElementsByClassName('timeline-dot')
-    console.log(elems)
-    const dist = getDistanceBetweenElements(elems[0], elems[elems.length-1])
-    
-    document.getElementById('vertical-line').style.height =  "" + dist + "px"
-    
+
+    function setLengthOfVerticalLine() {
+        const elems = document.getElementsByClassName('timeline-dot')
+        const dist = getDistanceBetweenElements(elems[0], elems[elems.length-1])
+
+        const verticalLine = document.getElementById('vertical-line')
+        const marginTop = parseInt(window.getComputedStyle(verticalLine).marginTop.split("px")[0])
+        
+        console.log(dist, marginTop)
+
+        verticalLine.style.height =  "" + (marginTop + dist - 30) + "px"
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setLengthOfVerticalLine()
+    }, false)
+
+    window.onresize = setLengthOfVerticalLine;
+
     </script>
 {{ end }}
