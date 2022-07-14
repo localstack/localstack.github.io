@@ -5,35 +5,47 @@ lead: "At LocalStack we are committed to constantly improve the cloud dev experi
 date: 2022-07-14
 lastmod: 2022-07-14
 images: []
-contributors: [""]
+contributors: ["Dominik", "Stefanie", "Thomas"]
 tags: ['news']
 ---
 
-Parity has been a major concern for LocalStack since the very beginning. Our goal is to provide the best possible experience for cloud developer. 
+Parity for LocalStack means that, when you as a cloud developer make an AWS API call to LocalStack's cloud emulator, it behaves the same way as AWS would.
 
-Naturally we want to make sure that LocalStack is reliable - meaning that running the same commands against AWS and LocalStack results in the same outcome. 
-Recently we have introduced some mechanics to ensure the parity of AWS and LocalStack increases steadily over time, and that the implementation stays up-to-date.
+Keeping parity with AWS has been our mission at LocalStack since day one.
+This is essential for building a reliable cloud emulator that provides a great experience for cloud application developers.
 
+Recently we introduced new mechanisms to scale the endeavor, and ensure that parity of LocalStack with AWS increases continuously over time, while keeping our service implementations up-to-date.
 
-This approach includes weekly, automated updates of API stubs, which verifies the operation definitions of each service in LocalStack are compatible with the latest changes in `botocore`.
+Here are the three key things we have been working on:
 
-Further, we have been working on a new testing approach, called "snapshot testing", that enables compatibility checks of LocalStack vs. AWS.
-
-Additionally, we started to collect detailed parity metrics in order to track test coverage and implementation status for services. 
+ - **Automated server-side code generation and API evolution:** Facilitated by our new AWS Server Framework (ASF), this approach includes weekly, automated updates of API stubs, which verifies the operation definitions of each service in LocalStack are compatible with the latest changes in `botocore`
+ - **Parity Tests with Snapshot Testing:** Further, we have been working on a new testing approach, called "snapshot testing", that enables compatibility checks of LocalStack vs. AWS
+ - **Parity Metrics:** Additionally, we started to collect detailed parity metrics in order to track test coverage and implementation status for services 
 
 
 ## AWS Service Framework
 
-In general the nature of distributed cloud systems, like AWS, comes with a lot of complexity. As LocalStack runs on your local machine, certain implementation details are already simplified. Further, some services can be fully emulated fairly easy, e.g., by CRUD functionality. Other services, like Lambda, require additional effort to ensure a smooth dev experience.
+Distributed cloud systems like AWS have immense inherent complexity. Some people are skeptical when we tell them that LocalStack behaves in the same way AWS does. 
 
-All service requests are routed through our AWS Service Framework (ASF). ASF contains the service and operations definitions of all AWS services supported by LocalStack.
-To generate these APIs LocalStack uses the definitions of the python package `botocore` - which is also a major part of the AWS CLI, and `boto3`.
+How are we dealing with all that complexity? Since LocalStack runs on your local machine, many of the problems of distributed systems go away, and we can make simplifying assumptions about the implementation of services. 
+
+This makes emulating some services like Lambda, or SQS, that are normally a complex distributed system, much easier. Moreover, for many services, providing CRUD (Create, Read, Update, Delete) functionality is often sufficient to enable most use cases.
+
+Each AWS service has a well-defined API and protocol specification. We have built a framework around these specs, which we call the AWS Server Framework (ASF).
+
+ASF generates server-side stubs for services and all their supported operations. In order to create these APIs LocalStack uses the definitions of the python package `botocore` - which is also a major part of the AWS CLI, and `boto3`.
+
+All service requests are then routed to their respective server-side implementation through ASF, which implements the AWS protocol in a generalized way.
+
 
 ### ASF Updates
 
-We have a weekly running Github action in place, that checks for any API changes and will raise a pull request (PR) automatically in case changes are detected. The PR also triggers our integration tests, and further has to be approved, and merged manually. Thus we ensure that nothing breaks accidentially.
+To keep up with AWS API evolution, and [there is a lot of it](https://awsapichanges.info/), we have a weekly we have a weekly running Github action in place, that checks for any API changes and will raise a pull request (PR) automatically in case changes are detected. 
 
-{{< img src="screenshot_update_asf_apis.png" >}}
+The PR also triggers our integration tests, and further has to be approved, and merged manually. Thus we ensure that nothing breaks accidentially.
+
+{{< img src="screenshot_update_asf_api.png" >}}
+
 
 Of course, newly added operations will not work out-of-the box. By default all operations that are not implemented will throw a `NotImplementedError` upon calling. However, we ensure that the declaration of each operation is compatible with AWS.
 
@@ -62,8 +74,7 @@ In turned out that the [aws-cdk verified the message of the exception](https://g
 }
 ```
 
-Thus parity tests are a crucial technique to ensure consistency and boost the confidence in LocalStack.
-
+This highlights the importance of parity tests as a technique to ensure consistency and boost the confidence in LocalStack.
 
 ### Parity Tests in a Nutshell
 
@@ -199,7 +210,7 @@ As you can see, there are some additional parameters in the AWS snapshot, that a
 
 This information is very important and helps us to access, improve, and fix expected responses. 
 
-While this is a just a simple example, it showcases the power of the snapshot recording and testing. 
+While this is a just a simplified example, it showcases the power of the snapshot recording and testing. 
 
 #### Parity Tests in Action
 
@@ -240,9 +251,10 @@ This strategy allows us to collect and outline deviations, while making sure tha
 
 
 ## Outlook
-With the new ASF framework we also introduced a metric collection utility. It enables us to collect details during the test execution, including used parameter values, exceptions etc.
+With the new AWS Server Framework we also introduced a metric collection utility. It enables us to collect details during the test execution, including used parameter values, or raised exceptions.
+
 This information will help us to increase test coverage and consequently improve the parity with AWS. 
 
 Additionally, we will provide regular metric updates and insights about supported services and operations. Thus our communication will be more transparent in terms of implemented APIs, and further improve the confidence overall. 
 
-We hope you are as excited as we are about the new snapshot testing framework - and if you are contributor: we appreciate your support with enhancing the AWS parity!
+We hope you are as excited as we are about our AWS Framework, that ensures latest compatibility with AWS, and the new snapshot testing framework, that will help us to write validated test cases.
