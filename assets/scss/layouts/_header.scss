@@ -183,6 +183,10 @@
   color: #1B183E;
 }
 
+.dropdown-item:active {
+  background-color: white;
+}
+
 .algolia-autocomplete .ds-dropdown-menu {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
