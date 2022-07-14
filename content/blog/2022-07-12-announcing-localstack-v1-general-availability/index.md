@@ -122,13 +122,13 @@ The main change from a user perspective: we used to configure `DATA_DIR` to poin
 
 We have many LocalStack 1.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 1.0 you can:
 
--   View our release notes on [GitHub](https://github.com/localstack/localstack/issues/6398).
+-   View our release notes on [GitHub](https://github.com/localstack/localstack/releases/tag/v1.0.0).
 -   Check out our new [documentation](https://docs.localstack.cloud) on using services and integrations locally.
--   Attend our [LocalStack Community Event Meetup](https://www.meetup.com/localstack-community/) to discuss the 1.0 release!
+-   Attend our [LocalStack Community Event Meetup](http://events.localstack.cloud/) to discuss the 1.0 release!
 
 To get started with using LocalStack 1.0 features:
 
--   Migrate to LocalStack 1.0 by following our [How to Migrate documentation](https://github.com/localstack/localstack/issues/6398).
+-   Migrate to LocalStack 1.0 by following our [How to Migrate documentation](https://discuss.localstack.cloud/t/migrating-to-localstack-v1-0/58).
 -   Navigate to our [LocalStack samples](https://github.com/localstack/localstack-pro-samples) and try out the examples.
 -   Reach out to us on [discussion pages](https://discuss.localstack.cloud) for any feedback, bug report or suggestion.
 
