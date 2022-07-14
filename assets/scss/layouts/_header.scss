@@ -164,6 +164,25 @@
   display: flex !important;
 }
 
+.dropdown-menu {
+  background-color: #1f1b4d;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.dropdown-item {
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.dropdown-item:hover {
+  color: #1B183E;
+}
+
 .algolia-autocomplete .ds-dropdown-menu {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
