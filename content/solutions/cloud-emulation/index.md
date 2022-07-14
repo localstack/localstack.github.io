@@ -5,7 +5,7 @@ lead: "LocalStack cloud emulation covers a huge range of AWS features."
 date: 2022-02-20T18:56:25+02:00
 lastmod: 2022-02-20T18:56:25+02:00
 draft: false
-images: []
+images: ['devloop.webp']
 weight: 92
 toc: true
 ---
