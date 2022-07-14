@@ -7,7 +7,10 @@ lastmod: 2022-07-12T11:00:55+05:30
 images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
+leadimage: "announcing-localstack-v1-milestone.png"
 ---
+
+{{< img src="announcing-localstack-v1-milestone.png" >}}
 
 Today, we are excited to announce the general availability of LocalStack 1.0. This major release is a significant milestone towards our vision to propel developer productivity - by allowing dev teams to quickly and conveniently develop & test their cloud applications locally and across the CI/CD pipeline.
 
