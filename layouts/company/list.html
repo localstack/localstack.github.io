@@ -2,9 +2,9 @@
 {{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "cloud" ) }}
 
 
-<div class="position-absolute w-100 section h-100" style="z-index: 1003">
+<div class="position-absolute w-100 section mt-11" id="vertical-line" style="z-index: 1003">
     <div class="container h-100">
-        <div class="row justify-content-center mt-11 h-100">
+        <div class="row justify-content-center h-100">
             <div class="col-5">
 
             </div>
@@ -85,5 +85,27 @@
         }}
     </div>
 </section>
-
+<script>
+    function getPositionAtCenter(element) {
+       const {top, left, width, height} = element.getBoundingClientRect();
+       return {
+         x: left + width / 2,
+         y: top + height / 2
+       };
+     }
+    
+    function getDistanceBetweenElements(a, b) {
+      const aPosition = getPositionAtCenter(a);
+      const bPosition = getPositionAtCenter(b);
+    
+      return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);  
+    }
+    
+    const elems = document.getElementsByClassName('timeline-dot')
+    console.log(elems)
+    const dist = getDistanceBetweenElements(elems[0], elems[elems.length-1])
+    
+    document.getElementById('vertical-line').style.height =  "" + dist + "px"
+    
+    </script>
 {{ end }}
