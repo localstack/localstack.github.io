@@ -21,7 +21,7 @@
   weight = 20
 
 [[main]]
-  name = "RESOURCES"
+  name = "DOCS"
   url = "https://docs.localstack.cloud"
   weight = 30
 
