@@ -32,39 +32,28 @@
       <div class="collapse navbar-collapse order-4 order-lg-3 flex-grow-0">
         <ul class="navbar-nav main-nav me-auto gap-xl-4 d-flex flex-wrap flex-sm-nowrap">
           {{- $current := . -}}
-          <!-- TODO: generalize into a dropdown menu for hugo -->
-          <li class="nav-item dropdown">
-            <!-- TODO: determine active state based on whether a child is selected -->
-            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              SOLUTIONS
-            </a>
-            <div class="dropdown-menu" aria-labelledby="productsDropdown">
-              {{ range .Site.Menus.solutions -}}
-              <a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
-              {{ end -}}
-            </div>
-          </li>
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
-            {{- $active = or $active (and (eq .Name "Docs") (eq $current.Section "docs")) -}}
-            {{- $active = or $active (and (eq .Name "Guides") (eq $current.Section "guides")) -}}
-            {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
-            <li class="nav-item{{ if $active }} active{{ end }}">
-              <a class="nav-link" style="white-space: nowrap" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+            {{- $active = or $active (and (eq .Name "SOLUTIONS") (eq $current.Section "solutions")) -}}
+            {{- $active = or $active (and (eq .Name "COMMUNITY") (eq $current.Section "community")) -}}
+            {{- $active = or $active (and (eq .Name "PRICING") (eq $current.Section "pricing")) -}}
+            {{- $active = or $active (and (eq .Name "BLOG") (eq $current.Section "blog" "authors")) -}}
+            <li class="nav-item{{ if $active }} active{{ end }}{{ if .HasChildren }} dropdown{{ end }}">
+              {{ if .HasChildren }} 
+                <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ .Name | safeHTML }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                  {{ range .Children -}}
+                  <a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+                  {{ end -}}
+                </div>
+              {{ else }}
+                <a class="nav-link" style="white-space: nowrap" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+              {{ end }}
             </li>
           {{ end -}}
-          <li class="nav-item dropdown">
-            <!-- TODO: determine active state based on whether a child is selected -->
-            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              COMMUNITY 
-            </a>
-            <div class="dropdown-menu" aria-labelledby="productsDropdown">
-              {{ range .Site.Menus.community -}}
-              <a class="dropdown-item" href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
-              {{ end -}}
-            </div>
-          </li>
         </ul>
         <div class="break order-6 d-md-none"></div>
         {{ if (eq $current.Section "docs") -}} <!-- only show search bar when in docs context -->
