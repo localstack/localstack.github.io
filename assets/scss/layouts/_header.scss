@@ -45,6 +45,11 @@
   margin-left: 1.25rem;
 }
 
+.nav-item.active .nav-link {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
 @include media-breakpoint-up(md) {
   .nav-item {
     margin-left: 0.5rem;

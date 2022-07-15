@@ -1,8 +1,7 @@
-# TODO: add Solutions section
-# [[main]]
-#   name = "SOLUTIONS"
-#   url = "/solutions/"
-#   weight = 5
+[[main]]
+  name = "SOLUTIONS"
+  url = "/solutions/"
+  weight = 5
 
 [[main]]
   name = "PRICING"
@@ -16,10 +15,10 @@
 #   url = "/docs/"
 #   weight = 10
 
-# [[main]]
-#   name = "COMMUNITY"
-#   url = "/community/"
-#   weight = 20
+[[main]]
+  name = "COMMUNITY"
+  url = "/community/"
+  weight = 20
 
 [[main]]
   name = "RESOURCES"
@@ -29,37 +28,43 @@
 [[main]]
   name = "BLOG"
   url = "/blog/"
-  weight = 440
+  weight = 40
 
-[[solutions]]
+[[main]]
   name = "CLOUD EMULATION"
   url = "/solutions/cloud-emulation"
   weight = 10
+  parent = "SOLUTIONS"
 
-[[solutions]]
+[[main]]
   name = "TEAM COLLABORATION"
   url = "/solutions/team-collaboration"
   weight = 20
+  parent = "SOLUTIONS"
 
-[[solutions]]
+[[main]]
   name = "ENTERPRISE INTEGRATION"
   url = "/solutions/enterprise-integration"
   weight = 30
+  parent = "SOLUTIONS"
 
-[[solutions]]
+[[main]]
   name = "ECOSYSTEM"
   url = "/solutions/ecosystem"
   weight = 40
+  parent = "SOLUTIONS"
 
-[[community]]
+[[main]]
   name = "STAY INFORMED"
   url  = "/community/stay-informed"
   weight = 10
+  parent = "COMMUNITY"
 
-[[community]]
+[[main]]
   name = "GET INVOLVED"
   url  = "/community/get-involved"
   weight = 15
+  parent = "COMMUNITY"
 
 
 [[social]]
