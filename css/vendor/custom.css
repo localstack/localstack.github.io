@@ -326,3 +326,8 @@ li::marker {
   background: linear-gradient(77.63deg, #12123E 23.04%, #12123E 23.05%, #3E3174 122.36%);
   box-shadow: 0px 10px 40px rgba(46, 38, 92, 0.25);
 }
+
+.bg-special-gradient {  
+  background: linear-gradient(280deg, #63ECD3 0%, #835AF7 95%);
+  border-radius: 10px;
+}
