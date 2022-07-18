@@ -2,10 +2,10 @@
 title: LocalStack and AWS Parity Explained
 description: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
 lead: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
-date: 2022-07-14
-lastmod: 2022-07-14
+date: 2022-07-18
+lastmod: 2022-07-18
 images: []
-contributors: ["Dominik", "Stefanie", "Thomas"]
+contributors: ["Stefanie", "Dominik", "Thomas"]
 tags: ['news']
 ---
 
