@@ -1,9 +1,9 @@
 ---
 title: Announcing LocalStack 1.0 General Availability!
 description: Announcing LocalStack 1.0 General Availability!
-lead: Announcing LocalStack 1.0 General Availability!
-date: 2022-07-12T11:00:55+05:30
-lastmod: 2022-07-12T11:00:55+05:30
+lead: LocalStack 1.0 introduces a whole suite of significant enhancements in the platform, plus exciting new features for team collaboration and stack analytics.
+date: 2022-07-13T11:00:55+05:30
+lastmod: 2022-07-13T11:00:55+05:30
 images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
@@ -14,9 +14,9 @@ leadimage: "announcing-localstack-v1-milestone.png"
 
 Today, we are excited to announce the general availability of LocalStack 1.0. This major release is a significant milestone towards our vision to propel developer productivity - by allowing dev teams to quickly and conveniently develop & test their cloud applications locally and across the CI/CD pipeline.
 
-LocalStack 1.0 is available with our Docker image, shipped for both our Community and Pro users, as well as all users of our newly introduced Team product tier. LocalStack's core emulation platform provides emulated cloud APIs, currently primarily focused on AWS cloud. It is presently being used by a large and active open source community with over 100K active users worldwide. With various features for individual productivity and team collaboration, we provide a comprehensive ecosystem of local AWS services, integrations and tools to make cloud development a breeze.
+LocalStack 1.0 is available with our Docker image, shipped for both our Community and Pro users, as well as all users of our newly introduced Team tier. LocalStack's core emulation platform provides emulated cloud APIs, currently primarily focused on AWS cloud. It is presently being used by a large and active open source community with over 100K active users worldwide. With various features for individual productivity and team collaboration, we provide a comprehensive ecosystem of local AWS services, integrations and tools to make cloud development a breeze.
 
-With LocalStack 1.0, we mark the first milestone of LocalStack's mission to become the go-to platform for local cloud development. We have spent the last year significantly re-shaping the codebase to make it easier to introduce and extend AWS services, improving parity with AWS, introducing mechanisms to monitor parity, adding new Pro features and introducing a completely new Team tier focused on cross team collaboration. This blog looks at what's new in LocalStack and what it means for our community and users.
+With LocalStack 1.0, we mark the first milestone of LocalStack's mission to become the go-to platform for local cloud development. We have spent the last year significantly re-shaping the codebase to make it easier to introduce and extend AWS services, improving parity with AWS. We have also introduced mechanisms to monitor parity, adding new Pro features and introducing a completely new Team tier focused on cross team collaboration. This blog looks at what's new in LocalStack and what it means for our community and users.
 
 ## What’s new in LocalStack?
 
@@ -50,7 +50,7 @@ We have significantly reworked the cloud pods experience, which now supports con
 
 ### Revamp of multi-account setups
 
-LocalStack now ships with a revamped multi-accounts system. This allows multi-tenant setups on a single LocalStack instance, with resources namespaced based on AWS account IDs. Previously we we had to start up one LocalStack instance per account, which has now been drastically simplified and will reduce resource consumption. The new system requires minimal configuration on the LocalStack-side, and you can enable the feature setting MULTI_ACCOUNTS=1. You can find more details about the current state and limitations in our [documentation](https://docs.localstack.cloud/tools/multi-account-setups/).
+LocalStack now ships with a revamped multi-accounts system. This allows multi-tenant setups on a single LocalStack instance, with resources namespaced based on AWS account IDs. Previously we had to start up one LocalStack instance per account, which has now been drastically simplified and will reduce resource consumption. The new system requires minimal configuration on the LocalStack-side, and you can enable the feature setting `MULTI_ACCOUNTS=1`. You can find more details about the current state and limitations in our [documentation](https://docs.localstack.cloud/tools/multi-account-setups/).
 
 ### Introducing Extensions
 
@@ -65,17 +65,17 @@ Use cases for extensions include:
 
 ### IAM enforcement for all services
 
-LocalStack now supports IAM enforcement for all supported AWS services! In addition to that, you can expect more parity regarding the required actions for requests, and our Explainable IAM feature will tell you which declarations are missing from your policies! IAM enforcement can be activated with ENFORCE_IAM=1. You can find more information in our [IAM documentation](https://docs.localstack.cloud/aws/iam/).
+LocalStack now supports IAM enforcement for all supported AWS services! In addition to that, you can expect more parity regarding the required actions for requests, and our Explainable IAM feature will tell you which declarations are missing from your policies! IAM enforcement can be activated with `ENFORCE_IAM=1`. You can find more information in our [IAM documentation](https://docs.localstack.cloud/aws/iam/).
 
 ### Detailed stack analytics
 
-As part of an upcoming Team feature we call “Stack Insights”, we have instrumented LocalStack to report AWS API usage telemetry of LocalStack runs to your LocalStack Team account. We can now show you which APIs you are using, which clients of your integrations use particular services and API operations, and which services cause the most API errors, and more. No sensitive data of your stacks are collected! Over the next weeks we will be rolling out new UI features to give you fine-grained access to this data.
+As part of an upcoming Team feature we call **Stack Insights**, we have instrumented LocalStack to report AWS API usage telemetry of LocalStack runs to your LocalStack Team account. We can now show you which APIs you are using, which clients of your integrations use particular services and API operations, and which services cause the most API errors, and more. No sensitive data of your stacks are collected! Over the next weeks we will be rolling out new UI features to give you fine-grained access to this data.
 
 > Note: You can disable all type of event logging by starting LocalStack with `DISABLE_EVENTS=1`.
 
 ### New filesystem hierarchy with simplified configuration
 
-We are introducing the _LocalStack volume_ as a unified volume mount directory in the LocalStack container.
+We are introducing the **LocalStack volume** as a unified volume mount directory in the LocalStack container.
 
 Previous versions of LocalStack had multiple directory configurations that were a frequent source of problems. We have worked to unify the experience, and have revamped the filesystem hierarchy used inside the LocalStack container. You can find a [detailed explanation in our documentation](https://docs.localstack.cloud/localstack/filesystem/).
 
