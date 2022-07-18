@@ -40,14 +40,14 @@ All service requests are then routed to their respective server-side implementat
 
 ### ASF Updates
 
-To keep up with AWS API evolution, and [there is a lot of it](https://awsapichanges.info/), we have a weekly we have a weekly running Github action in place, that checks for any API changes and will raise a pull request (PR) automatically in case changes are detected. 
+To keep up with AWS API evolution, and [there is a lot of it](https://awsapichanges.info/), we have a weekly running Github action in place that checks for any API changes and will raise a pull request (PR) automatically in case changes are detected.
 
 The PR also triggers our integration tests, and further has to be approved, and merged manually. Thus we ensure that nothing breaks accidentially.
 
 {{< img src="screenshot_update_asf_api.png" >}}
 
 
-Of course, newly added operations will not work out-of-the box. By default all operations that are not implemented will throw a `NotImplementedError` upon calling. However, we ensure that the declaration of each operation is compatible with AWS.
+Of course, newly added operations will not work out-of-the-box. By default all operations that are not implemented will throw a `NotImplementedError` upon calling. However, we ensure that the declaration of each operation is compatible with AWS.
 
 
 ## Parity Tests with Snapshot Testing
@@ -62,7 +62,7 @@ Parity helps to build trust in LocalStack's service implementation. While this s
 
 To give you one example: recently, [we had a case](https://github.com/localstack/localstack/pull/5978), where a slightly different message from a `ValidationException` caused an entire cdk-deployment to fail. The only thing that had changed was the wording of the message contained in that exception. 
 
-In turned out that the [aws-cdk verified the message of the exception](https://github.com/aws/aws-cdk/blob/v1-main/packages/aws-cdk/lib/api/util/cloudformation.ts#L35) like this:
+It turned out that the [aws-cdk verified the message of the exception](https://github.com/aws/aws-cdk/blob/v1-main/packages/aws-cdk/lib/api/util/cloudformation.ts#L35) like this:
 
 ```typescript
 
@@ -210,7 +210,7 @@ As you can see, there are some additional parameters in the AWS snapshot, that a
 
 This information is very important and helps us to access, improve, and fix expected responses. 
 
-While this is a just a simplified example, it showcases the power of the snapshot recording and testing. 
+While this is just a simplified example, it showcases the power of the snapshot recording and testing. 
 
 #### Parity Tests in Action
 
@@ -247,7 +247,7 @@ def test_iam_username_defaultname(deploy_cfn_template, iam_client, snapshot):
 
 This can be helpful in a situation like in the test case `test_iam_username_defaultname` above: one attribute is added in the output, e.g., it is not returned by AWS, but returned by LocalStack. 
 
-This strategy allows us to collect and outline deviations, while making sure that existing behavior is not broken accidentially. 
+This strategy allows us to collect and outline deviations, while making sure that existing behavior is not broken accidentally. 
 
 
 ## Outlook
@@ -257,4 +257,4 @@ This information will help us to increase test coverage and consequently improve
 
 Additionally, we will provide regular metric updates and insights about supported services and operations. Thus our communication will be more transparent in terms of implemented APIs, and further improve the confidence overall. 
 
-We hope you are as excited as we are about our AWS Framework, that ensures latest compatibility with AWS, and the new snapshot testing framework, that will help us to write validated test cases.
+We hope you are as excited as we are about our AWS Server Framework, that ensures latest compatibility with AWS, and the new snapshot testing framework, which will help us to write validated test cases.
