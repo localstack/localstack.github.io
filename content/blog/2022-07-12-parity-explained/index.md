@@ -18,9 +18,9 @@ Recently we introduced new mechanisms to scale the endeavor, and ensure that par
 
 Here are the three key things we have been working on:
 
- - **Automated server-side code generation and API evolution:** Facilitated by our new AWS Server Framework (ASF), this approach includes weekly, automated updates of API stubs, which verifies the operation definitions of each service in LocalStack are compatible with the latest changes in `botocore`
- - **Parity Tests with Snapshot Testing:** Further, we have been working on a new testing approach, called "snapshot testing", that enables compatibility checks of LocalStack vs. AWS
- - **Parity Metrics:** Additionally, we started to collect detailed parity metrics in order to track test coverage and implementation status for services 
+ - **Automated server-side code generation and API evolution:** Facilitated by our new AWS Server Framework (ASF), this approach includes weekly, automated updates of API stubs, which verifies the operation definitions of each service in LocalStack are compatible with the latest changes in `botocore`.
+ - **Parity Tests with Snapshot Testing:** Further, we have been working on a new testing approach, called "snapshot testing", that enables compatibility checks of LocalStack vs. AWS.
+ - **Parity Metrics:** Additionally, we started to collect detailed parity metrics in order to track test coverage and implementation status for services.
 
 
 ## AWS Service Framework
@@ -73,6 +73,8 @@ It turned out that the [aws-cdk verified the message of the exception](https://g
     throw e;
 }
 ```
+
+Another example is Terraform: when you setup your infrastructure with Terraform it performs very strict schema parsing. Hence, unexpected responses could even crash the deployment, for example when the return type is `int` but should be `string`.
 
 This highlights the importance of parity tests as a technique to ensure consistency and boost the confidence in LocalStack.
 
