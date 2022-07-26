@@ -15,7 +15,7 @@
             {{ $department := (replaceRE "(\\s)" "" .Params.department) }}
             <div class="card mb-3 tag-{{ $department }} tag-all">
               <div class="row align-items-center gy-3">
-                <div class="col-12 col-md-5 col-lg-4">
+                <div class="col-8 col-sm-6 col-md-5 col-lg-4">
                   {{ if isset .Params "leadimage"}}
                   {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Params.leadimage)) }}
                   <img class="card-img" src="{{ .RelPermalink }}" />
