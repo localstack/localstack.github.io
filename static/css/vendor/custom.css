@@ -334,3 +334,8 @@ li::marker {
   grid-template-columns: 45% 10% 45%;
   grid-template-rows: repeat(8, auto)
 }
+
+.bg-special-gradient {  
+  background: linear-gradient(280deg, #63ECD3 0%, #835AF7 95%);
+  border-radius: 10px;
+}
