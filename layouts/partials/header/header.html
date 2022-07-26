@@ -38,6 +38,7 @@
             {{- $active = or $active (and (eq .Name "SOLUTIONS") (eq $current.Section "solutions")) -}}
             {{- $active = or $active (and (eq .Name "COMMUNITY") (eq $current.Section "community")) -}}
             {{- $active = or $active (and (eq .Name "PRICING") (eq $current.Section "pricing")) -}}
+            {{- $active = or $active (and (eq .Name "COMPANY") (eq $current.Section "company")) -}}
             {{- $active = or $active (and (eq .Name "BLOG") (eq $current.Section "blog" "authors")) -}}
             <li class="nav-item{{ if $active }} active{{ end }}{{ if .HasChildren }} dropdown{{ end }}">
               {{ if .HasChildren }} 
