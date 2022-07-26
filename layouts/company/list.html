@@ -9,7 +9,7 @@
 
             </div>
             <div class="col-2 d-flex justify-content-center">
-                <div style="background-color: #AB8DFF; width: 20px" class="h-100"></div>
+                <div style="background-color: #8A6FE2; width: 14px; border-radius: 30px" class="h-100"></div>
             </div>
             <div class="col-5">
 
@@ -22,7 +22,7 @@
         <h2 class="text-center">Timeline</h2>
       </div>
     
-    <div class="d-flex flex-column mt-6 gap-6">
+    <div class="d-flex flex-column mt-6 gap-5">
         {{ partial "misc/timeline-card.html" (dict
             "cardHeading" "2016"
             "cardText" "August 16th"
@@ -57,7 +57,7 @@
             "cardHeading" "2020"
             "cardText" "July"
             "cardDescription" "Reaching 25.000 stars on Github, more than 50+ AWS services supported in LocalStack"
-            "image" "/images/company/leafs.svg"
+            "image" "/images/company/checks.svg"
             )
         }}
         {{ partial "misc/timeline-card.html" (dict
@@ -108,9 +108,7 @@
         const verticalLine = document.getElementById('vertical-line')
         const marginTop = parseInt(window.getComputedStyle(verticalLine).marginTop.split("px")[0])
         
-        console.log(dist, marginTop)
-
-        verticalLine.style.height =  "" + (marginTop + dist - 50) + "px"
+        verticalLine.style.height =  "" + (marginTop + dist) + "px"
     }
 
     document.addEventListener('DOMContentLoaded', function() {
