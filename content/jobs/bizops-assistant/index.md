@@ -7,7 +7,9 @@ lastmod: 2021-10-04T13:40:06+02:00
 draft: false
 weight: 50
 images: [""]
-department: "BizOps"
+employment: "Full-time"
+location: "Remote"
+department: "Administrative"
 ---
 
 ### About You

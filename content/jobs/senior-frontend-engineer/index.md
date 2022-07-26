@@ -7,7 +7,9 @@ lastmod: 2022-12-22
 draft: false
 weight: 50
 images: []
-department: "Engineering"
+employment: "Full-time"
+location: "Remote"
+department: "Tech"
 ---
 
 * **Engagement**: Full-time
