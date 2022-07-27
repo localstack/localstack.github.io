@@ -14,7 +14,7 @@ leadimage: "announcing-localstack-v1-milestone.png"
 
 Today, we are excited to announce the general availability of LocalStack 1.0. This major release is a significant milestone towards our vision to propel developer productivity - by allowing dev teams to quickly and conveniently develop & test their cloud applications locally and across the CI/CD pipeline.
 
-At LocalStack, we're working to provide a better way to develop and test your cloud applications. Today, LocalStack is redefining cloud development by enabling a highly efficient, fully local development & testing loop and giving developers back control over their environments. With LocalStack 1.0, we mark the first milestone of LocalStack's mission to become the go-to platform for local cloud development.
+At LocalStack, we're working to provide a better way to develop and test your cloud applications. Our platform is redefining cloud development by enabling a highly efficient, fully local development & testing loop and giving developers back control over their environments. With LocalStack 1.0, we mark the first milestone of LocalStack's mission to become the go-to platform for local cloud development.
 
 LocalStack 1.0 is available with our Docker image, shipped for both our Community and Pro users, as well as all users of our newly introduced Team tier. LocalStack's core emulation platform provides emulated cloud APIs, currently primarily focused on AWS cloud. It is presently being used by a large and active open source community with over 100K active users worldwide. With various features for individual productivity and team collaboration, we provide a comprehensive ecosystem of local AWS services, integrations and tools to make cloud development a breeze.
 
@@ -140,11 +140,11 @@ We are thankful to our community and our users for providing a lot of suggestion
 
 LocalStack's mission is to become the standard platform for local cloud development. With Cloud developers being left behind during development and testing processes, we are bringing the individual developer back in by empowering them and making things less complicated.
 
-We are planning to branch out to new cloud providers, while also solidifying the AWS developer experience. Next to the continuous increase in parity with AWS, here are some of things you can expect in the upcoming months:
+We are planning to branch out to new cloud providers, while also solidifying the AWS developer experience. In addition to the continuous increase in parity with AWS, here are some of the things you can expect in the upcoming months:
 
 * Additional Cloud Pods functionality
 * Advanced analytics capabilities for enterprise customers
 * Improved developer tools for building LocalStack extensions
 * Better IAM support and tools to develop and test IAM policies
 
-*Let's redefine Cloud Development!*
+*Together, let's redefine Cloud Development!*
