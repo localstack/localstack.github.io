@@ -53,7 +53,12 @@
 
 .nav-item.active .nav-link {
   color: white;
-  border-bottom: 1px solid white;
+}
+
+@include media-breakpoint-up(sm) {
+  .nav-item.active .nav-link {
+    border-bottom: 1px solid white;
+  }
 }
 
 @include media-breakpoint-up(md) {

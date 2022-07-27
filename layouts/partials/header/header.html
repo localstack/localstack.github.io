@@ -30,7 +30,7 @@
       </ul>
 
       <div class="collapse navbar-collapse order-4 order-lg-3 flex-grow-0" id="collapse-content">
-        <ul class="navbar-nav main-nav me-auto gap-xl-4 d-flex justify-content-between flex-column flex-sm-row">
+        <ul class="navbar-nav main-nav me-auto mt-4 mt-sm-0 gap-xl-4 d-flex justify-content-between flex-column flex-sm-row">
           {{- $current := . -}}
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
@@ -54,13 +54,15 @@
               {{ end }}
             </li>
           {{ end -}}
-          <li class="nav-item d-flex d-sm-none gap-4">
+          <li class="nav-item d-flex d-sm-none justify-content-between">
+            <div class="d-flex gap-4">
           {{ range .Site.Menus.social -}}
             <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
             {{ end -}}
+          </div>
+            <a class="btn btn-primary btn-tertiary" type="link" href="https://app.localstack.cloud"><i class="bi bi-person"></i> SIGN UP</a>
           </li>
           <li class="nav-item ms-2 d-flex d-sm-none">
-            <a class="btn btn-primary btn-tertiary" type="link" href="https://app.localstack.cloud"><i class="bi bi-person"></i> SIGN UP</a>
           </li>
         </ul>
       </div>
