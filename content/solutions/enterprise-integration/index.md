@@ -10,7 +10,7 @@ weight: 92
 toc: true
 ---
 <section class="section section-sm bg-gradient-dark pb-10">
-    <div class="position-absolute w-100 section pb-7 pt-9 pt-sm-7 d-none d-md-block">
+    <div class="position-absolute w-100 section pb-7 pt-7 d-none d-md-block">
         <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-3">
@@ -35,7 +35,7 @@ toc: true
         </div>
         </div>
     </div>
-    <div class="container pb-7 pt-9 pt-sm-7">
+    <div class="container pb-7 pt-7">
       <div class="row justify-content-center align-items-center text-white">
         <h1 class="text-center m-0 pt-5">Enterprise Integration</h1>
         <p class="text-center mt-4 mb-n6" style="font-size: 18px">
