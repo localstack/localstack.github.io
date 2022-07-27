@@ -18,7 +18,7 @@
       </button>
       {{ end -}}
 
-      <ul class="navbar-nav social-nav order-3 order-lg-4">
+      <ul class="navbar-nav social-nav d-none d-sm-flex order-3 order-lg-4">
         {{ range .Site.Menus.social -}}
         <li class="nav-item">
           <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
@@ -29,8 +29,8 @@
         </li>
       </ul>
 
-      <div class="collapse navbar-collapse order-4 order-lg-3 flex-grow-0">
-        <ul class="navbar-nav main-nav me-auto gap-xl-4 d-flex flex-wrap flex-sm-nowrap">
+      <div class="collapse navbar-collapse order-4 order-lg-3 flex-grow-0" id="collapse-content">
+        <ul class="navbar-nav main-nav me-auto gap-xl-4 d-flex justify-content-between flex-column flex-sm-row">
           {{- $current := . -}}
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
@@ -54,16 +54,15 @@
               {{ end }}
             </li>
           {{ end -}}
+          <li class="nav-item d-flex d-sm-none gap-4">
+          {{ range .Site.Menus.social -}}
+            <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
+            {{ end -}}
+          </li>
+          <li class="nav-item ms-2 d-flex d-sm-none">
+            <a class="btn btn-primary btn-tertiary" type="link" href="https://app.localstack.cloud"><i class="bi bi-person"></i> SIGN UP</a>
+          </li>
         </ul>
-        <div class="break order-6 d-md-none"></div>
-        {{ if (eq $current.Section "docs") -}} <!-- only show search bar when in docs context -->
-        {{ if .Site.Params.options.flexSearch -}}
-        <form class="navbar-form flex-grow-1 order-7 order-md-3">
-          <input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
-          <div id="suggestions" class="shadow bg-white rounded"></div>
-        </form>
-        {{ end -}}
-        {{ end -}}
       </div>
     </div>
   </div>
@@ -75,16 +74,31 @@
   -->
 </header>
 <script>
-  var myNav = document.getElementById('navbarGrad');
+  const myNav = document.getElementById('navbarGrad');
+  const collapseContent = document.getElementById('collapse-content');
+  const sm = window.matchMedia('(min-width: 576px)').matches
+
   window.onscroll = function () {
-    "use strict";
-    if (window.scrollY >= 100 ) {
+    if (window.scrollY >= 100) {
         myNav.classList.add("navbar-visible");
         myNav.classList.remove("bg-transparent");
     } 
-    else {
+    else if(getComputedStyle(collapseContent).display === 'none' || sm) {
         myNav.classList.add("bg-transparent");
         myNav.classList.remove("navbar-visible");
+    }
+  }
+  
+  if (!sm) {
+    const hamburgerMenu = document.getElementById('menu-btn')
+    hamburgerMenu.onclick = function () {
+      if (myNav.classList.contains('bg-transparent')) {
+        myNav.classList.add("navbar-visible");
+        myNav.classList.remove("bg-transparent");
+      } else if (window.scrollY === 0) {
+        myNav.classList.add("bg-transparent");
+        myNav.classList.remove("navbar-visible");
+      }
     }
   }
 </script>
