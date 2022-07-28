@@ -159,7 +159,7 @@ tr.no-border-bottom td {
 }
 
 .divider {
-  border: 1px solid #79F0A9;
+  border-bottom: 2px solid #79F0A9;
   width: 66px !important;
 }
 
