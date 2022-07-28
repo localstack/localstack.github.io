@@ -54,7 +54,7 @@ toc: true
       <div class="px-4 px-md-5 d-flex-column">
         <div class="row align-items-center mt-6">
             <div class="col-12 col-md-8 col-lg-6 order-1 order-lg-0" style="text-align: center">
-                <img src="ecosystem.png" class="img-fluid"/>
+                <img src="integrations.webp" class="img-fluid"/>
             </div>
             <div class="col-12 col-lg-6">
                 <h2>Leverage our growing system of integrations</h2>
@@ -76,7 +76,7 @@ toc: true
                 </ul>
             </div>
             <div class="col-12 col-md-8 col-lg-6">
-                <img src="extArchitecture.svg" class="img-fluid"/>
+                <img src="extensions.webp" class="img-fluid"/>
             </div>
         </div>
         </div>
