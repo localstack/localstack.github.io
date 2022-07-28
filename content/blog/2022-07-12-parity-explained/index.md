@@ -9,12 +9,14 @@ contributors: ["Stefanie", "Dominik", "Thomas"]
 tags: ['news']
 ---
 
-Parity for LocalStack means that, when you as a cloud developer make an AWS API call to LocalStack's cloud emulator, it behaves the same way as AWS would.
+Parity for LocalStack means that when you, as a cloud developer, make an AWS API call to LocalStack's cloud emulator, it behaves the same way AWS would.
+
 
 Keeping parity with AWS has been our mission at LocalStack since day one.
 This is essential for building a reliable cloud emulator that provides a great experience for cloud application developers.
 
-Recently we introduced new mechanisms to scale the endeavor, and ensure that parity of LocalStack with AWS increases continuously over time, while keeping our service implementations up-to-date.
+
+Recently we introduced new mechanisms to scale the endeavor and ensure that the parity of LocalStack with AWS increases continuously over time while keeping our service implementations up-to-date.
 
 Here are the three key things we have been working on:
 
@@ -29,11 +31,11 @@ Distributed cloud systems like AWS have immense inherent complexity. Some people
 
 How are we dealing with all that complexity? Since LocalStack runs on your local machine, many of the problems of distributed systems go away, and we can make simplifying assumptions about the implementation of services. 
 
-This makes emulating some services like Lambda, or SQS, that are normally a complex distributed system, much easier. Moreover, for many services, providing CRUD (Create, Read, Update, Delete) functionality is often sufficient to enable most use cases.
+This makes emulating some services like Lambda, or SQS, which are normally complex distributed systems, much easier. Moreover, for many services, providing CRUD (Create, Read, Update, Delete) functionality is often sufficient to enable most use cases.
 
 Each AWS service has a well-defined API and protocol specification. We have built a framework around these specs, which we call the AWS Server Framework (ASF).
 
-ASF generates server-side stubs for services and all their supported operations. In order to create these APIs LocalStack uses the definitions of the python package `botocore` - which is also a major part of the AWS CLI, and `boto3`.
+ASF generates server-side stubs for services and all their supported operations. To create these APIs, LocalStack uses the definitions of the python package `botocore` - which is also a major part of the AWS CLI, and `boto3`.
 
 All service requests are then routed to their respective server-side implementation through ASF, which implements the AWS protocol in a generalized way.
 
@@ -47,7 +49,7 @@ The PR also triggers our integration tests, and further has to be approved, and 
 {{< img src="screenshot_update_asf_api.png" >}}
 
 
-Of course, newly added operations will not work out-of-the-box. By default all operations that are not implemented will throw a `NotImplementedError` upon calling. However, we ensure that the declaration of each operation is compatible with AWS.
+Of course, newly added operations will not work out of the box. By default, all operations that are not implemented will throw a `NotImplementedError` upon calling. However, we ensure that the declaration of each operation is compatible with AWS.
 
 
 ## Parity Tests with Snapshot Testing
@@ -80,19 +82,19 @@ This highlights the importance of parity tests as a technique to ensure consiste
 
 ### Parity Tests in a Nutshell
 
-Initially, a parity test is designed to run against AWS. Certain responses in the test will be marked to be part of the "snapshot". Those responses are collected and stored in json-format in a separate file, which we call the snapshot. 
+Initially, a parity test is designed to run against AWS. We will mark certain responses in the test to be part of the "snapshot." Those responses are collected and stored in json-format in a separate file, which we call the snapshot.
 
-The snapshot will be used to verify the behavior of LocalStack later on. 
-As the initial test runs against AWS, we record the "ground truth". Consequent test runs will run against LocalStack.
+We will use the snapshot to verify the behavior of LocalStack later on. 
+As the initial test runs against AWS, we record the "ground truth." Consequent test runs will run against LocalStack.
 
-During the test execution against LocalStack the responses will be collected, and then compared to the recorded snapshot from AWS. This way we can ensure that LocalStack behaves just like AWS.
+During the test execution against LocalStack, the responses will be collected and compared to the recorded snapshot from AWS. This way, we can ensure that LocalStack behaves just like AWS.
 
 
 ### Snapshot Testing Framework
 
-Of course, it is not possible to compare the response bit-by-bit or character-by-character. Obviously there might be unique identifiers in place (like region, account-id, ARNs, timestamps), that will be different for every execution. 
+Of course, comparing the response bit-by-bit or character-by-character is impossible. There might be unique identifiers (like region, account-id, ARNs, timestamps) that will differ for every execution. 
 
-Thus we prepared a snapshot testing framework that on one hand replaces some common, pre-defined values with placeholders. On the other hand, it also allows to specify more complex replacements for specific API calls.
+Thus we prepared a snapshot testing framework that, on the one hand, replaces some common, pre-defined values with placeholders. On the other hand, it also allows specifying more complex replacements for specific API calls.
 
 For this kind of replacement we use "transformers" that do the same kind of transformation when recording the original response from AWS, and when running the test against LocalStack.
 
@@ -253,10 +255,10 @@ This strategy allows us to collect and outline deviations, while making sure tha
 
 
 ## Outlook
-With the new AWS Server Framework we also introduced a metric collection utility. It enables us to collect details during the test execution, including used parameter values, or raised exceptions.
+We also introduced a metric collection utility with the new AWS Server Framework. It enables us to collect details during the test execution, including used parameter values or raised exceptions.
 
 This information will help us to increase test coverage and consequently improve the parity with AWS. 
 
-Additionally, we will provide regular metric updates and insights about supported services and operations. Thus our communication will be more transparent in terms of implemented APIs, and further improve the confidence overall. 
+Additionally, we will provide regular metric updates and insights about supported services and operations. Thus our communication will be more transparent regarding implemented APIs and improve confidence overall. 
 
-We hope you are as excited as we are about our AWS Server Framework, that ensures latest compatibility with AWS, and the new snapshot testing framework, which will help us to write validated test cases.
+We hope you are as excited as we are about our AWS Server Framework, which ensures the latest compatibility with AWS, and the new snapshot testing framework, which will help us to write validated test cases.
