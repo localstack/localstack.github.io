@@ -90,6 +90,12 @@ tr.no-border-bottom td {
   border-radius: 20px;
   gap: 2rem;
   width: 100%;
+  position: relative;
+}
+
+.solution-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s;
 }
 
 .pricing-card {
