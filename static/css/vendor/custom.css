@@ -91,6 +91,7 @@ tr.no-border-bottom td {
   gap: 2rem;
   width: 100%;
   position: relative;
+  height: 100%;
 }
 
 .solution-card:hover {
