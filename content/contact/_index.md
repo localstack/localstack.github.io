@@ -27,9 +27,9 @@ Please make sure to always include the following details in your bug report:
 
 ### Chat
 
-Please join us in our Slack channel: [https://localstack-community.slack.com](https://localstack-community.slack.com)
+Please join us in our Slack channel: [https://localstack-community.slack.com](https://localstack-community.slack.com).
 
-Don't have access to `localstack-community` yet? Please contact us at [info@localstack.cloud](mailto:info@localstack.cloud) to receive an invite.
+Don't have access to `localstack-community` yet? Please contact us at [info@localstack.cloud](mailto:info@localstack.cloud) to receive an invite or join through this [invite link](http://slack.localstack.cloud/).
 
 ### Forum
 
