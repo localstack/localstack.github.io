@@ -8,8 +8,6 @@
   url = "/pricing/"
   weight = 7
 
-# Redirect to /docs
-# GH pages redirects to docs.localstack.cloud automatically
 [[main]]
   name = "COMPANY"
   url = "/company/"
@@ -65,6 +63,18 @@
   url  = "/community/get-involved"
   weight = 15
   parent = "COMMUNITY"
+
+[[main]]
+  name = "ABOUT US"
+  url  = "/company"
+  weight = 15
+  parent = "COMPANY"
+
+[[main]]
+  name = "CAREERS"
+  url  = "/careers"
+  weight = 15
+  parent = "COMPANY"
 
 
 [[social]]

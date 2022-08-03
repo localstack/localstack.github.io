@@ -1,6 +1,6 @@
 ---
-title: "Jobs"
-description: "Jobs at LocalStack"
+title: "Careers"
+description: "Careers at LocalStack"
 date: 2021-04-29T13:40:06+02:00
 lastmod: 2021-04-29T13:40:06+02:00
 draft: false

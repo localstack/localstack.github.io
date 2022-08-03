@@ -15,8 +15,8 @@
   url = "/blog"
 
   [[categories.entries]]
-  name = "Jobs"
-  url = "/jobs"
+  name = "Careers"
+  url = "/careers"
 
 [[categories]]
 
