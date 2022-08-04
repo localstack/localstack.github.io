@@ -1,7 +1,7 @@
 ---
 title: LocalStack and AWS Parity Explained
-description: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
-lead: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Service Framework and a new snapshot testing framework help us to stay on top of AWS changes."
+description: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Server Framework and a new snapshot testing framework help us to stay on top of AWS changes."
+lead: "At LocalStack we are committed to constantly improve the cloud dev experience. Here is how our AWS Server Framework and a new snapshot testing framework help us to stay on top of AWS changes."
 date: 2022-08-04
 lastmod: 2022-08-04
 images: []
@@ -25,7 +25,7 @@ Here are the three key things we have been working on:
  - **Parity Tests with Snapshot Testing:** Further, we have been working on a new testing approach, called "snapshot testing", that enables compatibility checks of LocalStack vs. AWS.
  - **Parity Metrics:** Additionally, we started to collect detailed parity metrics in order to track test coverage and implementation status for services.
 
-## AWS Service Framework
+## AWS Server Framework
 
 Distributed cloud systems like AWS have immense inherent complexity. Some people are skeptical when we tell them that LocalStack behaves in the same way AWS does. 
 
