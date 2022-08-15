@@ -65,69 +65,18 @@ localstack extensions install "git+https://github.com/localstack/localstack-exte
 
 We invite developers using LocalStack to mock and emulate AWS infrastructure locally to help us build an ecosystem around LocalStack Extensions. LocalStack Extensions can be created using our core Extensions API in our core codebase.
 
-The basic interface looks like the following:
-
-```python3
-class Extension(BaseExtension):
-    """
-    An extension that is loaded into LocalStack dynamically. The method
-    execution order of an extension is as follows:
-
-    - on_extension_load
-    - on_platform_start
-    - update_gateway_routes
-    - update_request_handlers
-    - update_response_handlers
-    - on_platform_ready
-    """
-
-    namespace: str = "localstack.extensions"
-    """The namespace of all basic localstack extensions."""
-
-    name: str
-    """The unique name of the extension set by the implementing class."""
-
-    def on_extension_load(self):
-        """
-        Called when LocalStack loads the extension.
-        """
-        pass
-
-    def on_platform_start(self):
-        """
-        Called when LocalStack starts the main runtime.
-        """
-        pass
-
-    def update_gateway_routes(self, router: Router[RouteHandler]):
-        """
-        Called with the Router attached to the LocalStack gateway. Overwrite this to add or update routes.
-        :param router: the Router attached in the gateway
-        """
-        pass
-
-    def update_request_handlers(self, handlers: CompositeHandler):
-        """
-        Called with the custom request handlers of the LocalStack gateway. Overwrite this to add or update handlers.
-        :param handlers: custom request handlers of the gateway
-        """
-        pass
-
-    def update_response_handlers(self, handlers: CompositeResponseHandler):
-        """
-        Called with the custom response handlers of the LocalStack gateway. Overwrite this to add or update handlers.
-        :param handlers: custom response handlers of the gateway
-        """
-        pass
-
-    def on_platform_ready(self):
-        """
-        Called when LocalStack is ready and the Ready marker has been printed.
-        """
-        pass
-```
+{{< img src="localstack-extensions.png" >}}  
 
 To further look into the developer docs to build new LocalStack Extensions, look into our [developer documentation](https://docs.localstack.cloud/developer-guide/localstack-extensions/) and [API code](https://github.com/localstack/localstack/tree/master/localstack/extensions).
+
+As a developer, some of the exciting use-cases of LocalStack Extensions are:
+
+- Integrate custom service emulators (like Stripe or more) with LocalStack
+- Load Python-based initialization scripts
+- Instrument AWS requests before they reach your Lambdas
+- Intercept AWS requests for logging or auditing
+
+The sky is the limit!
 
 ## Conclusion
 
