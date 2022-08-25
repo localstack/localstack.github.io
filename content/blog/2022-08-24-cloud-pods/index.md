@@ -65,7 +65,7 @@ After committing or pushing the state of a cloud pod, we can take a look at the 
 $ localstack pod inspect --name p1
 ```
 
-This will open an interactive shell that lists the resources contained in the pod - in our case, the S3 bucket `test-bucket`, as well as the SQS queue `test-queue` (see screenshot below). If your terminal supports `curses`, you can interactively browse the tree and collapse/uncollapse its nodes.
+This will open an interactive shell that lists the resources contained in the cloud pod - in our case, the S3 bucket `test-bucket`, as well as the SQS queue `test-queue` (see screenshot below). If your terminal supports `curses`, you can interactively browse the tree and collapse/uncollapse its nodes.
 
 <div style="text-align: center">
   <img src="pod_inspect.png" width="500px" border="1"/>
@@ -73,7 +73,7 @@ This will open an interactive shell that lists the resources contained in the po
 
 ## Merge Scenarios
 
-When working with an application state, we need to consider different scenarios regarding how to combine cloud pod state with the existing state in the running LocalStack instance.
+When working with application states, we need to consider different scenarios regarding how to combine cloud pod state with the existing state in the running LocalStack instance.
 
 The simplest case is when we inject a cloud pod into a fresh LocalStack instance - however, how should we proceed if there are some resources already deployed in the current instance?
 
@@ -85,11 +85,11 @@ The first case, **inject with overwrite**, simply removes and overwrites any exi
 
 The second case, **inject with basic merge**, leaves the state of existing services untouched and adds the state of the pod into the instance. In the example, if we start from a state with SQS queue `q1` and inject an S3 bucket `b1`, the resulting instance state will contain the union of both `q1` and `b1`.
 
-The third case, **inject with deep merge**, has the ability to merge the state of resources with the same identity. In the example, we combine an S3 object `o1` with an object `o2` into a combined S3 bucket `b1`.
+The third case, **inject with deep merge**, provides the ability to merge the state of resources with the same identity. In the example, we combine an S3 object `o1` with an object `o2` into a combined S3 bucket `b1`.
 
 As you can imagine, the third merge scenario is the most complex one, and is also highly domain-specific for the respective services it gets applied to. As another example, assume we have a DynamoDB table `t1` in both, the running instance and the cloud pod - with the deep merge mechanism, we would end up creating a table that contains the table items from both the instance and the cloud pod.
 
-Please note that the merge strategies are currently still experimental and under active development. We'd love to get your feedback on which merge scenarios work best for your particular use cases!
+Note that the merge strategies are currently still experimental and under active development. We'd love to get your feedback on which merge scenarios work best for your particular use cases!
 
 # Cloud Pods Use Cases
 
@@ -97,11 +97,13 @@ Next, let’s highlight some of the exciting use cases that cloud pods are enabl
 
 ## Sharing state for collaborative debugging
 
-Cloud Pods can be easily shared between team members and can be used to foster collaborative debugging. Let us consider the following simple use case. Bob is working on a new feature that uses three AWS services, namely SQS, Lambda, and Secrets Manager. He aims at implementing the following workflow: each time a message hits the SQS queue, a Lambda is automatically fired. The Lambda function checks for a secret stored in Secrets Manager and returns its details. Bob writes his Lambda handler and creates the necessary resources. Finally, he tries to send a message to the queue to test the end-to-end logic. Unfortunately, something seems odd: the Lambda returns a `404` error while attempting to fetch the secret.
+Cloud Pods can be easily shared among team members and can be used to foster collaborative debugging. Let us consider the following simple use case. Bob is working on a new feature that uses three AWS services, namely SQS, Lambda, and Secrets Manager. He aims at implementing the following workflow: each time a message hits the SQS queue, a Lambda is automatically fired. The Lambda function checks for a secret stored in Secrets Manager and returns its details. Bob writes his Lambda handler and creates the necessary resources. Finally, he tries to send a message to the queue to test the end-to-end logic. Unfortunately, something seems odd: the Lambda returns a `404` error while attempting to fetch the secret.
 
 {{< img src="pods_collaboration.png" >}}
 
-After a couple of attempts, Bob asks for help from his co-worker Alice. Alice is very happy to do so. She asks him to push a Cloud Pod from his LocalStack instance that exposes the error. Bob pushes the pod and Alice pulls it onto the local machine. After digging a bit, Alice finds out that there is a region mismatch between the `boto3` client used in the Lambda function and the other AWS resources previously created. Therefore, she fixes the Lambda code and pushes a new version of the Cloud Pod. Bob can now pull the latest version and to try out the new code by sending a message to the queue. Bob is grateful to Alice, as he can now finally run his implementation end-to-end with no errors 🚀
+After a couple of attempts, Bob asks for help from his co-worker Alice. Alice is very happy to do so. She asks him to push a Cloud Pod from his LocalStack instance that exposes the error. Bob pushes the pod and Alice pulls it onto the local machine. After digging a bit, Alice finds out that there is a region mismatch between the `boto3` client used in the Lambda function (`us-east-1`) and the other AWS resources previously created (`us-west-2`).
+
+Alice goes ahead and fixes the Lambda code, and pushes a new version of the Cloud Pod. Bob can now pull the latest version and to try out the new code by sending a message to the queue. Bob is grateful to Alice, as he can now finally run his implementation locally end-to-end with no errors. 🚀
 
 ## Pre-seeding CI environments
 
@@ -113,7 +115,7 @@ Let us imagine the following example. _Pikachu GmbH_ uses an AWS ECS cluster to 
 
 This pod is available in the cloud pod storage space at _Pikachu GmbH_ and can be easily pulled both, by each member of the organization, and from within the CI environment. This way, the Cloud Pod can be used in CI to bootstrap the testing environment where the application is then deployed and tested. Moreover, each individual developer can pull the same cloud pod and run some local tests. This approach provides a lot of flexibility to the team - indeed, every time some changes need to be done to the ECS cluster configuration, the platform team will simply push an update to the same cloud pod: the new version will then seamlessly be available for all clients at the next pull operation.
 
-*Note:* In addition to preseeding a CI environment, cloud pods can also be used at the "other end" of a pipeline, namely to store and push the state of the LocalStack instance after a CI run has completed. This can be a game changer in debugging failing CI builds, by replicating the exact same state onto the local machine. There's a lot to unpack in this scenario, which goes a bit beyond the scope of this article - we'll cover this use case in a follow-up blog post in the near future!
+**Note:** In addition to preseeding a CI environment, cloud pods can also be used at the "other end" of a pipeline, namely to store and push the state of the LocalStack instance after a CI run has completed. This can be a game changer in debugging failing CI builds, by replicating the exact same state onto the local machine. There's a lot to unpack in this scenario, which goes a bit beyond the scope of this article - we'll cover this use case in a follow-up blog post in the near future!
 
 ## Creating reproducible application samples
 
