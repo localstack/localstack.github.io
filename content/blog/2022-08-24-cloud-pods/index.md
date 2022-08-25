@@ -12,8 +12,6 @@ leadimage: "cloud-pods-banner.png"
 
 <!-- TODO: banner image ... -->
 
-In this blog post, we're excited to announce our latest developments around Cloud Pods - persistent state snapshots that enable next-generation state management and team collaboration features in LocalStack.
-
 # Background: Ephemeral and persistent state in LocalStack
 
 By default, the state of all services in LocalStack is ephemeral - i.e., whenever you restart the LocalStack Docker container, it presents a fresh instance with a clean state that can be used to create your application resources locally. This is the default mode, which is optimized for quick experimentation, and frequent container restarts, making sure to always start with a clean slate.
@@ -46,12 +44,14 @@ $ awslocal s3 mb s3://test-bucket
 $ awslocal sqs create-queue --queue-name test-queue
 # commit the state to pod p1
 $ localstack pod commit --name p1
+
+# continue with work for project B ...
 ```
 
 Later on - after restarting the LocalStack container with a fresh state, we can `inject` (restore) the previous state of the local instance to continue where we left off.
 
 ```bash
-# restart LocalStack with a fresh state
+# restart LocalStack with a fresh state, then inject the state of cloud pod p1
 $ localstack pod inject --name p1
 ```
 
@@ -71,17 +71,23 @@ This will open an interactive shell that lists the resources contained in the po
 
 ## Merge Scenarios
 
-When working with an application state, we need to consider different scenarios, including:
+When working with an application state, we need to consider different scenarios regarding how to combine cloud pod state with the existing state in the running LocalStack instance.
 
-*TODO: insert figure to illustrate the scenarios*
+The simplest case is when we inject a cloud pod into a fresh LocalStack instance - however, how should we proceed if there are some resources already deployed in the current instance?
 
-- starting from an empty state, injecting cloud pod state s1
-- starting from an existing state s0
-    - injecting cloud pod state s1 into the instance, overwriting any existing state
-    - merging cloud pod state s1 into the instance to create the union of s0 and s1
-    - …
+To cover the different scenarios, cloud pods support different merge strategies - the high-level approach is illustrated in the figure below.
 
-To cover the different scenarios, cloud pods support different merge strategies. …
+{{< img src="state_merge_mechanisms.png" >}}
+
+The first case, *inject with overwrite*, simply removes and overwrites any existing state in the instance. After injection, the instance state matches exactly the content of the cloud pod.
+
+The second case, *inject with basic merge*, leaves the state of existing services untouched and adds the state of the pod into the instance. In the example, if we start from a state with SQS queue `q1` and inject an S3 bucket `b1`, the resulting instance state will contain the union of both `q1` and `b1`.
+
+The third case, *inject with deep merge*, has the ability to merge the state of resources with the same identity. In the example, we combine an S3 object `o1` with an object `o2` into a combined S3 bucket `b1`.
+
+As you can imagine, the third merge scenario is the most complex one, and is also highly domain-specific for the respective services it gets applied to. As another example, assume we have a DynamoDB table `t1` in both, the running instance and the cloud pod - with the deep merge mechanism, we would end up creating a table that contains the table items from both the instance and the cloud pod.
+
+Please note that the merge strategies are currently still experimental and under active development. We'd love to get your feedback on which merge scenarios work best for your particular use cases!
 
 # Cloud Pods Use Cases
 
