@@ -91,33 +91,39 @@ Please note that the merge strategies are currently still experimental and under
 
 # Cloud Pods Use Cases
 
-Next, let’s highlight some of the exciting use cases that cloud pods are enabling. As a …
+Next, let’s highlight some of the exciting use cases that cloud pods are enabling - which allow us to fundamentally rethink how infrastructure state is managed, and how cloud apps are being developed collaboratively.
 
 ## Sharing state for collaborative debugging
 
-Cloud Pods can be easily shared between team members and can be used to foster collaborative debugging. Let us present a simple use case. Bob is working on a new feature that uses three AWS services, namely SQS, Lambda, and Secrets Manager. He is aiming at implementing the following workflow: each time a message hits the SQS queue, a Lambda is automatically fired. Such a Lambda checks for a secret stored in Secrets Manager and return its details. Bob writes his Lambda and creates the necessary resources. Finally, he tries to send a message to the queue to test the end-to-end logic. Unfortunately, something seems odd: the Lambda returns a 500 error while attempting to fetch the secret.
-
-After a couple of attempts, Bob asks for help from his colleague Alice. Alice is very happy to do so. She asks him to push a Cloud Pod from his troublesome LocalStack instance. Bob pushes the pod and Alice pulls it on the local machine. After digging a bit, Alice finds out that there is a region mismatch between the `boto` client used in the Lambda function and the other AWS resources previously created. Therefore, she fixed the Lambda code and pushes a version of the Cloud Pod. She simply tells Bob to pull the new version and to try out the new code by sending a message to the queue. Bob thanks Alice and finally can run his implementation end-to-end with no errors 🚀
+Cloud Pods can be easily shared between team members and can be used to foster collaborative debugging. Let us consider the following simple use case. Bob is working on a new feature that uses three AWS services, namely SQS, Lambda, and Secrets Manager. He aims at implementing the following workflow: each time a message hits the SQS queue, a Lambda is automatically fired. The Lambda function checks for a secret stored in Secrets Manager and returns its details. Bob writes his Lambda handler and creates the necessary resources. Finally, he tries to send a message to the queue to test the end-to-end logic. Unfortunately, something seems odd: the Lambda returns a `404` error while attempting to fetch the secret.
 
 {{< img src="pods_collaboration.png" >}}
 
+After a couple of attempts, Bob asks for help from his co-worker Alice. Alice is very happy to do so. She asks him to push a Cloud Pod from his LocalStack instance that exposes the error. Bob pushes the pod and Alice pulls it onto the local machine. After digging a bit, Alice finds out that there is a region mismatch between the `boto3` client used in the Lambda function and the other AWS resources previously created. Therefore, she fixes the Lambda code and pushes a new version of the Cloud Pod. Bob can now pull the latest version and to try out the new code by sending a message to the queue. Bob is grateful to Alice, as he can now finally run his implementation end-to-end with no errors 🚀
+
 ## Pre-seeding CI environments
 
-One of the most paramount use cases of LocalStack is its usage within various Continuous Integration/Continuous Delivery (CI/CD) environments. If you are running automated tests in CI, you might often feel the need to create test fixtures or additional resources to bootstrap your testing environment and test your application. Cloud Pods can dramatically facilitate such a task.
+One of the most paramount use cases of LocalStack is its usage within various Continuous Integration/Continuous Delivery (CI/CD) environments. If you are running automated tests in CI, you might often feel the need to create test fixtures or additional resources to bootstrap your testing environment and test your application. Cloud Pods can facilitate and dramatically simplify this task.
 
-Let us imagine the following example. Pikachu GmbH uses an AWS ECS cluster to deploy its flagship software. They have a dedicated platform team that is responsible to manage such a cluster and making it available to the development team. To facilitate the end-to-end testing, this team is also responsible to create and manage a Cloud Pod containing the state of the ECS cluster. This pod is available in the organization storage space at Pikachu GmbH and can be pulled both by each member of the organization and from within the CI environment. This way, the Cloud Pod can be used in CI to bootstrap the testing environment where the application is then deployed and tested. Moreover, each individual developer can pull the same image and run some local tests. This approach is quite flexible. Indeed, every time that some changes to the ECS cluster configuration need to be done, the platform team will simply push an update to the same pod: the new version will be seamlessly be available everywhere at the next pull operation.
+Let us imagine the following example. _Pikachu GmbH_ uses an AWS ECS cluster to deploy its flagship software. They have a dedicated platform team that is responsible for managing the cluster and making it available to the development team. To facilitate the end-to-end testing, this team is also responsible for creating and maintaining a Cloud Pod that contains the state and configuration of the ECS cluster.
 
 {{< img src="ci_preseeding.png" >}}
 
-### Creating reproducible application samples
+This pod is available in the cloud pod storage space at _Pikachu GmbH_ and can be easily pulled both, by each member of the organization, and from within the CI environment. This way, the Cloud Pod can be used in CI to bootstrap the testing environment where the application is then deployed and tested. Moreover, each individual developer can pull the same cloud pod and run some local tests. This approach provides a lot of flexibility to the team - indeed, every time some changes need to be done to the ECS cluster configuration, the platform team will simply push an update to the same cloud pod: the new version will then seamlessly be available for all clients at the next pull operation.
+
+*Note:* In addition to preseeding a CI environment, cloud pods can also be used at the "other end" of a pipeline, namely to store and push the state of the LocalStack instance after a CI run has completed. This can be a game changer in debugging failing CI builds, by replicating the exact same state onto the local machine. There's a lot to unpack in this scenario, which goes a bit beyond the scope of this article - we'll cover this use case in a follow-up blog post in the near future!
+
+## Creating reproducible application samples
 
 Another prime use case for using cloud pods is to prepare reproducible application samples. For example, in the area of Machine Learning (ML), it is common practice to provide training data sets along with the code logic used to compute ML models, in order to make results easily reproducible.
 
-Let’s assume we want to train an ML model that can recognize handwritten digits on an image. Cloud pods can help us create a reproducible sample - consider the simple application illustrated below: an S3 bucket contains the training data (image files with digits), a Lambda function defines the code for training the ML model, and a Lambda layer provides the dependencies of the ML library (e.g., `scikit-learn`).
+Let’s assume we want to train an ML model that can recognize handwritten digits on an image. Cloud pods can help us create a reproducible sample - consider the simple application illustrated in the figure below: an S3 bucket contains the training data (image files with digits), a Lambda function defines the code for training the ML model, and a Lambda layer provides the dependencies of the ML library (e.g., `scikit-learn`).
 
 {{< img src="reproducible_samples.png" >}}
 
-We can prepare this cloud pod, push it to the LocalStack platform, and then share it with our team - once available, it becomes as simple as running `localstack pod pull --name ml-pod` to replicate and run the app locally. The code for this sample is available here (**TODO add link**).
+We can prepare this cloud pod, push it to the LocalStack platform, and then share it with our team - once available, it becomes as simple as running `localstack pod pull --name ml-pod` to replicate and run the app locally.
+
+If you'd like to give it a try, the source code for the samples described above is available in this [Github repository](https://github.com/localstack/presentations/tree/main/2022-07-28-Pods-BlogPost).
 
 # Tech Deep Dive - How does it work under the covers?
 
@@ -133,7 +139,7 @@ We’re thrilled to get this next evolution of cloud pods to our users, which is
 
 We see cloud pods as a foundational technology that enables entirely new ways for how cloud applications are being developed - from managing and evolving application state, to preseeding CI test environments, to enabling collaborative debugging within your team.
 
-In the future, we continue to explore use cases and usage patterns for cloud pods - …
+In the future, we continue to explore use cases and usage patterns for cloud pods - we aim to evolve the different state merge strategies, establish auditability and governance rules for cloud pods, and provide tighter integration and analytics of cloud pods within your CI pipelines. We also envision a registry of cloud pods that will make it easy to provide pre-defined infrastructure components - complementing the popular mechanism of Infrastructure as Code (IaC) with the novel approach of Infrastructure as State (IaS) defined via cloud pods.
 
 # Acknowledgments
 
