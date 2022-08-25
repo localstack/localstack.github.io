@@ -67,7 +67,9 @@ $ localstack pod inspect --name p1
 
 This will open an interactive shell that lists the resources contained in the pod - in our case, the S3 bucket `test-bucket`, as well as the SQS queue `test-queue` (see screenshot below). If your terminal supports `curses`, you can interactively browse the tree and collapse/uncollapse its nodes.
 
-{{< img src="pod_inspect.png" >}}
+<div style="text-align: center">
+  <img src="pod_inspect.png" width="500px" border="1"/>
+</div>
 
 ## Merge Scenarios
 
@@ -79,11 +81,11 @@ To cover the different scenarios, cloud pods support different merge strategies 
 
 {{< img src="state_merge_mechanisms.png" >}}
 
-The first case, *inject with overwrite*, simply removes and overwrites any existing state in the instance. After injection, the instance state matches exactly the content of the cloud pod.
+The first case, **inject with overwrite**, simply removes and overwrites any existing state in the instance. After injection, the instance state matches exactly the content of the cloud pod.
 
-The second case, *inject with basic merge*, leaves the state of existing services untouched and adds the state of the pod into the instance. In the example, if we start from a state with SQS queue `q1` and inject an S3 bucket `b1`, the resulting instance state will contain the union of both `q1` and `b1`.
+The second case, **inject with basic merge**, leaves the state of existing services untouched and adds the state of the pod into the instance. In the example, if we start from a state with SQS queue `q1` and inject an S3 bucket `b1`, the resulting instance state will contain the union of both `q1` and `b1`.
 
-The third case, *inject with deep merge*, has the ability to merge the state of resources with the same identity. In the example, we combine an S3 object `o1` with an object `o2` into a combined S3 bucket `b1`.
+The third case, **inject with deep merge**, has the ability to merge the state of resources with the same identity. In the example, we combine an S3 object `o1` with an object `o2` into a combined S3 bucket `b1`.
 
 As you can imagine, the third merge scenario is the most complex one, and is also highly domain-specific for the respective services it gets applied to. As another example, assume we have a DynamoDB table `t1` in both, the running instance and the cloud pod - with the deep merge mechanism, we would end up creating a table that contains the table items from both the instance and the cloud pod.
 
@@ -119,19 +121,24 @@ Another prime use case for using cloud pods is to prepare reproducible applicati
 
 Let’s assume we want to train an ML model that can recognize handwritten digits on an image. Cloud pods can help us create a reproducible sample - consider the simple application illustrated in the figure below: an S3 bucket contains the training data (image files with digits), a Lambda function defines the code for training the ML model, and a Lambda layer provides the dependencies of the ML library (e.g., `scikit-learn`).
 
-{{< img src="reproducible_samples.png" >}}
+<div style="text-align: center">
+  <img src="reproducible_samples.png" width="500px" />
+</div>
 
 We can prepare this cloud pod, push it to the LocalStack platform, and then share it with our team - once available, it becomes as simple as running `localstack pod pull --name ml-pod` to replicate and run the app locally.
 
 If you'd like to give it a try, the source code for the samples described above is available in this [Github repository](https://github.com/localstack/presentations/tree/main/2022-07-28-Pods-BlogPost).
 
-# Tech Deep Dive - How does it work under the covers?
+# Brief Tech Deep Dive - How does it work under the covers?
 
-Support for cloud pods has been a sizeable engineering effort in LocalStack, and we continue to fine-tune the implementation and user experience. We have introduced several abstractions that build the foundation for how cloud pods are working internally:
+Support for cloud pods has been a sizeable engineering effort at LocalStack, and we continue to fine-tune the implementation and user experience. We have introduced several abstractions that build the foundation for how cloud pods are working internally:
 
 - **Cloud pods version store**: Each cloud pod has a set of metadata files associated which define the versions, revisions, commits, and state files that have been created for the cloud pod.
 - **State merging**: Different mechanisms are being used to deal with diverging local and remote states when pulling cloud pods to the local machine. In the simplest case, we simply overwrite the local state with the content of the cloud pod. More advanced use cases involve merging of service states - using a generic mechanism for merging Python backend objects, as well as specialized mechanisms for merging service-specific persistence files (e.g., sqlite files)
 - **Metamodel extraction**: In addition to storing the actual binary content to fully replicate a service state, we’re also extracting a metamodel of the cloud pod content, which represents a human-readable format that can be easily displayed via the CLI or in the Web user interface.
+- **Secure storage**: When using the `push` operation, cloud pods are stored securely in our storage backend in AWS, with each user/organization receiving a dedicated, isolated S3 bucket. The `push` and `pull` operations are using secure S3 presigned URLs, in order for the pods CLI to interact directly with the S3 bucket, rather than piping the state files through our platform APIs. This improves performance and scalability of the remote cloud pods operations, and also helps decoupling for security reasons.
+
+This is just a short peek under the covers - we'll share more implementation details in upcoming blogs and publications!
 
 # Conclusions and Next Steps
 
