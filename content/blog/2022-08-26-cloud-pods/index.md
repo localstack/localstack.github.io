@@ -2,8 +2,8 @@
 title: Cloud Pods - Enabling state sharing and team collaboration for local cloud development
 description: "We're excited to announce our latest developments around Cloud Pods - persistent state snapshots that enable next-generation state management and team collaboration features in LocalStack"
 lead: "We're excited to announce our latest developments around Cloud Pods - persistent state snapshots that enable next-generation state management and team collaboration features in LocalStack"
-date: 2022-08-24
-lastmod: 2022-08-24
+date: 2022-08-26
+lastmod: 2022-08-26
 images: []
 contributors: ["Giovanni Grano", "Waldemar Hummer"]
 tags: ['news']
