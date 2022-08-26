@@ -7,7 +7,7 @@ lastmod: 2022-08-26
 images: []
 contributors: ["Giovanni Grano", "Waldemar Hummer"]
 tags: ['news']
-leadimage: "cloud-pods-banner.png"
+leadimage: "cloud_pods_banner.png"
 ---
 
 {{< img src="cloud_pods_banner.png" >}}
@@ -99,7 +99,7 @@ Cloud Pods can be easily shared among team members and can be used to foster col
 
 {{< img src="pods_collaboration.png" >}}
 
-After a couple of attempts, Bob asks for help from his co-worker Alice. Alice is very happy to do so. She asks him to push a Cloud Pod from his LocalStack instance that exposes the error. Bob pushes the pod and Alice pulls it onto the local machine. After digging a bit, Alice finds out that there is a region mismatch between the `boto3` client used in the Lambda function (`us-east-1`) and the other AWS resources previously created (`us-west-2`). 
+After a couple of attempts, Bob asks for help from his co-worker Alice. Alice is very happy to do so. She asks him to push a Cloud Pod from his LocalStack instance that exposes the error. Bob pushes the pod and Alice pulls it onto the local machine. After digging a bit, Alice finds out that there is a region mismatch between the `boto3` client used in the Lambda function (`us-east-1`) and the other AWS resources previously created (`us-west-2`).
 
 Alice goes ahead and fixes the Lambda code, and pushes a new version of the Cloud Pod. Bob can now pull the latest version and to try out the new code by sending a message to the queue. Bob is grateful to Alice, as he can now finally run his implementation locally end-to-end with no errors 🚀.
 The picture above shows the end-to-end Cloud Pods's flow we just described.
