@@ -10,7 +10,7 @@ tags: ['news']
 leadimage: "cloud-pods-banner.png"
 ---
 
-<!-- TODO: banner image ... -->
+{{< img src="cloud_pods_banner.png" >}}
 
 # Background: Ephemeral and persistent state in LocalStack
 
