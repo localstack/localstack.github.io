@@ -38,7 +38,7 @@ To renew your license, please send an email to [info@localstack.cloud](mailto:in
 
 - Where can I get help?
 
-  LocalStack has a great [documentation](https://docs.localstack.cloud/overview/) which serves as a reference for all the features and how to use them across the community and professional edition. We also have a Slack community where you can ask questions and get help from other users. Drop a mail at [info@localstack.cloud](mailto:info@localstack.cloud) to get an invite!
+  LocalStack has a great [documentation](https://docs.localstack.cloud/overview/) which serves as a reference for all the features and how to use them across the community and professional edition. We also have a Slack community where you can ask questions and get help from other users. Drop a mail at [info@localstack.cloud](mailto:info@localstack.cloud) to get an invite or join through our [Slack invite](http://slack.localstack.cloud/).
 
 - How can I prove my student/teacher status?
 

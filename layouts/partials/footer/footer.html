@@ -9,13 +9,16 @@
           We promise never to send an excessive amount of emails (we hate spam, too).
         </p>
         <form class="center text-center validate" action="https://sendy.localstack.cloud/subscribe" method="POST" accept-charset="utf-8">
-          <div class="input-group d-flex align-items-center gap-3">
-            <input type="email" class="form-control email" name="email" id="email" placeholder="email-address" aria-label="email-address" aria-describedby="basic-addon2">
-            </input>
-            <input type="hidden" name="list" value="bZ8926jt167PVq0OXTjaMgag"/>
-            <input type="hidden" name="subform" value="yes"/>
-            <div class="input-group-append">
-              <button class="btn btn-primary btn-tertiary form-button" type="submit" name="submit">SUBSCRIBE</button>
+          <div class="d-flex wrapping-form-control justify-content-center input-group">
+            <div class="row w-100 gx-1">
+              <div class="col-7 col-md-8" style="padding-left: 0 !important">
+                <input class="form-control bg-transparent text-white border-0 h-100 d-flex p-3 w-100 align-items-center" type="email" name="email" id="email" placeholder="email-address" aria-label="email-address" aria-describedby="basic-addon2"></input>
+                <input type="hidden" name="list" value="bZ8926jt167PVq0OXTjaMgag"/>
+                <input type="hidden" name="subform" value="yes"/>
+              </div>
+              <div class="col-5 col-md-4" style="padding-right: 0 !important">
+                <button class="btn btn-primary btn-tertiary form-button w-100 fs-6" type="submit" name="submit">SUBSCRIBE</button>
+              </div>
             </div>
           </div>
         </form>

@@ -51,3 +51,13 @@ p.meta {
     @extend .rounded-2;
     padding: 1rem;
 }
+
+// use full discs for all lists (primary and sublists) to increase the readability
+ul {
+  list-style: disc;
+}
+
+// make ordered list markers (1., 2.,...) bold to increase the readability
+ol li::marker {
+  font-weight: bold;
+}

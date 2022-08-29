@@ -7,7 +7,9 @@ lastmod: 2022-01-13T08:40:06+02:00
 draft: false
 weight: 50
 images: []
-department: "Customer success"
+employment: "Full-time"
+location: "Remote"
+department: "Go to market"
 ---
 
 ### About You
