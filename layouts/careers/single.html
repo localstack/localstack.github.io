@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "cloud" "heroClasses" "pb-11 mt-4") }}
+{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "cloud" "heroClasses" "pb-md-11 mt-4") }}
 
 <section class="section d-flex">
   <div class="container overlay-card mt-n11 p-5 p-md-7">
@@ -9,6 +9,5 @@
   </div>
 </section>
 
-{{/*  Add this when values are ready  */}}
-{{/*  {{ partial "section/job-common.html" .}}  */}}
+{{ partial "section/job-common.html" .}}
 {{ end }}

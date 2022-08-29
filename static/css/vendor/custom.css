@@ -346,7 +346,7 @@ li::marker {
   width: 100%;
   row-gap: 2rem;
   grid-template-columns: 45% 10% 45%;
-  grid-template-rows: repeat(8, auto)
+  grid-template-rows: repeat(9, auto);
 }
 
 .bg-special-gradient {  
