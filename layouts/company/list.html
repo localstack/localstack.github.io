@@ -1,0 +1,128 @@
+{{ define "main" }}
+{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "cloud" ) }}
+
+<section class="section container">
+    <p class="text-center mb-0">
+      At LocalStack, we believe that empowering developers and giving them full control over their environments is the key to driving innovation. We live and breathe developer experience in everything we do, and have set out to pursue the audacious goal of seamlessly integrating and complementing the centralized nature of the cloud with our suite of tools that allow developers to build decentralized dev & test loops for full flexibility, control, and unprecedented cloud development speed.
+    </p>
+    <br/>
+    <p class="text-center mb-0">
+      Only made possible through countless contributions from the open source community and our top-notch team, we have managed to revolutionize the cloud development experience. Today, we are fortunate to be working with a growing community of users and customers, with 100s of thousand developers using LocalStack on a regular basis, and a growing number of organizations leveraging our platform to optimize their development pipelines and team collaboration flows.
+    </p>
+
+    <div class="strike-dark">
+      <h2 class="text-center">Timeline</h2>
+    </div>
+    
+    <div class="d-flex flex-row mt-6">
+        <div class="timeline-grid">
+            <div style="grid-column: 2/2; grid-row: 1 / 10" class="p-4 d-none d-lg-flex">
+                <div class="bg-white w-100 h-100 justify-content-center d-flex shadow-standard">
+                    <div style="background-color: #8A6FE2; width: 14px; border-radius: 30px; z-index: 1003" class="h-100"></div>
+                </div>
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 1/1">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2016"
+                    "cardText" "August 16th"
+                    "cardDescription" "First open source commits of LocalStack in GitHub repository (initial support for 8 AWS services)"
+                    "image" "/images/company/leafs.svg"
+                    )
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 2/2">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2017"
+                    "cardText" "March 27th"
+                    "cardDescription" "Several high-profile tweets and social media posts make LocalStack popular overnight"
+                    "image" "/images/company/twittershout.svg"
+                    "reverse" "true"
+                    )
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 3/3">                
+                {{ partial "misc/timeline-card.html" (dict
+                "cardHeading" "2018"
+                "cardText" "March"
+                "cardDescription" "Reaching 10.000 stars on GitHub"
+                "image" "/images/company/10k.svg")
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 4/4">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2019"
+                    "cardText" "July"
+                    "cardDescription" "LocalStack Pro extensions - first version available"
+                    "image" "/images/company/gears.svg"
+                    "reverse" "true"
+                    )
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 5/5">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2020"
+                    "cardText" "July"
+                    "cardDescription" "Reaching 25.000 stars on GitHub, more than 50+ AWS services supported in LocalStack"
+                    "image" "/images/company/checks.svg"
+                    )
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 6/6">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2021"
+                    "cardText" "May"
+                    "cardDescription" "LocalStack GmbH incorporated in Switzerland"
+                    "image" "/images/company/writing.svg"
+                    "reverse" "true"
+                    )
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 7/7">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2022"
+                    "cardText" "May"
+                    "cardDescription" "Reached 20+ team members, and growing!"
+                    "image" "/images/company/members.svg"
+                    )
+                }}
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 8/8">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "2022"
+                    "cardText" "July"
+                    "cardDescription" "Release of LocalStack version 1.0.0"
+                    "image" "/images/company/release.svg"
+                    "reverse" "true"
+                    )
+                }} 
+            </div>
+            <div style="grid-column: 1 / 4; grid-row: 9/9">
+                {{ partial "misc/timeline-card.html" (dict
+                    "cardHeading" "Now"
+                    "cardText" "and beyond"
+                    "cardDescription" "Let's shape the future of cloud development together!"
+                    "image" "/images/company/localstackFuture.svg"
+                    )
+                }} 
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "section/job-common.html" .}}
+<style>
+    .fade-background {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%) !important;
+        background-color: white;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1002;
+    }
+    .fade-background > .card {
+        background-color: rgba(0, 0, 0, 0);
+    }
+</style>
+{{ end }}

@@ -3,7 +3,7 @@
 .faq.list .card,
 .tags.list .card,
 .blog.list .card,
-.jobs.list .card {
+.careers.list .card {
   margin-top: 2rem;
   margin-bottom: 2rem;
   transition: transform 0.3s;
@@ -14,7 +14,7 @@
 .tags.list .card,
 .faq.list .card:hover,
 .blog.list .card:hover,
-.jobs.list .card:hover {
+.careers.list .card:hover {
   transform: scale(1.025);
 }
 
@@ -22,7 +22,7 @@
 .contributors.list .card-body,
 .tags.list .card,
 .blog.list .card-body,
-.jobs.list .card-body {
+.careers.list .card-body {
   padding: 0 2rem 1rem;
 }
 

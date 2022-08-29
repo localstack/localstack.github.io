@@ -1,6 +1,6 @@
 <!-- <div class="header-bar fixed-top"></div> -->
 <header class="navbar fixed-top navbar-expand-lg navbar-light pb-sm-0 bg-transparent" id="navbarGrad">
-  <div class="container pb-3">
+  <div class="container pb-0 pb-sm-3">
     <div class="d-flex justify-content-lg-between w-100 flex-wrap flex-lg-nowrap">
       <label class="menu-icon order-0 d-lg-none" for="menu-btn"><span class="navicon"></span></label>
       <input class="menu-btn order-0" type="checkbox" id="menu-btn">
@@ -38,8 +38,12 @@
             {{- $active = or $active (and (eq .Name "SOLUTIONS") (eq $current.Section "solutions")) -}}
             {{- $active = or $active (and (eq .Name "COMMUNITY") (eq $current.Section "community")) -}}
             {{- $active = or $active (and (eq .Name "PRICING") (eq $current.Section "pricing")) -}}
+            {{- $active = or $active (and (eq .Name "COMPANY") (eq $current.Section "company")) -}}
+            <!-- workaround for navbar highlighting careers section -->
+            {{- $active = or $active (and (eq .Name "COMPANY") (eq $current.Section "careers")) -}}
+            <!-- -->
             {{- $active = or $active (and (eq .Name "BLOG") (eq $current.Section "blog" "authors")) -}}
-            <li class="nav-item{{ if $active }} active{{ end }}{{ if .HasChildren }} dropdown{{ end }}">
+            <li class="nav-item ms-0{{ if $active }} active{{ end }}{{ if .HasChildren }} dropdown{{ end }}">
               {{ if .HasChildren }} 
                 <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ .Name | safeHTML }}
@@ -81,7 +85,7 @@
   const sm = window.matchMedia('(min-width: 576px)').matches
 
   window.onscroll = function () {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 25) {
         myNav.classList.add("navbar-visible");
         myNav.classList.remove("bg-transparent");
     } 

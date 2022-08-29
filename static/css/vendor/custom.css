@@ -341,6 +341,14 @@ li::marker {
   box-shadow: 0px 10px 40px rgba(46, 38, 92, 0.25);
 }
 
+.timeline-grid {
+  display: grid;
+  width: 100%;
+  row-gap: 2rem;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: repeat(9, auto);
+}
+
 .bg-special-gradient {  
   background: linear-gradient(280deg, #63ECD3 0%, #835AF7 95%);
   border-radius: 10px;

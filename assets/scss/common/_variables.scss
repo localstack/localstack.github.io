@@ -73,6 +73,15 @@ $body-color:                #1B183E;
 $link-color:                              $primary;
 $link-decoration:                         none;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1020px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
@@ -80,7 +89,7 @@ $link-decoration:                         none;
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
+  lg: 1020px,
   xl: 1156px,
   xxl: 1156px
 );
@@ -185,4 +194,6 @@ $alert-border-scale:                0;
 $alert-color-scale:                 0;
 
 $card-border-radius: 30px !important;
-$card-border-color: none
+$card-border-color: none;
+
+$shadow-standard: 10px 10px 150px rgba(46, 38, 92, 0.12);

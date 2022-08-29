@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "cloud" "heroClasses" "pb-md-11 mt-4") }}
+
+<section class="section d-flex">
+  <div class="container overlay-card mt-n11 p-5 p-md-7">
+    <article>
+      {{ .Content }}
+    </article>
+  </div>
+</section>
+
+{{ partial "section/job-common.html" .}}
+{{ end }}

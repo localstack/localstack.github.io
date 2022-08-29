@@ -8,12 +8,10 @@
   url = "/pricing/"
   weight = 7
 
-# Redirect to /docs
-# GH pages redirects to docs.localstack.cloud automatically
-# [[main]]
-#   name = "COMPANY"
-#   url = "/docs/"
-#   weight = 10
+[[main]]
+  name = "COMPANY"
+  url = "/company/"
+  weight = 10
 
 [[main]]
   name = "COMMUNITY"
@@ -21,13 +19,13 @@
   weight = 20
 
 [[main]]
-  name = "RESOURCES"
-  url = "https://docs.localstack.cloud"
+  name = "BLOG"
+  url = "/blog/"
   weight = 30
 
 [[main]]
-  name = "BLOG"
-  url = "/blog/"
+  name = "DOCS"
+  url = "https://docs.localstack.cloud"
   weight = 40
 
 [[main]]
@@ -65,6 +63,18 @@
   url  = "/community/get-involved"
   weight = 15
   parent = "COMMUNITY"
+
+[[main]]
+  name = "ABOUT US"
+  url  = "/company"
+  weight = 15
+  parent = "COMPANY"
+
+[[main]]
+  name = "CAREERS"
+  url  = "/careers"
+  weight = 15
+  parent = "COMPANY"
 
 
 [[social]]
