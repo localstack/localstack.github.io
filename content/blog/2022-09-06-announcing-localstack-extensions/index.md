@@ -2,8 +2,8 @@
 title: Announcing LocalStack Extensions
 description: Announcing LocalStack Extensions
 lead: Announcing LocalStack Extensions
-date: 2022-08-08T5:51:39+05:30
-lastmod: 2022-08-08T5:51:39+05:30
+date: 2022-09-06T5:51:39+05:30
+lastmod: 2022-09-06T5:51:39+05:30
 images: []
 contributors: []
 contributors: ["Harsh Mishra"]
@@ -61,11 +61,79 @@ You can also install it directly from a Git repository:
 localstack extensions install "git+https://github.com/localstack/localstack-extensions/#egg=localstack-extensions-stripe&subdirectory=stripe"
 ```
 
-## Developing LocalStack Extensions
+## Creating LocalStack Extensions
 
 We invite developers using LocalStack to mock and emulate AWS infrastructure locally to help us build an ecosystem around LocalStack Extensions. LocalStack Extensions can be created using our core Extensions API in our core codebase.
 
-{{< img src="localstack-extensions.png" >}}  
+{{< img src="localstack-extensions.png" >}}
+
+To create a new LocalStack Extension, you can use our Extensions CLI to access our developer commands that allows you to create new Extensions, and toggle local development mode for Extensions. With the developer mode toggled on, Extensions can be mounted into the LocalStack container hence you don't need to re-install them every time you change something.
+
+```bash  
+Usage: localstack extensions dev [OPTIONS] COMMAND [ARGS]...
+
+  Developer tools for developing Localstack extensions
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  disable  Disables an extension on the host for developer mode.
+  enable   Enables an extension on the host for developer mode.
+  list     List LocalStack extensions for which dev mode is enabled.
+  new      Create a new LocalStack extension from the official extension...
+```
+
+To create a new Extension, you can use the `localstack extensions dev new` command:
+
+```bash
+% localstack extensions dev new
+project_name [My LocalStack Extension]: 
+project_short_description [All the boilerplate you need to create a LocalStack extension.]: 
+project_slug [my-localstack-extension]: 
+module_name [my_localstack_extension]: 
+full_name [Jane Doe]: 
+email [jane@example.com]: 
+github_username [janedoe]: 
+version [0.1.0]: 
+```
+
+It will kick-start your all-new LocalStack Extension project with all the boilerplate code you need to get started with. 
+
+```sh 
+my-localstack-extension
+├── Makefile
+├── my_localstack_extension
+│   ├── extension.py
+│   └── __init__.py
+├── README.md
+├── setup.cfg
+└── setup.py
+```
+
+You can then run `make install` in the newly created project to make a distribution package. To start developing your Extension and mount it into the LocalStack container, use the `localstack extensions dev enable` command:
+
+```sh 
+localstack extensions dev enable ./my-localstack-extension
+```
+
+Start LocalStack with `EXTENSIONS_DEV_MODE=1` to mount the Extension into the LocalStack container:
+
+```sh
+EXTENSION_DEV_MODE=1 LOCALSTACK_API_KEY=... localstack start
+```
+
+You will notice the following in your logs when the Extension is mounted into the LocalStack container:
+
+```sh
+==================================================
+👷 LocalStack extension developer mode enabled 🏗
+- mounting extension /opt/code/extensions/my-localstack-extension
+Resuming normal execution, ...
+==================================================
+```
+
+## What's next?
 
 To further look into the developer docs to build new LocalStack Extensions, look into our [developer documentation](https://docs.localstack.cloud/developer-guide/localstack-extensions/) and [API code](https://github.com/localstack/localstack/tree/master/localstack/extensions).
 
