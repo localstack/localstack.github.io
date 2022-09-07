@@ -35,6 +35,7 @@ Options:
   --help  Show this message and exit.
 
 Commands:
+  dev        Developer tools for developing Localstack extensions
   init       Initialize the LocalStack extensions environment
   install    Install a LocalStack extension
   uninstall  Remove a LocalStack extension
@@ -42,7 +43,7 @@ Commands:
 
 ## Using LocalStack Extensions?
 
-LocalStack Extensions is a Python application that runs together with LocalStack in the LocalStack container. LocalStack Extensions allows you to hook into different lifecycle phases of LocalStack and execute custom code or modify LocalStack’s HTTP gateway with custom routes and server-side code.
+LocalStack Extensions is a Python application that runs alongside the main process in the LocalStack Docker container. LocalStack Extensions allows you to hook into different lifecycle phases of LocalStack and execute custom code or modify LocalStack’s HTTP gateway with custom routes and server-side code.
 
 We have the following extensions handy for our users to get started with:
 
@@ -67,7 +68,7 @@ We invite developers using LocalStack to mock and emulate AWS infrastructure loc
 
 {{< img src="localstack-extensions.png" >}}
 
-To create a new LocalStack Extension, you can use our Extensions CLI to access our developer commands that allows you to create new Extensions, and toggle local development mode for Extensions. With the developer mode toggled on, Extensions can be mounted into the LocalStack container hence you don't need to re-install them every time you change something.
+To create a new LocalStack Extension, you can use our Extensions CLI to access our developer commands that allows you to create new Extensions, and toggle local development mode for Extensions. With the developer mode toggled on, Extensions can be mounted into the LocalStack container, hence you don't need to re-install them every time you change something.
 
 ```bash  
 Usage: localstack extensions dev [OPTIONS] COMMAND [ARGS]...
