@@ -1,14 +1,16 @@
 ---
 title: Announcing LocalStack Extensions
-description: Announcing LocalStack Extensions
-lead: Announcing LocalStack Extensions
-date: 2022-09-06T5:51:39+05:30
-lastmod: 2022-09-06T5:51:39+05:30
+description: "With LocalStack 1.0 we have introduced LocalStack Extensions that allow developers to extend and customize LocalStack. You can now use Extensions to add new services, extend existing services, and even add custom functionality."
+lead: "With LocalStack 1.0 we have introduced LocalStack Extensions that allow developers to extend and customize LocalStack. You can now use Extensions to add new services, extend existing services, and even add custom functionality."
+date: 2022-09-12T5:51:39+05:30
+lastmod: 2022-09-12T5:51:39+05:30
 images: []
-contributors: []
-contributors: ["Harsh Mishra"]
+contributors: ["Harsh Mishra", "Thomas"]
 tags: ['news']
+leadimage: "localstack-extensions-cover.png"
 ---
+
+{{< img src="localstack-extensions-cover.png" >}}
 
 With the LocalStack 1.0 General Availability going live last month, we announced LocalStack Extensions! LocalStack Extensions allow users to extend and customize LocalStack using pluggable Python distributions.
 
