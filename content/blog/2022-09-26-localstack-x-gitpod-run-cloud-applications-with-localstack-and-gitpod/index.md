@@ -90,6 +90,8 @@ Let’s dive into some of the technical details of this example, and how to run 
 
 Congratulations 🎉 Now, you are ready to develop and run cloud applications using Gitpod and LocalStack. You can also watch the following video, which thoroughly walks you through the whole process:
 
+{{< youtube CihxsFcHyEk >}}
+
 ## Key Benefits
 
 There are a number of key benefits of using Gitpod and LocalStack to develop cloud applications:
