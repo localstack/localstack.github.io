@@ -16,17 +16,18 @@ Shipping applications to production requires them to be battle-tested in the dev
 Imagine configuring your project and provisioning these cloud resources in a test environment every time for developing new features. It’s a tiring and time-consuming cycle 😫 -- making the entire development and test feedback loop slow and inefficient.
 
 Developing and running cloud applications is simplified with Gitpod and LocalStack ✨ Gitpod’s fully automated, ephemeral workspaces provide a great developer experience. When you open a new workspace, all the required tools and packages get installed. You can also parallelly work on features in multiple ephemeral workspaces, which can be shared with your peers.
+
 LocalStack accelerates your dev and test feedback loop. It provides you with a fully functional local AWS cloud stack that gives immediate feedback on your changes without waiting on cloud resources. This saves you time and resources.
 
 In this blog, we describe how you can leverage Gitpod and LocalStack to set up a cloud development workspace without requiring access to your production cloud - allowing you to get productive within seconds.
 
-- [What is LocalStack](#What-is-LocalStack?)
+- [What is LocalStack](#what-is-localstack)
 - [What is Gitpod](#what-is-gitpod)
-- [How it works - the combined power of LocalStack and Gitpod](#How-it-works--the-combined-power-of-LocalStack-and-Gitpod)
+- [How it works - the combined power of LocalStack and Gitpod](#how-it-works---the-combined-power-of-localstack-and-gitpod)
 - [Example Scenario - Sample application on LocalStack x Gitpod](#example-scenario---sample-application-on-localstack-x-gitpod)
 - [Key Benefits](#key-benefits)
 
-# What is LocalStack?
+# What is LocalStack
 
 LocalStack is a cloud development platform that aims to turbocharge dev&test feedback loops, team collaboration, and easily reproducible ephemeral cloud environments. At its core, LocalStack provides a fully functional local AWS cloud stack that ships as a Docker image and provides some 70+ high-quality emulated cloud services (e.g., Lambda, S3, DynamoDB, etc). With LocalStack, cloud applications can be developed and executed entirely on your local machine, or in a CI pipeline or other ephemeral environment, without ever talking to the real cloud, reducing dev&test cycles from minutes to seconds.
 
@@ -34,7 +35,7 @@ LocalStack offers entirely new ways for local debugging of Lambdas and container
 
 There is also a large and growing ecosystem of tools that LocalStack natively integrates with - from Infrastructure-as-Code (IaC) frameworks like Terraform or Pulumi, to application frameworks like Serverless or Architect, to a whole suite of tools provided by AWS itself (CDK, SAM, Copilot, Chalice, etc).
 
-# What is Gitpod ?
+# What is Gitpod
 
 Gitpod is an open-source remote development platform for remote development. It provides an automated setup with cloud-based, remote developer environments connected with a developer’s [editing experience of choice](https://www.gitpod.io/docs/ides-and-editors), making developer experiences better.
 
