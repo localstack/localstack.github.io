@@ -4,7 +4,7 @@ description: Developing and running cloud applications is simplified with Gitpod
 lead: Developing and running cloud applications is simplified with Gitpod and LocalStack ✨ Gitpod’s fully automated, ephemeral workspaces provide a great developer experience. LocalStack accelerates your dev and test feedback loop.
 date: 2022-09-26T11:31:19+05:30
 lastmod: 2022-09-26T11:31:19+05:30
-contributors: ["Waldemar Hummer", "Nancy Chauhan"]
+contributors: ["Nancy Chauhan", "Waldemar Hummer"]
 tags: ['showcase']
 leadimage: "header.jpeg"
 ---
