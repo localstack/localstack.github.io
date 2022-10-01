@@ -22,7 +22,7 @@ Today, LocalStack is a flagship product on GitHub, powered by over 43,000+ starg
 
 We have also achieved the 1.0 release backed up by the support of an exciting ecosystem that is inching towards making the cloud development experience a breeze. Our contributor base has also expanded to over 400 contributors worldwide, and things are just getting started.
 
-We are now looking for more contributions from the community, whether it is a minor documentation fix, bug triaging to feature improvements. We appreciate all contributions coming in, and we are looking to support all new-time contributors who are looking to contribute through Hacktoberfest.
+We are now looking for more contributions from the community, whether it is a minor documentation fix, bug triaging, or feature improvement. We appreciate all contributions coming in, and we are looking to support all new-time contributors who are looking to contribute through Hacktoberfest.
 
 ## Getting started with Hacktoberfest
 
