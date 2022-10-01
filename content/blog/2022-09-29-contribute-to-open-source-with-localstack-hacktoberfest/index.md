@@ -55,6 +55,6 @@ We are also organizing our next community meetup on [contributing to LocalStack]
 
 ## Conclusion
 
-LocalStack’s primary aim is to become the standard platform for local cloud development. With Hacktoberfest, we are incredibly grateful to continue working on our core open-source software with new contributors, and we would love to provide you with all the support you might need. Over the entire period, we would be working closely with our new contributors and would be sharing exciting topics and updates that are coming up!
+LocalStack is on a mission to become the standard platform for local cloud development. With Hacktoberfest, we are incredibly grateful to continue working on our core open-source software with new contributors, and we would love to provide you with all the support you might need. Over the entire period, we would be working closely with our new contributors and would be sharing exciting topics and updates that are coming up!
 
 Let’s collaborate to create a superb developer experience and make cloud development fun! 🚀
