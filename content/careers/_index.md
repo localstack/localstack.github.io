@@ -5,6 +5,7 @@ date: 2021-04-29T13:40:06+02:00
 lastmod: 2021-04-29T13:40:06+02:00
 draft: false
 images: []
+aliases: ["/jobs/"]
 ---
 
 <div class="blog-tags d-flex flex-wrap gap-3">
