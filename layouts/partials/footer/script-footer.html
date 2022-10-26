@@ -1,3 +1,6 @@
+<!-- FIXME: get from node_modules -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
 {{ $indexTemplate := resources.Get "js/index.js" -}}
 {{ $index := $indexTemplate | resources.ExecuteAsTemplate "index.js" . -}}
 
@@ -88,3 +91,8 @@
     <script src="{{ $index.RelPermalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
 {{ end -}}
+
+<!-- TODO: bundle into page-specific javascript -->
+{{ range .Page.Resources.Match "*.script.js" }}
+<script src="{{ .RelPermalink }}" defer></script>
+{{ end }}
