@@ -1,0 +1,2 @@
+{{ $file := .Page.Resources.GetMatch (printf "%s" (.Get 0)) -}}
+{{ $file.Content | markdownify }}
