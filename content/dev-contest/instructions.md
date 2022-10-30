@@ -21,37 +21,42 @@ localstack start -d
 localstack wait
 ```
 
-
 #### Download the Lambda code
 
-We've prepared a Lambda function that generates a highly official looking LocalStack participation certificate for you.
-You can find the complete source code here, but can also just download from here, or using the following command:
+We've prepared a Lambda function that generates a highly official looking LocalStack local dev certificate for you.
+Definitely put it on your CV, companies will be impressed!
+
+You can find the complete source code [in our GitHub repository](https://github.com/localstack/devops-barcelona-2022/tree/main/contest),
+but you can also just download the lambda using the following command:
 
 ```bash
-wget -O cert-lambda.zip https://... TODO
+wget -O demo-lambda.zip https://github.com/localstack/devops-barcelona-2022/raw/main/contest/demo-lambda.zip
 ```
 
 #### Run the Lambda
+
+To run AWS commands, you can either use the aws CLI directly, by using `aws --endpoint-url http://localhost:4566`, or use our convenience tool `awslocal`.
+
 First we create the Lambda using the provided zip file:
 ```bash
 awslocal lambda create-function \
-        --function-name ls-lambda-func \
+        --function-name localstack-demo-lambda \
         --runtime python3.8 \
         --handler handler.handler \
-        --zip-file fileb://cert-lambda.zip \
+        --zip-file fileb://demo-lambda.zip \
         --role arn:aws:iam::000000000000:role/lambda-ex
 ```
 
 Next, we run the lambda - make sure you use the email address you provided when signing up for Localstack:
 ```bash
 awslocal lambda invoke \
-        --function-name ls-lambda-func \
+        --function-name localstack-demo-lambda \
         --payload '{"email": "thomas@localstack.cloud"}' /tmp/lambda.out
 ```
 
 Our Lambda created a new S3 bucket to save the result of our lambda - let's copy back the result to our local machine:
 ```bash
-awslocal s3 cp s3://test-bucket//certificate.pdf certificate.pdf
+awslocal s3 cp s3://localstack-demo/certificate.pdf certificate.pdf
 ```
 
 Now, open the `certificate.pdf` in your PDF viewer. 🪄📜
@@ -59,4 +64,4 @@ Now, open the `certificate.pdf` in your PDF viewer. 🪄📜
 ---
 
 **Come visit our booth with your certificate to enter the raffle for a chance to win a prize! 🏆**
-(Technically you're already in the pool, but we'd love to talk to you).
+Ok, technically you're already in the pool, but we'd love to talk to you anyway.

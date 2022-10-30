@@ -42,7 +42,7 @@ function onContestSignup() {
                 version: "1",
                 payload: JSON.stringify(payload)
             }),
-            headers: { Authorization: 'Bearer p.eyJ1IjogIjAwZDRjYzRjLTg4N2UtNGNmZS05YzY4LTJjNzMyNjE5ODdjMCIsICJpZCI6ICIzMjYzMDFiNy04NmMwLTRiMzAtOGEwZC05NzZjZjAyNzQ2MmYifQ.Zz7EPOp7wODY6ZMh-ls5tp2yrndl51flUOQIT2c1b04' }
+            headers: { Authorization: 'Bearer p.eyJ1IjogIjAwZDRjYzRjLTg4N2UtNGNmZS05YzY4LTJjNzMyNjE5ODdjMCIsICJpZCI6ICI2YzRhMDViNi1iZjVlLTRkY2QtODNlZS1jMmFjYjg5ZjQ1NzAifQ.EPdBzyAb28wUbtZacobblsMi42IwTd7d2amppDfw-jE' }
         }
     )
         .then(res => {
