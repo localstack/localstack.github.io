@@ -51,7 +51,7 @@ Next, we run the lambda - make sure you use the email address you provided when 
 ```bash
 awslocal lambda invoke \
         --function-name localstack-demo-lambda \
-        --payload '{"email": "thomas@localstack.cloud"}' /tmp/lambda.out
+        --payload '{"email": "YOUR EMAIL ADDRESS"}' /tmp/lambda.out
 ```
 
 Our Lambda created a new S3 bucket to save the result of our lambda - let's copy back the result to our local machine:
