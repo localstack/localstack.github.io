@@ -3,21 +3,21 @@ var userinput = document.getElementById('userinput');
 
 if (userinput != null) {
 
-document.addEventListener('keydown', inputFocus);
+  document.addEventListener('keydown', inputFocus);
 
-function inputFocus(e) {
+  function inputFocus(e) {
 
-  if (e.keyCode === 191 ) {
-    e.preventDefault();
-    userinput.focus();
+    if (e.keyCode === 191 ) {
+      e.preventDefault();
+      userinput.focus();
+    }
+
+    if (e.keyCode === 27 ) {
+      userinput.blur();
+      suggestions.classList.add('d-none');
+    }
+
   }
-
-  if (e.keyCode === 27 ) {
-    userinput.blur();
-    suggestions.classList.add('d-none');
-  }
-
-}
 }
 
 if (suggestions != null) {

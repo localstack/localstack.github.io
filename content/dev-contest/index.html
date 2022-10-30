@@ -1,0 +1,94 @@
+---
+title: "Develop locally & win prizes 🧙"
+subtitle: "foobar"
+lead: "Visit the LocalStack booth at DevOps Barcelona 🇪🇸 to win magical prizes 🏆."
+description: "Want to win awesome prizes while learning how easy it is to get started with local cloud dev? Join the LocalStack cloud contest at DevOps Barcelona. Sign up on this page, run a sample application using our instructions, and join the raffle for some magical prizes 🪄🏆, every participant wins! And don't forget to visit our booth at DevOps Barcelona 🇪🇸"
+date: 2020-08-27T19:25:12+02:00
+lastmod: 2020-08-27T19:25:12+02:00
+draft: false
+images: []
+layout: "heroclouds"
+---
+
+<section class="container mt-n11">
+    <div class="row">
+        <div class="col ">
+            <img alt="contest flyer front side" class="img-fluid" src="flyer-front.png">
+        </div>
+        <div class="col ">
+            <img alt="contest flyer back side" class="img-fluid" src="flyer-back.png">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div id="contestSignupFormContainer" class="container overlay-card mt-6 pb-5 d-flex flex-column align-items-center">
+        <h2 class="text-center">Join the raffle!</h2>
+        <form onsubmit="onContestSignup(); return false" id="contestSignupForm">
+            <div class="mb-3">
+                <p>
+                    Please fill out the basic information below to enter the raffle and receive the contest instructions.
+                </p>
+            </div>
+            <div class="mb-3">
+                <label for="fullName" class="form-label" hidden>Your Name</label>
+                <div class="input-group flex-nowrap">
+                    <input required type="text" class="contact-textbox" name="fullName" id="fullName"  placeholder="Full name">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="signupEmail" class="form-label">If you already have a Localstack account, please use the email of your account, so we can add the free team license to it!</label>
+                <div class="input-group flex-nowrap">
+                    <input required type="email" class="contact-textbox" name="signupEmail" id="signupEmail" aria-describedby="email-help"  placeholder="E-mail">
+                </div>
+                <div id="email-help" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="form-check form-control mb-1">
+                <input class="form-check-input" type="checkbox" value="" name="hasLocalstackAccount" id="hasLocalstackAccount">
+                <label class="form-check-label" for="hasLocalstackAccount">I already have an <a href="https://app.localstack.cloud">app.localstack.cloud</a> account.</label>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary btn-tertiary">
+                    <span class="spinner-border spinner-border-sm" hidden role="status" aria-hidden="true"></span>
+                    Show me the instructions!
+                </button>
+            </div>
+            <hr/>
+            <div class="form-check form-control-sm mb-1">
+                <input class="form-check-input" type="checkbox" value="" id="acceptPrivacyPolicy" required>
+                <label class="form-check-label" for="acceptPrivacyPolicy">I have read and accept the <a href="/terms/">Terms and Conditions</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.
+                </label>
+            </div>
+            <div class="form-check form-control-sm mb-3">
+                <input class="form-check-input" type="checkbox" value="" name="newsletter" id="newsletter">
+                <label class="form-check-label" for="newsletter">
+                    I would like to receive occasional product updates for LocalStack.
+                </label>
+            </div>
+        </form>
+    </div>
+    <div id="contestSignupInfoContainer" class="d-none">
+        <div class="overlay-card mt-6 pb-5 d-flex flex-column container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-7">
+                    <h2 class="mb-3">You're almost there!</h2>
+                    <p class="">
+                        Thanks for participating
+                        <span id="contest-signup-fullName" class="fw-bold text-primary">Name</span>,
+                        you're signed up with
+                        <span id="contest-signup-signupEmail" class="fw-bold text-primary">email</span>.
+                    </p>
+                    <p>
+                        Now complete the challenge to join the raffle!
+                    </p>
+                </div>
+                <div class="col-12  col-md-6 col-lg-5">
+                    <img alt="AWS on your laptop" class="img-fluid" src="diagram.png">
+                </div>
+            </div>
+            <h3 class="">Instructions</h3>
+            <hr>
+            {{% include "instructions.md" %}}
+        </div>
+    </div>
+</section>
