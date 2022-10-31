@@ -48,7 +48,18 @@ awslocal lambda create-function \
 ```
 
 Next, we run the lambda - make sure you use the email address you provided when signing up for Localstack:
+
 ```bash
+# aws-cli v1
+awslocal lambda invoke \
+        --function-name localstack-demo-lambda \
+        --payload '{"email": "YOUR EMAIL ADDRESS"}' /tmp/lambda.out
+```
+
+If you're using the **aws-cli v2** you will need to add `--cli-binary-format raw-in-base64-out`
+
+```bash
+# aws-cli v2
 awslocal lambda invoke \
         --cli-binary-format raw-in-base64-out \
         --function-name localstack-demo-lambda \
