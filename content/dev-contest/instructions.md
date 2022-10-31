@@ -41,7 +41,7 @@ First we create the Lambda using the provided zip file:
 ```bash
 awslocal lambda create-function \
         --function-name localstack-demo-lambda \
-        --runtime python3.8 \
+        --runtime python3.9 \
         --handler handler.handler \
         --zip-file fileb://demo-lambda.zip \
         --role arn:aws:iam::000000000000:role/lambda-ex
@@ -50,6 +50,7 @@ awslocal lambda create-function \
 Next, we run the lambda - make sure you use the email address you provided when signing up for Localstack:
 ```bash
 awslocal lambda invoke \
+        --cli-binary-format raw-in-base64-out \
         --function-name localstack-demo-lambda \
         --payload '{"email": "YOUR EMAIL ADDRESS"}' /tmp/lambda.out
 ```
