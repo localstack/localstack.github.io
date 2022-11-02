@@ -24,11 +24,17 @@ Definitely put it on your CV, companies will be impressed!</p><p>You can find th
 but you can also just download the lambda using the following command:</p><pre><code class=language-bash>wget -O demo-lambda.zip https://github.com/localstack/devops-barcelona-2022/raw/main/contest/demo-lambda.zip
 </code></pre><h4 id=run-the-lambda>Run the Lambda</h4><p>To run AWS commands, you can either use the aws CLI directly, by using <code>aws --endpoint-url http://localhost:4566</code>, or use our convenience tool <code>awslocal</code>.</p><p>First we create the Lambda using the provided zip file:</p><pre><code class=language-bash>awslocal lambda create-function \
         --function-name localstack-demo-lambda \
-        --runtime python3.8 \
+        --runtime python3.9 \
         --handler handler.handler \
         --zip-file fileb://demo-lambda.zip \
         --role arn:aws:iam::000000000000:role/lambda-ex
-</code></pre><p>Next, we run the lambda - make sure you use the email address you provided when signing up for Localstack:</p><pre><code class=language-bash>awslocal lambda invoke \
+</code></pre><p>Next, we run the lambda - make sure you use the email address you provided when signing up for Localstack:</p><pre><code class=language-bash># aws-cli v1
+awslocal lambda invoke \
+        --function-name localstack-demo-lambda \
+        --payload '{&quot;email&quot;: &quot;YOUR EMAIL ADDRESS&quot;}' /tmp/lambda.out
+</code></pre><p>If you&rsquo;re using the <strong>aws-cli v2</strong> you will need to add <code>--cli-binary-format raw-in-base64-out</code></p><pre><code class=language-bash># aws-cli v2
+awslocal lambda invoke \
+        --cli-binary-format raw-in-base64-out \
         --function-name localstack-demo-lambda \
         --payload '{&quot;email&quot;: &quot;YOUR EMAIL ADDRESS&quot;}' /tmp/lambda.out
 </code></pre><p>Our Lambda created a new S3 bucket to save the result of our lambda - let&rsquo;s copy back the result to our local machine:</p><pre><code class=language-bash>awslocal s3 cp s3://localstack-demo/certificate.pdf certificate.pdf
