@@ -71,7 +71,7 @@ Our Lambda created a new S3 bucket to save the result of our lambda - let's copy
 awslocal s3 cp s3://localstack-demo/certificate.pdf certificate.pdf
 ```
 
-Now, open the `certificate.pdf` in your PDF viewer. 🪄📜
+Now, open the `certificate.pdf` in your PDF viewer. 🪄📜 (Note: Some PDF viewers like MacOS Preview may not display the certificate correctly - if you cannot see your email address, please try a different viewer 🙂 ).
 
 ---
 
