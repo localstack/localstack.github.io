@@ -16,7 +16,7 @@ you're signed up with
 AWS Lambda and S3 are some of the most used Cloud services, and running Lambdas and letting them access S3 Buckets in LocalStack is easy as pie!</p><h4 id=get-ready>Get Ready</h4><p>All you need is <a href=https://docs.docker.com/get-docker/>Docker</a>, <a href=https://docs.python.org/3/using/index.html>Python</a>, and <a href=https://pip.pypa.io/en/stable/installation/>pip</a> installed on your machine.
 If you want to the full picture, you can read our <a href=https://docs.localstack.cloud/get-started/>Get Started guide</a>.
 Keep reading for the fast track!</p><p>Next, we will download <code>localstack</code> and <code>awslocal</code>, which makes working with LocalStack much easier:</p><pre><code class=language-bash>docker pull localstack/localstack
-pip install localstack awscli-local
+pip install localstack awscli-local[ver1]
 </code></pre><p>To start LocalStack in the background and wait for it to start, simply run:</p><pre><code class=language-bash>localstack start -d
 localstack wait
 </code></pre><h4 id=download-the-lambda-code>Download the Lambda code</h4><p>We&rsquo;ve prepared a Lambda function that generates a highly official looking LocalStack local dev certificate for you.
