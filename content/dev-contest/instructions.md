@@ -11,7 +11,7 @@ Next, we will download `localstack` and `awslocal`, which makes working with Loc
 
 ```bash
 docker pull localstack/localstack
-pip install localstack awscli-local
+pip install localstack awscli-local[ver1]
 ```
 
 To start LocalStack in the background and wait for it to start, simply run:
