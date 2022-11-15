@@ -44,7 +44,7 @@ To renew your license, please send an email to [info@localstack.cloud](mailto:in
 
   Please fill up the form above with a school-issued email address or relevant documents (like a school-issue bonafide certificate or your ID card).
 
-- Can students who are participating in a bootcamp/training program/online coursework get free    access?
+- Can students who are participating in a bootcamp/training program/online coursework get free access?
 
   No, students who are participating in a bootcamp/training program cannot get free access to LocalStack. We are currently offering free license only for students who are enrolled in an accredited educational program that takes one or more years of full-time study to complete.
 
