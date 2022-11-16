@@ -31,34 +31,34 @@
               <div class="d-flex justify-content-between align-items-center">
                 <h4 class="m-0">{{ .Params.question | safeHTML }}</h4>
                 <a class="stretched-link" data-bs-toggle="collapse" href="#collapse-card-{{.Params.id}}">
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    opacity="0.2"
-                    cx="25"
-                    cy="25"
-                    r="24.5"
-                    transform="rotate(-90 25 25)"
-                    stroke="#1B183E"
-                  />
-                  <path
-                    d="M24.2926 30.7073C24.6832 31.0978 25.3163 31.0978 25.7069 30.7073L32.0708 24.3433C32.4613 23.9528 32.4613 23.3196 32.0708 22.9291C31.6803 22.5386 31.0471 22.5386 30.6566 22.9291L24.9998 28.5859L19.3429 22.9291C18.9524 22.5386 18.3192 22.5386 17.9287 22.9291C17.5382 23.3196 17.5382 23.9528 17.9287 24.3433L24.2926 30.7073ZM23.9998 28.3335L23.9998 30.0002L25.9998 30.0002L25.9998 28.3335L23.9998 28.3335Z"
-                    fill="#1B183E"
-                  />
-                </svg>
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      opacity="0.2"
+                      cx="25"
+                      cy="25"
+                      r="24.5"
+                      transform="rotate(-90 25 25)"
+                      stroke="#1B183E"
+                    />
+                    <path
+                      d="M24.2926 30.7073C24.6832 31.0978 25.3163 31.0978 25.7069 30.7073L32.0708 24.3433C32.4613 23.9528 32.4613 23.3196 32.0708 22.9291C31.6803 22.5386 31.0471 22.5386 30.6566 22.9291L24.9998 28.5859L19.3429 22.9291C18.9524 22.5386 18.3192 22.5386 17.9287 22.9291C17.5382 23.3196 17.5382 23.9528 17.9287 24.3433L24.2926 30.7073ZM23.9998 28.3335L23.9998 30.0002L25.9998 30.0002L25.9998 28.3335L23.9998 28.3335Z"
+                      fill="#1B183E"
+                    />
+                  </svg>
                 </a>
               </div>
               <div class="collapse" id="collapse-card-{{.Params.id}}">
-                <div class="d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-3 position-relative" style="z-index: 2;">
                     <hr>
                 {{ .Content }}
                 </div>
-            </div>  
+              </div>  
             </div>
           </div>
         </div>
