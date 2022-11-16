@@ -8,6 +8,7 @@ images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
 leadimage: "announcing-localstack-v1-milestone.png"
+weight: 1
 ---
 
 {{< img src="announcing-localstack-v1-milestone.png" >}}

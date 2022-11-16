@@ -7,7 +7,7 @@
         <article>
             <div class="text-center">{{ .Content }}</div>
             <div class="card-list d-flex flex-column gap-1">
-              {{ range .Data.Pages -}}
+              {{ range .Pages -}}
 
                 {{ $tagClass := (delimit .Params.tags " tag-") }}
                 <div class="card tag-{{ $tagClass }} tag-all">
@@ -23,6 +23,13 @@
                           {{ range .Params.tags }}
                             <div class="btn btn-primary btn-pill bg-purple text-uppercase">{{ . }}</div>
                           {{ end -}}
+                          {{ with .Params.weight }}
+                            <div class="btn btn-outline-primary rounded-pill h-100">
+                              <div style="margin-top: -2px">
+                                📌
+                              </div>
+                            </div>
+                          {{end}}
                         </div>
                         <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
                         <p>{{ .Params.lead | safeHTML }}</p>
