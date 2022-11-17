@@ -8,6 +8,7 @@ images: []
 contributors: ["Harsh Mishra", "Thomas"]
 tags: ['news']
 leadimage: "localstack-extensions-cover.png"
+weight: 4
 ---
 
 {{< img src="localstack-extensions-cover.png" >}}
