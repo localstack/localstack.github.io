@@ -15,7 +15,7 @@ To obtain sponsorship for a project, confirm that the criteria below are satisfi
 
 We have some minor eligibility criteria for open-source projects to be eligible for sponsorship. Please confirm that the following criteria are satisfied:
 
-- The project should be open-source and available on a publically accessible repository.
+- The project should be open-source and available on a publicly accessible repository.
 - The project should be non-commercial and not-for-profit.
 - The project should have a LocalStack banner in the source repository's `README` file or on the documentation.
 - The project should have a link to [LocalStack](https://localstack.cloud/) on the project's `README` file or the website.
