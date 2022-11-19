@@ -20,7 +20,7 @@ We have some minor eligibility criteria for open-source projects to be eligible 
 - The project should have a LocalStack banner in the source repository's `README` file or on the documentation.
 - The project should have a link to [LocalStack](https://localstack.cloud/) on the project's `README` file or the website.
 
-If your project meets the terms of this eligibility criteria, don't hesitate to contact us at the above mail address. To renew your license, please send us a reminder mail on the same mail thread to allow us to renew your license.
+If your project meets the terms of these eligibility criteria, don't hesitate to contact us at the above mail address. To renew your license, please send us a reminder mail on the same mail thread to allow us to renew your license.
 
 ## Frequently asked questions
 
