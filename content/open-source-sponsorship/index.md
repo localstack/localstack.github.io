@@ -13,7 +13,7 @@ To obtain sponsorship for a project, confirm that the criteria below are satisfi
 
 ## Eligibility criteria
 
-We have some minor eligibility criteria for open-source projects to be eligible for sponsorship. Please confirm that the following criteria are satisfied:
+We define the following criteria for open-source projects to be eligible for sponsorship:
 
 - The project should be open-source and available on a publicly accessible repository.
 - The project should be non-commercial and not-for-profit.
