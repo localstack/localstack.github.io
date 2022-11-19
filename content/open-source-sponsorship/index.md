@@ -1,6 +1,6 @@
 ---
 title : "Open Source Sponsorship"
-description: "Open-Source projects and maintainers can avail 12-months free access to LocalStack Pro to support the development, testing, and adopting of open-source projects"
+description: "Open-Source projects and maintainers can avail 12-months free access to LocalStack Pro to support the development, testing, and adoption of open-source projects"
 date: 2022-11-15
 lastmod: 2020-11-15
 draft: false
