@@ -1,2 +1,2 @@
 baseurl = "https://localstack.cloud/"
-canonifyURLs = true
+canonifyURLs = false
