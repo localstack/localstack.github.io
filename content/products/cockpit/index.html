@@ -122,14 +122,14 @@ images: []
             </div>
             <div class="modal-body">
                 <form method="POST" action="{{ .Site.Params.localStackApiEndpoint }}" id="cockpitDownloadForm">
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="version" class="form-label"><strong>Version:</strong></label>
                         <select class="form-control" id="version">
                             <option value="v0.2.0" selected>Latest: v0.2.0 (beta)</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <span class="form-label">Platform: </span>
+                    <div class="mb-4">
+                        <span class="form-label"><strong>Platform:</strong></span>
                         <div class="input-group">
                             <input data-platform="Win32" value="cockpit/v0.2.0/LocalStack Cockpit 0.2.0.exe"
                                 type="radio" class="btn-check" name="artifact" id="artifact-windows" autocomplete="off"
@@ -154,14 +154,13 @@ images: []
                             <label class="btn btn-outline-primary rounded-0" for="artifact-linux">Linux (AppImage)</label>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Please enter your email address, so we can send you a
-                            download link.</label>
+                    <div class="mb-4">
+                        <label for="email" class="form-label"><strong>Email:</strong></label>
                         <div class="input-group flex-nowrap">
-                            <input type="email" class="contact-textbox" name="email" id="email"
+                            <input type="email" class="form-control" name="email" id="email"
                                 aria-describedby="email-help" required placeholder="E-mail">
                         </div>
-                        <div id="email-help" class="form-text">We'll never share your email with anyone else.</div>
+                        <div id="email-help" class="form-text">We'll never share your email with anyone else and only use it to send you a download link.</div>
                     </div>
                     <div class="form-check form-control-sm mb-1">
                         <input class="form-check-input" type="checkbox" value="" id="acceptPrivacyPolicy" required>
@@ -170,17 +169,17 @@ images: []
                                 href="/privacy-policy/" target="_blank">Privacy Policy</a>.
                         </label>
                     </div>
-                    <div class="form-check form-control-sm mb-3">
+                    <div class="form-check form-control-sm mb-1">
                         <input class="form-check-input" type="checkbox" value="" name="newsletter" id="newsletter">
                         <label class="form-check-label" for="newsletter">
                             I would like to receive occasional product updates for LocalStack.
                         </label>
                     </div>
+                    <div class="form-control-sm mb-1">By clicking <i>Send download link</i> you consent to allow LocalStack GmbH to 
+                        store and process the personal information submitted above to provide you the requested content.</div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary btn-tertiary">Send download link</button>
                     </div>
-                    <div class="fs-6 form-text mb-3">By clicking 'Send download link', you consent to allow LocalStack GmbH to 
-                        store and process the personal information submitted above to provide you the requested content.</div>
                 </form>
             </div>
         </div>
