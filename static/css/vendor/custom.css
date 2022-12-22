@@ -195,7 +195,6 @@ tr.no-border-bottom td {
 
 .form-control {
   background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
   border-radius: 10px !important;
   padding: 15px 20px !important;
 }
