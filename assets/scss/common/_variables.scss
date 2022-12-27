@@ -71,7 +71,10 @@ $body-color:                #1B183E;
 // Style anchor elements.
 
 $link-color:                              $primary;
-$link-decoration:                         none;
+$link-decoration:                         underline !default;
+$link-shade-percentage:                   100% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:                   null !default;
 
 $grid-breakpoints: (
   xs: 0,
