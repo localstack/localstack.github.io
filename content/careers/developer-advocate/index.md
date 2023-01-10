@@ -12,6 +12,8 @@ location: "Remote"
 department: "Tech"
 ---
 
+### About
+
 <h4 id="backend-dev">Open Source Developer Advocate / DevRel Engineer</h4>
 <h5>About You</h5>
 <p>
@@ -28,10 +30,10 @@ If you are -- then you might be a great fit for LocalStack!
 This is a truly <b>unique opportunity</b> to work with the global developer community and shape the future of cloud application development.
 </p>
 
-<h5>About LocalStack</h5>
-<p>
-At LocalStack, weâ€™re building world-class tooling to support highly efficient dev&test loops for cloud application developers. Our core product is the LocalStack cloud emulator - a light-weight cloud sandbox running in Docker that allows our users to develop cloud applications entirely on their local machines. LocalStack has an extremely large and active open source community (31k+ stars on Github) with several 100k active users worldwide. With a growing international customer base for our Pro and Enterprise offerings as well as a growing team of top-notch engineers and BizDev experts, we are on an exciting growth journey to become the world's leading platform for local cloud software development.
-</p>
+### About LocalStack
+
+{{< jobs/about-localstack >}}
+
 
 <h5>About the role</h5>
 <p>
@@ -79,10 +81,6 @@ We offer a highly dynamic, productive, and flexible work environment, where youâ
 We strive to provide a flexible work environment, and can accommodate flexible work hours (and timezones). We focus on output rather than process, and try to keep things as lean and agile as possible, to achieve the best possible efficiency and velocity. We are currently working in a remote setup spread across different geos - with the majority of the core team based in Zurich/Switzerland and Vienna/Austria.
 </p>
 
-<h5>Getting in touch</h5>
-<p>
-  If you think this could be a good match, please send us an email with your
-  CV/portfolio (past projects, Github profile) to
-  <a href="mailto:info@localstack.cloud">info@localstack.cloud</a>.
-  We very much look forward to getting to know you!
-</p>
+### Apply
+
+{{< jobs/apply-action >}}

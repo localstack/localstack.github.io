@@ -54,6 +54,6 @@ We offer an energetic, dynamic, productive, and flexible work environment, where
 
 We provide a remote-friendly work environment, and can accommodate flexible work hours (and timezones). We focus on output rather than process, and try to keep things as lean and agile as possible, to achieve the best possible efficiency and velocity. We are currently working in a remote setup spread across different geos - with part of the core team based in Zurich/Switzerland and Vienna/Austria, and remote locations around the world.
 
-### Get in touch
+### Apply
 
-If you think this could be a good match, please send your CV/portfolio to <a href="mailto:info@localstack.cloud">info@localstack.cloud</a>. We very much look forward to getting to know you!
+{{< jobs/apply-action >}}
