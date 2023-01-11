@@ -1,7 +1,7 @@
 ---
 id: ci-credits
 question: "How many CI Credits do I get?"
-tags: ['Application']
+tags: ['application']
 ---
 
 Your CI key offers a certain monthly number of available credits, depending on the number of individual user seats you have purchased. Each subscription (both Pro and Team) comes with the number of chosen individual developer keys to be configured on each developer's machine, plus one extra CI key (at no additional charge) which allows you to use LocalStack in your CI environment.

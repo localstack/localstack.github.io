@@ -49,5 +49,14 @@
 </section>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if(window.location.hash) {
+      var anchor = window.location.hash.substring(1)
+      var filterButton = document.getElementById(anchor + 'FilterButton')
+      if (filterButton) {
+        toggleTag(anchor)
+      }
+    }
+  }, false);  
 </script>
 {{ end }}

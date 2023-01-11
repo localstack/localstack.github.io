@@ -4,12 +4,12 @@
 <section class="section section-sm mb-4">
   <div class="container mt-5">
     <div class="blog-tags d-flex flex-wrap gap-3">
-      <button onclick="toggleTag('all')" id="allFilterButton" class="btn btn-primary bg-purple btn-pill filterButton">ALL TOPICS</button>
-      <button onclick="toggleTag('General')" id="GeneralFilterButton" class="btn btn-outline-primary btn-pill filterButton">GENERAL</button>
-      <button onclick="toggleTag('Pricing')" id="PricingFilterButton" class="btn btn-outline-primary btn-pill filterButton">PRICING</button>
-      <button onclick="toggleTag('Application')" id="ApplicationFilterButton" class="btn btn-outline-primary btn-pill filterButton">APPLICATION</button>
-      <button onclick="toggleTag('Product')" id="ProductFilterButton" class="btn btn-outline-primary btn-pill filterButton">PRODUCT</button>
-      <button onclick="toggleTag('Miscellaneous')" id="MiscellaneousFilterButton" class="btn btn-outline-primary btn-pill filterButton">MISCELLANEOUS</button>
+      <a href="#all"><button onclick="toggleTag('all')" id="allFilterButton" class="btn btn-primary bg-purple btn-pill filterButton">ALL TOPICS</button></a>
+      <a href="#general"><button onclick="toggleTag('general')" id="generalFilterButton" class="btn btn-outline-primary btn-pill filterButton">GENERAL</button></a>
+      <a href="#pricing"><button onclick="toggleTag('pricing')" id="pricingFilterButton" class="btn btn-outline-primary btn-pill filterButton">PRICING</button></a>
+      <a href="#application"><button onclick="toggleTag('application')" id="applicationFilterButton" class="btn btn-outline-primary btn-pill filterButton">APPLICATION</button></a>
+      <a href="#product"><button onclick="toggleTag('product')" id="productFilterButton" class="btn btn-outline-primary btn-pill filterButton">PRODUCT</button></a>
+      <a href="#miscellaneous"><button onclick="toggleTag('miscellaneous')" id="miscellaneousFilterButton" class="btn btn-outline-primary btn-pill filterButton">MISCELLANEOUS</button></a>
     </div>
   </div>
 </section>
@@ -29,8 +29,8 @@
                             {{ end -}}
                           </div> -->
               <div class="d-flex justify-content-between align-items-center">
-                <h4 class="m-0">{{ .Params.question | safeHTML }}</h4>
-                <a class="stretched-link" data-bs-toggle="collapse" href="#collapse-card-{{.Params.id}}">
+                <a class="stretched-link w-100 d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#collapse-card-{{.Params.id}}">
+                  <h4 class="m-0">{{ .Params.question | safeHTML }}</h4>
                   <svg
                     width="50"
                     height="50"
@@ -53,7 +53,7 @@
                   </svg>
                 </a>
               </div>
-              <div class="collapse" id="collapse-card-{{.Params.id}}">
+              <div class="collapse" id="collapse-card-{{.Params.id}}" style="padding-top: 15rem; margin-top: -15rem;">
                 <div class="d-flex flex-column gap-3 position-relative" style="z-index: 2;">
                     <hr>
                 {{ .Content }}
@@ -67,4 +67,20 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if(window.location.hash) {
+      var anchor = window.location.hash.substring(1)
+      var filterButton = document.getElementById(anchor + 'FilterButton')
+      if (filterButton) {
+        toggleTag(anchor)
+      } else {
+        var card = document.getElementById(anchor)
+        card.classList.add('show')
+      }
+    }
+  }, false);
+</script>
+
 {{ end }}

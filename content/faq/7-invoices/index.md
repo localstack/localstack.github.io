@@ -1,7 +1,7 @@
 ---
 id: invoices
 question: "Where can I find my invoices?"
-tags: ['Application']
+tags: ['application']
 ---
 
 You can find your entire invoice history in your account details at [Account billing section](https://app.localstack.cloud/account#billing).
