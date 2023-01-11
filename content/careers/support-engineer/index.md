@@ -51,9 +51,9 @@ Specifically, you will be able to
   * Strong written communication skills
   * A strong focus on customer experience and satisfaction
   * Understanding of first-level support processes (ITIL framework)
-  * Experience in technical support or customer-facing role, with at least 2 years of experience
+  * Experience in technical support or customer-facing role, with at least 2+ years of experience
 * Technical Skills:
-  * Understanding of software engineering processes
+  * Understand software engineering processes
   * The ability to read and analyze application logs
   * Strong attention to detail
 * Teamwork and Self-Management:
@@ -74,7 +74,7 @@ Specifically, you will be able to
 
 As a Support Engineer in LocalStack, you will have the opportunity to work with cutting-edge technologies and help customers to achieve success with our platform. In our rapidly growing company, we offer exceptional opportunities for professional development and the chance to have a significant impact on our future success.
 
-In addition to a competitive salary and flexible working environment, we offer a bonus system called "LocalStack Perks" which nurtures your performance. Furthermore, we provide a generous vacation policy to ensure you have enough time to recharge.
+In addition to a competitive salary and flexible working environment, we offer a bonus system called “LocalStack Perks” which nurtures your performance. Furthermore, we provide a generous vacation policy to ensure you have enough time to recharge.
 
 Join our team and shape the future of cloud software development!
 
