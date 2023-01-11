@@ -27,21 +27,20 @@ As a support engineer, you help our customers achieve success with LocalStack by
 Support engineers are deeply embedded into the engineering team and act as the nexus between our growing user base and our core developers. We have an active Slack workspace with over 19 000 users, with Slack and GitHub support processes in place.
 
 Many of our professional users have a diverse tech stack, where they integrate different types of Cloud application tools with LocalStack.
-It is possible to encounter issues ranging from simple configuration mishaps to complex integration challenges that require analytical skills and a good understanding of cloud development tooling.
-Most of our users are highly technical, and each user issue is an opportunity for improvement.
+Our users are highly technical, and each user issue is an opportunity for improvement.
 It can include improving documentation, requesting the help of engineers to fix bugs, or offering suggestions for new features.
 
 You can be a driving force in making cloud development fun again, and we would love to have you on the team!
 
 ### What you do
 
-You will utilize your technical problem-solving and communication skills to help LocalStack users (Pro and Enterprise) be successful with our product.
+You will utilize your technical problem-solving and communication skills to help LocalStack users be successful with our product.
 Specifically, you will be able to
 
 * Work hands-on with LocalStack users to help them get the most out of the platform
 * Providing customers with step-by-step guidance and samples to resolve technical problems
-* Manage cases throughout the entire support lifecycle, from initial customer inquiry to triage, reproduction, prioritizing, writing bug reports, and handing them off to developers
-* Help shape our product direction by getting customer feedback back to the developer and product team
+* Manage cases throughout the entire support lifecycle
+* Help to shape our product
 * Assist our LocalStack team with internal support
 
 ### Your profile
@@ -59,8 +58,8 @@ Specifically, you will be able to
   * Strong attention to detail
 * Teamwork and Self-Management:
   * Good time management skills
-  * Ability to work collaboratively within a team-oriented setting
-  * Ability to quickly acquire new knowledge and skills
+  * Able to work collaboratively within a team
+  * Fast learner
 
 #### Nice-to-have
 
