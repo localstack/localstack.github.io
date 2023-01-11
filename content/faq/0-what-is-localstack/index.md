@@ -1,7 +1,7 @@
 ---
 id: what-is-localstack
 question: "What is LocalStack?"
-tags: ['General']
+tags: ['general']
 ---
 
 LocalStack is a platform that simplifies and accelerates development of cloud applications. At its core, LocalStack provides a cloud service emulation layer that runs in a single container on your laptop or in your CI environment. With LocalStack, you can run your AWS services or Lambdas entirely on your local machine without connecting to a remote cloud provider.

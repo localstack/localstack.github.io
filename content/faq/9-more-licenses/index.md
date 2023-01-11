@@ -1,7 +1,7 @@
 ---
 id: more-licenses
 question: "Where can I add more licenses?"
-tags: ['Application']
+tags: ['application']
 ---
 
 You can create new subscriptions on [Account billing section](https://app.localstack.cloud/account#billing) by using the **+ ADD NEW PLAN** button.

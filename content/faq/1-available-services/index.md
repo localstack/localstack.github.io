@@ -1,7 +1,7 @@
 ---
 id: available-services
 question: "Which services are available and how well are the services covered?"
-tags: ['General']
+tags: ['general']
 ---
 
 The overview of different usage tiers (Open Source, Pro, Enterprise) can be found at [LocalStack Features page](/features/)

@@ -14,3 +14,46 @@
 ></script>
 
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26596507.js"></script>
+
+<script>
+// will hide all elements which tag-${tag} as className
+// requires you to add the tag-${tag} to your elements
+// can be done like this, assuming .tags is a string array, check out blog/list.html
+// dont forget tag-all for resetting the filter
+// also sets correct classes on the buttons for filtering based on id: ${tag}FilterButton
+// requires you to add the filterButton class to your buttons, and ${tag}FilterButton as the id for these buttons
+function toggleTag(tag) {
+  const fullTag = 'tag-' + tag
+
+  if (fullTag !== 'tag-all') {
+    const hideElems = document.getElementsByClassName('tag-all')
+    for (let index = 0; index < hideElems.length; index++) {
+      const element = hideElems[index];
+      element.classList.add('d-none')
+    }
+  }
+
+  const showElems = document.getElementsByClassName(fullTag)
+  for (let index = 0; index < showElems.length; index++) {
+    const element = showElems[index];
+    element.classList.remove('d-none')
+  }
+
+
+  //also set which filter button is active
+  const filterButtons = document.getElementsByClassName('filterButton')
+    for (let index = 0; index < filterButtons.length; index++) {
+      const filterButton = filterButtons[index];
+      filterButton.classList.remove('bg-purple')
+      filterButton.classList.remove('btn-primary')
+      filterButton.classList.add('btn-outline-primary')
+    }
+
+    const buttonTag = tag + "FilterButton"
+    const activeButton = document.getElementById(buttonTag)
+    activeButton.classList.add('bg-purple')
+    activeButton.classList.add('btn-primary')
+    activeButton.classList.remove('btn-outline-primary')
+}
+
+</script>
