@@ -1,6 +1,6 @@
 ---
 id: ci-credits
-question: "How many CI Credits do I get?"
+question: "How many CI credits do I get with my plan?"
 tags: ['application']
 ---
 
