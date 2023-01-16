@@ -14,46 +14,69 @@ department: "Tech"
 
 ### About LocalStack
 
-{{< jobs/about-localstack >}}
+We are a fast-growing startup headquartered in Zurich, Switzerland. With a development office in Vienna, Austria, and team members, from around the world.
+
+The LocalStack team is creating world-class tooling to support highly efficient development and testing for cloud application developers. Our core product is the LocalStack cloud emulator, a lightweight cloud sandbox running in Docker that allows our users to develop cloud applications entirely on their local machines.
+
+LocalStack has a large and active open-source community (45k+ stars on GitHub) with several hundred thousand active users worldwide. We are on an exciting growth journey to become a global leader because of our growing international customer base and our growing, globally distributed team of top-notch engineers.
 
 ### About the role
 
-As support engineer, you are instrumental in driving the adoption of our technology by helping customers be successful with LocalStack. Support engineers at LocalStack are deeply embedded into the engineering team and act as the nexus between LocalStack’s growing user base and our core developers. We have an active Slack workspace with over 7500 users, and a Slack and GitHub support process. Our pro user often have a diverse tech stack, where they integrate different types of Cloud applications tools with LocalStack. Issues can range from simple configuration mishaps to complex integration challenges that require analytical skills and a good understanding of cloud development tooling. Most of our users are deeply technical, and each user issue solved is an opportunity to improve the product. That can mean improving the documentation, requesting the help of engineers to fix bugs, making suggestions for new features, or even getting your hands dirty by digging into the codebase yourself.
+As a support engineer, you help our customers achieve success with LocalStack by driving the adoption of our technology.
 
-If you want to be a driving force in making cloud development fun again, we would love to have you on the team!
+Support engineers are deeply embedded into the engineering team and act as the nexus between our growing user base and our core developers. We have an active Slack workspace with over 19 000 users, with Slack and GitHub support processes in place.
 
-### What you will do
+Many of our professional users have a diverse tech stack, where they integrate different types of Cloud application tools with LocalStack.
+Our users are highly technical, and each user issue is an opportunity for improvement.
+It can include improving documentation, requesting the help of engineers to fix bugs, or offering suggestions for new features.
 
-You will use your technical problem solving and communication skills to help LocalStack users (Pro and Enterprise) be successful with our product.
-Specifically, you will
+You can be a driving force in making cloud development fun again, and we would love to have you on the team!
 
-* Work hands-on with LocalStack users on a daily basis to help them get the most out of LocalStack
-* Manage cases through the entire support lifecycle, from initial customer inquiry, to triage, reproduction, prioritizing, writing bug reports, and handing off to developers
-* Troubleshoot individual issues by running LocalStack in developer mode, analyzing log output, debugging through Python code, and making customer issues reproducible
-* Put together pull requests on GitHub that fix customer issues
-* Bring the customer feedback back to the developer and product team and help shape our product direction
+### What you do
 
+You will utilize your technical problem-solving and communication skills to help LocalStack users be successful with our product.
+Specifically, you will be able to
+
+* Work hands-on with LocalStack users to help them get the most out of the platform
+* Providing customers with step-by-step guidance and samples to resolve technical problems
+* Manage cases throughout the entire support lifecycle
+* Help to shape our product
+* Assist our LocalStack team with internal support
 
 ### Your profile
 
-* You are a natural communicator and thrive when using your skill to help others
-* You have an excellent understanding of software engineering processes
-* You’re obsessed with customer experience
-* You have 2+ years of experience in a technical support or another customer-facing role
-* You have experience in most or all of these areas:
-  * Linux
-  * Git and GitHub
-  * Python
-  * Cloud platforms (AWS/Azure/GCP)
-  * Developer tooling
-  * First-level support processes
+#### Basic prerequisites
 
+* Communication and Customer-service:
+  * Strong written communication skills
+  * A strong focus on customer experience and satisfaction
+  * Understanding of first-level support processes (ITIL framework)
+  * Experience in technical support or customer-facing role, with at least 2+ years of experience
+* Technical Skills:
+  * Understand software engineering processes
+  * The ability to read and analyze application logs
+  * Strong attention to detail
+* Teamwork and Self-Management:
+  * Good time management skills
+  * Able to work collaboratively within a team
+  * Fast learner
+
+#### Nice-to-have
+
+* Understanding of operating systems (Linux, macOS, Windows)
+* Basic scripting and programming experience (Python, PowerShell, Bash, etc.)
+* Experience working with Git and GitHub
+* Familiarity with cloud services (AWS, GCP, or Azure)
+* Use of developing tooling (Terraform, Serverless, Pulumi, AWS SDK, etc.)
+* Experience with using containerization technologies (Docker, Kubernetes)
 
 ### What we offer
 
-We offer a highly dynamic, productive, and flexible work environment, where you’ll be working with some of the brightest minds who are truly shaping the future of cloud software development. Given our current trajectory as a company, we offer outstanding opportunities for professional growth and the possibility to truly shape things from the ground up. We can offer competitive salary packages which will generally depend on your level of expertise and experience. We have several company perks that are part of your individual package.
+As a Support Engineer in LocalStack, you will have the opportunity to work with cutting-edge technologies and help customers to achieve success with our platform. In our rapidly growing company, we offer exceptional opportunities for professional development and the chance to have a significant impact on our future success.
 
-We strive to provide a flexible work environment, and can accommodate flexible work hours (and timezones). We focus on output rather than process, and try to keep things as lean and agile as possible, to achieve the best possible efficiency and velocity. We care deeply about fostering a welcoming, inclusive, and productive work environment, by selecting candidates carefully not only by their technical skills but also their cultural fit. We are currently working in a remote setup spread across different geos - with the majority of the core team based in Zurich/Switzerland and Vienna/Austria.
+In addition to a competitive salary and flexible working environment, we offer a bonus system called “LocalStack Perks” which nurtures your performance. Furthermore, we provide a generous vacation policy to ensure you have enough time to recharge.
+
+Join our team and shape the future of cloud software development!
 
 ### Apply
 
