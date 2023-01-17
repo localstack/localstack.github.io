@@ -77,13 +77,16 @@
   weight = 40
 
 [[main]]
-  name = "FAQ"
-  url  = "/faq"
+  name = "DOCUMENTATION"
+  url  = "https://docs.localstack.cloud"
   weight = 10
   parent = "DOCS"
 
-
-
+[[main]]
+  name = "FAQ"
+  url  = "/faq"
+  weight = 20
+  parent = "DOCS"
 
 
 [[social]]
