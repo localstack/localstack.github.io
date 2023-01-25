@@ -14,8 +14,8 @@ description = "Develop and test your cloud apps offline"
 
 ## Open Graph + Twitter Cards
 images = ["/images/og-preview-image.png", "/images/header-logo.svg"]
-twitterSite = "_localstack"
-twitterCreator = "_localstack"
+twitterSite = "localstack"
+twitterCreator = "localstack"
 #facebookAuthor = "localstack"
 #facebookPublisher = "localstack"
 ogLocale = "en_US"
@@ -23,7 +23,7 @@ ogLocale = "en_US"
 ## JSON-LD
 schemaType = "Organization"
 schemaLogo = "/images/og-preview-image.png"
-schemaTwitter = "https://twitter.com/_localstack"
+schemaTwitter = "https://twitter.com/localstack"
 schemaLinkedIn = "https://www.linkedin.com/"
 schemaGitHub = "https://github.com/localstack"
 schemaSection = "blog"
