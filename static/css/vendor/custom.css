@@ -83,7 +83,7 @@ tr.no-border-bottom td {
 .solution-card {
   display: flex;
   flex-direction: column;
-  justify-content: between;
+  justify-content: space-between;
   align-items: center;
   padding: 40px 40px;
   background: linear-gradient(15deg, #271E5A -35%, #7E5ACA 145%);
