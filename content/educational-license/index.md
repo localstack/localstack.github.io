@@ -28,13 +28,10 @@ How can LocalStack Education License help you?
 
 ## Application
 <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
-
 <script> 
-  window.addEventListener('load', function () {
-    hbspt.forms.create({ 
-      region: "eu1", portalId: "26596507", formId: "1f3a9b60-5ffa-46d7-b125-77a7a9d161fc" 
-    });   
-  })
+  hbspt.forms.create({ 
+    region: "eu1", portalId: "26596507", formId: "1f3a9b60-5ffa-46d7-b125-77a7a9d161fc" 
+  });   
 </script>
 </div>
 
