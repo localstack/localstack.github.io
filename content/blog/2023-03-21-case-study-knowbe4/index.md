@@ -17,9 +17,9 @@ leadimage: ""
 
 ## Background
 
-KCM GRC Platform by KnowBe4 is a governance, risk management, and compliance (GRC) software platform. Designed to help organizations move away from manual processes, KCM GRC efficiently manages risk and compliance by integrating with various third-party vendors. With KCM GRC, you can manage the complex area of compliance and audits, centralize policy distribution and tracking, and simplify the risk management process.
+[KCM GRC Platform](knowbe4.com/compliance-plus) by KnowBe4 is a governance, risk management, and compliance (GRC) software platform. Designed to help organizations move away from manual processes, KCM GRC efficiently manages risk and compliance by integrating with various third-party vendors. With KCM GRC, you can manage the complex area of compliance and audits, centralize policy distribution and tracking, and simplify the risk management process.
 
-KCM GRC was developed earlier as a single-monolith using PHP and was using AWS Fargate Container service to host their monolith application. KnowBe4 started to re-engineer the application development using NodeJS and PostgreSQL while using various AWS services like Simple Notification Service (SNS), Simple Queue Service (SQS), S3, DynamoDB, API Gateway, and Terraform as the Infrastructure-as-a-Code framework.
+KCM GRC was developed earlier as a single-monolith using PHP and was using [AWS Fargate Container service](https://aws.amazon.com/fargate/) to host their monolith application. KnowBe4 started to re-engineer the application development using NodeJS and PostgreSQL while using various AWS services like [Simple Notification Service (SNS)](https://aws.amazon.com/sns/), [Simple Queue Service (SQS)](https://aws.amazon.com/sqs/), [S3](https://aws.amazon.com/s3/), [DynamoDB](https://aws.amazon.com/dynamodb/), [API Gateway](https://aws.amazon.com/api-gateway/), and [Terraform](https://www.terraform.io/) as the Infrastructure-as-a-Code framework.
 
 We spoke with Kevin Breton, VP of engineering at KnowBe4, to learn more about how LocalStack has helped their engineers to improve their application migration and cloud adoption with LocalStack while empowering them with blazing-fast development and testing loops.
 
@@ -27,15 +27,15 @@ We spoke with Kevin Breton, VP of engineering at KnowBe4, to learn more about ho
 
 The initial challenge for the engineers at KnowBe4 was understanding the new AWS technologies and how to use them best. Previously, the software they were working on was a PHP-based monolithic application, where developers could not employ a testing & mocking framework judiciously. With the migration to a cloud-native approach, the engineers wanted to use AWS services best.
 
-To solve this problem, Serverless Stack (SST), an open-source serverless application platform, was employed to help the engineers with an efficient development and testing loop. But soon, the wider use cases of the KnowBe4 team forced them to look at alternatives, and this is where Kevin got acquainted with LocalStack!
+To solve this problem, [Serverless Stack (SST)](https://sst.dev/), an open-source serverless application platform, was employed to help the engineers with an efficient development and testing loop. But soon, the wider use cases of the KnowBe4 team forced them to look at alternatives, and this is where Kevin got acquainted with [LocalStack](http://localstack.cloud/)!
 
 ## Solution
 
-The KnowBe4 team started using LocalStack Pro, which has more enhanced features and APIs over the free, open-source community-focused solution. After initial usage, the KnowBe4 team started adopting LocalStack as a solution to spin up various AWS services inside a single-running Docker container. Engineers started using LocalStack with Docker Desktop, a desktop version of Docker used to build containerized applications and microservices. It led to an improvement in the development & testing life cycles. 
+The KnowBe4 team started using [LocalStack Pro](https://app.localstack.cloud/), which has more enhanced features and APIs over the [free, open-source community-focused solution](https://github.com/localstack/localstack). After initial usage, the KnowBe4 team started adopting LocalStack as a solution to spin up various AWS services inside a single-running Docker container. Engineers started using LocalStack with [Docker Desktop](https://www.docker.com/products/docker-desktop/), a desktop version of Docker used to build containerized applications and microservices. It led to an improvement in the development & testing life cycles. 
 
-The KnowBe4 team prefers to use our `awslocal` command-line interface (CLI) over Terraform. Kevin engineered a serverless template that creates a custom serverless project with LocalStack and Terraform with unit tests and all available integrations to simplify the project setup and development process. Lerna is used to bootstrap everything together to create multiple Lambda functions at will. 
+The KnowBe4 team prefers to use our [`awslocal` command-line interface (CLI)](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal) over Terraform. Kevin engineered a serverless template that creates a custom serverless project with LocalStack and Terraform with unit tests and all available integrations to simplify the project setup and development process. [Lerna](https://lerna.js.org/) is used to bootstrap everything together to create multiple Lambda functions at will. 
 
-It allows the engineering team to develop and test their serverless functions with Lambda locally and push it to GitLab CI, the CI provider used by KnowBe4, where a staging environment is created using real AWS API calls. The simplification in the engineering process has been a benchmark for the KnowBe4 team as they continue relying on LocalStack for their local cloud development needs.
+It allows the engineering team to develop and test their serverless functions with Lambda locally and push it to [GitLab CI](https://about.gitlab.com/features/continuous-integration/), the CI provider used by KnowBe4, where a staging environment is created using real AWS API calls. The simplification in the engineering process has been a benchmark for the KnowBe4 team as they continue relying on LocalStack for their local cloud development needs.
 
 ## Results
 
