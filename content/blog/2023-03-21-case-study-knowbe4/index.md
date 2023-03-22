@@ -51,6 +51,6 @@ With LocalStack, the KnowBe4 team capitalised on our Pro support plan, which aim
 
 ---------------------------------------------
 
-Kevin is now introducing LocalStack to a new team which is core to all of KnowBe4's AWS initiatives. The project would utilise an Event Driven architecture currently written in Python, Ruby, Golang, and Rust and leverage AppSync, API Gateway, Lambda, SQS, S3, SNS, and EventBridge. With LocalStack, the team can develop & test their cloud infrastructure as the team decouples their existing services and adds new services. With this project, the KnowBe4 team could integrate all their products into a single platform.
+Kevin is now introducing LocalStack to a new team which is core to all of KnowBe4's AWS initiatives. The project would utilize an event-driven architecture currently written in Python, Ruby, Golang, and Rust - and will leverage a diverse set of services, including AppSync, API Gateway, Lambda, SQS, S3, SNS, and EventBridge. With LocalStack, the team can develop & test their cloud infrastructure as the team decouples their existing code logic and adds new services. With this project, the KnowBe4 team could integrate all their products into a single platform.
 
 Learn more about KnowBe4 Engineering on their [Engineering Blog](https://www.knowbe4.com/careers/engineering) and learn more about their [career opportunities](https://www.knowbe4.com/careers).
