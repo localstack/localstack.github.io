@@ -1,6 +1,6 @@
 ---
 title: Case Study — Migrating to AWS Serverless with LocalStack's  fully functional local cloud stack at KnowBe4 
-description: KnowBe4 is migrating its old monolithic PHP-based application to an AWS Serverless model using LocalStack for testing and integration for their automated audits & compliance platform. In this case study, we talk with Kevin Breton, VP of engineering at KnowBe4, about their experience using LocalStack to redefine their local cloud development & testing!
+description: KnowBe4 is migrating its old monolithic PHP-based application to an AWS Serverless model, using LocalStack for testing and integration of their automated audits & compliance platform. In this case study, we talk with Kevin Breton, VP of engineering at KnowBe4, about their experience using LocalStack to redefine their local cloud development & testing!
 lead: KnowBe4 is migrating its old monolithic PHP-based application to an AWS Serverless model using LocalStack for testing and integration for their automated audits & compliance platform. In this case study, we talk with Kevin Breton, VP of engineering at KnowBe4, about their experience using LocalStack to redefine their local cloud development & testing!
 date: 2023-03-21
 lastmod: 2023-03-21
