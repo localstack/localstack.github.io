@@ -27,7 +27,7 @@ We spoke with Kevin Breton, VP of Engineering at KnowBe4, to learn more about ho
 
 The initial challenge for the engineers at KnowBe4 was understanding the new AWS technologies and how to use them best. Previously, the software they were working on was a PHP-based monolithic application, where developers could not employ a testing & mocking framework judiciously. With the migration to a cloud-native approach, the engineers wanted to use AWS services best.
 
-To solve this problem, [Serverless Stack (SST)](https://sst.dev/), an open-source serverless application platform, was employed to help the engineers with an efficient development and testing loop. But soon, the wider use cases of the KnowBe4 team forced them to look at alternatives, and this is where Kevin got acquainted with [LocalStack](http://localstack.cloud/)!
+To solve this problem, [Serverless Stack (SST)](https://sst.dev/), an open-source serverless application platform, was employed to help the engineers with an efficient development and testing loop. But soon, the wider use cases of the KnowBe4 team forced them to look at alternatives, and this is where Kevin got acquainted with [LocalStack](https://localstack.cloud)!
 
 ## Solution
 
