@@ -21,7 +21,7 @@ leadimage: ""
 
 KCM GRC was developed earlier as a single-monolith using PHP and was using [AWS Fargate Container Service](https://aws.amazon.com/fargate/) to host their monolith application. KnowBe4 started to re-engineer the application development using NodeJS and PostgreSQL while using various AWS services like [Simple Notification Service (SNS)](https://aws.amazon.com/sns/), [Simple Queue Service (SQS)](https://aws.amazon.com/sqs/), [S3](https://aws.amazon.com/s3/), [DynamoDB](https://aws.amazon.com/dynamodb/), [API Gateway](https://aws.amazon.com/api-gateway/), and [Terraform](https://www.terraform.io/) as the Infrastructure-as-Code framework.
 
-We spoke with Kevin Breton, VP of engineering at KnowBe4, to learn more about how LocalStack has helped their engineers to improve their application migration and cloud adoption with LocalStack while empowering them with blazing-fast development and testing loops.
+We spoke with Kevin Breton, VP of Engineering at KnowBe4, to learn more about how LocalStack has helped their engineers to improve their application migration and cloud adoption with LocalStack while empowering them with blazing-fast development and testing loops.
 
 ## Challenge
 
