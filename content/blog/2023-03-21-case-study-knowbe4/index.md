@@ -47,7 +47,7 @@ LocalStack has simplified the creation and invocation process of AWS Lambda func
 
 ### Consistent Pro support and hardening of the test suite
 
-With LocalStack, the KnowBe4 team capitalised on our Pro support plan, which aims to support our Pro & Enterprise user base. KnowBe4 adopted the support plan to simplify its integration of local development cycles with LocalStack. With LocalStack support handled by our team, Kevin’s team could focus more on taking their application to cloud-native rather than taking time to learn LocalStack. It also prompted them to discover flaky tests easier and faster, giving them a clear view of how to debug them and make the best use of LocalStack.
+With LocalStack, the KnowBe4 team capitalized on our Pro support plan, which aims to support our Pro & Enterprise user base. KnowBe4 adopted the support plan to simplify its integration of local development cycles with LocalStack. With LocalStack support handled by our team, Kevin’s team was able to focus more on taking their application to cloud-native rather than taking time to learn LocalStack. It also prompted them to discover flaky tests easier and faster, giving them a clear view of how to debug them and make the best use of LocalStack.
 
 ---------------------------------------------
 
