@@ -39,7 +39,7 @@ It allows the engineering team to develop and test their serverless functions wi
 
 ## Results
 
-Within a few weeks, Kevin and his team members, noticed the value LocalStack was bringing to their development and testing processes.
+Within a few weeks, Kevin and his team members noticed the value LocalStack was bringing to their development and testing processes. Some highlights and numbers are shared in the sections below.
 
 ### Creation & invocation of Serverless functions locally reduced by 90%
 
