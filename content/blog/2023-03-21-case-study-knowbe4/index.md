@@ -11,7 +11,7 @@ leadimage: ""
 
 "LocalStack has been a game changer in terms of development speed and efficiency for our team migrating our monolithic application to a serverless Node.js stack on AWS. While in the past we had to maintain our own tooling and local mocks, with LocalStack we can now empower our devs to iterate quickly without having to perform numerous code commits & waiting for AWS pipelines, - hence also saving money on infrastructure!"
 
-— [Kevin Breton](https://www.linkedin.com/in/kevinbreton/), VP of engineering at [KnowBe4](https://www.knowbe4.com/)
+— [Kevin Breton](https://www.linkedin.com/in/kevinbreton/), VP of Engineering at [KnowBe4](https://www.knowbe4.com/)
 
 ---------------------------------------------
 
