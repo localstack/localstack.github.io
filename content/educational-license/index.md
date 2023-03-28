@@ -27,8 +27,13 @@ How can LocalStack Education License help you?
 - The license should not be shared with any third parties.
 
 ## Application
-
-Please fill out the [following form](free-educational-license-application-localstack.docx) and with a proof of your student/teacher status send them to [info@localstack.cloud](mailto:info@localstack.cloud).
+<div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
+<script> 
+  hbspt.forms.create({ 
+    region: "eu1", portalId: "26596507", formId: "1f3a9b60-5ffa-46d7-b125-77a7a9d161fc" 
+  });   
+</script>
+</div>
 
 ## Renewal of License
 
