@@ -20,3 +20,90 @@ With the 2.0 release, LocalStack offers the most comprehensive local cloud devel
 LocalStack 2.0 delivers our strong investment across three  critical areas — parity, performance, and interoperability to provide the best developer experience. With LocalStack 2.0, we have significantly optimized the internals of the platform and moved to new service implementations, images, and internal toolings to make it easy for developers to build & test their cloud applications locally! LocalStack 2.0 is an exciting leap forward in our mission to make local cloud development possible, and we recommend you try out our new features and share your feedback with us!
 
 Let us take a look at our new features and enhancements, and what you can benefit from when using our latest release!
+
+### New Lambda & S3 provider
+
+LocalStack has made significant improvements around having an active parity with AWS. To push forward on this, we have entirely rewritten our Lambda & S3 providers, which feature significant performance improvements that would allow testing your cloud applications faster!
+
+The new Lambda provider has significantly decreased execution times, from 800 - 1000ms from the old `docker` executor to around 10ms for a simple Lambda invocation with an Echo function. The new Lambda provider has a new Lambda API, Docker Execution Environment, Configuration, and Hot Reloading.
+
+Previously, Lambdas were executed within the LocalStack container. With the new provider, official AWS images are pulled that match the Lambda production environment as closely as possible. We have also enabled functions to be created asynchronously and added stricter input validation for your Lambda functions.
+
+The new S3 provider is now faster, more stringent, and compatible with AWS behavior. From a user perspective, you can see better performance, especially for S3 notifications, which are asynchronous now. The new S3 & Lambda providers with a significant AWS parity will make your serverless experience a breeze with LocalStack. You can find more information about them on our S3 & Lambda documentation.
+
+## Separation of Community & Pro image
+
+With the 2.0 release, our Pro & Team customers need to migrate to our new LocalStack Pro image (`localstack/localstack-pro`). Community users are not affected by this change, as they can continue using the open-source community image (`localstack/localstack`). This separation solves a critical circular dependency between the community version of LocalStack and our proprietary LocalStack Pro extensions. If you use an API key and continue using the community image to activate the Pro extensions, you will see an error message.
+
+This separation of the Community & Pro image has significantly reduced our image size. The image size for the Community image has dropped from 775 MB to ~320 MB, while for the Pro image, it has dropped from 750 MB to ~570 MB. From a developer perspective, it has allowed us to shed away a lot of legacy code and build on new infrastructure. It will allow our development process to be more efficient due to this change and allow us to deliver more value to our users through this going forward.
+
+You can find more details about migrating to a new image in our Discuss post.
+
+### New Snapshot Persistence mechanism
+
+We are introducing a new snapshot persistence mechanism which introduces behavioural changes when data is restored and saved. The persistence mechanism allowed you to preserve your state across LocalStack Pro container restarts. Previously, snapshots were loaded from disk per service when services were initialized, lazy-loading the state the first time a service was used. With the new persistence mechanism, persistent data is loaded on LocalStack startup. Users can configure it by setting `SNAPSHOT_LOAD_STRATEGY` to `on_request or on_startup`.
+
+We also discovered that creating a snapshot for a particular service on each request leads to problems related to concurrency and performance. To fix this, we have introduced an alternative approach to store snapshots on LocalStack shutdown, which produces no performance overhead during runtime but will not protect you against data loss if LocalStack does not terminate correctly.
+
+The default strategy is on a scheduled basis, specifically, we take snapshots of services that have changed every 15 seconds. You can configure this behaviour by setting `SNAPSHOT_SAVE_STRATEGY` to `on_request, on_shutdown` or `scheduled`, respectively. You can find more information on our Persistence documentation.
+
+### Support for Community Cloud Pods
+
+Cloud Pods are persistent state snapshots that enable next-generation state management and team collaboration features in LocalStack. With Cloud Pods, you can take a snapshot of your LocalStack container state at any time and selectively restore, merge, and inject it into your instance. With LocalStack 1.0, we released Cloud Pods for our Team tier to handle state files, storage and versioning, and merging of cloud pod state. We have now made Cloud Pods available to the Community edition to allow users to create persistent snapshots and store it locally or in a Git repository.
+
+The layout of Cloud Pods has been changed, and Cloud Pods created with v1.x.x may be incompatible with LocalStack 2.0. Check out our Cloud Pods documentation for more information.
+
+### Mono container support for Big Data services
+
+We have introduced an all-new Mono container mode for our Big Data services (Glue, EMR, Athena). Previously, this feature was behind a feature flag, and now it would be the default behaviour. The previous implementation with a separate sidecar `localstack_bigdata` container is deprecated and will be removed in a future release. With the Mono container mode, some dependencies are lazily downloaded and installed at runtime, increasing the processing time on the first load. The library is cached in the `var_libs` directory. We also provide a separate `localstack/localstack-pro:2.0.0-bigdata` Mono container image with the default dependencies pre-installed.
+
+### Simplified Host configuration and Docker Networking
+
+We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently. If provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases. Furthermore, if you use LocalStack Pro with the CLI, it will no longer publish port 53 to the host if it is already bound by some other service like `systemd-resolved`. Check out our extensive documentation on connecting your application code to LocalStack.
+
+### New features for LocalStack Web Application
+
+We have overhauled the LocalStack Web Application with an immediate focus on improving the user interface and experience. The LocalStack Web Application now features an improved sign-up flow, a getting started section, API key management, subscription management, and improved Stack insights to visualize your LocalStack usage and track your AWS API usage telemetry to give you fine-grained access to this data.
+
+We have also introduced Cloud Pods launchpad for Pro & Team users to share and inject cloud pods directly from your repositories or via a simple URL. We have also released Resource Browsers for Glue, SES v2, RDS Clusters, and Lambda Layers and improved the UI/UX for all services. Resource Browsers provide a near AWS Console experience where you can create, manage, and configure your local AWS infrastructure via LocalStack.
+
+### New features for LocalStack Web Application
+
+We have overhauled the LocalStack Web Application with an immediate focus on improving the user interface and experience. The LocalStack Web Application now features an improved sign-up flow, API key and subscription management, and a getting started section. We have also polished the UI/UX for managing resources in our Resource Browser, for which we have also added support for Glue, SES v2, RDS Clusters, and Lambda Layers.
+
+We have also introduced Cloud Pods launchpad to share and inject cloud pods directly from your repositories or via a simple URL. With Cloud Pods launchpad, you can get your official LocalStack badge from our [Badge generator](https://app.localstack.cloud/launchpad) and simply include it in your READMEs to share your pod with others. Clicking on the badge will take you to the launchpad again, where the pod will then be injected into your running LocalStack instance.
+
+### Improved LocalStack toolings for local cloud development
+
+Over the past few months, we have introduced & improved LocalStack Tools to make your life as a cloud developer easier. These include:
+
+- LocalStack Docker Extension that enables developers working with LocalStack to operate their LocalStack container via Docker Desktop. It includes checking service status, container logs, and configuring profiles.
+- LocalSurf, a Chrome browser plugin to repoint AWS service calls to LocalStack. LocalSurf enables the browser to connect to the local endpoint (`http://localhost:4566`) instead of the AWS production servers (`*.amazonaws.com`).
+- LocalStack Cockpit 0.2.0, our refurbished Desktop client, allows users to control and manage their LocalStack instance easily. Users can utilize automated environment checks, profile configurations, instance management, and quick log access.
+- An improved Lambda Hot Reloading experience that continuously applies code changes to Lambda functions without manual redeployment. Users can use Hot Reloading with AWS CLI, Terraform, CDK, and Serverless framework for fast feedback cycles during the development & testing of Lambda functions.
+
+### All-new LocalStack Developer Hub & Tutorials
+
+We have launched the Developer Hub, a new Web experience enabling developers to find up-to-date LocalStack samples spanning various use cases: Serverless, Containers, Big Data, Identity, and much more! The Developer Hub offers a consolidated view of LocalStack sample applications that educate developers to build and run cloud and serverless applications. With these tutorials, we strive to keep the gap between LocalStack and AWS as small as possible and focus on getting users, step by step, started with LocalStack!
+
+The Developer Hub is currently in beta and available on our documentation website. We are increasingly improving our sample applications' quality and service coverage while actively seeking user feedback. In the future, we would like to expand this concept to include explainer videos, lab environments, broader code samples, and more blog posts, making it the resource go-to for our community.
+
+## Get started with LocalStack 2.0
+
+We have many LocalStack 2.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 2.0, you can:
+
+- View our release notes on GitHub.
+- Check out our new documentation on using services and integrations locally.
+- Attend our LocalStack Community Event to learn more about the 2.0 release.
+
+To get started with using LocalStack 2.0 features:
+
+- Migrate to LocalStack 2.0 by following our migration documentation.
+- Navigate to our LocalStack samples & Developer Hub and try the examples and applications, respectively.
+- Contact us on discussion pages for feedback, bug reports, or suggestions.
+
+LocalStack 2.0 could not have been possible without active user feedback, community discussions, and bug reports we received through our GitHub Issues and Discuss posts. We're proud to see that community continues to grow, and in the last year, we have seen tremendous growth, and this has been made possible by our users, who continue to propel our dream of a new era of local cloud development & testing, enabled by LocalStack's cloud emulation platform.
+
+## What’s next?
+
+TODO
