@@ -56,11 +56,14 @@ You can find more details about migrating to a new image in our [Discuss post](h
 
 ### New Snapshot Persistence mechanism
 
-We are introducing a new snapshot persistence mechanism which introduces behavioural changes when data is restored and saved. The persistence mechanism allowed you to preserve your state across LocalStack Pro container restarts. Previously, snapshots were loaded from disk per service when services were initialized, lazy-loading the state the first time a service was used. With the new persistence mechanism, persistent data is loaded on LocalStack startup. Users can configure it by setting `SNAPSHOT_LOAD_STRATEGY` to `on_request or on_startup`.
+We are introducing a new snapshot persistence mechanism which introduces behavioural changes when data is restored and saved. Snapshots allowed you to preserve your state across LocalStack Pro container restarts. We have introduced ways to configure the ways how and when snapshots are saved and loaded.
+
+Previously, the only option was to load snapshots from disk per service when services were initialized, lazy-loading the state the first time a service was used. With the new persistence mechanism, persistent data is loaded on LocalStack startup. Users can configure it by setting `SNAPSHOT_LOAD_STRATEGY` to `on_request or on_startup`.
 
 We also discovered that creating a snapshot for a particular service on each request leads to problems related to concurrency and performance. To fix this, we have introduced an alternative approach to store snapshots on LocalStack shutdown, which produces no performance overhead during runtime but will not protect you against data loss if LocalStack does not terminate correctly.
+For saving snapshots, the default strategy is on a scheduled basis. Specifically, we take snapshots of services that have changed every 15 seconds and on shutdown. You can configure this behaviour by setting `SNAPSHOT_SAVE_STRATEGY` to `on_request`, `on_shutdown` or `scheduled`, respectively.
+You can find more information on our [Persistence documentation](https://docs.localstack.cloud/references/persistence-mechanism/). 
 
-The default strategy is on a scheduled basis, specifically, we take snapshots of services that have changed every 15 seconds. You can configure this behaviour by setting `SNAPSHOT_SAVE_STRATEGY` to `on_request, on_shutdown` or `scheduled`, respectively. You can find more information on our [Persistence documentation](https://docs.localstack.cloud/references/persistence-mechanism/).
 
 ### Support for Community Cloud Pods
 
@@ -90,7 +93,18 @@ We have introduced an all-new Mono container mode for our Big Data services (Glu
 
 ### Simplified Host configuration and Docker Networking
 
-We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently. If provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases. Furthermore, if you use LocalStack Pro with the CLI, it will no longer publish port 53 to the host if it is already bound by some other service like `systemd-resolved`. Check out our extensive documentation on connecting your application code to LocalStack.
+We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently. 
+f provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases.
+We are also unifying the variables `EDGE_BIND_HOST`, `EDGE_PORT` and `EDGE_PORT_HTTP` into `GATEWAY_LISTEN`, which will allow configuration of the addresses and ports the LocalStack process listens on.
+You can find out more about this in our [migration guide](https://discuss.localstack.cloud/t/upcoming-changes-for-localstack-v2/239#networking-7).
+
+We have also spent time improving our documentation on networking are happy to present a new [networking troublehsooting](https://docs.localstack.cloud/references/network-troubleshooting/) guide.
+Based on feedback from the community, we have enumerated different networking scenarios LocalStack is often used in, and created a comprehensive guide on how to configure the specific scenario.
+
+Check out [our extensive documentation](https://docs.localstack.cloud/tags/networking/) on connecting your application code to LocalStack.
+
+{{< img src="network-troubleshooting.png" >}}
+
 
 ### New features for the LocalStack Web Application
 
@@ -102,14 +116,15 @@ Over the past few months, we have introduced & improved LocalStack Tools to make
 
 - [LocalStack Docker Extension](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/) that enables developers working with LocalStack to operate their LocalStack container via Docker Desktop. It includes checking service status, container logs, and configuring profiles.
 - [LocalSurf](https://docs.localstack.cloud/user-guide/tools/localsurf/), a Chrome browser plugin to repoint AWS service calls to LocalStack. LocalSurf enables the browser to connect to the local endpoint (`http://localhost:4566`) instead of the AWS production servers (`*.amazonaws.com`).
-- [LocalStack Cockpit 0.2.0](https://docs.localstack.cloud/user-guide/tools/cockpit/), our refurbished Desktop client, allows users to control and manage their LocalStack instance easily. Users can utilize automated environment checks, profile configurations, instance management, and quick log access.
 - An improved [Lambda Hot Reloading experience](https://docs.localstack.cloud/user-guide/tools/lambda-tools/hot-reloading/) that continuously applies code changes to Lambda functions without manual redeployment. Users can use Hot Reloading with AWS CLI, Terraform, CDK, and Serverless framework for fast feedback cycles during the development & testing of Lambda functions.
 
 ### All-new LocalStack Developer Hub & Tutorials
 
 We have launched the [Developer Hub](https://docs.localstack.cloud/developer-hub/), a new Web experience enabling developers to find up-to-date LocalStack samples spanning various use cases: Serverless, Containers, Big Data, Identity, and much more! The Developer Hub offers a consolidated view of [LocalStack sample applications](https://docs.localstack.cloud/applications) that educate developers to build and run cloud and serverless applications. With additional [tutorials](https://docs.localstack.cloud/tutorials), we strive to keep the gap between LocalStack and AWS as small as possible and focus on getting users, step by step, started with LocalStack!
 
-The Developer Hub is currently in beta and available on our [documentation website](https://docs.localstack.cloud/developer-hub/). We are increasingly improving our sample applications' quality and service coverage while actively seeking user feedback. In the future, we would like to expand this concept to include explainer videos, lab environments, broader code samples, and more blog posts, making it the resource go-to for our community.
+The Developer Hub is currently in beta and available on our [documentation website](https://docs.localstack.cloud/developer-hub/).
+We are increasingly improving our sample applications' quality and service coverage while actively seeking user feedback.
+In the future, we would like to expand this concept to include explainer videos, lab environments, broader code samples, and more blog posts, making it the resource go-to for our community.
 
 ## Get started with LocalStack 2.0
 
