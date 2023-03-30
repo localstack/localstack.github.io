@@ -101,7 +101,7 @@ If provided, this variable is used systematically throughout services that retur
 
 You can find out more about this in our [migration guide](https://discuss.localstack.cloud/t/upcoming-changes-for-localstack-v2/239#networking-7).
 
-We have also spent time improving our documentation on networking are happy to present a new [networking troublehsooting](https://docs.localstack.cloud/references/network-troubleshooting/) guide. Based on feedback from the community, we have enumerated different networking scenarios LocalStack is often used in, and created a comprehensive guide on how to configure the specific scenario.
+We have also spent time improving our documentation on networking, and we are happy to present a new [networking troublehsooting](https://docs.localstack.cloud/references/network-troubleshooting/) guide. Based on feedback from the community, we have enumerated different networking scenarios LocalStack is often used in, and created a comprehensive guide on how to configure the specific scenario.
 
 Check out [our extensive documentation](https://docs.localstack.cloud/tags/networking/) on connecting your application code to LocalStack.
 
@@ -115,11 +115,11 @@ We have also polished the UI/UX for managing resources in our Resource Browser, 
 
 {{< img-simple src="resource-browser.png" >}}
 
-### Improved LocalStack toolings for local cloud development
+### Improved LocalStack tooling for local cloud development
 
 Over the past few months, we have introduced & improved LocalStack Tools to make your life as a cloud developer easier. These include:
 
-- [LocalStack Docker Extension](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/) that enables developers working with LocalStack to operate their LocalStack container via Docker Desktop. It includes checking service status, container logs, and configuring profiles.
+- [LocalStack Docker Extension](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/) that enables developers working with LocalStack to operate their LocalStack container via Docker Desktop. This includes checking service status, container logs, and configuring profiles.
 - [LocalSurf](https://docs.localstack.cloud/user-guide/tools/localsurf/), a Chrome browser plugin to repoint AWS service calls to LocalStack. LocalSurf enables the browser to connect to the local endpoint (`http://localhost:4566`) instead of the AWS production servers (`*.amazonaws.com`).
 - An improved [Lambda Hot Reloading experience](https://docs.localstack.cloud/user-guide/tools/lambda-tools/hot-reloading/) that continuously applies code changes to Lambda functions without manual redeployment. Users can use Hot Reloading with AWS CLI, Terraform, CDK, and Serverless framework for fast feedback cycles during the development & testing of Lambda functions.
 
@@ -167,7 +167,7 @@ LocalStack 2.0 could not have been possible without active user feedback, commun
 ## What’s next?
 
 LocalStack's mission is to build the best developer experience for cloud application developers, and give developers back control over their environment.
-We are committed to improving parity with AWS so you can run all your cloud stacks, whether Terraform, CloudFormation, CDK, Pulumi, or whatever it is your using, out of the box!
+We are committed to improving parity with AWS so you can run all your cloud stacks, whether Terraform, CloudFormation, CDK, Pulumi, or whatever it is you're using, out of the box!
 We are fostering the development of community content through the Developer Hub, Community Cloud Pods, and Extensions, where there will be exiciting updates in the future.
-Our next big goal is to make LocalStack Pro more accessible to individuals, and open up our development platform to he world.
+Our next big goal is to make LocalStack Pro more accessible to individuals, and open up our development platform to the world.
 Stay tuned for more updates!
