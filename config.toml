@@ -1,1 +1,2 @@
 title = "LocalStack"
+timeout = "60s"
