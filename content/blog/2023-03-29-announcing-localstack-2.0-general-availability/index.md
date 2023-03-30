@@ -75,7 +75,7 @@ The layout of Cloud Pods has been changed, and Cloud Pods created with v1.x.x ma
 
 ### Cloud Pods launchpad
 
-We have released the Cloud Pods launchpad, a simple application to to share and inject cloud pods directly from your repositories or via a URL. 
+We have released the Cloud Pods launchpad, a simple application to share and inject cloud pods directly from your repositories or via a URL. 
 Simply include the official LocalStack launchpad badge, which you can get from our [badge generator](https://app.localstack.cloud/launchpad), in your READMEs.
 
 <div class='d-flex justify-content-center'>
