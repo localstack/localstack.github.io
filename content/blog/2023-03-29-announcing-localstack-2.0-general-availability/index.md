@@ -130,6 +130,9 @@ The Developer Hub is currently in beta and available on our [documentation websi
 We are increasingly improving our sample applications' quality and service coverage while actively seeking user feedback.
 In the future, we would like to expand this concept to include explainer videos, lab environments, broader code samples, and more blog posts, making it the resource go-to for our community.
 
+{{< img-simple src="developer-hub-collage.png" >}}
+
+
 ## Get started with LocalStack 2.0
 
 We have many LocalStack 2.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 2.0, you can:
