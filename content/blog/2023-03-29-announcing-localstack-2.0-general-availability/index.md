@@ -166,4 +166,8 @@ LocalStack 2.0 could not have been possible without active user feedback, commun
 
 ## What’s next?
 
-TODO
+LocalStack's mission is to build the best developer experience for cloud application developers, and give developers back control over their environment.
+We are committed to improving parity with AWS so you can run all your cloud stacks, whether Terraform, CloudFormation, CDK, Pulumi, or whatever it is your using, out of the box!
+We are fostering the development of community content through the Developer Hub, Community Cloud Pods, and Extensions, where there will be exiciting updates in the future.
+Our next big goal is to make LocalStack Pro more accessible to individuals, and open up our development platform to he world.
+Stay tuned for more updates!
