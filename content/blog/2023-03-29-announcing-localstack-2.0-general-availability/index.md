@@ -1,15 +1,19 @@
 ---
 title: Announcing LocalStack 2.0 General Availability!
-description: Announcing LocalStack 2.0 General Availability!
-lead: Announcing LocalStack 2.0 General Availability!
+description: We are excited to announce the release of LocalStack 2.0 that brings new features, greater AWS parity, and better performance!
+lead: We are excited to announce the release of LocalStack 2.0 that brings new features, greater AWS parity, and better performance!
 date: 2023-03-29T9:35:38+05:30
 lastmod: 2023-03-29T9:35:38+05:30
 images: []
 contributors: []
 tags: ['news']
+leadimage: "localstack-v2-cover.jpg"
+weight: 1
 ---
 
-Last year we announced the [general availability of LocalStack 1.0](https://localstack.cloud/blog/2022-07-13-announcing-localstack-v1-general-availability/), our first major release, to help development teams propel their productivity by developing & testing their cloud applications locally! Between then and now, LocalStack has achieved significant adoption and amassed over 135 million Docker pulls and thousands of new customers worldwide! As we continue to execute  our vision of making LocalStack the go-to platform for local cloud development, we are excited to announce our latest major release!
+{{< img src="localstack-v2-cover.jpg" >}}
+
+Last year we announced the [general availability of LocalStack 1.0](https://localstack.cloud/blog/2022-07-13-announcing-localstack-v1-general-availability/), our first major release, to help development teams propel their productivity by developing & testing their cloud applications locally! Between then and now, LocalStack has achieved significant adoption and amassed over 135 million Docker pulls and thousands of new customers worldwide! As we continue to execute our vision of making LocalStack the go-to platform for local cloud development, we are excited to announce our latest major release!
 
 Today we are excited to announce the general availability of **LocalStack 2.0**, our next-generation cloud emulation platform, focused on providing a better way to develop and test your cloud applications. This release is significant for us, as it expands our scope of building a frictionless, integrated cloud developer experience for our users. LocalStack 2.0 is our second major release with many new features, enhancements, and improved parity for more extensive integration across the AWS tooling ecosystem.
 
@@ -20,6 +24,17 @@ With the 2.0 release, LocalStack offers the most comprehensive local cloud devel
 LocalStack 2.0 delivers our strong investment across three  critical areas — **parity**, **performance**, and **interoperability** to provide the best developer experience. With LocalStack 2.0, we have significantly optimized the internals of the platform and moved to new service implementations, images, and internal toolings to make it easy for developers to build & test their cloud applications locally! LocalStack 2.0 is an exciting leap forward in our mission to make local cloud development possible, and we recommend you try out our new features and share your feedback with us!
 
 Let us take a look at our new features and enhancements, and what you can benefit from when using our latest release!
+
+* [Completely new Lambda and S3 provider]({{< ref "#new-lambda--s3-provider" >}})
+* Significant reduction in LocalStack container image size through [separation of LocalStack communtiy & LocalStack Pro docker images]({{< ref "#separation-of-community--pro-image" >}})
+* New [Snapshot persistence mechanism]({{< ref "#new-snapshot-persistence-mechanism" >}})
+* [Community Cloud Pods]({{< ref "#support-for-community-cloud-pods" >}})
+* [Cloud pods launchpad]({{< ref "#cloud-pods-launchpad" >}})
+* [Mono container support for Big Data services]({{< ref "#mono-container-support-for-big-data-services" >}})
+* [Simplified Host configuration and Docker Networking]({{< ref "#simplified-host-configuration-and-docker-networking" >}})
+* [New features for LocalStack Web Application]({{< ref "#new-features-for-localstack-web-application" >}})
+* [Improved LocalStack toolings for local cloud development]({{< ref "#improved-localstack-toolings-for-local-cloud-development" >}})
+* [All-new LocalStack Developer Hub &amp; Tutorials]({{< ref "#all-new-localstack-developer-hub--tutorials" >}})
 
 ### New Lambda & S3 provider
 
@@ -53,6 +68,10 @@ Cloud Pods are persistent state snapshots that enable next-generation state mana
 
 The layout of Cloud Pods has been changed, and Cloud Pods created with v1.x.x may be incompatible with LocalStack 2.0. Check out our [Cloud Pods documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/) for more information.
 
+### Cloud pods launchpad
+
+We have introduced the Cloud Pods launchpad, a simple application to to share and inject cloud pods directly from your repositories or via a simple URL. With Cloud Pods launchpad, you can get your official LocalStack badge from our [Badge generator](https://app.localstack.cloud/launchpad) and simply include it in your READMEs to share your pod with others. Clicking on the badge will take you to the launchpad again, where the pod will then be injected into your running LocalStack instance.
+
 ### Mono container support for Big Data services
 
 We have introduced an all-new Mono container mode for our Big Data services (Glue, EMR, Athena). Previously, this feature was behind a feature flag, and now it would be the default behaviour. The previous implementation with a separate sidecar `localstack_bigdata` container is deprecated and will be removed in a future release. With the Mono container mode, some dependencies are lazily downloaded and installed at runtime, increasing the processing time on the first load. The library is cached in the `var_libs` directory. We also provide a separate `localstack/localstack-pro:2.0.0-bigdata` Mono container image with the default dependencies pre-installed.
@@ -64,8 +83,6 @@ We have introduced several enhancements and features to simplify our host config
 ### New features for LocalStack Web Application
 
 We have overhauled the [LocalStack Web Application](app.localstack.cloud) with an immediate focus on improving the user interface and experience. The LocalStack Web Application now features an improved sign-up flow, API key and subscription management, and a getting started section. We have also polished the UI/UX for managing resources in our Resource Browser, for which we have also added support for Glue, SES v2, RDS Clusters, and Lambda Layers.
-
-We have also introduced Cloud Pods launchpad to share and inject cloud pods directly from your repositories or via a simple URL. With Cloud Pods launchpad, you can get your official LocalStack badge from our [Badge generator](https://app.localstack.cloud/launchpad) and simply include it in your READMEs to share your pod with others. Clicking on the badge will take you to the launchpad again, where the pod will then be injected into your running LocalStack instance.
 
 ### Improved LocalStack toolings for local cloud development
 
@@ -86,7 +103,8 @@ The Developer Hub is currently in beta and available on our [documentation websi
 
 We have many LocalStack 2.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 2.0, you can:
 
-- View our [release notes on GitHub]().
+<!-- TODO: update release notes link -->
+- View our [release notes on GitHub](https://github.com/localstack/localstack/issues/7882).
 - Check out our [new documentation](https://docs.localstack.cloud/) on using [services](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) and [integrations](https://docs.localstack.cloud/user-guide/integrations/) locally.
 - Attend our [LocalStack Community Event]() to learn more about the 2.0 release.
 
