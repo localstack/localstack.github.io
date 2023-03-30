@@ -356,3 +356,7 @@ li::marker {
 .blog h3 {
   scroll-margin-top: 100px;
 }
+
+.blog.single > section a {
+  font-weight: bold;
+}
