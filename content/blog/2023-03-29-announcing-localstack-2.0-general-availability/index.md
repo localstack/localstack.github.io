@@ -35,6 +35,7 @@ Let us take a look at our new features and enhancements, and what you can benefi
 * [New features for the LocalStack Web Application]({{< ref "#new-features-for-the-localstack-web-application" >}})
 * [Improved LocalStack toolings for local cloud development]({{< ref "#improved-localstack-toolings-for-local-cloud-development" >}})
 * [All-new LocalStack Developer Hub &amp; Tutorials]({{< ref "#all-new-localstack-developer-hub--tutorials" >}})
+* [Improved LocalStack Coverage Docs Overview]({{< ref "#improved-localstack-coverage-docs-overview" >}})
 
 ### New Lambda & S3 provider
 
@@ -131,6 +132,16 @@ We are increasingly improving our sample applications' quality and service cover
 In the future, we would like to expand this concept to include explainer videos, lab environments, broader code samples, and more blog posts, making it the resource go-to for our community.
 
 {{< img-simple src="developer-hub-collage.png" >}}
+
+
+### Improved LocalStack Coverage Docs Overview
+
+Our documentation has a brand new style for the [LocalStack Coverage](https://docs.localstack.cloud/references/coverage/). Each service has its dedicated coverage page, and we also included a search field to make navigation easier.
+
+The coverage pages provide detailed information regarding the supported operations in LocalStack. Additionally, the docs now show details on how operations are tested and covered by integration test suits.
+
+
+{{< img-simple src="coverage_docs_screenshot.png" >}}
 
 
 ## Get started with LocalStack 2.0
