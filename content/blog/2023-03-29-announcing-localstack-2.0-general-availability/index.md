@@ -137,7 +137,7 @@ We have many LocalStack 2.0 resources for new and existing users. To learn more 
 <!-- TODO: update release notes link -->
 - View our [release notes on GitHub](https://github.com/localstack/localstack/issues/7882).
 - Check out our [new documentation](https://docs.localstack.cloud) on using [services](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) and [integrations](https://docs.localstack.cloud/user-guide/integrations/) locally.
-- Attend our [LocalStack Community Event]() to learn more about the 2.0 release.
+- Attend our [LocalStack Community Event](https://www.meetup.com/localstack-community/events/292576557/) to learn more about the 2.0 release.
 
 To get started with using LocalStack 2.0 features:
 
