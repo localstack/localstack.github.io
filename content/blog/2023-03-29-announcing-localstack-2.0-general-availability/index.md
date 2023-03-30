@@ -74,12 +74,12 @@ We have released the Cloud Pods launchpad, a simple application to to share and 
 Simply include the official LocalStack launchpad badge, which you can get from our [Badge generator](https://app.localstack.cloud/launchpad), in your READMEs.
 
 <div class='d-flex justify-content-center'>
-{{< img src="badge.png" style="max-width: 866; max-height: 244px;" >}}
+{{< img-simple src="badge.png" style="max-width: 866; max-height: 244px;" >}}
 </div>
 
 Everyone that clicks on the badge will be redirected to our launchpad, where they will be able to inject the linked pod into their LocalStack instance.
 <div class='d-flex justify-content-center'>
-    {{< img src="launchpad.png" style="max-width: 662px; max-height: 558px;" >}}
+    {{< img-simple src="launchpad.png" style="max-width: 662px; max-height: 558px;" >}}
 </div>
 
 Find out more about our Cloud Pods launchpad on our [official documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/launchpad/)
