@@ -36,6 +36,7 @@ Let us take a look at our new features and enhancements, and what you can benefi
 * [Improved LocalStack toolings for local cloud development]({{< ref "#improved-localstack-toolings-for-local-cloud-development" >}})
 * [All-new LocalStack Developer Hub &amp; Tutorials]({{< ref "#all-new-localstack-developer-hub--tutorials" >}})
 * [Improved LocalStack Coverage Docs Overview]({{< ref "#improved-localstack-coverage-docs-overview" >}})
+* [Cross Service IAM Enforcement]({{< "#cross-service-iam-enforcement" >}})
 
 ### New Lambda & S3 provider
 
@@ -94,18 +95,17 @@ We have introduced an all-new Mono container mode for our Big Data services (Glu
 
 ### Simplified Host configuration and Docker Networking
 
-We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently. 
-f provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases.
-We are also unifying the variables `EDGE_BIND_HOST`, `EDGE_PORT` and `EDGE_PORT_HTTP` into `GATEWAY_LISTEN`, which will allow configuration of the addresses and ports the LocalStack process listens on.
+We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently.
+
+If provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases. We are also unifying the variables `EDGE_BIND_HOST`, `EDGE_PORT` and `EDGE_PORT_HTTP` into `GATEWAY_LISTEN`, which will allow configuration of the addresses and ports the LocalStack process listens on.
+
 You can find out more about this in our [migration guide](https://discuss.localstack.cloud/t/upcoming-changes-for-localstack-v2/239#networking-7).
 
-We have also spent time improving our documentation on networking are happy to present a new [networking troublehsooting](https://docs.localstack.cloud/references/network-troubleshooting/) guide.
-Based on feedback from the community, we have enumerated different networking scenarios LocalStack is often used in, and created a comprehensive guide on how to configure the specific scenario.
+We have also spent time improving our documentation on networking are happy to present a new [networking troublehsooting](https://docs.localstack.cloud/references/network-troubleshooting/) guide. Based on feedback from the community, we have enumerated different networking scenarios LocalStack is often used in, and created a comprehensive guide on how to configure the specific scenario.
 
 Check out [our extensive documentation](https://docs.localstack.cloud/tags/networking/) on connecting your application code to LocalStack.
 
 {{< img-simple src="network-troubleshooting.png" >}}
-
 
 ### New features for the LocalStack Web Application
 
@@ -133,16 +133,19 @@ In the future, we would like to expand this concept to include explainer videos,
 To learn more about the Developer Hub and the purpose it serves, check out our [discuss post](https://discuss.localstack.cloud/t/introducing-the-localstack-developer-hub/264).
 {{< img-simple src="developer-hub-collage.png" >}}
 
-
 ### Improved LocalStack Coverage Docs Overview
 
-Our documentation has a brand new style for the [LocalStack Coverage](https://docs.localstack.cloud/references/coverage/). Each service has its dedicated coverage page, and we also included a search field to make navigation easier.
+Our documentation has a new style for the [LocalStack Coverage](https://docs.localstack.cloud/references/coverage/). Each service has a dedicated coverage page, and we also included a search field to make navigation easier.
 
-The coverage pages provide detailed information regarding the supported operations in LocalStack. Additionally, the docs now show details on how operations are tested and covered by integration test suits.
-
+The coverage pages provide detailed information regarding the supported operations in LocalStack. The coverage page also displays details on how these operations are tested and covered by our integration test suits.
 
 {{< img-simple src="coverage_docs_screenshot.png" >}}
 
+### Cross Service IAM Enforcement
+
+Our IAM Enforcement, activated using `ENFORCE_IAM=1`, now has the ability to enforce internal requests between services. This exciting feature makes it easier for you to debug your IAM policies and enables LocalStack to provide clear feedback for internal and external requests that are denied due to missing permissions.
+
+We've made some important changes to the way that resource-based permissions are evaluated when a request is made. As a result, both external and cross-service requests will now be evaluated correctly, ensuring that your IAM policies are respected across the board.
 
 ## Get started with LocalStack 2.0
 
