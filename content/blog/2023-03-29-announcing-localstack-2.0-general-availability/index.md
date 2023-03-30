@@ -46,7 +46,7 @@ Previously, Lambdas were executed within the LocalStack container. With the new 
 
 The new S3 provider is now faster, more stringent, and compatible with AWS behavior. From a user perspective, you can see better performance, especially for S3 notifications, which are asynchronous now. The new S3 & Lambda providers with a significant AWS parity will make your serverless experience a breeze with LocalStack. You can find more information about them on our S3 & Lambda documentation.
 
-## Separation of Community & Pro image
+### Separation of Community & Pro image
 
 With the 2.0 release, our Pro & Team customers need to migrate to our new LocalStack Pro image ([`localstack/localstack-pro`](https://hub.docker.com/r/localstack/localstack-pro)). Community users are not affected by this change, as they can continue using the open-source community image ([`localstack/localstack`](https://hub.docker.com/r/localstack/localstack)). This separation solves a critical circular dependency between the community version of LocalStack and our proprietary LocalStack Pro extensions. If you use an API key and continue using the community image to activate the Pro extensions, you will see an error message.
 
@@ -71,7 +71,7 @@ The layout of Cloud Pods has been changed, and Cloud Pods created with v1.x.x ma
 ### Cloud Pods launchpad
 
 We have released the Cloud Pods launchpad, a simple application to to share and inject cloud pods directly from your repositories or via a URL. 
-Simply include the official LocalStack launchpad badge, which you can get from our [Badge generator](https://app.localstack.cloud/launchpad), in your READMEs.
+Simply include the official LocalStack launchpad badge, which you can get from our [badge generator](https://app.localstack.cloud/launchpad), in your READMEs.
 
 <div class='d-flex justify-content-center'>
 {{< img-simple src="badge.png" style="max-width: 866; max-height: 244px;" >}}
@@ -82,7 +82,7 @@ Everyone that clicks on the badge will be redirected to our launchpad, where the
     {{< img-simple src="launchpad.png" style="max-width: 662px; max-height: 558px;" >}}
 </div>
 
-Find out more about our Cloud Pods launchpad on our [official documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/launchpad/)
+Find out more about our Cloud Pods launchpad on our [official documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/launchpad/).
 
 ### Mono container support for Big Data services
 
@@ -107,7 +107,7 @@ Over the past few months, we have introduced & improved LocalStack Tools to make
 
 ### All-new LocalStack Developer Hub & Tutorials
 
-We have launched the [Developer Hub](), a new Web experience enabling developers to find up-to-date LocalStack samples spanning various use cases: Serverless, Containers, Big Data, Identity, and much more! The Developer Hub offers a consolidated view of [LocalStack sample applications]() that educate developers to build and run cloud and serverless applications. With additional [tutorials](), we strive to keep the gap between LocalStack and AWS as small as possible and focus on getting users, step by step, started with LocalStack!
+We have launched the [Developer Hub](https://docs.localstack.cloud/developer-hub/), a new Web experience enabling developers to find up-to-date LocalStack samples spanning various use cases: Serverless, Containers, Big Data, Identity, and much more! The Developer Hub offers a consolidated view of [LocalStack sample applications](https://docs.localstack.cloud/applications) that educate developers to build and run cloud and serverless applications. With additional [tutorials](https://docs.localstack.cloud/tutorials), we strive to keep the gap between LocalStack and AWS as small as possible and focus on getting users, step by step, started with LocalStack!
 
 The Developer Hub is currently in beta and available on our [documentation website](https://docs.localstack.cloud/developer-hub/). We are increasingly improving our sample applications' quality and service coverage while actively seeking user feedback. In the future, we would like to expand this concept to include explainer videos, lab environments, broader code samples, and more blog posts, making it the resource go-to for our community.
 
