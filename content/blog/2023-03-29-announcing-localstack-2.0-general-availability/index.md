@@ -36,7 +36,7 @@ Let us take a look at our new features and enhancements, and what you can benefi
 * [Improved LocalStack toolings for local cloud development]({{< ref "#improved-localstack-toolings-for-local-cloud-development" >}})
 * [All-new LocalStack Developer Hub &amp; Tutorials]({{< ref "#all-new-localstack-developer-hub--tutorials" >}})
 * [Improved LocalStack Coverage Docs Overview]({{< ref "#improved-localstack-coverage-docs-overview" >}})
-* [Cross Service IAM Enforcement]({{< "#cross-service-iam-enforcement" >}})
+* [Cross Service IAM Enforcement]({{< ref "#cross-service-iam-enforcement" >}})
 
 ### New Lambda & S3 provider
 
