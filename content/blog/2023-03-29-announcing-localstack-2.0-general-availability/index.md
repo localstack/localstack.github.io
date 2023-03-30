@@ -5,7 +5,7 @@ lead: We are excited to announce the release of LocalStack 2.0 that brings new f
 date: 2023-03-29T9:35:38+05:30
 lastmod: 2023-03-29T9:35:38+05:30
 images: []
-contributors: []
+contributors: ["LocalStack Team"]
 tags: ['news']
 leadimage: "localstack-v2-cover.jpg"
 weight: 1
@@ -32,7 +32,7 @@ Let us take a look at our new features and enhancements, and what you can benefi
 * [Cloud pods launchpad]({{< ref "#cloud-pods-launchpad" >}})
 * [Mono container support for Big Data services]({{< ref "#mono-container-support-for-big-data-services" >}})
 * [Simplified Host configuration and Docker Networking]({{< ref "#simplified-host-configuration-and-docker-networking" >}})
-* [New features for LocalStack Web Application]({{< ref "#new-features-for-localstack-web-application" >}})
+* [New features for the LocalStack Web Application]({{< ref "#new-features-for-the-localstack-web-application" >}})
 * [Improved LocalStack toolings for local cloud development]({{< ref "#improved-localstack-toolings-for-local-cloud-development" >}})
 * [All-new LocalStack Developer Hub &amp; Tutorials]({{< ref "#all-new-localstack-developer-hub--tutorials" >}})
 
@@ -68,9 +68,21 @@ Cloud Pods are persistent state snapshots that enable next-generation state mana
 
 The layout of Cloud Pods has been changed, and Cloud Pods created with v1.x.x may be incompatible with LocalStack 2.0. Check out our [Cloud Pods documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/) for more information.
 
-### Cloud pods launchpad
+### Cloud Pods launchpad
 
-We have introduced the Cloud Pods launchpad, a simple application to to share and inject cloud pods directly from your repositories or via a simple URL. With Cloud Pods launchpad, you can get your official LocalStack badge from our [Badge generator](https://app.localstack.cloud/launchpad) and simply include it in your READMEs to share your pod with others. Clicking on the badge will take you to the launchpad again, where the pod will then be injected into your running LocalStack instance.
+We have released the Cloud Pods launchpad, a simple application to to share and inject cloud pods directly from your repositories or via a URL. 
+Simply include the official LocalStack launchpad badge, which you can get from our [Badge generator](https://app.localstack.cloud/launchpad), in your READMEs.
+
+{{< img src="badge.png" >}}
+
+Everyone that clicks on the badge will be redirected to our launchpad, where they will be able to inject the linked pod into their LocalStack instance.
+<div class='d-flex justify-content-center'>
+  <div class="col col-12 col-md-8 col-lg-7">
+    {{< img src="launchpad.png" >}}
+  </div>
+</div>
+
+Find our more about our Cloud Pods launchpad on the [official documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/launchpad/)
 
 ### Mono container support for Big Data services
 
@@ -80,7 +92,7 @@ We have introduced an all-new Mono container mode for our Big Data services (Glu
 
 We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently. If provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases. Furthermore, if you use LocalStack Pro with the CLI, it will no longer publish port 53 to the host if it is already bound by some other service like `systemd-resolved`. Check out our extensive documentation on connecting your application code to LocalStack.
 
-### New features for LocalStack Web Application
+### New features for the LocalStack Web Application
 
 We have overhauled the [LocalStack Web Application](app.localstack.cloud) with an immediate focus on improving the user interface and experience. The LocalStack Web Application now features an improved sign-up flow, API key and subscription management, and a getting started section. We have also polished the UI/UX for managing resources in our Resource Browser, for which we have also added support for Glue, SES v2, RDS Clusters, and Lambda Layers.
 
@@ -119,3 +131,8 @@ LocalStack 2.0 could not have been possible without active user feedback, commun
 ## What’s next?
 
 TODO
+
+
+<style>
+
+</style>
