@@ -73,16 +73,16 @@ The layout of Cloud Pods has been changed, and Cloud Pods created with v1.x.x ma
 We have released the Cloud Pods launchpad, a simple application to to share and inject cloud pods directly from your repositories or via a URL. 
 Simply include the official LocalStack launchpad badge, which you can get from our [Badge generator](https://app.localstack.cloud/launchpad), in your READMEs.
 
-{{< img src="badge.png" >}}
+<div class='d-flex justify-content-center'>
+{{< img src="badge.png" style="max-width: 866; max-height: 244px;" >}}
+</div>
 
 Everyone that clicks on the badge will be redirected to our launchpad, where they will be able to inject the linked pod into their LocalStack instance.
 <div class='d-flex justify-content-center'>
-  <div class="col col-12 col-md-8 col-lg-7">
-    {{< img src="launchpad.png" >}}
-  </div>
+    {{< img src="launchpad.png" style="max-width: 662px; max-height: 558px;" >}}
 </div>
 
-Find our more about our Cloud Pods launchpad on the [official documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/launchpad/)
+Find out more about our Cloud Pods launchpad on our [official documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/launchpad/)
 
 ### Mono container support for Big Data services
 
