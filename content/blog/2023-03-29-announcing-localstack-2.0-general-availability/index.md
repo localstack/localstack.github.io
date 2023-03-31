@@ -4,7 +4,6 @@ description: We are excited to announce the release of LocalStack 2.0 that bring
 lead: We are excited to announce the release of LocalStack 2.0 that brings new features, greater AWS parity, and better performance!
 date: 2023-03-29T9:35:38+05:30
 lastmod: 2023-03-29T9:35:38+05:30
-images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
 leadimage: "localstack-v2-cover.jpg"
