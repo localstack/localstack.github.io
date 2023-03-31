@@ -109,7 +109,7 @@ Check out [our extensive documentation](https://docs.localstack.cloud/tags/netwo
 
 ### New features for the LocalStack Web Application
 
-We have overhauled the [LocalStack Web Application](app.localstack.cloud) with an immediate focus on improving the user interface and experience. The LocalStack Web Application now features an improved sign-up flow, API key and subscription management, and a getting started section. 
+We have overhauled the [LocalStack Web Application](https://app.localstack.cloud) with an immediate focus on improving the user interface and experience. The LocalStack Web Application now features an improved sign-up flow, API key and subscription management, and a getting started section.
 
 We have also polished the UI/UX for managing resources in our Resource Browser, for which we have also added support for Glue, SES v2, RDS Clusters, and Lambda Layers, bringing up the number of supported services to 28!
 
