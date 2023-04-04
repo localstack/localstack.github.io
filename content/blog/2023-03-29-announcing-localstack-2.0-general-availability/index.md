@@ -94,7 +94,7 @@ We have introduced an all-new Mono container mode for our Big Data services (Glu
 
 ### Simplified Host configuration and Docker Networking
 
-We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack more consistently.
+We have introduced several enhancements and features to simplify our host configuration. The variables `HOSTNAME_EXTERNAL` and `LOCALSTACK_HOSTNAME` have been unified into `LOCALSTACK_HOST`, which allows the configuration of hostnames returned by LocalStack to be more consistent.
 
 If provided, this variable is used systematically throughout services that return URLs to access created resources, such as OpenSearch clusters, SQS queues, or RDS databases. We are also unifying the variables `EDGE_BIND_HOST`, `EDGE_PORT` and `EDGE_PORT_HTTP` into `GATEWAY_LISTEN`, which will allow configuration of the addresses and ports the LocalStack process listens on.
 
