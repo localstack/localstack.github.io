@@ -25,7 +25,7 @@ LocalStack 2.0 delivers our strong investment across three  critical areas — *
 Let us take a look at our new features and enhancements, and what you can benefit from when using our latest release!
 
 * [Completely new Lambda and S3 provider]({{< ref "#new-lambda--s3-provider" >}})
-* Significant reduction in LocalStack container image size through [separation of LocalStack communtiy & LocalStack Pro docker images]({{< ref "#separation-of-community--pro-image" >}})
+* Significant reduction in LocalStack image size through [separation of LocalStack Community & Pro Docker images]({{< ref "#separation-of-community--pro-image" >}})
 * New [Snapshot persistence mechanism]({{< ref "#new-snapshot-persistence-mechanism" >}})
 * [Community Cloud Pods]({{< ref "#support-for-community-cloud-pods" >}})
 * [Cloud pods launchpad]({{< ref "#cloud-pods-launchpad" >}})
