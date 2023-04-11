@@ -7,7 +7,7 @@
   </div>
   <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="container overlay-card stats-card mb-8">
-      <div class="carousel-inner">
+      <div class="carousel-inner d-flex align-items-end" id="carouselItemContainer">
         {{ partial "misc/review-carousel-item.html" (dict
           "active" "active"
           "review" "Xiatech is a global technology company based in London that leverages Hyper-Integration to connect systems, unify data and deliver advanced insights to customers through Xfuze, our platform, which orchestrates many AWS services. Our engineering team utilises localstack to provide a complete, localised AWS environment where developers can build, test, profile and debug infrastructure and code ahead of deployment to the cloud. We have enabled each software engineer to be fully independent with local development and testing tooling, and this has proved to be a key accelerator for our engineering team."
@@ -58,3 +58,16 @@
     </div>
   </div>
 </section>
+
+
+<script defer>
+  var reviews = document.getElementsByClassName("carousel-item");
+  var maxHeight = 0
+  for (var i = 0; i < reviews.length; i++) {
+    if (reviews[i].offsetHeight > maxHeight) {
+      maxHeight = reviews[i].offsetHeight;
+    }
+  }
+  var carouselItemContainer = document.getElementById("carouselItemContainer");
+  carouselItemContainer.style.height = '' + maxHeight + 'px';
+</script>

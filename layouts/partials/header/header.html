@@ -21,10 +21,10 @@
       <ul class="navbar-nav social-nav d-none d-sm-flex order-3 order-lg-4">
         {{ range .Site.Menus.social -}}
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
+          <a class="nav-link social-hover" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
         </li>
         {{ end -}}
-        <li class="nav-item ms-2">
+        <li class="nav-item">
           <a class="btn btn-primary btn-tertiary" type="link" href="https://app.localstack.cloud"><i class="bi bi-person"></i> SIGN UP</a>
         </li>
       </ul>
@@ -64,7 +64,7 @@
             <a class="nav-link" target="_blank" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="visually-hidden">{{ .Name | safeHTML }}</span></a>
             {{ end -}}
           </div>
-            <a class="btn btn-primary btn-tertiary" type="link" href="https://app.localstack.cloud"><i class="bi bi-person"></i> SIGN UP</a>
+            <a class="btn btn-primary btn-tertiary" type="link" href="https://app.localstack.cloud/sign-up"><i class="bi bi-person"></i> SIGN UP</a>
           </li>
           <li class="nav-item ms-2 d-flex d-sm-none">
           </li>
@@ -107,4 +107,25 @@
       }
     }
   }
+
+  $(document).ready(function(){
+      $(".dropdown").hover(function(){
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if(dropdownMenu.is(":visible")){
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+  });     
+
 </script>
+<style>
+  .social-hover:hover svg path {
+    fill: white;
+  }
+  .dropdown:hover .dropdown-menu{
+      display: block;
+  }
+  .dropdown-menu{
+      margin-top: 0.125rem;
+  }
+</style>

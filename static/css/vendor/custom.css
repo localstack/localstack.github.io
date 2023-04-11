@@ -83,7 +83,7 @@ tr.no-border-bottom td {
 .solution-card {
   display: flex;
   flex-direction: column;
-  justify-content: between;
+  justify-content: space-between;
   align-items: center;
   padding: 40px 40px;
   background: linear-gradient(15deg, #271E5A -35%, #7E5ACA 145%);
@@ -195,7 +195,6 @@ tr.no-border-bottom td {
 
 .form-control {
   background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
   border-radius: 10px !important;
   padding: 15px 20px !important;
 }
@@ -352,4 +351,12 @@ li::marker {
 .bg-special-gradient {  
   background: linear-gradient(280deg, #63ECD3 0%, #835AF7 95%);
   border-radius: 10px;
+}
+
+.blog h3 {
+  scroll-margin-top: 100px;
+}
+
+.blog.single > section a {
+  font-weight: bold;
 }

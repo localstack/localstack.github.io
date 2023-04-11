@@ -9,7 +9,7 @@
           <p class="m-0">A fully functional local cloud stack</p>
           <p>Develop and test your cloud and serverless<br>apps offline!</p>
         </div>
-        <a class="btn btn-primary btn-lg" style="width: 315px" href="https://github.com/localstack/localstack" target="_blank">GET STARTED</a>
+        <a class="btn btn-primary btn-lg" style="width: 315px" href="https://docs.localstack.cloud/getting-started/" target="_blank">GET STARTED</a>
       </div>
       <div class="col-12 col-sm-10 col-md-7 order-0 order-md-1">
         <img style="max-width: 100%" src="/images/landing/laptop_stacks.svg"
@@ -43,15 +43,15 @@
   <div class="container overlay-card stats-card">
     <div class="row text-center">
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">430<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">460<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.875rem; font-weight: 700">CONTRIBUTORS</span>
       </div>
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">13 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">20 k<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.87rem; font-weight: 700">SLACK MEMBERS</span>
       </div>
       <div class="col-12 col-sm-6 col-lg-3">
-        <span style="font-size: 2.5rem; font-weight: 800">42 k<span style="color: #79F0A9">+</span></span><br>
+        <span style="font-size: 2.5rem; font-weight: 800">45 k<span style="color: #79F0A9">+</span></span><br>
         <span style="font-size: 0.87rem; font-weight: 700">GITHUB STARS</span>
       </div>
       <div class="col-12 col-sm-6 col-lg-3">
@@ -66,7 +66,7 @@
   <div class="strike-dark">
     <h2 class="text-center">Our trusted clients</h2>
   </div>
-  <div class="row justify-content-center text-center mt-6">
+  <div class="row justify-content-center text-center mt-5">
     <div class="col-lg-10">
       <div class="row gy-3">
         {{ range .Site.Data.customers -}}
@@ -216,6 +216,35 @@
 
 {{ partial "section/reviews.html" . }}
 
+<section class="section section-md container mb-6">
+  <div class="strike-dark">
+    <h2 class="text-center">Giving back <span class="h4"><i class="bi bi-heart-fill"></i></span></h2>
+  </div>
+  <div class="row justify-content-center text-center mt-5">
+    <div class="col-lg-10">
+      <div class="row gy-3">
+        <p>
+          At LocalStack, we're 100% committed to supporting the community.
+        </p>
+        <p>
+          We frequently contribute open source code, and support academic, student, or open source projects and non-profit/philanthropic organizations.
+          If you have a project like this, please reach out to us!
+        </p>
+        <p>
+          Here are some of the awesome projects we have supported with free subscriptions:
+        </p>
+        {{ range .Site.Data.community -}}
+        <div class="col customer-logo mb-4 d-flex justify-content-center">
+          <a href="{{ .url }}" target="_blank" class="d-flex align-items-center">
+            <img src="{{ .logo }}" style="max-height: 80px">
+          </a>
+        </div>
+        {{ end -}}
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- <section class="section section-sm container">
   <div class="row justify-content-center">
     <div class="col-lg-10">
@@ -327,33 +356,7 @@
     </div>
   </div>
 </section> 
-
-<section class="section section-md container pt-0">
-  <h2 class="h2 text-center">Giving back <span class="h4"><i class="bi bi-heart-fill"></i></span></h2>
-  <div class="row justify-content-center text-center mt-2">
-    <div class="col-lg-10">
-      <div class="row">
-        <p>
-          At LocalStack, we're 100% committed to supporting the community.
-        </p>
-        <p>
-          We frequently contribute open source code, and support academic, student, or open source projects and non-profit/philanthropic organizations.
-          If you have a project like this, please reach out to us!
-        </p>
-        <p>
-          Here are some of the awesome projects we have supported with free pro subscriptions:
-        </p>
-        {{ range .Site.Data.community -}}
-        <div class="col customer-logo mb-4">
-          <a href="{{ .url }}" target="_blank">
-            <img src="{{ .logo }}" style="max-height: 80px">
-          </a>
-        </div>
-        {{ end -}}
-      </div>
-    </div>
-  </div>
-</section> -->
+-->
 {{ end }}
 
 {{ define "sidebar-footer" }}

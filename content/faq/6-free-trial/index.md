@@ -1,7 +1,7 @@
 ---
 id: free-trial
 question: "Is a free trial available before I purchase?"
-tags: ['Pricing']
+tags: ['pricing']
 ---
 
 

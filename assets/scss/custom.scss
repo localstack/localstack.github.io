@@ -1,0 +1,11 @@
+@include media-breakpoint-up(lg) {
+  .input-group > .btn:first-of-type {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+  
+  .input-group > .btn:last-of-type {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+  }
+}
