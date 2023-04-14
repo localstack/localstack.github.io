@@ -1,14 +1,16 @@
 - logo: /images/customers/prg_fulllogo_onecolor_pink.png
   url: "https://www.pinkribbongirls.org"
+- logo: /images/customers/orenda_logos_horizontal_with_tagline.svg
+  url: https://orendaed.org/
 - logo: /images/customers/global_health.png
   url: "https://global.health"
-- logo: /images/customers/bahmi.png
-  url: https://www.bahmni.org/
 - logo: /images/customers/spring_cloud_aws_logo.png
   url: https://awspring.io/
-- logo: /images/customers/cdf_logo.png
-  url: https://openfabr.github.io/cdf/
+- logo: /images/customers/bahmi.png
+  url: https://www.bahmni.org/
 - logo: /images/customers/sqs_admin_logo.png
   url: https://github.com/PacoVK/sqs-admin
+- logo: /images/customers/cdf_logo.png
+  url: https://openfabr.github.io/cdf/
 - logo: /images/customers/cdrl.png
   url: https://cdrl-ut.org/
