@@ -41,6 +41,14 @@
   background: linear-gradient(278.94deg, #63ECD3 -4.84%, #7795E9 112.95%) !important;
 }
 
+.btn-white {
+  background: $white !important;
+  color: $purple-primary;
+  &:hover, &:focus, &:active{
+    color: $purple-primary !important;
+  }
+}
+
 .btn-lg {
   font-size: $font-size-md;
   padding: 18px;

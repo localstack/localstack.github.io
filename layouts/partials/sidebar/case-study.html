@@ -1,0 +1,21 @@
+<div class="casestudy-sidebar">
+  <div class="casestudy-logo d-flex align-items-center justify-content-center">
+    <img src="{{.Params.logo}}" alt="{{.Title}}" />
+  </div>
+  <ul class="casestudy-properties">
+    {{ range .Params.properties }}
+    <li>
+      <p class="key"><strong>{{ .key }}:</strong></p>
+      {{ $type := (printf "%T" .value) }} {{ if eq $type "[]interface {}" }}
+      <ul class="services-list d-flex flex-wrap">
+        {{ range .value }}
+        <li>{{.}}</li>
+        {{ end }}
+      </ul>
+      {{ end }} {{ if eq $type "string" }}
+      <p class="value">{{.value}}</p>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</div>
