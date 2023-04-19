@@ -52,12 +52,12 @@
 
 .case-study-content {
   font-size: 14px;
-  font-weight: 700;
   color: $mav-deep-blue;
   line-height: 26px;
   .lead-content {
     margin-top: 46px;
     font-size: 18px;
+    font-weight: 500;
     p {
       margin-bottom: 30px;
     }
@@ -78,12 +78,14 @@
     border-left: 0;
     margin-bottom: 24px;
     padding-left: 0;
+    font-weight: 700;
   }
   .quote-author {
     font-size: 18px;
     border-left: 4px solid $teal;
     padding-left: 18px;
     margin-bottom: 24px;
+    font-weight: 700;
     p {
       margin: 0;
     }
