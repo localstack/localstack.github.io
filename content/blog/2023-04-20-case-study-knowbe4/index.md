@@ -1,11 +1,12 @@
 ---
 title: KnowBe4 redefines their local cloud development & testing using LocalStack
 description: KnowBe4 is migrating its old monolithic PHP-based application to an AWS Serverless model, using LocalStack for testing and integration of their automated audits & compliance platform. In this case study, we talk with Kevin Breton, VP of engineering at KnowBe4, about their experience using LocalStack to redefine their local cloud development & testing!
+lead: KnowBe4 is migrating its old monolithic PHP-based application to an AWS Serverless model, using LocalStack for testing and integration of their automated audits & compliance platform. In this case study, we talk with Kevin Breton, VP of engineering at KnowBe4, about their experience using LocalStack to redefine their local cloud development & testing!
 date: 2023-04-19
 lastmod: 2023-04-19
 contributors: ["LocalStack Team"]
 tags: ["case-study"]
-leadimage: ""
+leadimage: "localstack-knowbe4-case-study-lead-image.png"
 layout: case-study
 logo: knowbe4-logo.png
 properties:
@@ -73,14 +74,14 @@ Kevin engineered a serverless template that creates a custom serverless project 
 
 It allows the engineering team to develop and test their serverless functions with Lambda locally and push it to [GitLab CI](https://about.gitlab.com/features/continuous-integration/), the CI provider used by KnowBe4, where a staging environment is created using real AWS API calls. The simplification in the engineering process has been a benchmark for the KnowBe4 team as they continue relying on LocalStack for their local cloud development needs.
 
-![localstack-knowbe4-diagram-1.jpg](localstack-knowbe4-diagram-1.jpg)
+![High-level overview of the CI/CD workflow at KnowBe4 with LocalStack playing a role for local dev & test along with CI integrations](localstack-knowbe4-diagram.jpg)
 
 ## Results
 
 Within a few weeks, Kevin and his team members noticed the value LocalStack was bringing to their development and testing processes. Some highlights and numbers are shared in the sections below.LocalStack has simplified the creation and invocation process of AWS Lambda functions for KnowBe4 by nearly 90%. Previously, creating the Lambda functions on GitLab CI took around 7-10 minutes which is now created and tested locally in just a few seconds. It increases the reliability and efficiency of LocalStack as a credible local cloud development platform geared towards increasing developer productivity.
 
 <div class="img-group d-block d-sm-flex align-items-start">
-  <img src="reduction-by-90-locally.jpg" alt="90% Creation & invocation of Serverless functions locally reduced by" class="img-1">
+  <img src="localstack-knowbe4-serverless-invocations.png" alt="90% Creation & invocation of Serverless functions locally reduced by" class="img-1">
   <img src="consistent-pro-support.jpg" alt="Consistent Pro support and hardening of the test suite" class="img-2">
 </div>
 
