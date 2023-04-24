@@ -1,5 +1,5 @@
-<section class="section section-sm bg-gradient-dark">
-  
+<section class='section section-sm bg-gradient-dark {{ cond (eq .Layout "case-study") "position-relative" "" }}'>
+
   {{ if eq .HeroIcon "search" }}
     <div class="position-absolute w-100 section pb-7 pt-7 d-none d-md-block">
       <div class="container">
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-  {{ else if eq .HeroIcon "blog" }} 
+  {{ else if eq .HeroIcon "blog" }}
   <div class="position-absolute w-100 section pb-7 pt-7 d-none d-md-block">
     <div class="container">
       <div class="row justify-content-center align-items-center">
@@ -68,7 +68,32 @@
       </div>
     </div>
   </div>
-  {{ else if eq .HeroIcon "computer" }} 
+  {{ else if eq .HeroIcon "case-study" }}
+  <div class="position-absolute w-100 section d-none d-md-block case-study-bg-icon p-0">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2 icon1">
+          <img
+            class="w-100"
+            style="transform: rotate(35deg) scale(1.6); opacity: .9;"
+            src="/images/heroes/blog.svg"
+          />
+        </div>
+        <div class="col-2 icon2">
+          <img
+            class="w-100"
+            style="transform: rotate(-35deg) scaleX(-1) scale(1.8); opacity: .75;"
+            src="/images/heroes/blog.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ else if eq .HeroIcon "computer" }}
     <div class="position-absolute w-100 section pb-7 pt-7 d-none d-md-block">
       <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -100,7 +125,7 @@
         </div>
       </div>
     </div>
-  {{ else if eq .HeroIcon "cloud" }} 
+  {{ else if eq .HeroIcon "cloud" }}
     {{ partial "heroes/clouds.html" }}
   {{ else if eq .HeroIcon "question" }}
     <div class="position-absolute w-100 section pb-7 pt-7 d-none d-md-block">
@@ -140,7 +165,13 @@
     </div>
   {{ end }}
 
-
+  {{ if eq .Layout "case-study" }}
+  <div class="container pb-4 pt-9 {{ .heroClasses }}">
+    <div class="row justify-content-center align-items-center text-white">
+      <h1 class="text-left m-0 pt-lg-5">{{ .Title }}</h1>
+    </div>
+  </div>
+  {{ else  }}
   <div class="container pb-5 pt-6 pb-md-7 pt-sm-7 {{ .heroClasses }}">
     <div class="row justify-content-center align-items-center text-white">
       <h1 class="text-center m-0 pt-lg-5">{{ .Title }}</h1>
@@ -149,4 +180,5 @@
       {{ end }}
     </div>
   </div>
+  {{ end }}
 </section>

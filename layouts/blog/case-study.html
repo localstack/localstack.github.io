@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "case-study" "Layout" "case-study" "heroClasses" "case-study-top-sec") }}
+<section class="section section-sm mb-6">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <article>
+          {{/*  <div class="blog-header">
+            {{ partial "main/blog-meta.html" . }}
+          </div>  */}}
+          <div class="case-study-main">
+            <div class="row g-0">
+              <div class="col-12 col-md-4">
+                {{ partial "sidebar/case-study.html" (dict "Title" .Title "Params" .Params) }}
+              </div>
+              <div class="col-12 col-md-8">
+                <p class="lead">{{ .Params.lead | safeHTML }}</p>
+                <div class="case-study-content">{{ .Content }}</div>
+                {{ partial "misc/case-study-cta.html" }}
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

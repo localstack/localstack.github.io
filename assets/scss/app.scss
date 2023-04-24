@@ -15,6 +15,7 @@
 @import "katex/dist/katex";
 
 /** Import theme styles */
+@import "functions";
 @import "common/fonts";
 @import "common/global";
 @import "common/dark";
@@ -29,6 +30,7 @@
 @import "components/images";
 @import "components/search";
 @import "components/tables";
+@import "components/cta";
 
 @import "layouts/footer";
 @import "layouts/header";
@@ -37,6 +39,7 @@
 @import "layouts/sidebar";
 
 @import "pages/pricing";
+@import "pages/casestudy";
 
 @import "vendor/misc";
 @import "custom";
