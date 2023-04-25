@@ -80,7 +80,7 @@ Engineers started using LocalStack with [Docker Desktop](https://www.docker.com/
 
 Kevin engineered a serverless template that creates a custom serverless project with LocalStack and Terraform, including unit tests and all available integrations to simplify the project setup and development process. [Lerna](https://lerna.js.org/) is used to bootstrap everything together to create multiple Lambda functions at will. 
 
-![High-level overview of the CI/CD workflow at KnowBe4 with LocalStack playing a role for local dev & test along with CI integrations](localstack-knowbe4-diagram.png)
+<img src="localstack-knowbe4-diagram.png" alt="High-level overview of the CI/CD workflow at KnowBe4 with LocalStack playing a role for local dev & test along with CI integrations">
 
 It allows the engineering team to develop and test their serverless functions with Lambda locally and push it to [GitLab CI](https://about.gitlab.com/features/continuous-integration/), the CI provider used by KnowBe4, where a staging environment is created using real AWS API calls. The simplification in the engineering process has been a benchmark for the KnowBe4 team as they continue relying on LocalStack for their local cloud development needs.
 
