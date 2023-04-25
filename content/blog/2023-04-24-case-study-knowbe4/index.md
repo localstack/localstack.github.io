@@ -40,10 +40,13 @@ properties:
 
 {{< youtube O5DoLsuAn4E >}}
 <br>
-> _“LocalStack has been a game changer in terms of development speed and efficiency for our team migrating our monolithic application to a serverless Node.js stack on AWS.”_
-<div class="quote-author">
-  <p><a href="https://www.linkedin.com/in/kevinbreton/">Kevin Breton</a>,</p>
-  <p>VP of Engineering at <a href="https://www.knowbe4.com/">KnowBe4</a></p>
+<div class="quote-container mt-4">
+
+  > _“LocalStack has been a game changer in terms of development speed and efficiency for our team migrating our monolithic application to a serverless Node.js stack on AWS.”_
+  <div class="quote-author">
+    <p><a href="https://www.linkedin.com/in/kevinbreton/">Kevin Breton</a>,</p>
+    <p>VP of Engineering at <a href="https://www.knowbe4.com/">KnowBe4</a></p>
+  </div>
 </div>
 
 <div class="lead-content">
@@ -66,10 +69,13 @@ The KnowBe4 team started using [LocalStack Pro](https://app.localstack.cloud/), 
 
 Engineers started using LocalStack with [Docker Desktop](https://www.docker.com/products/docker-desktop/) to build containerized applications and microservices. It led to an improvement in the development & testing lifecycles. The KnowBe4 team prefers to use our [`awslocal` command-line interface (CLI)](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal) over Terraform.
 
->_“While in the past we had to maintain our own tooling and local mocks, with LocalStack we can now empower our devs to iterate quickly without having to perform numerous code commits & waiting for AWS pipelines—hence also saving money on infrastructure!”_
-<div class="quote-author">
-  <p><a href="https://www.linkedin.com/in/kevinbreton/">Kevin Breton</a>,</p>
-  <p>VP of Engineering at <a href="https://www.knowbe4.com/">KnowBe4</a></p>
+<div class="quote-container">
+
+  >_“While in the past we had to maintain our own tooling and local mocks, with LocalStack we can now empower our devs to iterate quickly without having to perform numerous code commits & waiting for AWS pipelines—hence also saving money on infrastructure!”_
+  <div class="quote-author">
+    <p><a href="https://www.linkedin.com/in/kevinbreton/">Kevin Breton</a>,</p>
+    <p>VP of Engineering at <a href="https://www.knowbe4.com/">KnowBe4</a></p>
+  </div>
 </div>
 
 Kevin engineered a serverless template that creates a custom serverless project with LocalStack and Terraform, including unit tests and all available integrations to simplify the project setup and development process. [Lerna](https://lerna.js.org/) is used to bootstrap everything together to create multiple Lambda functions at will. 
