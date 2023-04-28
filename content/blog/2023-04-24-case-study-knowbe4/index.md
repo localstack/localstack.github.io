@@ -50,7 +50,7 @@ properties:
 </div>
 
 <div class="lead-content">
-  <p><a href="https://knowbe4.com/compliance-plus">KCM GRC Platform</a> by KnowBe4 is a governance, risk management, and compliance (GRC) software platform. Designed to help organizations move away from manual processes, KCM GRC efficiently manages risk and compliance by integrating with various third-party vendors. With KCM GRC, you can manage the complex area of compliance and audits, centralize policy distribution and tracking, and simplify the risk management process.</p>
+  <p><a href="https://www.knowbe4.com/careers/engineering">KCM GRC Platform</a> by KnowBe4 is a governance, risk management, and compliance (GRC) software platform. Designed to help organizations move away from manual processes, KCM GRC efficiently manages risk and compliance by integrating with various third-party vendors. With KCM GRC, you can manage the complex area of compliance and audits, centralize policy distribution and tracking, and simplify the risk management process.</p>
 
   <p>KCM GRC was developed earlier as a single-monolith using PHP and was using <a href="https://aws.amazon.com/fargate/">AWS Fargate Container Service</a> to host their monolith application. KnowBe4 started to re-engineer the application development using NodeJS and PostgreSQL while using various AWS services like <a href="https://aws.amazon.com/sns/">Simple Notification Service (SNS)</a>, <a href="https://aws.amazon.com/sqs/">Simple Queue Service (SQS)</a>, <a href="https://aws.amazon.com/s3/">S3</a>, <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a>, <a href="https://aws.amazon.com/api-gateway/">API Gateway</a>, and <a href="https://www.terraform.io/">Terraform</a> as the Infrastructure-as-Code framework.</p>
 
