@@ -13,6 +13,11 @@ weight: 3
 
 {{< img src="cloud_pods_banner.png" >}}
 
+{{< alert title="Note" >}}
+📢 Cloud Pods have seen a lot of improvements since this blog post was published. We have deprecated the `commit` and `inject` commands in favour of the new `save` and `load` commands. We have also made Cloud Pods available to our Community & Pro users. For more information, please refer to our [documentation](https://docs.localstack.cloud/user-guide/tools/cloud-pods/).
+{{< /alert >}}
+<br>
+
 # Background: Ephemeral and persistent state in LocalStack
 
 By default, the state of all services in LocalStack is ephemeral - i.e., whenever you restart the LocalStack Docker container, it presents a fresh instance with a clean state that can be used to create your application resources locally. This is the default mode, which is optimized for quick experimentation, and frequent container restarts, making sure to always start with a clean slate.

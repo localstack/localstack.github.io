@@ -13,6 +13,11 @@ leadimage: "hot-swapping-python-lambda-functions.png"
 
 {{< img src="hot-swapping-python-lambda-functions.png" >}}
 
+{{< alert title="Note" >}}
+📢 Hot Swapping is now Hot Reloading. The feature has been significantly improved in the latest releases of LocalStack and we recommend to check out our [documentation](https://docs.localstack.cloud/user-guide/tools/lambda-tools/hot-reloading/) for more details. We are keeping this blog post available for informational purposes only.
+{{< /alert >}}
+<br>
+
 AWS Lambda is a Serverless Function as a Service (FaaS) system that allows you to write code in your favorite programming language and run it on the AWS ecosystem. Unlike deploying your code on a server, you can now break down your application into many independent functions and deploy them as a singular units. With the help of AWS Lambda, you can strive for more modular code that can be tested and debugged while integrated with the AWS infrastructure and your core system.
 
 However, iterating over your Lambda functions can be a slow process. When developing with AWS, Lambda functions need to be re-deployed on every change before you can test or debug. Having many functions that depend on each other or rely on other AWS services can create really slow development loops that impede progress and cost money. These slow loops incentivizes developers to deploy changes without testing them properly. Suddenly, you may be deploying critical bugs to production, and it will be much more expensive to find the defect and fix it.
