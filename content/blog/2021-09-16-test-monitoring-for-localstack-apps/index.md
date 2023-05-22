@@ -10,6 +10,12 @@ tags: ["showcase"]
 leadimage: "image1.png"
 ---
 
+{{< img-simple src="image1.png" >}}
+
+{{< alert title="Note" >}}
+📢 Thundra Inc and its product Foresight have ceased operations and have been acquired by Catchpoint, resulting in significant changes to their products and services. Please note that the tutorial provided in our blog may no longer be applicable or functional with the latest updates. We are keeping this blog post available for informational purposes only.
+{{< /alert >}}
+<br>
 LocalStack gives developers the freedom to develop their cloud applications locally (even offline) - enabling a highly efficient dev&amp;test loop. It also helps prevent scary cloud bills at the end of every month! LocalStack has an amazing community of users, contributors, and supporters - and generally demonstrates a very strong commitment to supporting open source.
 
 The community uses LocalStack for many use cases such as developing microservice cloud applications. One of the strongest use cases why developers use LocalStack is “testing”. Since the local testing framework is provided, the need for setting up multiple testing environments on the cloud disappears and distributed microservice applications can easily be developed, tested, and deployed with green tests.
