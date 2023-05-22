@@ -14,7 +14,7 @@ leadimage: "hot-swapping-python-lambda-functions.png"
 {{< img src="hot-swapping-python-lambda-functions.png" >}}
 
 {{< alert title="Note" >}}
-📢 Hot Swapping is now Hot Reloading. The feature has been significantly improved in the latest releases of LocalStack and we recommend you to check out our [documentation](https://docs.localstack.cloud/user-guide/tools/lambda-tools/hot-reloading/) for more details. We are keeping this blog post available for informational purposes only.
+📢 Hot Swapping is now Hot Reloading. The feature has been significantly improved in the latest releases of LocalStack and we recommend to check out our [documentation](https://docs.localstack.cloud/user-guide/tools/lambda-tools/hot-reloading/) for more details. We are keeping this blog post available for informational purposes only.
 {{< /alert >}}
 <br>
 
