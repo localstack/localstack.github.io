@@ -12,4 +12,5 @@ images: []
   <a href="#news"><button class="btn btn-outline-primary btn-pill filterButton" id="newsFilterButton" onClick="toggleTag('news')">NEWS</button></a>
   <a href="#showcase"><button class="btn btn-outline-primary btn-pill filterButton" id="showcaseFilterButton" onClick="toggleTag('showcase')">SHOWCASE</button></a>
   <a href="#tutorial"><button class="btn btn-outline-primary btn-pill filterButton" id="tutorialFilterButton" onClick="toggleTag('tutorial')">TUTORIAL</button></a>
+  <a href="#case-study"><button class="btn btn-outline-primary btn-pill filterButton" id="case-studyFilterButton" onClick="toggleTag('case-study')">CASE-STUDY</button></a>
 </div>
