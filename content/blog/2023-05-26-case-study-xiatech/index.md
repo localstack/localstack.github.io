@@ -77,7 +77,7 @@ Enterprise LocalStack now allows Xiatech’s engineers to run end-to-end integra
 
 ## Results
 
-### 10x reduction in infrastructure spin-up with LocalStack in comparison to AWS
+### 10x reduction in infrastructure spin-up time with LocalStack in comparison to AWS
 
 LocalStack has simplified and accelerated the infrastructure spin-up for Xiatech’s engineering products by 10-times. The infrastructure is defined using Terraform, allowing for a high level of automation and repeatability in the creation of resources. According to Rick, using the real AWS APIs used to take around 20 minutes to provision all the real cloud resources for the simulation to happen before tearing down everything. With LocalStack, this duration has been reduced to just 2 minutes on an individual developer's machine, thus fostering a culture of frequent testing, and increasing the reliability and efficiency of local testing & debugging.
 
