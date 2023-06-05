@@ -83,4 +83,4 @@ LocalStack has simplified and accelerated the infrastructure spin-up for Xiatech
 
 ### An improved development workflow with Testcontainers
 
-Today, Xiatech uses LocalStack with tight integration with the Testcontainers framework, which empowers engineers to develop, test and release without caring about how LocalStack works under the hood. With the level of abstraction provided by Testcontainers, an engineer can use Terragrunt to kick off Terraform and spin up the local AWS infrastructure using LocalStack, which can be further analyzed before tearing the whole infrastructure down.
+Today, Xiatech uses LocalStack with tight integration with the Testcontainers framework, which empowers engineers to develop, test and release without caring about how LocalStack works under the hood. With the level of abstraction provided by Testcontainers, an engineer can use Terragrunt to kick off Terraform and spin up the local AWS infrastructure using LocalStack, which can be further analyzed before tearing the entire test infrastructure down again.
