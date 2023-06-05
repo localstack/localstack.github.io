@@ -54,7 +54,7 @@ properties:
 
 The challenge for engineers includes vast amounts of technologies, ranging from SOAP or XML APIs to RESTful services, and the need to provide integrations with Lambda, SQS, Kinesis, DocumentDB, DynamoDB and more. As an engineer, orchestrating these serverless technologies via a command-line interface and developing/debugging the services was very slow and tedious. 
 
-To solve this problem, Xiatech created a developer-experience (DevEx) environment to bring forward a localized environment on the individual machines used by engineers to enable them to run integrations between one system and another. It would allow them to run these simulations and profile, debug, and check the memory state and the stack — all on their IDEs. 
+To solve this problem, Xiatech created a developer-experience (DevEx) environment to bring forward a localized environment on the individual machines used by engineers to enable them to run integrations between one system and another. It would allow them to run these simulations and profile, debug, and check the memory state and the call stack — all from within their IDEs. 
 
 This is where Xiatech came across TestContainers. Given that Xiatech uses Golang as the primary-used language, Testcontainers-Go was picked up to create and clean up container-based dependencies for automated tests. Xiatech started building endpoints to provide multiple functionalities like HTTP replayers to provide simulations for RESTful endpoints for a CRM system, simulating SOAP-API containers, and more.
 
