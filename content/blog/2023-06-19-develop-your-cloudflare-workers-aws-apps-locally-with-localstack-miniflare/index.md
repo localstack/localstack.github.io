@@ -143,7 +143,7 @@ $ export CLOUDFLARE_API_BASE_URL=http://localhost:4566/miniflare
 $ wrangler init
 ```
 
-Next, we create an SQS queue locally in LocalStack, using the `awslocal` command line interface (note that we’re extracting the queue URL from the output and assign it to the `queueUrl` variable):
+Next, we create an SQS queue locally in LocalStack, using the [`awslocal`](https://github.com/localstack/awscli-local) command line interface (note that we’re extracting the queue URL from the output and assign it to the `queueUrl` variable):
 
 ```sh
 $ queueUrl=$(awslocal sqs create-queue --queue-name q1 | jq -r .QueueUrl) 
