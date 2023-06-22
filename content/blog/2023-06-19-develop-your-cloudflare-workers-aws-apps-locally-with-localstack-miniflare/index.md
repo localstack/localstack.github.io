@@ -169,12 +169,12 @@ After a successful deployment, the local Cloudflare worker can be easily invoked
 ```sh
 $ curl http://worker-aws.miniflare.localhost.localstack.cloud:4566/test
 {
-	"Messages": [{
-        	"MessageId": "f76db8be-9cc8-47da-8918-9df686169712",
-        	"ReceiptHandle": "NGUwNDg3NTM…",
-        	"MD5OfBody": "58d3b165…",
-        	"Body": "Hello SQS from a Cloudflare Worker"
-    	}]
+        "Messages": [{
+                "MessageId": "f76db8be-9cc8-47da-8918-9df686169712",
+                "ReceiptHandle": "NGUwNDg3NTM…",
+                "MD5OfBody": "58d3b165…",
+                "Body": "Hello SQS from a Cloudflare Worker"
+        }]
 }
 ```
 
