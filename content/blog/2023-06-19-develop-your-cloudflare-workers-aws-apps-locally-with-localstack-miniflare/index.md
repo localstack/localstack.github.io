@@ -5,7 +5,7 @@ lead: Develop your Cloudflare Workers + AWS apps locally with LocalStack & Minif
 date: 2023-06-19T3:27:34+05:30
 lastmod: 2023-06-19T3:27:34+05:30
 images: []
-contributors: ["Harsh Mishra", "Waldemar Hummer", "Brendan Coll", "Adam Murray"]
+contributors: ["Harsh Mishra", "Waldemar Hummer", "Adam Murray", "Brendan Coll"]
 tags: ['showcase']
 ---
 
