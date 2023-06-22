@@ -19,7 +19,7 @@ LocalStack has traditionally been popular among cloud developers for its extensi
 
 With the [LocalStack 1.0 release](https://localstack.cloud/blog/2022-07-13-announcing-localstack-v1-general-availability/), we introduced [LocalStack Extensions](https://localstack.cloud/blog/2022-09-12-announcing-localstack-extensions/). Extensions allow users to extend and customize LocalStack using pluggable Python distributions. The Extensions API allows developers to easily plug in their own custom logic and services into the LocalStack container.
 
-With LocalStack Extensions, it is now possible to start custom services with LocalStack in the same container. Developers can now add new services, extend existing services, and even add custom functionality that goes beyond the scope of AWS cloud emulation and can encompass other cloud providers, like Cloudflare.
+With LocalStack Extensions, it is now possible to start custom services with LocalStack in the same container, while leveraging the existing features in the ecosystem. Developers can add new services, extend existing services, and even add custom functionality that goes beyond the scope of AWS cloud emulation - in particular, it can encompass other cloud providers, like Cloudflare!
 
 ## What are Cloudflare Workers & Miniflare?
 
