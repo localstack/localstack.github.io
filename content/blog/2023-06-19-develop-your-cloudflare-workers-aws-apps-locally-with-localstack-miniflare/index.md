@@ -25,7 +25,7 @@ With LocalStack Extensions, it is now possible to start custom services with Loc
 
 [Cloudflare](https://www.cloudflare.com/) is an internet service provider focused on providing content delivery network (CDN) and web security services. One of the key features in their service offering is [Cloudflare Workers](https://workers.cloudflare.com), a platform to run JavaScript service workers at the Edge. It allows users to inject functionality like setting user cookies, performing web redirects, modifying served content via search/replace, rewriting URLs, etc.
 
-The Cloudflare team has released a high-fidelity local emulator called Miniflare that allows users to run the JavaScript code of Cloudflare Workers locally. Cloudflare recently announced the release of [Miniflare v3](https://blog.cloudflare.com/wrangler3/) during their Developer Week in May 2023. Miniflare v3, now based on the workerd runtime, offers several new features and enhancements, providing even higher parity with the real environment.
+The Cloudflare team has released a high-fidelity local emulator called _Miniflare_ that allows users to run the JavaScript code of Cloudflare Workers locally. Cloudflare recently announced the release of [Miniflare v3](https://blog.cloudflare.com/wrangler3/) during their Developer Week in May 2023. Miniflare v3, now based on the `workerd` runtime, offers several new features and enhancements, providing even higher parity with the real environment. This is a major step towards providing a _local-first_ developer experience for Clouflare users, and is a perfect match for LocalStack's vision of giving developers back control over their local dev cycles.
 
 ## A sample application using Cloudflare Workers + AWS
 
