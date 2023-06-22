@@ -67,7 +67,7 @@ All fees are exclusive of all taxes, levies, or duties imposed by taxing authori
 
 ### 3.1 Term
 
-The initial term commitment for your purchase of Services will be as specified on an Order (“Initial Term”) and begins on the Effective Date.   After the Initial Term, the Services will, unless otherwise specified in the Service Description for a particular Service, renew for subsequent periods of the same length as the previous Term. You may provide notice of non-renewal for each Service you do not wish to renew at https://app.localstack.cloud. You will not receive any refunds due to early Service termination. We may agree to align the invoicing under multiple Orders but this will not reduce the term of any Order. Terminating specific Services does not affect the term of any other Services still in effect. If we permit you to reinstate Services at any time after termination, you agree that you will be bound by the then-current Terms and the renewal date that was in effect as of the effective termination date.
+The initial term commitment for your purchase of Services will be as specified on an Order (“Initial Term”) and begins on the Effective Date.   After the Initial Term, the Services will, unless otherwise specified in the Service Description for a particular Service, renew for subsequent periods of the same length as the previous Term. You may provide notice of non-renewal for each Service you do not wish to renew at https://app.localstack.cloud or in writing to info@LocalStack.cloud. For monthly subscriptions, the cancellation is effective with the end of the then-current subscription period. For annual and multi-year Terms, notice of non-renewal must be provided no later than 60 days before the end of the Term, or then-current renewal term, or signs a new order form with a new term, as applicable. You will not receive any refunds due to early Service termination. We may agree to align the invoicing under multiple Orders but this will not reduce the term of any Order. Terminating specific Services does not affect the term of any other Services still in effect. If we permit you to reinstate Services at any time after termination, you agree that you will be bound by the then-current Terms and the renewal date that was in effect as of the effective termination date.
 
 ### 3.2 Termination for Cause
 
@@ -165,4 +165,4 @@ The failure of LocalStack to exercise or enforce any right or provision of the T
 
 ---
 
-Last Updated: January 2023 (2023.v1)
+Last Updated: June 2023 (2023.v1.2)
