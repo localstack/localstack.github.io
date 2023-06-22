@@ -134,7 +134,7 @@ $ localstack start -d
 
 ### Set up the Wrangler application with LocalStack
 
-To use the extension, we can simply use the `wrangler` CLI after exporting the relevant environment variables `CLOUDFLARE_API_BASE_URL` and `CLOUDFLARE_API_TOKEN`, which cause wrangler to run the deployment requests against the LocalStack Cloudflare Extension. Let us set the following environment variables for local development:
+To use the extension, we can simply use the [`wrangler`](https://github.com/cloudflare/workers-sdk) CLI after exporting the relevant environment variables `CLOUDFLARE_API_BASE_URL` and `CLOUDFLARE_API_TOKEN`, which cause wrangler to run the deployment requests against the LocalStack Cloudflare Extension. Let us set the following environment variables for local development:
 
 ```sh
 $ export AWS_DEFAULT_REGION=us-east-1
