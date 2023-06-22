@@ -178,7 +178,7 @@ $ curl http://worker-aws.miniflare.localhost.localstack.cloud:4566/test
 }
 ```
 
-Congratulations! 🎉 If you see the output above, then the end-to-end roundtrip of invoking our Cloudflare Worker + AWS application has completed successfully. It is worth noting that no cloud credentials are required to run this sample, hence we are also not incurring any costs during development. Once the application is ready to deploy to production, we can easily make the switch and point `wrangler` to the real Cloudflare environment (by adjusting the environment secrets accordingly).
+Congratulations! 🎉 If you see the output above, then the end-to-end roundtrip of invoking our Cloudflare Worker + AWS application has completed successfully. It is worth noting that **no** cloud credentials whatsoever are required to run this sample, hence we are also not incurring any costs during development. Once the application is ready to deploy to production, we can easily make the switch and point `wrangler` to the real Cloudflare environment (by adjusting the environment secrets accordingly).
 
 ## Conclusion
 
