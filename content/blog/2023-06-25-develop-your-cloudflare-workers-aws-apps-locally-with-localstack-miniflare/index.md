@@ -58,7 +58,7 @@ To allow the Worker to access an SQS resource, we first need to configure the cr
 
 ```js
 const myCredentialProvider = () => ({
-   // use wrangler secrets to provide these variables
+   // use wrangler secrets to provide these variables (see further below)
    accessKeyId: AWS_ACCESS_KEY_ID,
    secretAccessKey: AWS_SECRET_ACCESS_KEY,
 });
