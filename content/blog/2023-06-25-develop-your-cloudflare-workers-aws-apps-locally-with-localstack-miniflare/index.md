@@ -88,7 +88,7 @@ Ok, so how can we now test this Cloudflare Workers + AWS application locally? In
 
 ## Extending Miniflare with LocalStack’s Cloudflare Extension
 
-Combining Miniflare’s capability with LocalStack’s cloud sandbox, which can be spun up as a Docker container, helps developers to get up and running with Workers development within a few seconds. This is particularly interesting for Cloudflare applications that are connecting to AWS services and resources, such as S3 buckets, SQS queues, or DynamoDB tables.
+Combining Miniflare’s capability with LocalStack’s cloud sandbox, which can be spun up as a Docker container, helps developers to get up and running with Workers development within a few seconds. This is particularly interesting for Cloudflare applications that are connecting to AWS services and resources, such as S3 buckets, SQS queues, DynamoDB tables, or various others.
 
 The figure below illustrates how Miniflare is embedded as an Extension into the LocalStack platform. Once enabled, the LocalStack Cloudflare Extension exposes an additional endpoint at `http://localhost:4566/miniflare` which provides an emulated version of the Cloudflare API, allowing users to create local services, script uploads, deployments — while additionally leveraging the full power of the LocalStack AWS emulator.
 
