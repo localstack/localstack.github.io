@@ -49,7 +49,7 @@ In the request handler below, we call a sendSqsMessage function, receive the res
 async function handleRequest() {
    const result = await sendSqsMessage();
    return new Response(JSON.stringify(result), {
-      headers: { 'content-type': application/json' },
+      headers: { 'content-type': 'application/json' },
    });
 }
 ```
