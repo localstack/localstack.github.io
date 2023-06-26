@@ -3,11 +3,11 @@
 title: Develop your Cloudflare Workers + AWS apps locally with LocalStack & Miniflare
 description: In this post, we showcase how Cloudflare Workers and AWS applications can be easily tested locally, using the powerful Miniflare emulator in combination with the LocalStack platform.
 lead: In this post, we showcase how Cloudflare Workers and AWS applications can be easily tested locally, using the powerful Miniflare emulator in combination with the LocalStack platform.
-date: 2023-06-25
-lastmod: 2023-06-25
+date: 2023-06-26
+lastmod: 2023-06-26
 images: ["cover.png", "diagram.png"]
 leadimage: "cover.png"
-contributors: ["Harsh Mishra", "Waldemar Hummer", "Brendan Coll", "Adam Murray"]
+contributors: ["Adam Murray", "Brendan Coll", "Harsh Mishra", "Waldemar Hummer"]
 tags: ['showcase']
 ---
 
