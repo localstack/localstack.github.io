@@ -2,8 +2,8 @@
 title: Xiatech accelerates their development workflows on cloud using LocalStack!
 description: Xiatech uses a complete, localized AWS environment where developers can build, test, profile and debug infrastructure with LocalStack to accelerate their engineering efforts. In this case study, we talk with Xiatech's Head of Engineering, Rick Timmis about their experience using LocalStack to improve their developer experience and cloud feedback loop!
 lead: Xiatech uses a complete, localized AWS environment where developers can build, test, profile and debug infrastructure with LocalStack to accelerate their engineering efforts. In this case study, we talk with Xiatech's Head of Engineering, Rick Timmis about their experience using LocalStack to improve their developer experience and cloud feedback loop!
-date: 2023-06-26
-lastmod: 2023-06-26
+date: 2023-07-05
+lastmod: 2023-07-05
 contributors: ["LocalStack Team"]
 leadimage: "localstack-xiatech-case-study-lead-image.png"
 tags: ["case-study"]
@@ -45,16 +45,16 @@ properties:
 <div class="lead-content">
   <p><a href="https://www.xiatech.co.uk/" target="_blank">Xiatech</a> helps organizations and users connect systems, unify data, and make data-driven decisions with artificial intelligence via a continuous flow of actionable insights. Xiatech’s flagship platform is <a href="https://www.xiatech.co.uk/platform/">Xfuze</a>, a hyper-integration platform that helps customers gain key insights, create value from data and turbocharge legacy technology investments. Xfuze integrates with various systems like customer relationship management (CRM), enterprise resource planning (ERP), logistics, warehousing, marketing, and different cloud-based systems. Xfuze creates a central, singular view of data which then helps provide automation, data management, continuous insights and advanced analytics — all in one solution.</p>
 
-  <p>Xiatech deploys Xfuze across cloud providers, including Amazon Web Service (AWS) and Google Cloud Platform. Their Hyper-Integration platform utilizes an event driven architecture, and leverages many distributed computing technologies, including SQL/NoSQL databases, cloud functions, and AWS Serverless technologies. Cloud infrastructure is orchestrated using <a href="https://terraform.io">Terraform</a>, and <a href="https://terragrunt.gruntwork.io/">Terragrunt</a> to co-ordinate the compute resources upon which Xfuze stands.</p>
+  <p>Xiatech deploys Xfuze across cloud providers, including Amazon Web Service (AWS) and Google Cloud Platform. Their Hyper-Integration platform utilizes an event driven architecture, and leverages many distributed computing technologies, including SQL/NoSQL databases, cloud functions, and AWS Serverless technologies. Cloud infrastructure is orchestrated using <a href="https://terraform.io">Terraform</a>, and <a href="https://terragrunt.gruntwork.io/">Terragrunt</a> to coordinate the compute resources upon which Xfuze stands.</p>
 
-  <p>We spoke with Rick Timmis, Head of Engineering at Xiatech, to learn more about how LocalStack has helped their organization accelerate its cloud development workflows with LocalStack and empowered engineers to be independent of their local development and test toolings.</p>
+  <p>We spoke with Rick Timmis, Head of Engineering at Xiatech, to learn more about how LocalStack has helped their organization accelerate its cloud development workflows with LocalStack and empowered engineers to be independent of their local development and test tooling.</p>
 </div>
 
 ## Challenge
 
 The challenge for engineers includes vast amounts of technologies, ranging from SOAP or XML APIs to RESTful services, and the need to provide integrations with Lambda, SQS, Kinesis, DocumentDB, DynamoDB and more. As an engineer, orchestrating these serverless technologies via a command-line interface and developing/debugging the services was very slow and tedious. 
 
-To solve this problem, Xiatech created a developer-experience (DevEx) environment to bring forward a localized environment on the individual machines used by engineers to enable them to run integrations between one system and another. It would allow them to run these simulations and profile, debug, and check the memory state and the call stack — all from within their IDEs. 
+To solve this problem, Xiatech created a developer-experience (DevEx) environment to bring forward a localized environment on the individual machines used by engineers to enable them to run integrations between one system and another. It would allow them to run these simulations and profile, debug, and check the memory state and the call stack — all from within their IDE's. 
 
 This is where Xiatech came across [TestContainers](https://testcontainers.com/). Given that Xiatech uses Golang as the primary-used language, [Testcontainers-Go](https://golang.testcontainers.org/) was picked up to create and clean up container-based dependencies for automated tests. Xiatech started building endpoints to provide multiple functionalities like HTTP replayers to provide simulations for RESTful endpoints for a CRM system, simulating SOAP-API containers, and more.
 
@@ -62,7 +62,7 @@ However, Xiatech was still stuck with running containerized pieces of code for o
 
 ## Solution
 
-Xiatech initially explored the open-source, community version of LocalStack through a proof-of-concept with a basic set of AWS APIs. Xiatech had tremendous success with LocalStack, allowing them to create integrations and end-to-end tests. Today, Xiatech’s Testcontainers framework, with LocalStack enabled, allows developers to do unit, interaction, smoke, and end-to-end (E2E) testing.
+Xiatech initially explored the open-source version of LocalStack through a proof-of-concept with a basic set of AWS APIs. Xiatech had tremendous success with LocalStack, allowing them to create integrations and end-to-end tests. Today, Xiatech’s Testcontainers framework, with LocalStack enabled, allows developers to do unit, interaction, smoke, and end-to-end (E2E) testing.
 
 <div class="quote-container mt-4">
 
@@ -73,7 +73,7 @@ Xiatech initially explored the open-source, community version of LocalStack thro
   </div>
 </div>
 
-[LocalStack Enterprise](http://localhost:1313/solutions/enterprise-integration/) now allows Xiatech’s engineers to run end-to-end integrations with multiple simulations, like a CRM system delivering customer information through a serverless stack and then appending the data to an ERP system. Engineers can now visualize this whole workflow on an individual developer machine, allowing an engineer to understand how their code works and acts as a massive accelerator!
+[LocalStack Enterprise](/solutions/enterprise-integration) now allows Xiatech’s engineers to run end-to-end integrations with multiple simulations, like a CRM system delivering customer information through a serverless stack and then appending the data to an ERP system. Engineers can now visualize this whole workflow on an individual developer machine, allowing an engineer to understand how their code works and acts as a massive accelerator!
 
 ## Results
 
@@ -84,7 +84,7 @@ Xiatech initially explored the open-source, community version of LocalStack thro
 
 ### 10x reduction in infrastructure spin-up time with LocalStack in comparison to AWS
 
-LocalStack has simplified and accelerated the infrastructure spin-up for Xiatech’s engineering products by 10-times. The infrastructure is defined using Terraform, allowing for a high level of automation and repeatability in the creation of resources. According to Rick, using the real AWS APIs used to take around 20 minutes to provision all the real cloud resources for the simulation to happen before tearing down everything. With LocalStack, this duration has been reduced to just 2 minutes on an individual developer's machine, thus fostering a culture of frequent testing, and increasing the reliability and efficiency of local testing & debugging.
+LocalStack has simplified and accelerated the infrastructure spin-up for Xiatech’s engineering products by 10x. The infrastructure is defined using Terraform, allowing for a high level of automation and repeatability in the creation of resources. According to Rick, using the real AWS APIs used to take around 20 minutes to provision all the real cloud resources for the simulation to happen before tearing down everything. With LocalStack, this duration has been reduced to just two minutes on an individual developer's machine, thus fostering a culture of frequent testing, and increasing the reliability and efficiency of local testing & debugging.
 
 ### An improved development workflow with Testcontainers
 
