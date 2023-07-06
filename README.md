@@ -15,7 +15,7 @@ npm is used to manage the frontend dependencies.
 
 ### Build the static website
 
-    hugo --gc --minify
+    npx hugo --gc --minify
 
 And find the results in `public/`
 
