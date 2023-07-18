@@ -1,24 +1,25 @@
 {{ define "main" }}
-{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "computer" "heroClasses" "pb-md-8") }}
+{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "computer" "heroClasses"
+"pb-md-8") }}
 <div class="container mb-6 mt-n5">
   <div class="d-flex flex-column flex-md-row gap-4">
-      <div class="col col-md-5 d-flex flex-column gap-4 flex-grow-1 jusitfy-space-between overlay-card">
-        {{ .Content }}
+    <div class="col col-md-5 d-flex flex-column gap-4 flex-grow-1 jusitfy-space-between overlay-card">
+      {{ .Content }}
+    </div>
+    <div class="col col-md-7">
+      <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
+        <p class="pb-4">Sign up to join the LocalStack Insiders waiting list.</p>
+        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            region: "eu1",
+            portalId: "26596507",
+            formId: "69e69b3e-f7d8-4d0b-8319-090766e2207f"
+          });
+        </script>
       </div>
-      <div class="col col-md-7">
-          <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
-              <p class="pb-4">Sign up to join the LocalStack Insiders waiting list.</p>
-              <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-              <script>
-                hbspt.forms.create({
-                  region: "eu1",
-                  portalId: "26981439",
-                  formId: "41328029-333a-4c00-866b-8e0e4d69ad79"
-                });
-              </script>
-          </div>
-      </div>
+    </div>
   </div>
 </div>
 {{ end }}
-
