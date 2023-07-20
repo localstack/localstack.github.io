@@ -15,11 +15,11 @@ We are launching the LocalStack Insiders program, and for the initial installmen
 We are currently working on making LocalStack more accessible and to bring it to a wider audience. As a LocalStack Insider you will:
 
 - Get early access to our improved developer onboarding experience
-- Get access to our Insiders Slack channel
-- Join our commnity office hours and interact with the LocalStack team
+- Get access to our LocalStack Insiders Slack channel
+- Join our community office hours and interact with the LocalStack team
 - Participate in our feedback program & receive exciting swag
 
-To express our appreciation for your participation, we are excited to offer **LocalStack for free** for non-commercial use to our insiders!
+To express our appreciation for your participation, we are excited to offer **LocalStack for free** for non-commercial use to our Insiders!
 
 Sign up now to be one of the first on the waiting list! We are eagerly looking forward to welcoming the first users to the Insiders Program in the upcoming weeks!
 
