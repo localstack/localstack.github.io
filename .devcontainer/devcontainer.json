@@ -16,7 +16,14 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install && npm uninstall hugo-extended && go install -tags extended github.com/gohugoio/hugo@v0.92.0"
+	"postCreateCommand": "npm install && npm uninstall hugo-extended && go install -tags extended github.com/gohugoio/hugo@v0.92.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"jsynowiec.vscode-insertdatestring"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
