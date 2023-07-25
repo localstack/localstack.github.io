@@ -1,19 +1,19 @@
 {{ define "main" }}
-{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "cloud" "heroClasses"
-"pb-md-8") }}
-<div class="container mb-6 mt-n5">
-		<div class="col col-md-12">
-			<div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
-				<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-				<script>
-					hbspt.forms.create({
-						region: "eu1",
-						portalId: "26596507",
-						formId: "457a6a02-0e4f-43e4-ab96-81c551404882"
-					});
-				</script>
+{{ partial "heroes/base.html" (dict "Title" .Title "Subtitle" .Description "HeroIcon" "cloud" "heroClasses" "pb-6 pb-md-8") }}
+<section class="section section-sm">
+	<div class="container mb-6 mt-n5">
+			<div class="col col-md-12">
+				<div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
+					<script>
+						hbspt.forms.create({
+							region: "eu1",
+							portalId: "26596507",
+							formId: "457a6a02-0e4f-43e4-ab96-81c551404882"
+						});
+					</script>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 {{ end }}
