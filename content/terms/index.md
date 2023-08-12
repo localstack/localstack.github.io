@@ -16,6 +16,7 @@ If LocalStack makes material changes to these Terms, we will notify you by email
 Violation of any of the terms below will result in the termination of your Account. You agree to use the Service at your own risk.
 
 ## API USAGE TERMS
+
 Customers may access their LocalStack account data via an API (Application Program Interface). Any use of the API, including use of the API through a third-party product that accesses LocalStack, is bound by these Terms plus the following specific terms:
 
    1. You expressly understand and agree that LocalStack shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses (even if LocalStack has been advised of the possibility of such damages), resulting from your use of the API or third-party products that access data via the API.
@@ -62,12 +63,11 @@ You must notify us of any fee dispute within 15 days of the invoice date, and on
 
 All fees are exclusive of all taxes, levies, or duties imposed by taxing authorities, and you shall be responsible for payment of all such taxes, levies, or duties. You are responsible for all applicable sales, services, value-added, goods and services, withholding, tariffs and similar taxes or fees (collectively, "Taxes and Fees") imposed by any government entity or collecting agency based on the Services, except those Taxes and Fees based on our net income, or Taxes and Fees for which you have provided an exemption certificate. Additionally, if you do not satisfy your Tax and Fees obligations, you agree that you will be required to reimburse us for any Taxes and Fees paid on your behalf, and we may take steps to collect Taxes and Fees we have paid on your behalf. In all cases, you will pay the amounts due under this Agreement to us in full without any right of set-off or deduction.
 
-
 ## 3. TERM AND TERMINATION
 
 ### 3.1 Term
 
-The initial term commitment for your purchase of Services will be as specified on an Order (“Initial Term”) and begins on the Effective Date.   After the Initial Term, the Services will, unless otherwise specified in the Service Description for a particular Service, renew for subsequent periods of the same length as the previous Term. You may provide notice of non-renewal for each Service you do not wish to renew at https://app.localstack.cloud or in writing to info@LocalStack.cloud. For monthly subscriptions, the cancellation is effective with the end of the then-current subscription period. For annual and multi-year Terms, notice of non-renewal must be provided no later than 60 days before the end of the Term, or then-current renewal term, or signs a new order form with a new term, as applicable. You will not receive any refunds due to early Service termination. We may agree to align the invoicing under multiple Orders but this will not reduce the term of any Order. Terminating specific Services does not affect the term of any other Services still in effect. If we permit you to reinstate Services at any time after termination, you agree that you will be bound by the then-current Terms and the renewal date that was in effect as of the effective termination date.
+The initial term commitment for your purchase of Services will be as specified on an Order (“Initial Term”) and begins on the Effective Date.   After the Initial Term, the Services will, unless otherwise specified in the Service Description for a particular Service, renew for subsequent periods of the same length as the previous Term. You may provide notice of non-renewal for each Service you do not wish to renew at <https://app.localstack.cloud> or in writing to [info@localstack.cloud](mailto:info@localstack.cloud). For monthly subscriptions, the cancellation is effective with the end of the then-current subscription period. For annual and multi-year Terms, notice of non-renewal must be provided no later than 60 days before the end of the Term, or then-current renewal term, or signs a new order form with a new term, as applicable. You will not receive any refunds due to early Service termination. We may agree to align the invoicing under multiple Orders but this will not reduce the term of any Order. Terminating specific Services does not affect the term of any other Services still in effect. If we permit you to reinstate Services at any time after termination, you agree that you will be bound by the then-current Terms and the renewal date that was in effect as of the effective termination date.
 
 ### 3.2 Termination for Cause
 
@@ -115,6 +115,7 @@ NEITHER PARTY WILL BE LIABLE TO THE OTHER PARTY OR TO ANY OTHER PERSON FOR ANY I
 EXCEPT FOR YOUR BREACH OF SECTIONS 1.2 OR 4 AND YOUR INDEMNIFICATION OBLIGATIONS, AND TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE TOTAL CUMULATIVE LIABILITY OF EITHER PARTY AND THEIR RESPECTIVE LICENSORS AND SUPPLIERS ARISING OUT OF THIS AGREEMENT IS LIMITED TO THE SUM OF THE AMOUNTS PAID FOR THE APPLICABLE SERVICE DURING THE 12 MONTHS IMMEDIATELY PRECEDING THE INCIDENT GIVING RISE TO THE LIABILITY. THE FOREGOING DOES NOT LIMIT YOUR OBLIGATIONS TO PAY ANY UNDISPUTED FEES AND OTHER AMOUNTS DUE UNDER ANY ORDER.
 
 ## 9. Cookies
+
 A cookie is a small file containing a string of characters that is sent to your computer when you visit a website. Cookies help to improve your user experience. When you visit the site again, the cookie allows that site to recognize your browser. Cookies may store user preferences and other information. You can configure your browser to refuse all cookies or to indicate when a cookie is being sent. However, some website features or services may not function properly without cookies.
 
 ## 10. ADDITIONAL TERMS
@@ -153,7 +154,7 @@ Neither party may assign its rights or delegate its duties under the Agreement e
 
 ### 10.9 Notices
 
-We may provide notice to the email last designated on your account, electronically via postings on our website, or in-product notices. Unless specified elsewhere in this Agreement, notices should be sent to us via email to info@localstack.cloud and we will send notices to the address last designated on your account. Notice is given when the email is sent, or if posted electronically, upon posting.
+We may provide notice to the email last designated on your account, electronically via postings on our website, or in-product notices. Unless specified elsewhere in this Agreement, notices should be sent to us via email to [info@localstack.cloud](mailto:info@localstack.cloud) and we will send notices to the address last designated on your account. Notice is given when the email is sent, or if posted electronically, upon posting.
 
 ### 10.10 General Terms
 

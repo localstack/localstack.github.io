@@ -60,7 +60,7 @@ function onContestSignup() {
         })
         .catch(error => {
             console.log(error);
-            alert("Sorry, there was an error with your signup: " + error + ". Please contact us at info@localstack.cloud")
+            alert("Sorry, there was an error with your signup: " + error + ". Please contact us at support@localstack.cloud")
             toggleLoading(button);
         });
 

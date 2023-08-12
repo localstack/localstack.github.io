@@ -2,15 +2,15 @@
     <div class="d-flex flex-column flex-md-row gap-4">
         <div class="col col-md-5 d-flex flex-column gap-4 flex-grow-1 jusitfy-space-between">
                 {{ partial "misc/contact-card.html" (dict "contactName" "Discussion"
-                "text" "Our new discussion platform:"
+                "text" "Join our discussion platform:"
                 "link" "discuss.localstack.cloud"
                 "type" "link"
                 ) }}
-                {{ partial "misc/contact-card.html" (dict "contactName" "E-mail"
-                "text" "For any administrative questions"
+                {{/*  {{ partial "misc/contact-card.html" (dict "contactName" "E-mail"
+                "text" "For any support questions"
                 "link" "info@localstack.cloud"
                 "type" "mail"
-                ) }}
+                ) }}  */}}
                 {{ partial "misc/contact-card.html" (dict "contactName" "Slack"
                 "text" "Please join our Slack community"
                 "link" "slack.localstack.cloud"
@@ -24,8 +24,8 @@
             {{/* TODO: discuss */}}
         </div>
         <div class="col col-md-7">
-            <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
-                <p class="pb-4">You can also get in touch with us directly via this form.</p>
+            <div class="overlay-card h-100 p-4 p-md-5 p-lg-5 ">
+                <h2 class="mb-4">Have a Question?</h2>
                 <script>
                 hbspt.forms.create({
                     region: "eu1",
@@ -45,7 +45,7 @@
         const email = document.getElementById('email')
         const phonenumber = document.getElementById('phonenumber')
         const message = document.getElementById('message')
-        const link = "mailto:info@localstack.cloud?subject="+firstname.value+" "+lastname.value+" "+phonenumber.value+"&body="+message.value
+        const link = "mailto:support@localstack.cloud?subject="+firstname.value+" "+lastname.value+" "+phonenumber.value+"&body="+message.value
         window.location.href = link
     }
 </script>

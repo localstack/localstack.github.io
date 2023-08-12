@@ -234,7 +234,7 @@ function preSelectPlatformArtifact(artifacts) {
         alert('Error occurred: ' + data.message);
       } else if (status === 404) {
         cockpitDownloadModal.hide();
-        showError("Error: " + data.message, "This is probably a problem on our side, sorry! Please contact us and let us know at info@localstack.cloud");
+        showError("Error: " + data.message, "This is probably a problem on our side, sorry! Please contact us and let us know at support@localstack.cloud");
       } else {
         cockpitDownloadModal.hide();
         showError("Unknown error occurred", "Please contact us and let us know. Thanks!");

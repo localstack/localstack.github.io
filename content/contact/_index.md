@@ -14,7 +14,8 @@ Below you can find some pointers for contacting us, as well as getting in touch 
 
 ### Issues and Bug Reports
 
-For any bug reports, please first consult the main Github repository: [https://github.com/localstack/localstack](https://github.com/localstack/localstack). Chances are that a similar issue may have already been posted by other users in the past. Github has an excellent search function, which may help find existing answers to your questions.
+For any bug reports, please first consult the main Github repository: [https://github.com/localstack/localstack](https://github.com/localstack/localstack).
+Chances are that a similar issue may have already been posted by other users in the past. Github has an excellent search function, which may help find existing answers to your questions.
 
 If you cannot find a solution in the existing issues, please raise a bug report directly in Github. By tagging the issue with the label `PRO`, we'll try our best to prioritize your request.
 
@@ -29,7 +30,7 @@ Please make sure to always include the following details in your bug report:
 
 Please join us in our Slack channel: [https://localstack-community.slack.com](https://localstack-community.slack.com).
 
-Don't have access to `localstack-community` yet? Please contact us at [info@localstack.cloud](mailto:info@localstack.cloud) to receive an invite or join through this [invite link](http://slack.localstack.cloud/).
+Don't have access to `localstack-community` yet? Join us through this [invite link](http://slack.localstack.cloud/).
 
 ### Forum
 
@@ -37,4 +38,4 @@ To participate in wider community discussions and steer the development of Local
 
 ### Email
 
-For any administrative questions regarding your account (e.g., subscriptions, billing), please contact us directly at [info@localstack.cloud](mailto:info@localstack.cloud). (Note: Please do not post any personal details or private information in any of the public communication channels!)
+For any administrative questions regarding your account (e.g., subscriptions, billing), please contact us directly at [support@localstack.cloud](mailto:support@localstack.cloud). (Note: Please do not post any personal details or private information in any of the public communication channels!)
