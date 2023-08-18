@@ -27,23 +27,24 @@ How can LocalStack Education License help you?
 - The license should not be shared with any third parties.
 
 ## Application
+
 <div class="overlay-card h-100 p-4 p-md-5 p-lg-6">
-<script> 
-  hbspt.forms.create({ 
-    region: "eu1", portalId: "26596507", formId: "1f3a9b60-5ffa-46d7-b125-77a7a9d161fc" 
-  });   
+<script>
+  hbspt.forms.create({
+    region: "eu1", portalId: "26596507", formId: "1f3a9b60-5ffa-46d7-b125-77a7a9d161fc"
+  });
 </script>
 </div>
 
 ## Renewal of License
 
-To renew your license, please send an email to [info@localstack.cloud](mailto:info@localstack.cloud) with a proof of your student/teacher status.
+To renew your license, please send an email to [support@localstack.cloud](mailto:support@localstack.cloud) with a proof of your student/teacher status.
 
 ## Frequently asked questions
 
 - Where can I get help?
 
-  LocalStack has a great [documentation](https://docs.localstack.cloud/overview/) which serves as a reference for all the features and how to use them across the community and professional edition. We also have a Slack community where you can ask questions and get help from other users. Drop a mail at [info@localstack.cloud](mailto:info@localstack.cloud) to get an invite or join through our [Slack invite](http://slack.localstack.cloud/).
+  LocalStack has a great [documentation](https://docs.localstack.cloud/overview/) which serves as a reference for all the features and how to use them across the community and professional edition. We also have a Slack community where you can ask questions and get help from other users. Send an e-mail at [support@localstack.cloud](mailto:support@localstack.cloud) to get an invite or join through our [Slack invite](http://slack.localstack.cloud/).
 
 - How can I prove my student/teacher status?
 

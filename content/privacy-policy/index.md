@@ -76,16 +76,16 @@ The Company may use Personal Data for the following purposes:
 * To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.
 * For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.
 * To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.
-*  To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
-*  To manage Your requests: To attend and manage Your requests to Us.
+* To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
+* To manage Your requests: To attend and manage Your requests to Us.
 
 We may share your personal information in the following situations:
 
-*  With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to show advertisements to You to help support and maintain Our Service, to contact You, to advertise on third party websites to You after You visited our Service, or for payment processing.
-*  For Business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of our business to another company.
-*  With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
-*  With Business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
-*  With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside. If You interact with other users or register through a Third-Party Social Media Service, Your contacts on the Third-Party Social Media Service may see You name, profile, pictures and description of Your activity. Similarly, other users may be able to view descriptions of Your activity, communicate with You and view Your profile.
+* With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to show advertisements to You to help support and maintain Our Service, to contact You, to advertise on third party websites to You after You visited our Service, or for payment processing.
+* For Business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of our business to another company.
+* With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
+* With Business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
+* With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside. If You interact with other users or register through a Third-Party Social Media Service, Your contacts on the Third-Party Social Media Service may see You name, profile, pictures and description of Your activity. Similarly, other users may be able to view descriptions of Your activity, communicate with You and view Your profile.
 
 ## Retention of Your Personal Data
 
@@ -147,7 +147,7 @@ As set out in locally applicable Personal Data protection law, You may have:
 
 * **The right to data portability** Under certain circumstances, You may have the right to receive the Personal Data concerning You, which You have provided to Us, in a structured, commonly used, and machine-readable format, and to transmit these Personal Data to another entity.
 
-If You make a request, we have one month to respond to You. If You would like to exercise any of these rights, please contact Us at our email: info@localstack.cloud
+If You make a request, we have one month to respond to You.If You would like to exercise any of these rights, please contact Us at our email: [info@localstack.cloud](mailto:info@localstack.cloud)
 
 ## Links to Other Websites
 
@@ -163,7 +163,7 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ## How to contact Us
 
-If you have any questions or comments about this Privacy Policy or Our privacy practices, you can contact Us at any time at info@localstack.cloud
+If you have any questions or comments about this Privacy Policy or Our privacy practices, you can contact Us at any time at [info@localstack.cloud](mailto:info@localstack.cloud)
 
 ---
 Last updated: March, 2022 (2022.v1)

@@ -26,7 +26,7 @@ If your project meets the terms of these eligibility criteria, don't hesitate to
 
 - Where can I get help?
 
-  LocalStack has excellent [documentation](https://docs.localstack.cloud/overview/), which is our central reference for all the features and toolings. We also have a Slack community where you can ask questions and get help from other users. Drop a mail at [info@localstack.cloud](mailto:info@localstack.cloud) to get an invite or join through our [Slack invite](http://slack.localstack.cloud/).
+  LocalStack has excellent [documentation](https://docs.localstack.cloud/overview/), which is our central reference for all the features and toolings. We also have a Slack community where you can ask questions and get help from other users. Drop a mail at [support@localstack.cloud](mailto:support@localstack.cloud) to get an invite or join through our [Slack invite](http://slack.localstack.cloud/).
 
 - How can I prove my maintainer status?
 
