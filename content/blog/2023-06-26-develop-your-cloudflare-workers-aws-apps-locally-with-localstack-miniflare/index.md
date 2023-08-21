@@ -188,4 +188,4 @@ With LocalStack Extensions, you can now leverage an end-to-end local development
 
 At LocalStack, we continue to invest in our Extensions mechanism and provide emulators that go beyond our core scope of running AWS apps locally — aiming to become the go-to platform for running emulators for any API or managed service out there! We would love to hear your thoughts and whether you have ideas for new LocalStack Extensions we could develop. Join our [Discuss Forum](https://discuss.localstack.cloud/) to get started and share your feedback and suggestions 🚀
 
-If you have questions about configuring and running your project, drop by [Cloudflare’s Community Discord server](https://discord.com/invite/cloudflaredev) or the [LocalStack Slack Community](https://slack.localstack.cloud/)!
+If you have questions about configuring and running your project, drop by [Cloudflare’s Community Discord server](https://discord.com/invite/cloudflaredev) or the [LocalStack Slack Community](https://localstack.cloud/slack/)!

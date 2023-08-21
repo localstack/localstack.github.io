@@ -30,7 +30,7 @@ Please make sure to always include the following details in your bug report:
 
 Please join us in our Slack channel: [https://localstack-community.slack.com](https://localstack-community.slack.com).
 
-Don't have access to `localstack-community` yet? Join us through this [invite link](http://slack.localstack.cloud/).
+Don't have access to `localstack-community` yet? Join us through this [invite link](http://localstack.cloud/slack/).
 
 ### Forum
 

@@ -37,7 +37,7 @@ Follow these simple steps to get started:
 3.  Contribute to the projects by following our [`hacktoberfest` tag](https://github.com/search?q=user%3Alocalstack+repo%3Alocalstack%2Flocalstack+repo%3Alocalstack%2Flocalstack-pro-samples+repo%3Alocalstack%2Fdocs+repo%3Alocalstack%2Flocalstack-terraform-samples+label%3Ahacktoberfest+state%3Aopen&type=Issues&ref=advsearch&l=&l=) between October 1 to October 31. 
 4.  Ensure follow-ups with the maintainers on respective pull requests to ensure they are merged before the end of Hacktoberfest.
 
-After your pull request is merged, share your achievement on the `#community` channel of our [community slack](https://slack.localstack.cloud). After the end of Hacktoberfest, all the contributors will be acknowledged in a public community post over our [Discussion pages](https://discuss.localstack.cloud).
+After your pull request is merged, share your achievement on the `#community` channel of our [community slack](https://localstack.cloud/slack). After the end of Hacktoberfest, all the contributors will be acknowledged in a public community post over our [Discussion pages](https://discuss.localstack.cloud).
 
 But what's new apart from the official Hacktoberfest prizes? Your contributions call for more awesome schwag! To celebrate your contributions during Hacktoberfest, we have some limited edition swag up for grabs!
 
