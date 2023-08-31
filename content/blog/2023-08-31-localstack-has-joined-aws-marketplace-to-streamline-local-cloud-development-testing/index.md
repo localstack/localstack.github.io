@@ -26,6 +26,21 @@ The LocalStack Team edition delivers a range of features aimed at enhancing your
 
 With LocalStack now available in the AWS Marketplace, you can quickly leverage a streamlined procurement to access our cloud development framework. 
 
+## Subscribing to LocalStack in AWS Marketplace
+
+To launch LocalStack with AWS Marketplace, you can follow the steps below:
+
+- Go to **AWS Marketplace Subscriptions** in the AWS Console and locate **LocalStack** under **Discover Products**.
+- Review the terms, select the desired number of seats, contract renewal strategy, and accept the contract. Accepting the contract will initiate a Marketplace subscription.
+- Once the contract is accepted, you'll be prompted to finalize the order by clicking a button. You'll then be directed to the LocalStack Web Application, where you need to authenticate by signing in or signing up.
+    {{< img-simple src="localstack-web-application-contract.png" alt="Image of LocalStack Web Application showing a subscribe button which can be clicked after signing-in to the application">}}
+- Upon successful authentication on the LocalStack Web Application, you'll be automatically returned to the previous page. At this point, an additional button will be visible, allowing you to subscribe to LocalStack.
+    {{< img-simple src="localstack-web-application-subscribe.png" alt="Image of LocalStack Web Application showing a subscribe button which allows you to complete the subscription">}}
+- Click the button to establish a connection between your LocalStack organization and the AWS Marketplace Customer. This will redirect you to the subscription page, where a banner appears next to existing subscriptions, with the AWS Marketplace subscription becoming visible within a few minutes.
+    {{< img-simple src="localstack-web-application-synchronization.png" alt="Image of LocalStack Web Application showing a box which mentions that the synchronization is in progress and may take a few minutes">}}
+
+Note that subscriptions cannot be modified or canceled within the LocalStack Web Application. Any changes such as upgrades, downgrades, or cancellations should be managed through the AWS Marketplace. You can make subscription adjustments by navigating to **Modify Current Contract** or **Modify Renewal Terms** on the AWS Marketplace.
+
 ## Next Steps
 
 In the era of rapid digital transformation, organizations embrace DevOps for agile software delivery, yet struggle with deployment delays, security issues, and cost management. Overcoming these challenges requires efficiency and agility to streamline development & testing cycles and maximize the impact of DevOps practices.
