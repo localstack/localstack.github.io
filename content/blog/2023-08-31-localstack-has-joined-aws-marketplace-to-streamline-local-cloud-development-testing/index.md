@@ -37,7 +37,7 @@ To launch LocalStack with AWS Marketplace, you can follow the steps below:
 - Upon successful authentication on the LocalStack Web Application, you'll be automatically returned to the previous page. At this point, an additional button will be visible, allowing you to subscribe to LocalStack.
     {{< img-simple src="localstack-web-application-subscribe.png" alt="Image of LocalStack Web Application showing a subscribe button which allows you to complete the subscription">}}
 - Click the button to establish a connection between your LocalStack organization and the AWS Marketplace Customer. This will redirect you to the subscription page, where a banner appears next to existing subscriptions, with the AWS Marketplace subscription becoming visible within a few minutes.
-    {{< img-simple src="localstack-web-application-synchronization.png" alt="Image of LocalStack Web Application showing a box which mentions that the synchronization is in progress and may take a few minutes">}}
+    {{< img-simple src="localstack-web-application-synchronization.png" width=300 alt="Image of LocalStack Web Application showing a box which mentions that the synchronization is in progress and may take a few minutes">}}
 
 Note that subscriptions cannot be modified or canceled within the LocalStack Web Application. Any changes such as upgrades, downgrades, or cancellations should be managed through the AWS Marketplace. You can make subscription adjustments by navigating to **Modify Current Contract** or **Modify Renewal Terms** on the AWS Marketplace.
 
