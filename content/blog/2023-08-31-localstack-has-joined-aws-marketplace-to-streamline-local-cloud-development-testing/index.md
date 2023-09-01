@@ -15,7 +15,7 @@ Our mission is to give developers back control over their environments and free 
 
 ## Leveraging LocalStack through AWS Marketplace
 
-Through LocalStack’s AWS Marketplace integration,, you will get access to our [base emulation layer](https://localstack.cloud/solutions/cloud-emulation/) that offers advanced support for extended AWS services and features, along with [team collaboration features](https://localstack.cloud/solutions/team-collaboration/) through the LocalStack Team edition.
+Through LocalStack’s AWS Marketplace integration, you will get access to our [core emulation layer](https://localstack.cloud/solutions/cloud-emulation/) that offers advanced support for extended AWS services and features, along with [team collaboration features](https://localstack.cloud/solutions/team-collaboration/) through the LocalStack Team edition.
 
 The LocalStack Team edition delivers a range of features aimed at enhancing your cloud productivity while seamlessly aligning with your existing workflows. These features are designed to reduce friction and adapt as your infrastructure & workflows scale, with:
 
