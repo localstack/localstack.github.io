@@ -45,7 +45,7 @@ Note that subscriptions cannot be modified or canceled within the LocalStack Web
 
 In the era of rapid digital transformation, organizations embrace DevOps for agile software delivery, yet struggle with deployment delays, security issues, and cost management. Overcoming these challenges requires efficiency and agility to streamline development & testing cycles and maximize the impact of DevOps practices.
 
-LocalStack enables local cloud sanboxes, aiding developers and cutting down inefficient dev&test loops in software workflows. LocalStack's listing in the AWS Marketplace is a step towards making local cloud sanboxes for development & testing accessible to AWS customers.
+LocalStack enables local cloud sandboxes, aiding developers and cutting down inefficient dev&test loops in software workflows. LocalStack's listing in the AWS Marketplace is a step towards making local cloud sandboxes for development & testing easily accessible to AWS customers.
 
 To find out more about LocalStack, visit [localstack.cloud](https://localstack.cloud), or follow us on Twitter/X [@localstack](https://x.com/localstack).
 
