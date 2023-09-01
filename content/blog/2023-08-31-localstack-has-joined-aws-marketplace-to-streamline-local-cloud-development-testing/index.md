@@ -26,7 +26,7 @@ The LocalStack Team edition delivers a range of features aimed at enhancing your
 
 With LocalStack now available in the AWS Marketplace, you can leverage a streamlined procurement to get easy access to our cloud development platform. 
 
-## Subscribing to LocalStack in AWS Marketplace
+## Subscribing to LocalStack on the AWS Marketplace
 
 To launch LocalStack with AWS Marketplace, you can follow the steps below:
 
