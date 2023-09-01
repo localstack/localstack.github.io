@@ -2,12 +2,14 @@
 title: LocalStack has joined AWS Marketplace to streamline local cloud development & testing!
 description: Announcing the availability of LocalStack's Cloud Emulator to facilitate local cloud development and team collaboration in the AWS Marketplace.
 lead: Announcing the availability of LocalStack's Cloud Emulator to facilitate local cloud development and team collaboration in the AWS Marketplace.
-date: 2023-08-31T1:05:12+05:30
-lastmod: 2023-08-31T1:05:12+05:30
+date: 2023-09-01
+lastmod: 2023-09-01
 images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
 ---
+
+{{< img-simple src="localstack-joins-aws-marketplace.png" >}}
 
 We are excited to announce that LocalStack is now available in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-lllzw3ywntoxg?sr=0-1&ref_=beagle&applicationId=AWSMPContessa). LocalStack is the leading platform for local development and testing of cloud applications. LocalStack's Cloud Emulator allows you to effectively run over 80 AWS services directly on your local machine and on CI/CD systems to significantly cut down on development time and feedback cycles. At its core, LocalStack provides a growing ecosystem of native integrations that encompasses crucial components such as CI/CD providers, application development frameworks, programming language SDKs, Infrastructure-as-Code tools, and more. 
 
@@ -31,6 +33,7 @@ With LocalStack now available in the AWS Marketplace, you can leverage a streaml
 To launch LocalStack with AWS Marketplace, you can follow the steps below:
 
 - Go to **AWS Marketplace Subscriptions** in the AWS Console and locate **LocalStack** under **Discover Products**.
+    {{< img-simple src="aws-localstack-marketplace-discover.png" alt="Image of AWS Console showing the LocalStack Cloud Emulator product">}}
 - Review the terms, select the desired number of seats, contract renewal strategy, and accept the contract. Accepting the contract will initiate a Marketplace subscription.
 - Once the contract is accepted, you'll be prompted to finalize the order by clicking a button. You'll then be directed to the LocalStack Web Application, where you need to authenticate by signing in or signing up.
     {{< img-simple src="localstack-web-application-contract.png" alt="Image of LocalStack Web Application showing a subscribe button which can be clicked after signing-in to the application">}}
