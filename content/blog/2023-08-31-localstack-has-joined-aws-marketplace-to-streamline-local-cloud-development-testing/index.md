@@ -47,6 +47,6 @@ In the era of rapid digital transformation, organizations embrace DevOps for agi
 
 LocalStack enables local cloud sanboxes, aiding developers and cutting down inefficient dev&test loops in software workflows. LocalStack's listing in the AWS Marketplace is a step towards making local cloud sanboxes for development & testing accessible to AWS customers.
 
-To know more about LocalStack, visit [localstack.cloud](https://localstack.cloud), or follow us on X [@localstack](https://x.com/localstack).
+To find out more about LocalStack, visit [localstack.cloud](https://localstack.cloud), or follow us on Twitter/X [@localstack](https://x.com/localstack).
 
 [Request a demo](https://localstack.cloud/contact/) to understand how to deploy your AWS infrastructure 10x faster locally and on CI systems with LocalStack.
