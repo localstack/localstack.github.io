@@ -24,7 +24,7 @@ The LocalStack Team edition delivers a range of features aimed at enhancing your
 - **LocalStack in CI**: Spin up LocalStack in your CI pipelines to run tests before pushing out changes to production or to create ephemeral environments to showcase your changes with LocalStack.
 - **LocalStack Extensions**: Extend and customise LocalStack to integrate custom service emulators, such as Cloudflare & Stripe, into your LocalStack instance to enable your team go beyond AWS.
 
-With LocalStack now available in the AWS Marketplace, you can quickly leverage a streamlined procurement to access our cloud development framework. 
+With LocalStack now available in the AWS Marketplace, you can leverage a streamlined procurement to get easy access to our cloud development platform. 
 
 ## Subscribing to LocalStack in AWS Marketplace
 
