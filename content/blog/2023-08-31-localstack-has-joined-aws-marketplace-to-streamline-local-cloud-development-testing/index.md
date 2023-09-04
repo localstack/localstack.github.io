@@ -2,11 +2,11 @@
 title: LocalStack has joined AWS Marketplace to streamline local cloud development & testing!
 description: Announcing the availability of LocalStack's Cloud Emulator to facilitate local cloud development and team collaboration in the AWS Marketplace.
 lead: Announcing the availability of LocalStack's Cloud Emulator to facilitate local cloud development and team collaboration in the AWS Marketplace.
-date: 2023-09-01
-lastmod: 2023-09-01
-images: []
+date: 2023-09-04
+lastmod: 2023-09-04
 contributors: ["LocalStack Team"]
 tags: ['news']
+leadimage: "localstack-joins-aws-marketplace.png"
 ---
 
 {{< img-simple src="localstack-joins-aws-marketplace.png" >}}
@@ -16,6 +16,8 @@ We are excited to announce that LocalStack is now available in the [AWS Marketpl
 Our mission is to give developers back control over their environments and free them from wasting time with inefficient dev & test loops in the cloud, so they can instead focus on developing great products to solve the world's problems. This milestone holds significant value for our users as it grants developer teams the freedom to leverage their AWS budget effectively while harnessing the capabilities of LocalStack's emulation features. This synergy with diverse cloud developer tools has the potential to revolutionize the way developers build, test and deploy their AWS-powered applications today!
 
 ## Leveraging LocalStack through AWS Marketplace
+
+> With the AWS Marketplace integration our users get a quick and simple way to subscribe to LocalStack, without having to go through lengthy procurement processes. Customers already have a business relationship with AWS and can simply purchase our software through the Marketplace by just add another line item to their existing AWS bill! — [Gerta Sheganaku](https://www.linkedin.com/in/gerta-sheganaku/), Chief Operating Office at LocalStack
 
 Through LocalStack’s AWS Marketplace integration, you will get access to our [core emulation layer](https://localstack.cloud/solutions/cloud-emulation/) that offers advanced support for extended AWS services and features, along with [team collaboration features](https://localstack.cloud/solutions/team-collaboration/) through the LocalStack Team edition.
 
