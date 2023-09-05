@@ -1,4 +1,4 @@
-.case-study-cta {
+.blog-cta-1 {
   background: $purple-primary;
   background: linear-gradient(84.91deg, #4d29b4 -5.02%, #2a1763 51.7%, #4d29b4 109.23%);
   box-shadow: 10px 10px 40px rgba(18, 18, 62, 0.15);
@@ -27,7 +27,7 @@
 }
 
 @include media-breakpoint-down(md) {
-  .case-study-cta {
+  .blog-cta-1 {
     padding: 36px 18px;
     margin-top: 28px;
     .heading {

@@ -7,17 +7,25 @@ lastmod: 2023-09-04
 contributors: ["LocalStack Team"]
 tags: ['news']
 leadimage: "localstack-joins-aws-marketplace.png"
+show_cta_1: true
 ---
 
 {{< img-simple src="localstack-joins-aws-marketplace.png" >}}
 
-We are excited to announce that LocalStack is now available in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-lllzw3ywntoxg?sr=0-1&ref_=beagle&applicationId=AWSMPContessa). LocalStack is the leading platform for local development and testing of cloud applications. LocalStack's Cloud Emulator allows you to effectively run over 80 AWS services directly on your local machine and on CI/CD systems to significantly cut down on development time and feedback cycles. At its core, LocalStack provides a growing ecosystem of native integrations that encompasses crucial components such as CI/CD providers, application development frameworks, programming language SDKs, Infrastructure-as-Code tools, and more. 
+We are excited to announce that LocalStack is now available in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-lllzw3ywntoxg?sr=0-1&ref_=beagle&applicationId=AWSMPContessa). LocalStack is the leading platform for local development and testing of cloud applications. LocalStack's Cloud Emulator allows you to effectively run over 80 AWS services directly on your local machine and on CI/CD systems to significantly cut down on development time and feedback cycles. At its core, LocalStack provides a growing ecosystem of native integrations that encompasses crucial components such as CI/CD providers, application development frameworks, programming language SDKs, Infrastructure-as-Code tools, and more.
 
 Our mission is to give developers back control over their environments and free them from wasting time with inefficient dev & test loops in the cloud, so they can instead focus on developing great products to solve the world's problems. This milestone holds significant value for our users as it grants developer teams the freedom to leverage their AWS budget effectively while harnessing the capabilities of LocalStack's emulation features. This synergy with diverse cloud developer tools has the potential to revolutionize the way developers build, test and deploy their AWS-powered applications today!
 
 ## Leveraging LocalStack through AWS Marketplace
 
-> With the AWS Marketplace integration our users get a quick and simple way to subscribe to LocalStack, without having to go through lengthy procurement processes. Customers already have a business relationship with AWS and can simply purchase our software through the Marketplace by just add another line item to their existing AWS bill! — [Gerta Sheganaku](https://www.linkedin.com/in/gerta-sheganaku/), Chief Operating Office at LocalStack
+<div class="quote-container mt-4">
+
+  > _“With the AWS Marketplace integration our users get a quick and simple way to subscribe to LocalStack, without having to go through lengthy procurement processes. Customers already have a business relationship with AWS and can simply purchase our software through the Marketplace by just add another line item to their existing AWS bill!”_
+  <div class="quote-author">
+    <p><a href="https://www.linkedin.com/in/gerta-sheganaku/">Gerta Sheganaku</a>,</p>
+    <p>Chief Operating Officer at LocalStack</p>
+  </div>
+</div>
 
 Through LocalStack’s AWS Marketplace integration, you will get access to our [core emulation layer](https://localstack.cloud/solutions/cloud-emulation/) that offers advanced support for extended AWS services and features, along with [team collaboration features](https://localstack.cloud/solutions/team-collaboration/) through the LocalStack Team edition.
 
@@ -28,7 +36,7 @@ The LocalStack Team edition delivers a range of features aimed at enhancing your
 - **LocalStack in CI**: Spin up LocalStack in your CI pipelines to run tests before pushing out changes to production or to create ephemeral environments to showcase your changes with LocalStack.
 - **LocalStack Extensions**: Extend and customise LocalStack to integrate custom service emulators, such as Cloudflare & Stripe, into your LocalStack instance to enable your team go beyond AWS.
 
-With LocalStack now available in the AWS Marketplace, you can leverage a streamlined procurement to get easy access to our cloud development platform. 
+With LocalStack now available in the AWS Marketplace, you can leverage a streamlined procurement to get easy access to our cloud development platform.
 
 ## Subscribing to LocalStack on the AWS Marketplace
 
