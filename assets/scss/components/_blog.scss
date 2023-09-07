@@ -1,0 +1,22 @@
+.quote-container {
+  margin: 3rem 0 4rem 0;
+  blockquote {
+    font-size: 26px;
+    line-height: 32px;
+    color: $purple-primary;
+    border-left: 0;
+    margin-bottom: 24px;
+    padding-left: 0;
+    font-weight: 700;
+  }
+}
+.quote-author {
+  font-size: 18px;
+  border-left: 4px solid $teal;
+  padding-left: 18px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  p {
+    margin: 0;
+  }
+}

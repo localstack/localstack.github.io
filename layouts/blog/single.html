@@ -7,10 +7,15 @@
       <article>
       <div class="blog-header">
         {{ partial "main/blog-meta.html" . }}
-      </div> 
+      </div>
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
-      </article>
+      {{ with .Params.show_cta_1 }}
+        {{ if eq . true }}
+          {{ partial "misc/blog-cta-1.html" }}
+        {{ end }}
+      {{ end }}
+    </article>
     </div>
 
   </div>
