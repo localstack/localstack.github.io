@@ -2,8 +2,8 @@
 title: LocalStack has joined AWS Marketplace to streamline local cloud development & testing!
 description: Announcing the availability of LocalStack's Cloud Emulator to facilitate local cloud development and team collaboration in the AWS Marketplace.
 lead: Announcing the availability of LocalStack's Cloud Emulator to facilitate local cloud development and team collaboration in the AWS Marketplace.
-date: 2023-09-06
-lastmod: 2023-09-06
+date: 2023-09-07
+lastmod: 2023-09-07
 contributors: ["LocalStack Team"]
 tags: ['news']
 leadimage: "localstack-joins-aws-marketplace.png"
