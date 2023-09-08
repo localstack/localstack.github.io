@@ -16,7 +16,7 @@ In this post we will outline some of the ways we have made connectivity within a
 
 <!-- picture -->
 
-There are two main problems with connecting to LocalStack that we are tackling:
+We are tackling two problems users experience when connecting to LocalStack:
 
 1. connectivity to the LocalStack container, and
 2. configuration of the LocalStack container.
@@ -34,9 +34,40 @@ It does not work when trying to connect to LocalStack from your own containers, 
 We also use the domain name `localhost.localstack.cloud` extensively in our documentation and examples.
 This domain name is publically registered and resolves to the IP address `127.0.0.1`.
 This allows us to present a valid TLS certificate when using HTTPS from the host, but does not remove the connectivity problem.
+You can check that the domain maps to `127.0.0.1` by running:
+
+```sh
+dig @8.8.8.8 localhost.localstack.cloud
+
+; <<>> DiG 9.10.6 <<>> @8.8.8.8 localhost.localstack.cloud
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54676
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;localhost.localstack.cloud.	IN	A
+
+;; ANSWER SECTION:
+localhost.localstack.cloud. 600	IN	A	127.0.0.1
+
+;; Query time: 54 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Fri Sep 08 11:23:20 BST 2023
+;; MSG SIZE  rcvd: 71
+```
+
+This command queries the Google public nameserver (`8.8.8.8`) for the `localhost.localstack.cloud` domain.
+In the "ANSWER" section we see `127.0.0.1` returned, as an `A` record, meaning IP address.
 
 
 ## Configuration of the LocalStack container
+
+* `GATEWAY_LISTEN`
+* `LOCALSTACK_HOST`
 
 # Notes
 
