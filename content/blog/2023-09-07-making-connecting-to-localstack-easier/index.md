@@ -18,8 +18,8 @@ In this post we will outline some of the ways we have made connectivity within a
 
 We are tackling two problems users experience when connecting to LocalStack:
 
-1. connectivity to the LocalStack container, and
-2. configuration of the LocalStack container.
+1. connectivity to the LocalStack container (this post), and
+2. configuration of the LocalStack container (in the next post).
 
 ## Connectivity to the LocalStack container
 
@@ -38,7 +38,11 @@ You can check that the domain maps to `127.0.0.1` by running:
 
 ```sh
 dig @8.8.8.8 localhost.localstack.cloud
+```
 
+which outputs:
+
+```text
 ; <<>> DiG 9.10.6 <<>> @8.8.8.8 localhost.localstack.cloud
 ; (1 server found)
 ;; global options: +cmd
@@ -63,28 +67,87 @@ localhost.localstack.cloud. 600	IN	A	127.0.0.1
 This command queries the Google public nameserver (`8.8.8.8`) for the `localhost.localstack.cloud` domain.
 In the "ANSWER" section we see `127.0.0.1` returned, as an `A` record, meaning IP address.
 
+When you create a lambda function, ECS container or EC2 instance, we create a new docker container running your application code.
+In these situations, using the domain name `localhost.localstack.cloud` will not resolve to the LocalStack container as you may expect.
+We currently have code in our Lambda managed runtimes to intercept any domain names that resolve to `127.0.0.1` and rewrite them to the LocalStack container IP, but this is only available to managed runtimes.
 
-## Configuration of the LocalStack container
+To tackle the problem generally, we are bringing a feature from LocalStack Pro into LocalStack open source: our DNS server.
+By doing this, we are able to respond with the IP address of the container for any requests to `localhost.localstack.cloud`, provided your code is running in a correctly configured environment.
 
-* `GATEWAY_LISTEN`
-* `LOCALSTACK_HOST`
+For AWS services like Lambda or ECS, we are running your application code in a pre-configured environment.
+For your own containers, there is some configuration required.
 
-# Notes
+Docker allows the configuration of a container DNS resolver.
+This is done by overriding the `/etc/resolv.conf` file inside the container.
+When using the Docker CLI, you can use the `--dns` flag, or the `dns:` entry of a Docker Compose service.
+This flag accepts an IP address to use for resolving domain names.
+To use this flag, your LocalStack container will need to have a known IP address.
 
-- Why connectivity is difficult
-    - in the past we have used `localhost.localstack.cloud` but this resolves to `127.0.0.1` (example dig command, `dig @8.8.8.8 localhost.localstack.cloud`).
-    - We run your lambda code in separate docker containers to LocalStack
-    - Therefore `127.0.0.1` is not correct when accessing LocalStack created resources
-    - Also multiple configuration variables that do different overlapping things
-        - cosmetic vs runtime parameters
-- One way this is achieved is running our own DNS server
-    - We have now moved the DNS server from -ext
-    - Lambda, ECS and EC2 compute now supports this
-- One difficulty is that the IP address of LocalStack is different to different containers
-    - implemented intelligent ip address returning
-    - works with transparent endpoint injection too
-- How to use the new functionality from your container
-    - example compose file
-- Configuration of LocalStack has been simplified and made clearer
-    - GATEWAY_LISTEN configures the runtime
-    - LOCALSTACK_HOST configures the cosmetic variables
+### Setting LocalStack as the DNS server using the Docker CLI
+
+When using the CLI, you can use the `--dns` flag to set your application container DNS to the LocalStack container.
+
+```sh
+# start localstack
+localstack start -d
+localstack wait
+
+# get the ip address of the LocalStack container
+docker inspect localstack_main | \
+	jq -r '.[0].NetworkSettings.Networks | to_entries | .[].value.IPAddress'
+# prints 172.17.0.2
+
+# run your application container
+docker run --rm -it --dns 172.17.0.2 <arguments> <image name>
+```
+
+### Setting LocalStack as the DNS server using Docker Compose
+
+When using Docker Compose, you can specify the IP address that the LocalStack container will be assigned by using a user-defined network, and using the `ipam` configuration settings.
+For example:
+
+```yaml
+version: "3.8"
+
+services:
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack-main}"
+    image: localstack/localstack
+    ports:
+      - "127.0.0.1:53:53/udp"
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+    environment:
+      - DEBUG=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      ls:
+        # Set the container IP address in the 10.0.2.0/24 subnet
+        ipv4_address: 10.0.2.20
+
+  application:
+    image: ghcr.io/localstack/localstack-docker-debug:main
+    entrypoint: ""
+    command: ["sleep", "infinity"]
+    dns:
+      # Set the DNS server to be the LocalStack continer
+      - 10.0.2.20
+    networks:
+      - ls
+
+networks:
+  ls:
+    ipam:
+      config:
+        # Specify the subnet range for IP address allocation
+        - subnet: 10.0.2.0/24
+```
+
+We hope that with this new functionality available today, accessing LocalStack should be considerably easier.
+By moving the DNS server into LocalStack and configuring AWS compute environments, your Lambda functions, ECS containers, and EC2 instances should already be able to access LocalStack at `localhost.localstack.cloud`.
+With a small change in configuration, your application containers will also be able to reach LocalStack at `localhost.localstack.cloud`.
+
+As always, let us know if any issues using the [GitHub issue tracker](https://github.com/localstack/locaslstack/issues), or if you are a Pro customer feel free to [reach out to us directly](https://docs.localstack.cloud/getting-started/help-and-support).
+We want to hear your feedback on this feature, so please get in touch!
