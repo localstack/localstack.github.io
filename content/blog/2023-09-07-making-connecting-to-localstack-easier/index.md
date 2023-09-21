@@ -12,7 +12,7 @@ draft: true
 ---
 
 Connecting your application code to LocalStack is not always easy.
-In this post we will outline some of the ways we have made connectivity within and **to** LocalStack easier.
+In this series we will outline some of the ways we have made connectivity within and **to** LocalStack easier.
 
 <!-- picture -->
 
@@ -20,6 +20,8 @@ We are tackling two problems users experience when connecting to LocalStack:
 
 1. connectivity to the LocalStack container (this post), and
 2. configuration of the LocalStack container (in the next post).
+
+In the third post of this series, we will introduce and demonstrate a utility to help debug connectivity issues when connecting to LocalStack.
 
 ## Connectivity to the LocalStack container
 
