@@ -1,9 +1,9 @@
 ---
 title: OpenFABR leverages LocalStack for Infrastructure as Code for local development & validation
-description: OpenFABR has harnessed the power of LocalStack to enhance the aglity and productivity of their package development via Infrastructure-as-Code (IaC). In this case study, we talk with Janaka Abeywardhana, Co-founder and CPTO at FABR, about their experience using LocalStack to transform their developer experience while reducing time and costs associated with deploying infrastructure on AWS.
-lead: OpenFABR has harnessed the power of LocalStack to enhance the aglity and productivity of their package development via Infrastructure-as-Code (IaC). In this case study, we talk with Janaka Abeywardhana, Co-founder and CPTO at FABR, about their experience using LocalStack to transform their developer experience while reducing time and costs associated with deploying infrastructure on AWS.
-date: 2023-09-15
-lastmod: 2023-09-15
+description: OpenFABR has harnessed the power of LocalStack to enhance the aglity and productivity of their package development via Infrastructure-as-Code. In this case study, we talk with Janaka Abeywardhana, CPTO at FABR, about their experience using LocalStack to transform their developer experience while reducing time and costs associated with deploying infrastructure on AWS.
+lead: OpenFABR has harnessed the power of LocalStack to enhance the aglity and productivity of their package development via Infrastructure-as-Code. In this case study, we talk with Janaka Abeywardhana, CPTO at FABR, about their experience using LocalStack to transform their developer experience while reducing time and costs associated with deploying infrastructure on AWS.
+date: 2023-09-25
+lastmod: 2023-09-25
 contributors: ["LocalStack Team"]
 logo: openfabr-logo.png
 leadimage: "localstack-openfabr-case-study-lead-image.png"
