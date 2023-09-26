@@ -22,7 +22,7 @@ In this series we will outline some of the ways we have made connecting to Local
 
 LocalStack normally runs in a container, meaning that it is isolated from the host system.
 By default, LocalStack _publishes_ its edge port (usually 4566) to the host.
-Publishing a port means that a ports on the host forwards network communications to the LocalStack container.
+Publishing a port means that a port on the host forwards network communications to the LocalStack container.
 Requests made to `localhost:4566` are then forwarded to the LocalStack container.
 
 This works well when interacting from the host, for example using `awslocal` commands.
