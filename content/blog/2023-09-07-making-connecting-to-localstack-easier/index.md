@@ -5,23 +5,19 @@ lastmod: 2023-09-07
 tags:
 - news
 contributors:
-- Simon
-- Daniel
-- Thomas
+- Simon Walker
+- Daniel Fangl
 draft: true
 ---
 
 Connecting your application code to LocalStack is not always easy.
-In this series we will outline some of the ways we have made connectivity within and **to** LocalStack easier.
+In this series we will outline some of the ways we have made connectivity within, and <u><i>to</i></u> LocalStack easier.
 
 <!-- picture -->
 
-We are tackling two problems users experience when connecting to LocalStack:
-
-1. connectivity to the LocalStack container (this post), and
-2. configuration of the LocalStack container (in the next post).
-
-In the third post of this series, we will introduce and demonstrate a utility to help debug connectivity issues when connecting to LocalStack.
+1. In this post, we will talk about how we have made connecting to LocalStack easier.
+2. In the next post, we will demonstrate a debugging utility that we have built, to help diagnose network connectivity problems.
+3. In the final post, we will show how we have simplified the configuration of the LocalStack container.
 
 ## Connectivity to the LocalStack container
 
