@@ -72,7 +72,7 @@ In the "ANSWER" section we see `127.0.0.1` returned, as an `A` record, meaning I
 
 ### Why is using localhost.localstack.cloud not enough?
 
-When you create a lambda function, ECS container or EC2 instance, we create a new docker container running your application code.
+When you create a lambda function, ECS container or EC2 instance, we create a new Docker container running your application code.
 In these situations, using the domain name `localhost.localstack.cloud` will not resolve to the LocalStack container as you may expect.
 We currently have code in our Lambda managed runtimes to intercept any domain names that resolve to `127.0.0.1` and rewrite them to the LocalStack container IP, but this is only available to managed runtimes.
 
@@ -164,6 +164,13 @@ networks:
         # Specify the subnet range for IP address allocation
         - subnet: 10.0.2.0/24
 ```
+
+We have created a demo application to show off this functionality: [https://github.com/localstack/networking-demo-application](https://github.com/localstack/networking-demo-application).
+This sample uses `*.localhost.localstack.cloud` throughout to seamlessly configure AWS SDK clients to communicate with LocalStack.
+
+* The deploy process runs in a separate Docker container.
+* The application container connects across the Docker network to LocalStack.
+* A lambda function communicates with LocalStack to subscribe to SQS messages, access objects in S3, and write to a DynamoDB table.
 
 We hope that with this new functionality available today, accessing LocalStack should be considerably easier.
 By moving the DNS server into LocalStack and configuring AWS compute environments, your Lambda functions, ECS containers, and EC2 instances should already be able to access LocalStack at `localhost.localstack.cloud`.
