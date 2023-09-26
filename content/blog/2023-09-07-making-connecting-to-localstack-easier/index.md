@@ -91,7 +91,7 @@ We are now able to resolve the three issues mentioned above:
 
 ## How to use this new feature
 
-For AWS services like Lambda or ECS, we are running your application code in a pre-configured environment.
+For AWS services like Lambda or ECS, we are running your application code in an environment pre-configured to use this feature.
 
 _For your own containers, there is some configuration required._
 
@@ -173,7 +173,7 @@ This sample uses `*.localhost.localstack.cloud` throughout to seamlessly configu
 * A lambda function communicates with LocalStack to subscribe to SQS messages, access objects in S3, and write to a DynamoDB table.
 
 We hope that with this new functionality available today, accessing LocalStack should be considerably easier.
-By moving the DNS server into LocalStack and configuring AWS compute environments, your Lambda functions, ECS containers, and EC2 instances should already be able to access LocalStack at `localhost.localstack.cloud`.
+By moving the DNS server into LocalStack and configuring spawned AWS compute environments to use it by default, your Lambda functions, ECS containers, and EC2 instances should already be able to access LocalStack at `localhost.localstack.cloud`.
 With a small change in configuration, your application containers will also be able to reach LocalStack at `localhost.localstack.cloud`.
 
 As always, let us know if any issues using the [GitHub issue tracker](https://github.com/localstack/locaslstack/issues), or if you are a Pro customer feel free to [reach out to us directly](https://docs.localstack.cloud/getting-started/help-and-support).
