@@ -7,7 +7,6 @@ tags:
 contributors:
 - Simon Walker
 - Daniel Fangl
-draft: true
 ---
 
 Connecting your application code to LocalStack is not always easy.
