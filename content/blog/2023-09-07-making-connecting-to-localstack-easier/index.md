@@ -10,7 +10,7 @@ contributors:
 ---
 
 Connecting your application code to LocalStack is not always easy.
-In this series we will outline some of the ways we have made connectivity within, and <u><i>to</i></u> LocalStack easier.
+In this series we will outline some of the ways we have made connecting to LocalStack easier.
 
 <!-- picture -->
 
