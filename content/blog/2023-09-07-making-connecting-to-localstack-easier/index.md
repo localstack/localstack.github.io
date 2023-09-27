@@ -28,9 +28,12 @@ Requests made to `localhost:4566` are then forwarded to the LocalStack container
 This works well when interacting from the host, for example using `awslocal` commands.
 It does not work when trying to connect to LocalStack from your own containers, or LocalStack compute resources such as Lambda functions or ECS containers.
 In the past, some people have suggested connecting their application containers to the host network (`--network host`) or by making requests to `host.docker.internal:4566`.
-In some cases, using the host networking solves the problem, but it raises other ones:
+In some cases, using the host networking solves the problem, but it causes other problems:
 
-* If SSL is used, then certificate validation must be turned off since LocalStack does not present a valid certificate for the domain used (either `localhost` or `host.docker.internal`).
+* If SSL is used, then certificate validation must be turned off:
+    * LocalStack presents a certificate for a set of registered domains;
+    * if using host networking (`--network host`), requests are made to an IP address or `localhost`, which is not included in the certificate; and
+    * when using the gateway domain (`host.docker.internal`), this domain is also not included in the set of certificate domains.
 * Subdomains created by resources such as S3 buckets or OpenSearch clusters will not resolve to the LocalStack container.
 * Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port.
 
