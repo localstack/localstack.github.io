@@ -30,7 +30,7 @@ It does not work when trying to connect to LocalStack from your own containers, 
 In the past, some people have suggested connecting their application containers to the host network (`--network host`) or by making requests to `host.docker.internal:4566`.
 In some cases, using the host networking solves the problem, but it raises other ones:
 
-* If SSL is used, then certificate validation must be turned off since LocalStack does not present a valid certificate for the domain used(either `localhost` or `host.docker.internal`).
+* If SSL is used, then certificate validation must be turned off since LocalStack does not present a valid certificate for the domain used (either `localhost` or `host.docker.internal`).
 * Subdomains created by resources such as S3 buckets or OpenSearch clusters will not resolve to the LocalStack container.
 * Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port.
 
