@@ -35,6 +35,7 @@ In some cases, using the host networking solves the problem, but it causes other
     * if using host networking (`--network host`), requests are made to an IP address or `localhost`, which is not included in the certificate; and
     * when using the gateway domain (`host.docker.internal`), this domain is also not included in the set of certificate domains.
 * Subdomains created by resources such as S3 buckets or OpenSearch clusters will not resolve to the LocalStack container.
+* Servers listening on the host must bind to either the Docker network gateway IP address, which is inconvenient to get, or `0.0.0.0` which exposes the server to traffic from outside the host, which may be insecure.
 * Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port.
 
 We already resolve the first issue by using the domain name `localhost.localstack.cloud` in our documentation and examples.
