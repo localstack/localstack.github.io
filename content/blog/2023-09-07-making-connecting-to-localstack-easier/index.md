@@ -39,7 +39,7 @@ In some cases, using the host networking solves the problem, but it causes other
 * Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port.
 
 We already resolve the first issue by using the domain name `localhost.localstack.cloud` in our documentation and examples.
-This domain name is publically registered and resolves to the IP address `127.0.0.1`.
+This domain name is publicly registered and resolves to the IP address `127.0.0.1`.
 This allows us to present a valid TLS certificate when using HTTPS from the host, but does not remove the connectivity problem.
 You can check that the domain maps to `127.0.0.1` by running:
 
@@ -156,7 +156,7 @@ services:
     entrypoint: ""
     command: ["sleep", "infinity"]
     dns:
-      # Set the DNS server to be the LocalStack continer
+      # Set the DNS server to be the LocalStack container
       - 10.0.2.20
     networks:
       - ls
@@ -180,5 +180,5 @@ We hope that with this new functionality available today, accessing LocalStack s
 By moving the DNS server into LocalStack and configuring spawned AWS compute environments to use it by default, your Lambda functions, ECS containers, and EC2 instances should already be able to access LocalStack at `localhost.localstack.cloud`.
 With a small change in configuration, your application containers will also be able to reach LocalStack at `localhost.localstack.cloud`.
 
-As always, let us know if any issues using the [GitHub issue tracker](https://github.com/localstack/locaslstack/issues), or if you are a Pro customer feel free to [reach out to us directly](https://docs.localstack.cloud/getting-started/help-and-support).
+As always, let us know if any issues using the [GitHub issue tracker](https://github.com/localstack/localstack/issues), or if you are a Pro customer feel free to [reach out to us directly](https://docs.localstack.cloud/getting-started/help-and-support).
 We want to hear your feedback on this feature, so please get in touch!
