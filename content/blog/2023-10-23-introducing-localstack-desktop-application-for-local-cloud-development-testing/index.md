@@ -8,7 +8,10 @@ images: []
 contributors: ["LocalStack Team"]
 tags: ['news']
 show_cta_1: true
+leadimage: 'introducing-localstack-desktop.png'
 ---
+
+{{< img-simple src="introducing-localstack-desktop.png" >}}
 
 We are excited to announce that we have released an all-new Desktop Application to make cloud development with LocalStack a breeze! The Desktop application underscores our unwavering commitment to make LocalStack accessible for our users, who would like to use a local cloud sandbox for development, testing, and experimentation, and truly embrace the inner dev loop. The Desktop Application now enables users to control, manage, and visualize over 80+ emulated AWS cloud services, running entirely on your local machine.
 
