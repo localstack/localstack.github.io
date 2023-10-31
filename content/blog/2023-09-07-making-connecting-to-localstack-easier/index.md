@@ -21,13 +21,13 @@ In this series we will outline some of the ways we have made connecting to Local
 ## Connectivity to the LocalStack container
 
 LocalStack normally runs in a container, meaning that it is isolated from the host system.
-By default, LocalStack _publishes_ its edge port (usually 4566) to the host.
+By default, LocalStack _publishes_ its edge port (usually `4566`) to the host.
 Publishing a port means that a port on the host forwards network communications to the LocalStack container.
 Requests made to `localhost:4566` are then forwarded to the LocalStack container.
 
-This works well when interacting from the host, for example using `awslocal` commands.
+This works well when interacting from the host, for example using [`awslocal`](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal) commands.
 It does not work when trying to connect to LocalStack from your own containers, or LocalStack compute resources such as Lambda functions or ECS containers.
-In the past, some people have suggested connecting their application containers to the host network (`--network host`) or by making requests to `host.docker.internal:4566`.
+In the past, our community users have suggested connecting their application containers to the host network (`--network host`) or by making requests to `host.docker.internal:4566`.
 In some cases, using the host networking solves the problem, but it causes other problems:
 
 * If SSL is used, then certificate validation must be turned off:
@@ -47,7 +47,7 @@ You can check that the domain maps to `127.0.0.1` by running:
 dig @8.8.8.8 localhost.localstack.cloud
 ```
 
-which outputs:
+You will see the following output:
 
 ```text
 ; <<>> DiG 9.10.6 <<>> @8.8.8.8 localhost.localstack.cloud
@@ -74,23 +74,23 @@ localhost.localstack.cloud. 600	IN	A	127.0.0.1
 This command queries the Google public nameserver (`8.8.8.8`) for the `localhost.localstack.cloud` domain.
 In the "ANSWER" section we see `127.0.0.1` returned, as an `A` record, meaning IP address.
 
-### Why is using localhost.localstack.cloud not enough?
+### Why is using `localhost.localstack.cloud` not enough?
 
 When you create a lambda function, ECS container or EC2 instance, we create a new Docker container running your application code.
 In these situations, using the domain name `localhost.localstack.cloud` will not resolve to the LocalStack container as you may expect.
 We currently have code in our Lambda managed runtimes to intercept any domain names that resolve to `127.0.0.1` and rewrite them to the LocalStack container IP, but this is only available to managed runtimes.
 
-To tackle the problem generally, we are bringing a feature from LocalStack Pro into LocalStack open source: our DNS server.
+To tackle the problem generally, we are bringing our DNS server from LocalStack Pro into the LocalStack Community edition.
 By doing this, we are able to respond with the IP address of the container for any requests to `localhost.localstack.cloud`, provided your code is running in a correctly configured environment.
 
 We are now able to resolve the three issues mentioned above:
 
-* If SSL is used, then certificate validation must be turned off since LocalStack does not present a valid certificate for the domain used(either `localhost` or `host.docker.internal`).
-    * **LocalStack presents a valid certificate for `*.localhost.localstack.cloud` domains**
+* If SSL is used, then certificate validation must be turned off since LocalStack does not present a valid certificate for the domain used (either `localhost` or `host.docker.internal`).
+    * LocalStack presents a valid certificate for `*.localhost.localstack.cloud` domains.
 * Subdomains created by resources such as S3 buckets or OpenSearch clusters will not resolve to the LocalStack container.
-    * **Subdomains of `localhost.localstack.cloud` also resolve to the LocalStack container**. 
-* Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port .
-    * **Now all networking can be done over the Docker network, and no ports have to be bound to the host at all**.
+    * Subdomains of `localhost.localstack.cloud` also resolve to the LocalStack container. 
+* Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port.
+    * Now all networking can be done over the Docker network, and no ports have to be bound to the host at all.
 
 
 ## How to use this new feature
@@ -126,7 +126,7 @@ docker run --rm -it --dns 172.17.0.2 <arguments> <image name>
 ### Setting LocalStack as the DNS server using Docker Compose
 
 When using Docker Compose, you can specify the IP address that the LocalStack container will be assigned by using a user-defined network, and using the `ipam` configuration settings.
-For example:
+An example configuration would look similar to:
 
 ```yaml
 version: "3.8"
@@ -169,12 +169,12 @@ networks:
         - subnet: 10.0.2.0/24
 ```
 
-We have created a demo application to show off this functionality: [https://github.com/localstack/networking-demo-application](https://github.com/localstack/networking-demo-application).
+We have created a demo application to show off this functionality: [github.com/localstack/networking-demo-application](https://github.com/localstack/networking-demo-application).
 This sample uses `*.localhost.localstack.cloud` throughout to seamlessly configure AWS SDK clients to communicate with LocalStack.
 
 * The deploy process runs in a separate Docker container.
 * The application container connects across the Docker network to LocalStack.
-* A lambda function communicates with LocalStack to subscribe to SQS messages, access objects in S3, and write to a DynamoDB table.
+* A Lambda function communicates with LocalStack to subscribe to SQS messages, access objects in S3, and write to a DynamoDB table.
 
 We hope that with this new functionality available today, accessing LocalStack should be considerably easier.
 By moving the DNS server into LocalStack and configuring spawned AWS compute environments to use it by default, your Lambda functions, ECS containers, and EC2 instances should already be able to access LocalStack at `localhost.localstack.cloud`.
