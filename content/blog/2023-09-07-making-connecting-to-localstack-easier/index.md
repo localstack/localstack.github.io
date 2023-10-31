@@ -38,8 +38,9 @@ In some cases, using the host networking solves the problem, but it causes other
 * Servers listening on the host must bind to either the Docker network gateway IP address, which is inconvenient to get, or `0.0.0.0` which exposes the server to traffic from outside the host, which may be insecure.
 * Each host port can only be bound once, whereas container ports are separate from each other and multiple containers can bind to the same port.
 
-We already resolve the first issue by using the domain name `localhost.localstack.cloud` in our documentation and examples.
+We already solve the first two issues by using the domain name `localhost.localstack.cloud` in our documentation and examples.
 This domain name is publicly registered and resolves to the IP address `127.0.0.1`.
+Any (possibly nested) subdomain of this domain name also resolve to `127.0.0.1`.
 This allows us to present a valid TLS certificate when using HTTPS from the host, but does not remove the connectivity problem.
 You can check that the domain maps to `127.0.0.1` by running:
 
@@ -105,56 +106,30 @@ When using the Docker CLI, you can use the `--dns` flag, or the `dns:` entry of 
 This flag accepts an IP address to use for resolving domain names.
 To use this flag, your LocalStack container will need to have a known IP address.
 
-### Setting LocalStack as the DNS server using the Docker CLI
-
-When using the CLI, you can use the `--dns` flag to set your application container DNS to the LocalStack container.
-
-```sh
-# start localstack
-localstack start -d
-localstack wait
-
-# get the ip address of the LocalStack container
-docker inspect localstack_main | \
-	jq -r '.[0].NetworkSettings.Networks | to_entries | .[].value.IPAddress'
-# prints 172.17.0.2
-
-# run your application container
-docker run --rm -it --dns 172.17.0.2 <arguments> <image name>
-```
-
 ### Setting LocalStack as the DNS server using Docker Compose
 
 When using Docker Compose, you can specify the IP address that the LocalStack container will be assigned by using a user-defined network, and using the `ipam` configuration settings.
 An example configuration would look similar to:
 
 ```yaml
-version: "3.8"
-
 services:
   localstack:
-    container_name: "${LOCALSTACK_DOCKER_NAME-localstack-main}"
     image: localstack/localstack
-    ports:
-      # Now only required if you need to access LocalStack from the host
-      - "127.0.0.1:4566:4566"            
-      # Now only required if you need to access LocalStack from the host
-      - "127.0.0.1:4510-4559:4510-4559"
-    environment:
-      - DEBUG=${DEBUG-}
-      - DOCKER_HOST=unix:///var/run/docker.sock
-    volumes:
-      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
-      - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
       ls:
         # Set the container IP address in the 10.0.2.0/24 subnet
         ipv4_address: 10.0.2.20
 
+  # Example application container that connects to LocalStack
   application:
-    image: ghcr.io/localstack/localstack-docker-debug:main
-    entrypoint: ""
-    command: ["sleep", "infinity"]
+    image: amazon/aws-cli
+    depends_on:
+      - localstack
+    command: ["s3api", "list-buckets"]
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_ENDPOINT_URL=http://localhost.localstack.cloud:4566
     dns:
       # Set the DNS server to be the LocalStack container
       - 10.0.2.20
