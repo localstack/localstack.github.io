@@ -40,6 +40,15 @@ Leapp enables DevOps & Cloud engineers to streamline their cloud access workflow
 
 ## Configuring a LocalStack session in Leapp
 
+<div class="quote-container mt-4">
+
+  > _“We are excited to have this integration between LocalStack and Leapp - it allows our customers to easily manage their IAM policies and profiles, and seamlessly switch between local development and real AWS environments at the click of a button!”_
+  <div class="quote-author">
+    <p><a href="https://www.linkedin.com/in/whummer/">Waldemar Hummer</a>,</p>
+    <p>Chief Technology Officer at LocalStack</p>
+  </div>
+</div>
+
 A Leapp session entails all the necessary details to allow the developer to connect to a cloud provider. A session allows you to perform three actions:
 
 - **Start**: To make temporary credentials available to the provider chain
