@@ -1,6 +1,6 @@
 ---
 title: "One Click Local Development: Announcing Leapp's LocalStack Integration"
-description: "We're excited to announce our partnership with Leapp by Noovolari to integrate LocalStack. Now you can easily create LocalStack sessions in Leapp to connect to the cloud emulator without hassles."
+description: "We're excited to announce our partnership with Leapp by Noovolari to integrate LocalStack. Now you can easily create LocalStack sessions in Leapp and seamlessly switch between local dev and remote cloud environments."
 lead: "We're excited to announce our partnership with Leapp by Noovolari to integrate LocalStack. Now you can easily create LocalStack sessions in Leapp to connect to the cloud emulator without hassles."
 date: 2023-11-06
 lastmod: 2023-11-06
