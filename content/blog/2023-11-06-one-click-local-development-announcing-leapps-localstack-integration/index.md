@@ -77,7 +77,7 @@ Your LocalStack session is ready! Select the session and click on **Start Sessio
 
 {{< img-simple src="start-localstack-session.png" >}}
 
-Start your LocalStack container using your preferred method with `DEBUG=1` enabled. Navigate to your preferred terminal or Command Prompt and run the following set of commands:
+Start your LocalStack container using your preferred method with `DEBUG=1` enabled. Navigate to your preferred terminal or command prompt and run the following set of commands:
 
 ```bash
 echo 'def handler(*args, **kwargs):' > /tmp/testlambda.py
