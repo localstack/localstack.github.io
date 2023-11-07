@@ -17,7 +17,7 @@ show_cta_1: true
 
 LocalStack supports integrations, such as the [AWS CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/), [CDK](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/), [Terraform](https://docs.localstack.cloud/user-guide/integrations/terraform/), along with additional wrappers to make it possible for developers to connect to the local cloud emulator. However, maintaining these wrappers requires additional effort, and a lot of developers would like to switch from AWS to LocalStack in a click. 
 
-We’re excited to announce our official partnership and integration with [Leapp](https://leapp.cloud) by [Noovolari](https://www.noovolari.com/) to help you switch between AWS and LocalStack. You can use Leapp to create a LocalStack session on your developer machine that can then be used to set your local credential file and access your LocalStack resources, using standard integrations such as the AWS CLI.
+We’re excited to announce our partnership and integration with [Leapp](https://leapp.cloud) by [Noovolari](https://www.noovolari.com/) to help you switch between AWS and LocalStack. You can use Leapp to create a LocalStack session on your developer machine that can then be used to set your local credential file and access your LocalStack resources, using standard integrations such as the AWS CLI.
 
 In this post, we will showcase how you can easily test your cloud applications locally, using LocalStack’s powerful core cloud emulator in combination with [Leapp’s IAM-based desktop app](https://github.com/Noovolari/leapp).
 
