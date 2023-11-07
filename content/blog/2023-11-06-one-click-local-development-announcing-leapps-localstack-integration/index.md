@@ -13,7 +13,7 @@ show_cta_1: true
 
 {{< img-simple src="localstack-leapp-cover-image.png" >}}
 
-[LocalStack](https://localstack.cloud) enables a fully functional cloud stack to emulate AWS cloud services on your local machine. It allows developers to shorten their feedback loop by enabling them develop, test, and deploy their applications locally while reducing costs and improving agility.  
+[LocalStack](https://localstack.cloud) enables a fully functional cloud stack to emulate AWS cloud services on your local machine. It allows developers to shorten their feedback loop by enabling them to develop, test, and deploy their applications locally while reducing costs and improving agility.  
 
 LocalStack supports integrations, such as the [AWS CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/), [CDK](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/), [Terraform](https://docs.localstack.cloud/user-guide/integrations/terraform/), along with additional wrappers to make it possible for developers to connect to the local cloud emulator. However, maintaining these wrappers requires additional effort, and a lot of developers would like to switch from AWS to LocalStack in a click. 
 
