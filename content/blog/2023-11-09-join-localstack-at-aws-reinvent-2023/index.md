@@ -18,7 +18,7 @@ As the evolution towards empowering developers with local cloud development gain
 
 ## What can you expect this year?
 
-At re:Invent this year,you will witness firsthand how we're elevating developer productivity by expediting onboarding and minimizing inefficient dev&test loops that often plague software development and delivery workflows. We will also demonstrate cutting-edge tools and technologies designed to empower teams in testing, debugging, and profiling applications—all without incurring unnecessary cloud costs.
+At re:Invent this year, you will witness firsthand how we're elevating developer productivity by expediting onboarding and minimizing inefficient dev&test loops that often plague cloud software development and delivery workflows. We will also demonstrate cutting-edge tools and technologies designed to empower teams in testing, debugging, and profiling applications—all without incurring unnecessary cloud costs.
 
 Talk to us about:
 
