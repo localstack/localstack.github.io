@@ -29,7 +29,7 @@ Talk to us about:
 - Spinning up LocalStack in ephemeral environments to setup application previews and test your changes before merging them to production.
 - Getting insights into your CI builds for cloud infrastructure to improve cloud developer experience across the entire software development lifecycle (SDLC).
 
-Additionally, LocalStack is now an AWS Partner and has joined AWS Marketplace to grant developer teams the freedom to leverage their AWS budget effectively while harnessing the capabilities of LocalStack’s extensive set of features.
+Additionally, LocalStack is now an AWS Partner and has joined the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-lllzw3ywntoxg) to grant developer teams the freedom to leverage their AWS budget effectively while harnessing the capabilities of LocalStack’s extensive set of features.
 
 ## Discuss with our Experts!
 
