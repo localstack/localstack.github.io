@@ -7,7 +7,6 @@ lastmod: 2023-11-09
 images: []
 contributors: ['LocalStack Team']
 tags: ['news']
-show_cta_1: true
 ---
 
 LocalStack is excited to be participating in [AWS re:Invent 2023](https://reinvent.awsevents.com), Amazon's premier annual cloud computing conference. Amidst keynote addresses by Amazon executives, an array of technical sessions, and a bustling expo floor designed for learning and networking, we're delighted to announce our role as an Exhibit Sponsor for this year's event.
@@ -26,7 +25,7 @@ Talk to us about:
 - Conducting sophisticated chaos engineering testing, such as region failover, DNS failover, and service failure simulations, on your local machine.
 - Integrating third-party emulators to extend the functionality of LocalStack by adding new services and features via our Extension mechanism.
 - Shifting left on IAM Testing to prevent any compromises on security and incurring unnecessary costs due to misconfigurations or inefficiencies.
-- Spinning up LocalStack in ephemeral environments to setup application previews and test your changes before merging them to production.
+- Spinning up LocalStack in ephemeral environments to set up application previews and test your changes before pushing them to production.
 - Getting insights into your CI builds for cloud infrastructure to improve cloud developer experience across the entire software development lifecycle (SDLC).
 
 Additionally, LocalStack is now an AWS Partner and has joined the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-lllzw3ywntoxg) to grant developer teams the freedom to leverage their AWS budget effectively while harnessing the capabilities of LocalStack’s extensive set of features.
