@@ -37,7 +37,7 @@ At LocalStack, we hold customer engagement in high regard—it's the cornerstone
 
 You can engage with Executives, Sales, and DevRel to get a one-on-one time with a personalized demo just for you. Fill out the form below and we will follow up to set a date and time that works best for you.
 
-## See you in Las Vegas
+## See you in Las Vegas!
 
 Don't miss the opportunity to swing by the LocalStack Booth at re:Invent for a shot at scoring fantastic swag and prizes in our exclusive raffle. Your visit could be the key to unlocking some seriously cool rewards, so make sure you drop by and join in the excitement!
 
