@@ -33,7 +33,7 @@ Additionally, LocalStack is now an AWS Partner and has joined the [AWS Marketpla
 
 ## Discuss with our Experts!
 
-At LocalStack, we hold customer engagement in high regard—it's the cornerstone of our mission to empower teams in simplifying the testing and development of cloud applications on their local machines.
+At LocalStack, we hold customer engagement in high regard — it's the cornerstone of our mission to empower teams in simplifying the testing and development of cloud applications on their local machines and in CI pipelines.
 
 You can engage with Executives, Sales, and DevRel to get a one-on-one time with a personalized demo just for you. Fill out the form below and we will follow up to set a date and time that works best for you.
 
