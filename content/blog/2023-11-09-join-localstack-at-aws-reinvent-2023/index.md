@@ -1,7 +1,7 @@
 ---
 title: Join LocalStack at AWS re:Invent 2023
-description: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, CI analytics, and more!
-lead: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, CI analytics, and more!
+description: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, CI Analytics, and more!
+lead: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, CI Analytics, and more!
 date: 2023-11-09
 lastmod: 2023-11-09
 images: []
