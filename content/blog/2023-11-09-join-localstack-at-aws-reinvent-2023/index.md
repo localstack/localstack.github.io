@@ -10,7 +10,7 @@ tags: ['news']
 show_cta_1: true
 ---
 
-LocalStack is excited to be participating in AWS re:Invent 2023, Amazon's premier annual cloud computing conference. Amidst keynote addresses by Amazon executives, an array of technical sessions, and a bustling expo floor designed for learning and networking, we're delighted to announce our role as an Exhibit Sponsor for this year's event.
+LocalStack is excited to be participating in [AWS re:Invent 2023](https://reinvent.awsevents.com), Amazon's premier annual cloud computing conference. Amidst keynote addresses by Amazon executives, an array of technical sessions, and a bustling expo floor designed for learning and networking, we're delighted to announce our role as an Exhibit Sponsor for this year's event.
 
 Join us at Booth #1074 in the Venetian Expo, Las Vegas, from November 27 to December 1. It's an opportune moment to engage with the LocalStack team, where we'll not only share our insights but also learn valuable lessons from your experiences. 
 
