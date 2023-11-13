@@ -26,9 +26,15 @@ These latest enhancements mark a significant step forward in our commitment to d
 
 ### IAM Policy Streams
 
-### Ephemeral Environments
+### Ephemeral Environments for LocalStack
 
 ### All-new LocalStack Desktop Application
+
+We're excited to announce the release of the LocalStack Desktop Application, our cross-platform Desktop client for local cloud development & testing. The Desktop Application features an intuitive user interface, with local Resource Browser for 30+ AWS services and a simplified way to manage LocalStack containers and logs. The new Desktop Application replaces the LocalStack Cockpit, streamlining the developer experience and making our cloud emulator tooling more accessible. [Download it for free and get started!](https://app.localstack.cloud/download).
+
+{{< img-simple src="localstack-desktop-resource-browser.png" width=300 alt="Image of LocalStack Desktop Application showcasing the local AWS Resource Browsers">}}
+
+Check out our [announcement blog](https://localstack.cloud/blog/2023-11-09-introducing-localstack-desktop-application-for-local-cloud-development-testing/) for more information.
 
 ### Multi-region and Multi-account support
 
