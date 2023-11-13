@@ -44,4 +44,16 @@ Check out our [announcement blog](https://localstack.cloud/blog/2023-11-09-intro
 
 ## Get started with LocalStack 3.0
 
+We have many LocalStack 3.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 3.0, you can:
+
+- View our [release notes on GitHub]().
+- Navigate to our [Developer Hub](https://docs.localstack.cloud/developer-hub/) and try out sample applications to get started.
+- Attend our [LocalStack Community Event](https://www.meetup.com/localstack-community/events/292576557/) to know more about the 3.0 release.
+
+To get started with using LocalStack 3.0 features:
+
+- Migrate to LocalStack 3.0 by following our [migration documentation](https://discuss.localstack.cloud/t/upcoming-changes-for-localstack-v3/576).
+- Migrate your LocalStack networking configuration by following our [networking migration guide](https://discuss.localstack.cloud/t/networking-migration-guide-for-localstack-3-0/588).
+- Connect with us on [LocalStack Discuss](https://discuss.localstack.cloud/) for feedback, bug reports, or suggestions.
+
 ## What’s next?
