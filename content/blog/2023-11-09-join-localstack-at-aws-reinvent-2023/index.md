@@ -15,17 +15,18 @@ show_cta_2: true
 
 LocalStack is excited to be participating in [AWS re:Invent 2023](https://reinvent.awsevents.com), Amazon's premier annual cloud computing conference. Amidst keynote addresses by Amazon executives, an array of technical sessions, and a bustling expo floor designed for learning and networking, we're delighted to announce our role as an Exhibit Sponsor for this year's event.
 
-Join us at **Booth #1074** in the Venetian Expo, Las Vegas, from November 27 to December 1. It's an opportune moment to engage with the LocalStack team, where we'll not only share our insights but also learn valuable lessons from your experiences. 
+Join us at **Booth #1074 ([Map](./file/aws-reinvent-localstack-map.pdf))** in the Venetian Expo, Las Vegas, from November 27 to December 1. It's an opportune moment to engage with the LocalStack team, where we'll not only share our insights but also learn valuable lessons from your experiences. 
 
-As the evolution towards empowering developers with local cloud development gains momentum, re:Invent serves as the ideal platform for us to collaborate, exchange ideas, and refine LocalStack based on your feedback. Your journey with LocalStack awaits at AWS re:Invent—let's make it an enriching experience together.
+As the evolution towards empowering developers with local cloud development gains momentum, re:Invent serves as the ideal platform for us to collaborate, exchange ideas, and refine LocalStack based on your feedback. Your journey with LocalStack awaits at AWS re:Invent — let's make it an enriching experience together.
 
 ## What can you expect this year?
 
-At re:Invent this year, you will witness firsthand how we're elevating developer productivity by expediting onboarding and minimizing inefficient dev&test loops that often plague cloud software development and delivery workflows. We will also demonstrate cutting-edge tools and technologies designed to empower teams in testing, debugging, and profiling applications—all without incurring unnecessary cloud costs.
+At re:Invent this year, you will witness firsthand how we're elevating developer productivity by expediting onboarding and minimizing inefficient dev&test loops that often plague cloud software development and delivery workflows. We will also demonstrate cutting-edge tools and technologies designed to empower teams in testing, debugging, and profiling applications — all without incurring unnecessary cloud costs.
 
 Talk to us about:
 
 - Streamlining efficiency and reduce waiting times for provisioning cloud development resources by using a fully-local cloud sandbox.
+- Storing and injecting a persistent snapshot which can be stored, shared, versioned using Cloud Pods to accelerate collaborative debugging and testing.
 - Conducting sophisticated chaos engineering testing, such as region failover, DNS failover, and service failure simulations, on your local machine.
 - Integrating third-party emulators to extend the functionality of LocalStack by adding new services and features via our Extension mechanism.
 - Shifting left on IAM Testing to prevent any compromises on security and incurring unnecessary costs due to misconfigurations or inefficiencies.
