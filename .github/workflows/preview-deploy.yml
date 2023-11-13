@@ -48,7 +48,7 @@ jobs:
 
       - name: Lighthouse Audit
         id: lighthouse_audit
-        uses: treosh/lighthouse-ci-action@9.3.0
+        uses: treosh/lighthouse-ci-action@10
         with:
           urls: |
             https://localstack-website-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
