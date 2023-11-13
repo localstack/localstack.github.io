@@ -15,6 +15,11 @@
           {{ partial "misc/blog-cta-1.html" }}
         {{ end }}
       {{ end }}
+      {{ with .Params.show_cta_2 }}
+        {{ if eq . true }}
+          {{ partial "misc/blog-cta-2.html" }}
+        {{ end }}
+      {{ end }}
     </article>
     </div>
 
