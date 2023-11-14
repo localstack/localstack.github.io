@@ -1,7 +1,7 @@
 ---
 title: Join LocalStack at AWS re:Invent 2023
-description: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, CI Analytics, and more!
-lead: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, CI Analytics, and more!
+description: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, Cloud Pods, CI Analytics, and more!
+lead: LocalStack is at AWS re:Invent 2023 — Join us in-person to witness our cutting-edge demos on local Cloud Emulation, Extensions, Chaos Engineering, Security Testing, Ephemeral Environments, Cloud Pods, CI Analytics, and more!
 date: 2023-11-09
 lastmod: 2023-11-09
 images: ['localstack-at-reinvent.png']
@@ -13,7 +13,7 @@ show_cta_2: true
 
 {{< img-simple src="localstack-at-reinvent.png" >}}
 
-LocalStack is excited to be participating in [AWS re:Invent 2023](https://reinvent.awsevents.com), Amazon's premier annual cloud computing conference. Amidst keynote addresses by Amazon executives, an array of technical sessions, and a bustling expo floor designed for learning and networking, we're delighted to announce our role as an Exhibit Sponsor for this year's event.
+LocalStack is excited to be participating in [AWS re:Invent 2023](https://reinvent.awsevents.com), Amazon's premier annual cloud computing conference. Amidst keynote addresses, an array of technical sessions, and a bustling expo floor designed for learning and networking, we're delighted to announce our role as an Exhibit Sponsor for this year's event.
 
 Join us at **Booth #1074 ([Map](./file/aws-reinvent-localstack-map.pdf))** in the Venetian Expo, Las Vegas, from November 27 to December 1. It's an opportune moment to engage with the LocalStack team, where we'll not only share our insights but also learn valuable lessons from your experiences. 
 
