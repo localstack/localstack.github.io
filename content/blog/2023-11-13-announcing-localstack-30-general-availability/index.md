@@ -14,7 +14,7 @@ show_cta_1: true
 
 ### New S3 provider
 
-The new native S3 implementation, introduced in version [`2.3.2`](https://github.com/localstack/localstack/releases/tag/v2.3.2), is now the default S3 provider in LocalStack 3.0. The key features include better parity with AWS features, enhanced performance, improved persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
+The **new native S3 implementation**, introduced in version [`2.3.2`](https://github.com/localstack/localstack/releases/tag/v2.3.2), is now the default S3 provider in LocalStack 3.0. The key features include better parity with AWS features, enhanced performance, improved persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
 
 S3 is a core AWS service, and undertaking our own implementation was crucial to further improve the parity of our services with AWS. We have also improved performance, with some massive upgrades for some operations including:
 
@@ -34,9 +34,22 @@ These latest enhancements mark a significant step forward in our commitment to d
 
 ### New features for Chaos Engineering
 
+Chaos engineering is a practice focused on improving system resilience by intentionally introducing disruptions. To support this, we're introducing a new **Chaos Engineering** dashboard in the LocalStack Web Application. This feature allows users to conduct fault injection experiments within their application stack. The dashboard offers various Fault Injection Simulator (FIS) experiment options, such as:
+
+- **500 Internal Error**: This experiment randomly terminates incoming requests and returns an `Internal error` with a response code of 500.
+- **Service Unavailable**: Similar to the previous one, this experiment randomly terminates incoming requests but responds with a `Service Unavailable` message and a 503 response code.
+- **AWS Region Unavailable**: This simulates region outages and failovers by randomly terminating incoming requests to mimic regional service disruptions.
+- **Latency**: This introduces a specified amount of latency to each API call, useful for simulating slow network conditions or network performance issues.
+
+{{< img-simple src="localstack-chaos-engineering-dashboard.png" width=300 alt="Image of LocalStack Chaos Engineering dashboard">}}
+
+Additionally, we have introduced user guides for various scenarios, including simulating unexpected outages using the [LocalStack Outage Extension](), implementing [Route53 Failover with FIS](), and configuring error probabilities in [Kinesis]() & [DynamoDB]().
+
+These resources are designed to help users effectively respond to such scenarios, facilitating the development of thorough disaster recovery plans. By using these tools, teams can prepare to sustain stability and efficiency even in challenging situations.
+
 ### IAM Policy Stream on Web Application
 
-In application development, accessing AWS resources like S3 buckets and RDS databases is common. To grant access, we create IAM roles and attach policies that specify permissions. However, determining the correct permissions can be challenging, often leading developers to assign excessive permissions to IAM roles. To address this, LocalStack introduced the IAM Policy Stream. This tool simplifies identifying the necessary permissions for cloud applications and helps detect logical errors.
+In application development, accessing AWS resources like S3 buckets and RDS databases is common. To grant access, we create IAM roles and attach policies that specify permissions. However, determining the correct permissions can be challenging, often leading developers to assign excessive permissions to IAM roles. To address this, LocalStack introduced the **IAM Policy Stream**. This tool simplifies identifying the necessary permissions for cloud applications and helps detect logical errors.
 
 We have expanded the IAM Policy Stream feature to be accessible directly through the Web Application, in addition to the existing CLI feature. This enhancement will display the specific policy generated for each API call in the new interface, simplifying permission management and eliminating concerns about assigning correct permissions.
 
@@ -47,7 +60,7 @@ The features include:
 3.  The option to enable or disable this feature during runtime, allowing for performance optimization as needed.
 4.  The ability to reset the stream, enabling a fresh start with a new set of policies.
 
-{{< img-simple src="localstack-IAM-policy-stream.png" width=300 alt="Image of LocalStack ">}}
+{{< img-simple src="localstack-IAM-policy-stream.png" width=300 alt="Image of LocalStack IAM Policy Stream dashboard">}}
 
 Check out our [documentation]() and [video]() on getting started with the IAM Policy Stream.
 
@@ -71,7 +84,7 @@ Check out our [announcement blog](https://localstack.cloud/blog/2023-11-09-intro
 
 ### Multi-region and Multi-account support
 
-Multi-account and multi-region support within LocalStack has been continuously enhanced through incremental updates. We've completely reworked the way services interact with each other internally, significantly broadening our support for IAM enforcement in inter-service integrations. This structural change is pivotal in advancing our multi-account and multi-region capabilities.
+**Multi-account** and **multi-region support** within LocalStack has been continuously enhanced through incremental updates. We've completely reworked the way services interact with each other internally, significantly broadening our support for IAM enforcement in inter-service integrations. This structural change is pivotal in advancing our multi-account and multi-region capabilities.
 
 Several providers, including the new StepFunctions provider, CloudWatch, EventBridge, Glue, and more, have seen improvements in their multi-account and multi-region awareness. Notably, SQS is now inherently compatible with multi-accounts, thanks to the introduction of a new default URL endpoint strategy.
 
