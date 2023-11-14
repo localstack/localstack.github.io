@@ -24,7 +24,23 @@ These latest enhancements mark a significant step forward in our commitment to d
 
 ### New features for Chaos Engineering
 
-### IAM Policy Streams
+### IAM Policy Stream on Web Application
+
+In application development, accessing AWS resources like S3 buckets and RDS databases is common. To grant access, we create IAM roles and attach policies that specify permissions. However, determining the correct permissions can be challenging, often leading developers to assign excessive permissions to IAM roles. To address this, LocalStack introduced the IAM Policy Stream. This tool simplifies identifying the necessary permissions for cloud applications and helps detect logical errors.
+
+We have expanded the IAM Policy Stream feature to be accessible directly through the Web Application, in addition to the existing CLI feature. This enhancement will display the specific policy generated for each API call in the new interface, simplifying permission management and eliminating concerns about assigning correct permissions.
+
+The features available include:
+
+1.  A real-time list of calls and the corresponding policies they generate.
+2.  A real-time summary policy that combines all individual policies into a single comprehensive policy.
+3.  The option to enable or disable this feature during runtime, allowing for performance optimization as needed.
+4.  The ability to reset the stream, enabling a fresh start with a new set of policies.
+5.  The capability to use all the above features simultaneously across multiple instances.
+
+{{< img-simple src="localstack-IAM-policy-stream.png" width=300 alt="Image of LocalStack ">}}
+
+Check out our [documentation]() and [video]() on getting started with the IAM Policy Stream.
 
 ### Ephemeral Environments for LocalStack
 
@@ -56,7 +72,7 @@ We have many LocalStack 3.0 resources for new and existing users. To learn more 
 
 - View our [release notes on GitHub]().
 - Navigate to our [Developer Hub](https://docs.localstack.cloud/developer-hub/) and try out sample applications to get started.
-- Attend our [LocalStack Community Event](https://www.meetup.com/localstack-community/events/292576557/) to know more about the 3.0 release.
+- Attend our [LocalStack Community Event]() to know more about the 3.0 release.
 
 To get started with using LocalStack 3.0 features:
 
