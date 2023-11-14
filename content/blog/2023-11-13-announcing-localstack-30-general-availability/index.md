@@ -26,6 +26,12 @@ Check out our [S3 documentation]() for more information.
 
 ### New Step Functions provider
 
+We're excited to announce a new native implementation of Step Functions, featuring several enhancements and additional capabilities compared to the previous provider. This update significantly expands support, including extended handling of timeouts and heartbeats, state machine versioning, Map states, and integration with EventBridge. It also includes support for the latest set of Intrinsic Functions. A major focus of this update is the improved API parity with AWS Step Functions, aligning more closely with its functionalities.
+
+Our commitment to enhancing the Step Functions implementation continues. In the upcoming months, users can expect further exciting additions such as express workflows, expanded service integrations, and activity support, among others. The adoption of this new native implementation streamlines our ability to introduce new features and address issues in StepFunctions more efficiently than ever before.
+
+Check out our [Step Functions documentation](https://docs.localstack.cloud/user-guide/aws/stepfunctions/) and [Discuss post](https://discuss.localstack.cloud/t/new-stepfunctions-implementation-in-localstack-3-0/593) for more information.
+
 ### New ElastiCache provider
 
 We have introduced a **new ElastiCache provider** with better parity with AWS and resolves issues around the Redis cluster management in the previous provider. The new provider implements a dedicated Redis control plane to manage Redis instances in non-cluster mode and cluster mode. The new provider will be extended in the future to test automatic failover, snapshotting, scaling replication groups, and more features.
