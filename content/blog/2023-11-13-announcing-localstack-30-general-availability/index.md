@@ -14,11 +14,21 @@ show_cta_1: true
 
 ### New S3 provider
 
+The new native S3 implementation, introduced in version [`2.3.2`](https://github.com/localstack/localstack/releases/tag/v2.3.2), is now the default S3 provider in LocalStack 3.0. The key features include better parity with AWS features, enhanced performance, improved persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
+
+S3 is a core AWS service, and undertaking our own implementation was crucial to further improve the parity of our services with AWS. We have also improved performance, with some massive upgrades for some operations including:
+
+- An approximate 10% increase in throughput for operations like `PutObject`, `DeleteObject`, `GetObject`, and `HeadObject` with small files (1 KB to 100 KB), and a 30% increase for 10 MB files.
+- A 2.5 times throughput boost for `ListObjectsV2` and a 16 times increase for `ListObjectVersions`.
+-  A 33% throughput improvement in multipart uploads.
+
+Check out our [S3 documentation]() for more information.
+
 ### New Step Functions provider
 
 ### New ElastiCache provider
 
-We have introduced a **new ElastiCache provider** with better parity against AWS and resolves issues around the Redis cluster management in the previous provider. The new provider implements a dedicated Redis control plane to manage Redis instances in non-cluster mode and cluster mode. It also features new CRUD operations for the `CacheCluster` and `ReplicationGroup` resources which is critical for the Redis control plane.
+We have introduced a **new ElastiCache provider** with better parity with AWS and resolves issues around the Redis cluster management in the previous provider. The new provider implements a dedicated Redis control plane to manage Redis instances in non-cluster mode and cluster mode. The new provider will be extended in the future to test automatic failover, snapshotting, scaling replication groups, and more features.
 
 These latest enhancements mark a significant step forward in our commitment to delivering a more robust and fine-tuned ElastiCache provider. The old ElastiCache provider is temporarily available in LocalStack v3 using `PROVIDER_OVERRIDE_ELASTICACHE=legacy` but we highly recommend migrating as soon as possible since we will drop support for this in LocalStack v4.
 
