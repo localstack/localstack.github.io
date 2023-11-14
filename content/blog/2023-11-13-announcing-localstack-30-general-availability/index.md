@@ -108,6 +108,14 @@ In addition, there has been a significant revamp in the way ARNs are constructed
 
 ### LocalStack Networking initiative
 
+Over the past few years, LocalStack's configuration options have expanded to accommodate a wide range of use cases, particularly in networking configuration. This includes setting up the listen address for the LocalStack container and configuring domain names for services like SQS or OpenSearch. 
+
+However, this expansion resulted in an excess of configuration variables, some of which were redundant or overlapping in functionality. Additionally, there was inconsistency in how these variables were used across different services — some services relied on one set of variables, while others used different ones, and some didn't support configuration adjustments at all.
+
+To simplify and standardize this process, LocalStack 2.0 introduced two new configuration variables: `GATEWAY_LISTEN` and `LOCALSTACK_HOST`. Building on this, LocalStack 3.0 further standardizes configuration across all LocalStack services. As part of this update, we have eliminated several older configuration variables, including `EDGE_PORT`, `EDGE_PORT_HTTP`, `EDGE_BIND_HOST`, `LOCALSTACK_HOSTNAME`, and `HOSTNAME_EXTERNAL`, streamlining the configuration experience and enhancing overall usability.
+
+View our [Networking migration guide](https://discuss.localstack.cloud/t/networking-migration-guide-for-localstack-3-0/588) for more details!
+
 ### Miscellaneous
 
 ## Get started with LocalStack 3.0
