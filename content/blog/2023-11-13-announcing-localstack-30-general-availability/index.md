@@ -45,7 +45,7 @@ Chaos engineering is a practice focused on improving system resilience by intent
 
 Additionally, we have introduced user guides for various scenarios, including simulating unexpected outages using the [LocalStack Outage Extension](), implementing [Route53 Failover with FIS](), and configuring error probabilities in [Kinesis]() & [DynamoDB]().
 
-These resources are designed to help users effectively respond to such scenarios, facilitating the development of thorough disaster recovery plans. By using these tools, teams can prepare to sustain stability and efficiency even in challenging situations.
+These resources are designed to help users effectively respond to such scenarios, facilitating the development of thorough disaster recovery plans. By using these tools, teams can prepare to sustain stability and efficiency even in challenging situations. Check out our [documentation]() for more information.
 
 ### IAM Policy Stream on Web Application
 
@@ -73,6 +73,22 @@ With Ephemeral Instances, you can use the same set of features that you use whil
 {{< img-simple src="localstack-ephemeral-environments.png" width=300 alt="Image of LocalStack Ephemeral environments with a LocalStack Sandbox running in the cloud">}}
 
 Check out our [documentation]() on getting started with Ephemeral Instances.
+
+### CI Analytics for LocalStack
+
+We're excited to introduce **CI Analytics**, a new feature for comprehensive state browsing and analysis of historical continuous integration (CI) builds. This feature integrates into your LocalStack CI workflow, offering insights and supporting our goal to enhance the cloud developer experience throughout the software development lifecycle (SDLC). With CI Analytics, you can collect, analyze, and visualize critical metrics from your software CI pipelines, helping you understand the impact of cloud infrastructure changes on CI builds. It facilitates root cause analysis for build failures, supports data-driven decisions for continuous improvement, and more.
+
+CI Analytics combines a number of existing features in the LocalStack platform, such as [Cloud Pods]() & [Stack Insights](), and provides a unified view of the state of your LocalStack resources across CI builds. The features include:
+
+- **CI Project Runs**: This gives you a consolidated view of all CI builds for a specific project.
+- **Log Output**: You can view detailed log output for individual CI builds.
+- **Request/Response Traces**: This feature provides traces of requests and responses, including details of the AWS service and operation, along with expandable request and response payloads.
+- **Cloud Pod State**: It allows you to view the state of LocalStack resources for a particular CI build through a Cloud Pod, which can be injected locally or loaded in an Ephemeral Instance.
+- **Stack Insights**: This offers a view and audit log of interactions, API error codes in your application stack over time, and enables you to drill down into the most commonly used services and API calls.
+
+{{< img-simple src="localstack-ci-analytics.png" width=300 alt="Image of LocalStack CI Analytics dashboard">}}
+
+Check out our [documentation]() on getting started with CI Analytics.
 
 ### All-new LocalStack Desktop Application
 
