@@ -72,6 +72,12 @@ Check out our [announcement blog](https://localstack.cloud/blog/2023-11-09-intro
 
 ### Multi-region and Multi-account support
 
+Multi-account and multi-region support within LocalStack has been continuously enhanced through incremental updates. We've completely reworked the way services interact with each other internally, significantly broadening our support for IAM enforcement in inter-service integrations. This structural change is pivotal in advancing our multi-account and multi-region capabilities.
+
+Several providers, including the new StepFunctions provider, CloudWatch, EventBridge, Glue, and more, have seen improvements in their multi-account and multi-region awareness. Notably, SQS is now inherently compatible with multi-accounts, thanks to the introduction of a new default URL endpoint strategy.
+
+In addition, there has been a significant revamp in the way ARNs are constructed internally. This change is particularly beneficial for users working with LocalStack in scenarios involving non-default account IDs or regions. It ensures the generation of more accurate ARNs, aligning closely with real-world AWS environments and enhancing the overall user experience with LocalStack.
+
 ### LocalStack Networking initiative
 
 ### Miscellaneous
