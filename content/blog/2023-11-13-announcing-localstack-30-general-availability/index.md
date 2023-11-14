@@ -40,13 +40,12 @@ In application development, accessing AWS resources like S3 buckets and RDS data
 
 We have expanded the IAM Policy Stream feature to be accessible directly through the Web Application, in addition to the existing CLI feature. This enhancement will display the specific policy generated for each API call in the new interface, simplifying permission management and eliminating concerns about assigning correct permissions.
 
-The features available include:
+The features include:
 
 1.  A real-time list of calls and the corresponding policies they generate.
 2.  A real-time summary policy that combines all individual policies into a single comprehensive policy.
 3.  The option to enable or disable this feature during runtime, allowing for performance optimization as needed.
 4.  The ability to reset the stream, enabling a fresh start with a new set of policies.
-5.  The capability to use all the above features simultaneously across multiple instances.
 
 {{< img-simple src="localstack-IAM-policy-stream.png" width=300 alt="Image of LocalStack ">}}
 
