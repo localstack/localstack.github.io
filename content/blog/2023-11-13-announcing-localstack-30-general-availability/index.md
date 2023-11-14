@@ -14,7 +14,7 @@ show_cta_1: true
 
 ### New S3 provider
 
-The **new native S3 implementation**, introduced in version [`2.3.2`](https://github.com/localstack/localstack/releases/tag/v2.3.2), is now the default S3 provider in LocalStack 3.0. The key features include better parity with AWS features, enhanced performance, improved persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
+The **new native S3 implementation**, introduced in version [`2.3.0`](https://discuss.localstack.cloud/t/localstack-release-v2-3-0/533/1), is now the default S3 provider in LocalStack 3.0. The key features include better parity with AWS features, enhanced performance, improved persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
 
 S3 is a core AWS service, and undertaking our own implementation was crucial to further improve the parity of our services with AWS. We have also improved performance, with some massive upgrades for some operations including:
 
