@@ -43,6 +43,8 @@ You can engage with Executives, Sales, and DevRel to get a one-on-one time with 
 
 ## See you in Las Vegas!
 
+{{< img-simple src="localstack-swags-booth.png" >}}
+
 Don't miss the opportunity to swing by the LocalStack Booth at re:Invent for a shot at scoring fantastic swag and prizes in our exclusive raffle. Your visit could be the key to unlocking some seriously cool rewards, so make sure you drop by and join in the excitement!
 
 In conclusion, LocalStack is poised to transform your cloud development experience. From streamlined cloud development efficiency to chaos engineering, we're committed to solving the challenges that matter most to you. Your challenges are our focus, and we're thrilled to shape the future of cloud development with you in Las Vegas!
