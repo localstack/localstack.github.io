@@ -110,7 +110,7 @@
 
 [[footerend]]
   name = "Terms of Service"
-  url = "/terms"
+  url = "/legal/tos"
   weight = 20
 
 [[footerend]]
