@@ -1,16 +1,48 @@
 ---
 title: Announcing LocalStack 3.0 General Availability!
-description: Announcing LocalStack 3.0 General Availability!
-lead: Announcing LocalStack 3.0 General Availability!
+description: We are excited to announce the release of LocalStack 3.0 featuring enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance and more!
+lead: We are excited to announce the release of LocalStack 3.0 featuring enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance and more!
 date: 2023-11-13
 lastmod: 2023-11-13
-images: []
+images: ['localstack-3.0.png']
 contributors: ["LocalStack Team"]
 tags: ['news']
 show_cta_1: true
+leadimage: 'localstack-3.0.png'
 ---
 
+{{< img-simple src="localstack-3.0.png" >}}
+
+Today, we are excited to announce **LocalStack 3.0**, our latest major release towards empowering developers with a high-fidelity local cloud development & testing experience. Earlier this year, we unveiled [LocalStack 2.0](https://localstack.cloud/blog/2023-03-29-announcing-localstack-2.0-general-availability/), which brought forth a host of new features and improvements, along with better integration with the AWS tooling ecosystem. With the 3.0 release, we're doubling down on our promise to boosting developer productivity and tackling the issues that often slow down cloud software development and delivery workflows — specifically, simplifying onboarding and eliminating the inefficiencies that lead to prolonged dev&test cycles. Additionally, this release represents a significant milestone in our journey as we move beyond traditional cloud emulation, and introduce innovative features that promise to reshape the way developers construct resilient cloud applications.
+
+Whether you’re a LocalStack user or just getting started on your cloud development journey, we have a lot of exciting features to share with you! With LocalStack, you can now:
+
+- Test disaster recovery simulations such as region failover, DNS failover, and service failures.
+- Explore and progressively tighten security around IAM policies as your application takes shape.
+- Create ephemeral cloud sandboxes for testing your infrastructure locally or on CI pipelines.
+- Activate analytics for LocalStack in CI runs to get insights into your infrastructure test runs.
+- Utilize enhanced, faster AWS services such as S3, Step Functions, DynamoDB and ElastiCache.
+- Get started with a fully-local developer environment with the new LocalStack Desktop Application.
+
+And much more! LocalStack makes it easy to build & test local-first cloud applications, all while improving the **Inner Dev Loop**. We are excited to share our recent developments in this release, and discuss how you can get started with them!
+
 ## What’s new in LocalStack 3.0?
+
+In previous releases, we supplemented our cloud emulation capabilities with parity, performance, and interoperability. In LocalStack 3.0, our core areas of focus has been — **resilience**, **efficiency**, and **flexibility**. With LocalStack, we aim to power your local development productivity and cover the most sophisticated enterprise use cases. Collectively, the new features in the release won't just cut away your slow *code → deploy → test → redeploy → ...* loops, but also help your team to confidently ship faster and more secure cloud applications. You can explore *all* the new features by upgrading your LocalStack setup or downloading LocalStack 3.0 today! [Get your free LocalStack account](https://app.localstack.cloud/sign-up).
+
+Let's take a look at our latest release's new features and enhancements to see how you can get the most out of them!
+
+* [New S3 provider](#new-s3-provider)
+* [New Step Functions provider](#new-step-functions-provider)
+* [New ElastiCache provider](#new-elasticache-provider)
+* [New features for Chaos Engineering](#new-features-for-chaos-engineering)
+* [IAM Policy Stream on Web Application](#iam-policy-stream-on-web-application)
+* [Ephemeral Environments for LocalStack](#ephemeral-environments-for-localstack)
+* [CI Analytics for LocalStack](#ci-analytics-for-localstack)
+* [All-new LocalStack Desktop Application](#all-new-localstack-desktop-application)
+* [Multi-region and Multi-account support](#multi-region-and-multi-account-support)
+* [LocalStack Networking initiative](#localstack-networking-initiative)
+* [Miscellaneous](#miscellaneous)
 
 ### New S3 provider
 
@@ -28,7 +60,7 @@ Check out our [S3 documentation]() for more information.
 
 We're excited to announce a new native implementation of Step Functions, featuring several enhancements and additional capabilities compared to the previous provider. This update significantly expands support, including extended handling of timeouts and heartbeats, state machine versioning, Map states, and integration with EventBridge. It also includes support for the latest set of Intrinsic Functions. A major focus of this update is the improved API parity with AWS Step Functions, aligning more closely with its functionalities.
 
-Our commitment to enhancing the Step Functions implementation continues. In the upcoming months, users can expect further exciting additions such as express workflows, expanded service integrations, and activity support, among others. The adoption of this new native implementation streamlines our ability to introduce new features and address issues in StepFunctions more efficiently than ever before.
+Our commitment to enhancing the Step Functions implementation continues. In the upcoming months, users can expect further exciting additions such as express workflows, expanded service integrations, and activity support, among others. The adoption of this new native implementation streamlines our ability to introduce new features and address issues in Step Functions more efficiently than ever before.
 
 Check out our [Step Functions documentation](https://docs.localstack.cloud/user-guide/aws/stepfunctions/) and [Discuss post](https://discuss.localstack.cloud/t/new-stepfunctions-implementation-in-localstack-3-0/593) for more information.
 
@@ -98,7 +130,7 @@ Check out our [documentation]() on getting started with CI Analytics.
 
 ### All-new LocalStack Desktop Application
 
-We're excited to announce the release of the **LocalStack Desktop Application**, our cross-platform Desktop client for local cloud development & testing. The Desktop Application features an intuitive user interface, with local [Resource Browser](https://docs.localstack.cloud/user-guide/web-application/resource-browser/) for 30+ AWS services and a simplified way to manage LocalStack containers and logs. The new Desktop Application replaces the LocalStack Cockpit, streamlining the developer experience and making our cloud emulator tooling more accessible. [Download it for free and get started!](https://app.localstack.cloud/download).
+We're excited to announce the release of the **LocalStack Desktop Application**, our cross-platform Desktop client. The Desktop Application features an intuitive user interface, with local [Resource Browser](https://docs.localstack.cloud/user-guide/web-application/resource-browser/) for 30+ AWS services and a simplified way to manage LocalStack containers and logs. The new Desktop Application replaces the LocalStack Cockpit, streamlining the developer experience and making our cloud emulator tooling more accessible. [Download it for free and get started!](https://app.localstack.cloud/download).
 
 {{< img-simple src="localstack-desktop-resource-browser.png" width=300 alt="Image of LocalStack Desktop Application showcasing the local AWS Resource Browsers">}}
 
@@ -108,7 +140,7 @@ Check out our [announcement blog](https://localstack.cloud/blog/2023-11-09-intro
 
 **Multi-account** and **multi-region support** within LocalStack has been continuously enhanced through incremental updates. We've completely reworked the way services interact with each other internally, significantly broadening our support for IAM enforcement in inter-service integrations. This structural change is pivotal in advancing our multi-account and multi-region capabilities.
 
-Several providers, including the new StepFunctions provider, CloudWatch, EventBridge, Glue, and more, have seen improvements in their multi-account and multi-region awareness. Notably, SQS is now inherently compatible with multi-accounts, thanks to the introduction of a new default URL endpoint strategy.
+Several providers, including the new Step Functions provider, CloudWatch, EventBridge, Glue, and more, have seen improvements in their multi-account and multi-region awareness. Notably, SQS is now inherently compatible with multi-accounts, thanks to the introduction of a new default URL endpoint strategy.
 
 In addition, there has been a significant revamp in the way ARNs are constructed internally. This change is particularly beneficial for users working with LocalStack in scenarios involving non-default account IDs or regions. It ensures the generation of more accurate ARNs, aligning closely with real-world AWS environments and enhancing the overall user experience with LocalStack.
 
@@ -124,6 +156,12 @@ View our [Networking migration guide](https://discuss.localstack.cloud/t/network
 
 ### Miscellaneous
 
+- We’ve massively **improved write performance for DynamoDB** in LocalStack, with our benchmarks showing a 60% faster [`PutItem`](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html) operation. Using higher batch sizes will profit even more from this change, with [`BatchWriteItem`](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchWriteItem.html) now being 6.2x faster for 10 items and 9.9x faster for 25 items. That means if you’re populating a large DynamoDB table, you can now take advantage of much faster insertion times! For the best performance please set `DYNAMODB_IN_MEMORY=1`, but even without this, you should still notice a significant performance improvement.
+- To limit which services can be started by LocalStack, we have (re-)introduced the concept of **Strict Service Loading**, where only the services defined in the `SERVICES` variable, are going to be started. This also lays the foundation for us to provide standalone images for single services or combinations thereof.
+- We’re also currently in the progress of internally refactoring our CloudFormation resource implementations to be more in parity with AWS and also structurally easier for us and contributors to work with. If you’re interested in contributing here, [please reach out to us](mailto:info@localstack.cloud)! 
+
+If you want to know more check out the [detailed release notes on GitHub]()!
+
 ## Get started with LocalStack 3.0
 
 We have many LocalStack 3.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 3.0, you can:
@@ -138,4 +176,11 @@ To get started with using LocalStack 3.0 features:
 - Migrate your LocalStack networking configuration by following our [networking migration guide](https://discuss.localstack.cloud/t/networking-migration-guide-for-localstack-3-0/588).
 - Connect with us on [LocalStack Discuss](https://discuss.localstack.cloud/) for feedback, bug reports, or suggestions.
 
+LocalStack 3.0 would not have been possible without the invaluable support, community discussions, and bug reports we've received via our GitHub Issues and Discuss posts. We'd like to thank all our dedicated users who are driving forward our vision for a new era where building & testing cloud applications locally is the norm. 
+
 ## What’s next?
+
+As we continue to push out new features in our platform & toolings, the fundamental goal remains the same: *Bringing the individual developer back in by empowering them and making things less complicated!* All while keeping the **developer experience**, **product quality**, and **user feedback** at the forefront of our efforts. Your active participation has been the bedrock of our progress!
+
+Thank you for your support and welcome to LocalStack 3.0!
+
