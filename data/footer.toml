@@ -4,19 +4,19 @@
 
   [[categories.entries]]
   name = "Contact"
-  url = "/contact"
+  url = "https://localstack.cloud"
 
   [[categories.entries]]
   name = "Pricing"
-  url = "/pricing"
+  url = "https://localstack.cloud"
 
   [[categories.entries]]
   name = "Blog"
-  url = "/blog"
+  url = "/"
 
   [[categories.entries]]
   name = "Careers"
-  url = "/careers"
+  url = "https://localstack.cloud"
 
 [[categories]]
 
@@ -26,11 +26,11 @@
 
   [[categories.entries]]
   name = "Community"
-  url = "/community"
+  url = "https://localstack.cloud"
 
   [[categories.entries]]
   name = "FAQ"
-  url = "/faq"
+  url = "https://localstack.cloud"
 
 [[categories]]
 

@@ -1,9 +1,16 @@
 ---
-title : "LocalStack"
-description: "LocalStack is a cloud service emulator that runs in a single container on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas entirely on your local machine without connecting to a remote cloud provider! Whether you are testing complex CDK applications or Terraform configurations, or just beginning to learn about AWS services, LocalStack helps speed up and simplify your testing and development workflow."
-lead: "A fully functional local cloud stack<br>Develop and test your cloud and serverless apps offline!"
-date: 2020-10-06T08:47:36+00:00
-lastmod: 2020-10-06T08:47:36+00:00
+title: "LocalStack Blog"
+description: "The LocalStack Blog."
+date: 2020-10-06T08:49:55+00:00
+lastmod: 2023-11-15T05:04:21Z
 draft: false
 images: []
 ---
+
+<!-- <div class="blog-tags d-flex flex-wrap gap-3">
+  <a href="#all"><button class="btn btn-primary btn-pill bg-purple filterButton" id="allFilterButton" onClick="toggleTag('all')">ALL TOPICS</button></a>
+  <a href="#news"><button class="btn btn-outline-primary btn-pill filterButton" id="newsFilterButton" onClick="toggleTag('news')">NEWS</button></a>
+  <a href="#showcase"><button class="btn btn-outline-primary btn-pill filterButton" id="showcaseFilterButton" onClick="toggleTag('showcase')">SHOWCASE</button></a>
+  <a href="#tutorial"><button class="btn btn-outline-primary btn-pill filterButton" id="tutorialFilterButton" onClick="toggleTag('tutorial')">TUTORIAL</button></a>
+  <a href="#case-study"><button class="btn btn-outline-primary btn-pill filterButton" id="case-studyFilterButton" onClick="toggleTag('case-study')">CASE-STUDY</button></a>
+</div> -->
