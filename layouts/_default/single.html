@@ -1,14 +1,24 @@
 {{ define "main" }}
-{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "cloud") }}
-<section class="section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-12 col-lg-12 col-xl-12">
-        <article>
-          {{ .Content }}
-        </article>
+{{ partial "heroes/base.html" (dict "Title" .Title "HeroIcon" "blog") }}
+<section class="section section-sm mb-6">
+  <div class="container px-lg-8">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <article>
+      <div class="blog-header">
+        {{ partial "main/blog-meta.html" . }}
       </div>
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      {{ .Content }}
+      {{ with .Params.show_cta_1 }}
+        {{ if eq . true }}
+          {{ partial "misc/blog-cta-1.html" }}
+        {{ end }}
+      {{ end }}
+    </article>
     </div>
+
   </div>
-</section> 
+</div>
+</section>
 {{ end }}
