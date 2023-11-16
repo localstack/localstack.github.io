@@ -82,9 +82,9 @@ Chaos engineering is a practice focused on improving system resilience by intent
 
 {{< img-simple src="localstack-chaos-engineering-dashboard.png" width=300 alt="Image of LocalStack Chaos Engineering dashboard">}}
 
-Additionally, we have introduced user guides for various scenarios, including simulating unexpected outages using the [LocalStack Outage Extension](), implementing [Route53 Failover with FIS](), and configuring error probabilities in [Kinesis]() & [DynamoDB]().
+Additionally, we have introduced user guides for various scenarios, including simulating unexpected outages using the [LocalStack Outage Extension](https://docs.localstack.cloud/user-guide/chaos-engineering/outages-extension/), implementing [Route53 Failover with FIS](https://docs.localstack.cloud/user-guide/chaos-engineering/route53-failover/), and configuring error probabilities in [Kinesis](https://docs.localstack.cloud/user-guide/chaos-engineering/subsequent-configs/#kinesis-error-probability) & [DynamoDB](https://docs.localstack.cloud/user-guide/chaos-engineering/subsequent-configs/#dynamodb-error-probability).
 
-These resources are designed to help users effectively respond to such scenarios, facilitating the development of thorough disaster recovery plans. By using these tools, teams can prepare to sustain stability and efficiency even in challenging situations. Check out our [documentation]() for more information.
+These resources are designed to help users effectively respond to such scenarios, facilitating the development of thorough disaster recovery plans. By using these tools, teams can prepare to sustain stability and efficiency even in challenging situations. Check out our [documentation](https://docs.localstack.cloud/user-guide/chaos-engineering/) for more information.
 
 ### IAM Policy Stream on Web Application
 
@@ -101,23 +101,23 @@ The features include:
 
 {{< img-simple src="localstack-IAM-policy-stream.png" width=300 alt="Image of LocalStack IAM Policy Stream dashboard">}}
 
-Check out our [documentation]() and [video]() on getting started with the IAM Policy Stream.
+Check out our [documentation](https://docs.localstack.cloud/user-guide/security-testing/iam-policy-stream/) on getting started with the IAM Policy Stream.
 
 ### Ephemeral Environments for LocalStack (**Beta**)
 
 We have launched **Ephemeral Instances**, which allows you to run a LocalStack sandbox in the cloud, instead of your local machine. This ephemeral environment is a short-lived, encapsulated deployment of LocalStack which will be terminated after 90 minutes. With these sandboxes, you can run your tests, preview features in your AWS-powered applications, and collaborate asynchronously within and across your team!
 
-With Ephemeral Instances, you can use the same set of features that you use while running LocalStack locally, including the [Resource Browser](https://docs.localstack.cloud/user-guide/web-application/resource-browser/), [State Management (Cloud Pods)](), and [Extensions](https://docs.localstack.cloud/user-guide/extensions/)! While on your local machine, you can switch the [AWS Service Endpoint URL](https://docs.aws.amazon.com/general/latest/gr/rande.html) to point to the deployed sandbox URL to get started! Ephemeral Instances also allows you to generate an preview environment from GitHub Pull Request (PR) builds.
+With Ephemeral Instances, you can use the same set of features that you use while running LocalStack locally, including the [Resource Browser](https://docs.localstack.cloud/user-guide/web-application/resource-browser/), [State Management (Cloud Pods)](https://docs.localstack.cloud/user-guide/cloud-pods/), and [Extensions](https://docs.localstack.cloud/user-guide/extensions/)! While on your local machine, you can switch the [AWS Service Endpoint URL](https://docs.aws.amazon.com/general/latest/gr/rande.html) to point to the deployed sandbox URL to get started! Ephemeral Instances also allows you to generate an preview environment from GitHub Pull Request (PR) builds.
 
 {{< img-simple src="localstack-ephemeral-environments.png" width=300 alt="Image of LocalStack Ephemeral environments with a LocalStack Sandbox running in the cloud">}}
 
-Check out our [documentation]() on getting started with Ephemeral Instances. The feature is in private beta, and you can reach out to us to get early access!
+Check out our [documentation](https://docs.localstack.cloud/user-guide/cloud-sandbox/ephemeral-instance/) on getting started with Ephemeral Instances. The feature is in **private beta**, and you can reach out to us to get early access!
 
 ### CI Analytics for LocalStack (**Beta**)
 
 We're excited to introduce **CI Analytics**, a new feature for comprehensive state browsing and analysis of historical continuous integration (CI) builds. This feature integrates into your LocalStack CI workflow, offering insights and supporting our goal to enhance the cloud developer experience throughout the software development lifecycle (SDLC). With CI Analytics, you can collect, analyze, and visualize critical metrics from your software CI pipelines, helping you understand the impact of cloud infrastructure changes on CI builds. It facilitates root cause analysis for build failures, supports data-driven decisions for continuous improvement, and more.
 
-CI Analytics combines a number of existing features in the LocalStack platform, such as [Cloud Pods]() & [Stack Insights](), and provides a unified view of the state of your LocalStack resources across CI builds. The features include:
+CI Analytics combines a number of existing features in the LocalStack platform, such as [Cloud Pods](https://docs.localstack.cloud/user-guide/cloud-pods/) & [Stack Insights](https://docs.localstack.cloud/user-guide/web-application/stack-insights/), and provides a unified view of the state of your LocalStack resources across CI builds. The features include:
 
 - **CI Project Runs**: This gives you a consolidated view of all CI builds for a specific project.
 - **Log Output**: You can view detailed log output for individual CI builds.
@@ -127,7 +127,7 @@ CI Analytics combines a number of existing features in the LocalStack platform, 
 
 {{< img-simple src="localstack-ci-analytics.png" width=300 alt="Image of LocalStack CI Analytics dashboard">}}
 
-Check out our [documentation]() on getting started with CI Analytics. The feature is in private beta, and you can reach out to us to get early access!
+Check out our [documentation](https://docs.localstack.cloud/user-guide/ci/ci-analytics/) on getting started with CI Analytics. The feature is in **private beta**, and you can reach out to us to get early access!
 
 ### All-new LocalStack Desktop Application
 
@@ -157,20 +157,18 @@ View our [Networking migration guide](https://discuss.localstack.cloud/t/network
 
 ### Miscellaneous
 
-- We're introducing a simplified method for managing team licenses. Instead of activating LocalStack with API keys, we're shifting to the use of **Auth Tokens**. This approach facilitates the assignment of licenses to users without necessitating changes to their environment setup. Read our [documentation]() for more information.
+- We're introducing a simplified method for managing team licenses. Instead of activating LocalStack with API keys, we're shifting to the use of **Auth Tokens**. This approach facilitates the assignment of licenses to users without necessitating changes to their environment setup. Read our [documentation](https://docs.localstack.cloud/getting-started/auth-token/) for more information.
 - We’ve massively **improved write performance for DynamoDB** in LocalStack, with our benchmarks showing a 60% faster [`PutItem`](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html) operation. Using higher batch sizes will profit even more from this change, with [`BatchWriteItem`](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchWriteItem.html) now being 6.2x faster for 10 items and 9.9x faster for 25 items. That means if you’re populating a large DynamoDB table, you can now take advantage of much faster insertion times! For the best performance please set `DYNAMODB_IN_MEMORY=1`, but even without this, you should still notice a significant performance improvement.
 - To limit which services can be started by LocalStack, we have (re-)introduced the concept of **Strict Service Loading**, where only the services defined in the `SERVICES` variable, are going to be started. This also lays the foundation for us to provide standalone images for single services or combinations thereof.
 - We’re also currently in the progress of internally refactoring our CloudFormation resource implementations to be more in parity with AWS and also structurally easier for us and contributors to work with. If you’re interested in contributing, [please reach out to us](mailto:info@localstack.cloud)! 
-
-If you want to know more check out the [detailed release notes on GitHub]()!
 
 ## Get started with LocalStack 3.0
 
 We have many LocalStack 3.0 resources for new and existing users. To learn more about the new functionalities and features of LocalStack 3.0, you can:
 
-- View our [release notes on GitHub]().
+- View our [release notes on GitHub](https://github.com/localstack/localstack/releases/tag/v3.0.0).
 - Navigate to our [Developer Hub](https://docs.localstack.cloud/developer-hub/) and try out sample applications to get started.
-- Attend our [LocalStack Community Event]() to know more about the 3.0 release.
+- Attend our [LocalStack Community Event](https://www.meetup.com/localstack-community/events/297394492/) to know more about the 3.0 release.
 
 To get started with using LocalStack 3.0 features:
 
