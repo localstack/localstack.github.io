@@ -2,13 +2,14 @@
 title: Announcing LocalStack 3.0 General Availability!
 description: We are excited to announce the release of LocalStack 3.0 featuring enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance and more!
 lead: We are excited to announce the release of LocalStack 3.0 featuring enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance and more!
-date: 2023-11-13
-lastmod: 2023-11-13
+date: 2023-11-16
+lastmod: 2023-11-16
 images: ['localstack-3.0.png']
 contributors: ["LocalStack Team"]
 tags: ['news']
 show_cta_1: true
 leadimage: 'localstack-3.0.png'
+weight: 1
 ---
 
 {{< img-simple src="localstack-3.0.png" >}}
