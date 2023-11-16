@@ -55,7 +55,7 @@ S3 is a core AWS service, and undertaking our own implementation was crucial to 
 - A 2.5 times throughput boost for `ListObjectsV2` and a 16 times increase for `ListObjectVersions`.
 -  A 33% throughput improvement in multipart uploads.
 
-Check out our [S3 documentation]() for more information.
+Check out our [S3 documentation](https://docs.localstack.cloud/user-guide/aws/s3/) for more information.
 
 ### New Step Functions provider
 
@@ -111,7 +111,7 @@ With Ephemeral Instances, you can use the same set of features that you use whil
 
 {{< img-simple src="localstack-ephemeral-environments.png" width=300 alt="Image of LocalStack Ephemeral environments with a LocalStack Sandbox running in the cloud">}}
 
-Check out our [documentation]() on getting started with Ephemeral Instances.
+Check out our [documentation]() on getting started with Ephemeral Instances. The feature is in private beta, and you can reach out to us to get early access!
 
 ### CI Analytics for LocalStack (**Beta**)
 
@@ -127,7 +127,7 @@ CI Analytics combines a number of existing features in the LocalStack platform, 
 
 {{< img-simple src="localstack-ci-analytics.png" width=300 alt="Image of LocalStack CI Analytics dashboard">}}
 
-Check out our [documentation]() on getting started with CI Analytics.
+Check out our [documentation]() on getting started with CI Analytics. The feature is in private beta, and you can reach out to us to get early access!
 
 ### All-new LocalStack Desktop Application
 
