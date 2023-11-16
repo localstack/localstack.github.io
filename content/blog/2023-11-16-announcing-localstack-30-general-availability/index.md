@@ -182,7 +182,8 @@ LocalStack 3.0 would not have been possible without the invaluable support, comm
 
 ## What’s next?
 
-As we continue to push out new features in our platform & toolings, the fundamental goal remains the same: *Bringing the individual developer back in by empowering them and making things less complicated!* All while keeping the **developer experience**, **product quality**, and **user feedback** at the forefront of our efforts. Your active participation has been the bedrock of our progress!
+As we continue to push out new features in our platform & core emulator, the fundamental goal remains the same: *Providing the best tooling and empowering cloud developers to enable a seamless dev experience across the entire development lifecycle.* A cornerstone in our approach is to keep the **developer experience**, **product quality**, and **user feedback** at the forefront of our efforts. Your active participation has been the bedrock of our progress!
+
+Stay tuned for more news and awesome features in the upcoming months - we couldn't be more excited and pumped to work with our huge user base across the globe - and we're just getting started. 🚀 If you happen to be attending AWS re:Invent this year, come meet us there at **Booth #1074** in the main Expo hall!
 
 Thank you for your support and welcome to LocalStack 3.0!
-
