@@ -1,7 +1,7 @@
 ---
 title: Announcing LocalStack 3.0 General Availability!
-description: We are excited to announce the release of LocalStack 3.0 featuring enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance and more!
-lead: We are excited to announce the release of LocalStack 3.0 featuring enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance and more!
+description: We are excited to announce the release of LocalStack 3.0, which features enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance, and more!
+lead: We are excited to announce the release of LocalStack 3.0, which features enhanced AWS services, Chaos Engineering tools, IAM Policy Stream, Desktop Application, improved performance, and more!
 date: 2023-11-16
 lastmod: 2023-11-16
 images: ['localstack-3.0.png']
@@ -14,7 +14,7 @@ weight: 1
 
 {{< img-simple src="localstack-3.0.png" >}}
 
-Today, we are excited to announce **LocalStack 3.0**, our latest major release towards empowering developers with a high-fidelity local cloud development & testing experience. Earlier this year, we unveiled [LocalStack 2.0](https://localstack.cloud/blog/2023-03-29-announcing-localstack-2.0-general-availability/), which brought forth a host of new features and improvements, along with better integration with the AWS tooling ecosystem. With the 3.0 release, we're doubling down on our promise to boosting developer productivity and tackling the issues that often slow down cloud software development and delivery workflows — specifically, simplifying onboarding and eliminating the inefficiencies that lead to prolonged dev&test cycles. Additionally, this release represents a significant milestone in our journey as we move beyond traditional cloud emulation, and introduce innovative features that promise to reshape the way developers construct resilient cloud applications.
+Today, we are excited to announce **LocalStack 3.0**, our latest major release aiming to empower developers with a high-fidelity local cloud development & testing experience. Earlier this year, we unveiled [LocalStack 2.0](https://localstack.cloud/blog/2023-03-29-announcing-localstack-2.0-general-availability/), which brought forth a host of new features and improvements, along with better integration with the AWS tooling ecosystem. With the 3.0 release, we’re doubling down on our promise to **boost** developer productivity and **tackle** the issues that often slow down cloud software development and delivery workflows. Specifically, simplifying onboarding and eliminating the inefficiencies that lead to prolonged development and test cycles. Additionally, this release represents a significant milestone in our journey as we move beyond traditional cloud emulation, and introduce innovative features that promise to reshape the way developers construct resilient cloud applications.
 
 Whether you’re a LocalStack user or just getting started on your cloud development journey, we have a lot of exciting features to share with you! With LocalStack, you can now:
 
@@ -23,7 +23,7 @@ Whether you’re a LocalStack user or just getting started on your cloud develop
 - Create ephemeral cloud sandboxes for testing your infrastructure locally or on CI pipelines.
 - Activate analytics for LocalStack in CI runs to get insights into your infrastructure test runs.
 - Utilize enhanced, faster AWS services such as S3, Step Functions, DynamoDB and ElastiCache.
-- Get started with a fully-local developer environment with the new LocalStack Desktop Application.
+- Start with a fully local developer environment with the new LocalStack Desktop Application.
 
 And much more! LocalStack makes it easy to build & test local-first cloud applications, all while improving the **inner dev loop**. We are excited to share our recent developments in this release, and discuss how you can get started with them!
 
