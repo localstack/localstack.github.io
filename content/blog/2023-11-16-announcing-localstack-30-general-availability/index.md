@@ -38,8 +38,8 @@ Let's take a look at our latest release's new features and enhancements to see h
 * [New ElastiCache provider](#new-elasticache-provider)
 * [New features for Chaos Engineering](#new-features-for-chaos-engineering)
 * [IAM Policy Stream on Web Application](#iam-policy-stream-on-web-application)
-* [Ephemeral Environments for LocalStack](#ephemeral-environments-for-localstack)
-* [CI Analytics for LocalStack](#ci-analytics-for-localstack)
+* [Ephemeral Environments for LocalStack](#ephemeral-environments-for-localstack-beta) (**Beta**)
+* [CI Analytics for LocalStack](#ci-analytics-for-localstack-beta) (**Beta**)
 * [All-new LocalStack Desktop Application](#all-new-localstack-desktop-application)
 * [Multi-region and Multi-account support](#multi-region-and-multi-account-support)
 * [LocalStack Networking initiative](#localstack-networking-initiative)
@@ -47,7 +47,7 @@ Let's take a look at our latest release's new features and enhancements to see h
 
 ### New S3 provider
 
-The **new native S3 implementation**, introduced in version [`2.3.0`](https://discuss.localstack.cloud/t/localstack-release-v2-3-0/533/1), is now the default S3 provider in LocalStack 3.0. The key features include better parity with AWS features, enhanced performance, improved persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
+The **new native S3 implementation**, introduced in version [`2.3.0`](https://discuss.localstack.cloud/t/localstack-release-v2-3-0/533/1), is now the default S3 provider in LocalStack 3.0. The new S3 provider offers improved parity with AWS features, significantly enhanced performance and persistence support, and reduced memory usage for large object uploads/downloads and multipart uploads. The provider brings advanced support for AWS-specific features such as bucket versioning, pagination in `List` operations, precondition headers, S3 Object Lock and Legal Hold, and default Bucket Encryption settings.
 
 S3 is a core AWS service, and undertaking our own implementation was crucial to further improve the parity of our services with AWS. We have also improved performance, with some massive upgrades for some operations including:
 
@@ -67,13 +67,13 @@ Check out our [Step Functions documentation](https://docs.localstack.cloud/user-
 
 ### New ElastiCache provider
 
-We have introduced a **new ElastiCache provider** with better parity with AWS and resolves issues around the Redis cluster management in the previous provider. The new provider implements a dedicated Redis control plane to manage Redis instances in non-cluster mode and cluster mode. The new provider will be extended in the future to test automatic failover, snapshotting, scaling replication groups, and more features.
+We have introduced a **new ElastiCache provider** with significantly improved AWS parity and resolving issues around the Redis cluster management in the previous provider. The new provider implements a dedicated Redis control plane to manage Redis instances in non-cluster mode and cluster mode. The new provider will be extended in the future to test automatic failover, snapshotting, scaling replication groups, and more features.
 
 These latest enhancements mark a significant step forward in our commitment to delivering a more robust and fine-tuned ElastiCache provider. The old ElastiCache provider is temporarily available in LocalStack v3 using `PROVIDER_OVERRIDE_ELASTICACHE=legacy` but we highly recommend migrating as soon as possible since we will drop support for this in LocalStack v4.
 
 ### New features for Chaos Engineering
 
-Chaos engineering is a practice focused on improving system resilience by intentionally introducing disruptions. To support this, we're introducing a new **Chaos Engineering** dashboard in the LocalStack Web Application. This feature allows users to conduct fault injection experiments within their application stack. The dashboard offers various Fault Injection Simulator (FIS) experiment options, such as:
+Chaos engineering is a practice focused on improving system resilience by intentionally introducing disruptions. To support this, we're introducing a new **Chaos Engineering** dashboard in the LocalStack [Web Application](https://app.localstack.cloud). This feature allows users to conduct fault injection experiments within their application stack. The dashboard offers various Fault Injection Simulator (FIS) experiment options, such as:
 
 - Disrupt a percentage of all incoming requests and return 500 errors instead.
 - Disrupt a percentage of requests made against a specific region.
@@ -103,7 +103,7 @@ The features include:
 
 Check out our [documentation]() and [video]() on getting started with the IAM Policy Stream.
 
-### Ephemeral Environments for LocalStack
+### Ephemeral Environments for LocalStack (**Beta**)
 
 We have launched **Ephemeral Instances**, which allows you to run a LocalStack sandbox in the cloud, instead of your local machine. This ephemeral environment is a short-lived, encapsulated deployment of LocalStack which will be terminated after 90 minutes. With these sandboxes, you can run your tests, preview features in your AWS-powered applications, and collaborate asynchronously within and across your team!
 
@@ -113,7 +113,7 @@ With Ephemeral Instances, you can use the same set of features that you use whil
 
 Check out our [documentation]() on getting started with Ephemeral Instances.
 
-### CI Analytics for LocalStack
+### CI Analytics for LocalStack (**Beta**)
 
 We're excited to introduce **CI Analytics**, a new feature for comprehensive state browsing and analysis of historical continuous integration (CI) builds. This feature integrates into your LocalStack CI workflow, offering insights and supporting our goal to enhance the cloud developer experience throughout the software development lifecycle (SDLC). With CI Analytics, you can collect, analyze, and visualize critical metrics from your software CI pipelines, helping you understand the impact of cloud infrastructure changes on CI builds. It facilitates root cause analysis for build failures, supports data-driven decisions for continuous improvement, and more.
 
