@@ -157,9 +157,10 @@ View our [Networking migration guide](https://discuss.localstack.cloud/t/network
 
 ### Miscellaneous
 
+- We're introducing a simplified method for managing team licenses. Instead of activating LocalStack with API keys, we're shifting to the use of **Auth Tokens**. This approach facilitates the assignment of licenses to users without necessitating changes to their environment setup. Read our [documentation]() for more information.
 - We’ve massively **improved write performance for DynamoDB** in LocalStack, with our benchmarks showing a 60% faster [`PutItem`](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html) operation. Using higher batch sizes will profit even more from this change, with [`BatchWriteItem`](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchWriteItem.html) now being 6.2x faster for 10 items and 9.9x faster for 25 items. That means if you’re populating a large DynamoDB table, you can now take advantage of much faster insertion times! For the best performance please set `DYNAMODB_IN_MEMORY=1`, but even without this, you should still notice a significant performance improvement.
 - To limit which services can be started by LocalStack, we have (re-)introduced the concept of **Strict Service Loading**, where only the services defined in the `SERVICES` variable, are going to be started. This also lays the foundation for us to provide standalone images for single services or combinations thereof.
-- We’re also currently in the progress of internally refactoring our CloudFormation resource implementations to be more in parity with AWS and also structurally easier for us and contributors to work with. If you’re interested in contributing here, [please reach out to us](mailto:info@localstack.cloud)! 
+- We’re also currently in the progress of internally refactoring our CloudFormation resource implementations to be more in parity with AWS and also structurally easier for us and contributors to work with. If you’re interested in contributing, [please reach out to us](mailto:info@localstack.cloud)! 
 
 If you want to know more check out the [detailed release notes on GitHub]()!
 
