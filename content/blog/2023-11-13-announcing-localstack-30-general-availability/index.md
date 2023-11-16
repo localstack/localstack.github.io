@@ -24,7 +24,7 @@ Whether you’re a LocalStack user or just getting started on your cloud develop
 - Utilize enhanced, faster AWS services such as S3, Step Functions, DynamoDB and ElastiCache.
 - Get started with a fully-local developer environment with the new LocalStack Desktop Application.
 
-And much more! LocalStack makes it easy to build & test local-first cloud applications, all while improving the **Inner Dev Loop**. We are excited to share our recent developments in this release, and discuss how you can get started with them!
+And much more! LocalStack makes it easy to build & test local-first cloud applications, all while improving the **inner dev loop**. We are excited to share our recent developments in this release, and discuss how you can get started with them!
 
 ## What’s new in LocalStack 3.0?
 
@@ -74,10 +74,10 @@ These latest enhancements mark a significant step forward in our commitment to d
 
 Chaos engineering is a practice focused on improving system resilience by intentionally introducing disruptions. To support this, we're introducing a new **Chaos Engineering** dashboard in the LocalStack Web Application. This feature allows users to conduct fault injection experiments within their application stack. The dashboard offers various Fault Injection Simulator (FIS) experiment options, such as:
 
-- **500 Internal Error**: This experiment randomly terminates incoming requests and returns an `Internal error` with a response code of 500.
-- **Service Unavailable**: Similar to the previous one, this experiment randomly terminates incoming requests but responds with a `Service Unavailable` message and a 503 response code.
-- **AWS Region Unavailable**: This simulates region outages and failovers by randomly terminating incoming requests to mimic regional service disruptions.
-- **Latency**: This introduces a specified amount of latency to each API call, useful for simulating slow network conditions or network performance issues.
+- Disrupt a percentage of all incoming requests and return 500 errors instead.
+- Disrupt a percentage of requests made against a specific region.
+- Simulate the complete outage of a specific region.
+- Introduce latency to all API calls to simulate network service degradations.
 
 {{< img-simple src="localstack-chaos-engineering-dashboard.png" width=300 alt="Image of LocalStack Chaos Engineering dashboard">}}
 
