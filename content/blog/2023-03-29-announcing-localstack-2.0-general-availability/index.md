@@ -7,7 +7,6 @@ lastmod: 2023-03-29T9:35:38+05:30
 contributors: ["LocalStack Team"]
 tags: ['news']
 leadimage: "localstack-v2-cover.jpg"
-weight: 1
 ---
 
 {{< img-simple src="localstack-v2-cover.jpg" >}}
