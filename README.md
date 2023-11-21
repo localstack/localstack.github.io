@@ -1,9 +1,15 @@
 LocalStack Website
 ==================
 
-The website uses [Hugo](https://github.com/gohugoio/hugo) and the [doks theme](https://github.com/h-enk/doks).
+# Migration Notice
+
+- The LocalStack website has been migrated to another service and is not served from this repo anymore.
+- The blog is now served from a new (forked) repo (https://github.com/localstack/localstack-blog.github.io).
+- Auxiliary files that were previously hosted via this repo are now hosted in an external CDN.
+
 
 ## Build and run locally
+The website uses [Hugo](https://github.com/gohugoio/hugo) and the [doks theme](https://github.com/h-enk/doks).
 
 Make sure you have `npm` and `hugo` (extended - for sass compilation) installed.
 
